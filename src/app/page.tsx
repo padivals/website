@@ -26,7 +26,9 @@ export default function Home() {
       <ContactSection />
       <Footer />
 
-      <ReservationBar />
+      <section className="hidden lg:block">
+        <ReservationBar />
+      </section>
     </main>
   );
 }

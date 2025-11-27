@@ -23,8 +23,122 @@
   }
 }
 
+
+.flatpickr-calendar {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.flatpickr-calendar.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, -40);
+  }
+}
+
+.nav-underline {
+  position: relative;
+}
+
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #d4af37; /* gold */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.nav-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.animate-fadeSlide {
+  animation: fadeSlide 0.35s ease forwards;
+}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* selected start + end */
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background: #1D8842 !important; /* main green */
+  color: white !important;
+  border-radius: 0 !important;
+}
+
+/* days BETWEEN selected dates */
+.flatpickr-day.inRange {
+  background: rgba(29, 136, 66, 0.25) !important; /* faint light green */
+  color: white !important;
+  border-radius: 0 !important;
+}
+
+/* hover preview effect */
+.flatpickr-day:hover {
+  background: rgba(29, 136, 66, 0.18) !important;
+}
+
+/* remove default circle feel */
+.flatpickr-day {
+  border-radius: 0 !important;
+  transition: background 0.25s ease;
+}
+
+/* calendar container UI */
+.flatpickr-calendar {
+  background: #2E2E2E !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* week day labels */
+.flatpickr-weekday {
+  color: white !important;
+  font-weight: 400;
+}
+
+/* month & year text */
+.flatpickr-current-month {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* navigation arrows */
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  color: #1D8842 !important;
+}
+
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover {
+  color: #146b33 !important;
+}
+
+/* popup shadow + radius */
+.flatpickr-calendar {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25) !important;
+  border-radius: 6px !important;
+}
+
+
+
