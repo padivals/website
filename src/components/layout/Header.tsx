@@ -7,11 +7,11 @@ const Header = () => {
         <header className="absolute top-0 left-0 w-full z-50 p-6">
             <div className="container mx-auto grid grid-cols-5 items-center gap-8">
                 {/* Left Navigation */}
-                <Link href="#" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
+                <Link href="/rooms" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
                     LODGING
                 </Link>
 
-                <Link href="#" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
+                <Link href="/events" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
                     EVENT SPACES
                 </Link>
 
@@ -30,7 +30,7 @@ const Header = () => {
                 </div>
 
                 {/* Right Navigation */}
-                <Link href="#" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
+                <Link href="/dining" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
                     DINING
                 </Link>
 
