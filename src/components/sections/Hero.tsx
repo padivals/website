@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Hero = () => {
     return (
-        <div className="relative w-full h-screen min-h-[800px] overflow-hidden">
+        <div className="sticky top-0 w-full h-screen min-h-[800px] overflow-hidden -z-10">
             {/* Background Image */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0">
                 <Image
                     src="/hero-bg.png"
                     alt="Hotel Lobby"
@@ -14,8 +14,6 @@ const Hero = () => {
                     className="object-cover object-center"
                     quality={100}
                 />
-                {/* Dark Overlay for text readability if needed, though design seems to rely on the dark ceiling */}
-                <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
             {/* Content Container */}

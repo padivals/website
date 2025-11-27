@@ -42,7 +42,7 @@ const NearbyAttractions = () => {
 
     return (
         <section className="bg-white py-20 overflow-hidden">
-            <div className="container mx-auto px-6">
+            <div className="container ml-32 px-6">
                 {/* Top Divider Line */}
                 <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50"></div>
 

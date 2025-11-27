@@ -1,45 +1,42 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const Header = () => {
     return (
         <header className="absolute top-0 left-0 w-full z-50 p-6">
-            <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
+            <div className="container mx-auto grid grid-cols-5 items-center gap-8">
                 {/* Left Navigation */}
-                <nav className="hidden md:flex space-x-8 text-white text-sm tracking-widest font-sans">
-                    <Link href="#" className="hover:text-gold-400 transition-colors">
-                        LODGING
-                    </Link>
-                    <Link href="#" className="hover:text-gold-400 transition-colors">
-                        EVENT SPACES
-                    </Link>
-                </nav>
+                <Link href="#" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
+                    LODGING
+                </Link>
+
+                <Link href="#" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
+                    EVENT SPACES
+                </Link>
 
                 {/* Center Logo */}
-                <div className="text-center my-4 md:my-0">
-                    <div className="flex flex-col items-center">
-                        {/* Simple icon representation or image could go here */}
-                        <div className="w-8 h-8 border-t-2 border-l-2 border-gold-400 rotate-45 mb-2"></div>
-                        <h1 className="text-2xl md:text-3xl text-white font-serif tracking-wider">
-                            THE PADIVAL GRAND
-                        </h1>
-                        <span className="text-gold-400 text-sm tracking-[0.3em] uppercase mt-1">
-                            Hotel
-                        </span>
-                        {/* Decorative wave line */}
-                        <div className="w-32 h-2 mt-2 bg-[url('/wave.svg')] bg-repeat-x opacity-80"></div>
-                    </div>
+                <div className="col-span-5 md:col-span-1 text-center">
+                    <Link href="/">
+                        <Image
+                            src="/logo.svg"
+                            alt="The Padival Grand Hotel"
+                            width={250}
+                            height={67}
+                            className="w-48 md:w-64 h-auto mx-auto"
+                            priority
+                        />
+                    </Link>
                 </div>
 
                 {/* Right Navigation */}
-                <nav className="hidden md:flex space-x-8 text-white text-sm tracking-widest font-sans">
-                    <Link href="#" className="hover:text-gold-400 transition-colors">
-                        DINING
-                    </Link>
-                    <Link href="#" className="hover:text-gold-400 transition-colors">
-                        ABOUT US
-                    </Link>
-                </nav>
+                <Link href="#" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
+                    DINING
+                </Link>
+
+                <Link href="#" className="hidden md:block text-white text-sm tracking-widest font-sans hover:text-gold-400 transition-colors text-center">
+                    ABOUT US
+                </Link>
 
                 {/* Mobile Menu Button (Placeholder) */}
                 <button className="md:hidden text-white">

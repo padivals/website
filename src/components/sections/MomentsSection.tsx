@@ -11,60 +11,22 @@ import { Swiper as SwiperType } from "swiper";
 const MomentsSection = () => {
     const swiperRef = useRef<SwiperType>(null);
     const [progress, setProgress] = useState(0);
-    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
     const moments = [
-        {
-            id: 1,
-            video: "https://www.w3schools.com/html/mov_bbb.mp4", // Placeholder video
-            poster: "/hero-bg.png", // Placeholder poster
-        },
-        {
-            id: 2,
-            video: "https://www.w3schools.com/html/movie.mp4", // Placeholder video
-            poster: "/hero-bg.png",
-        },
-        {
-            id: 3,
-            video: "https://www.w3schools.com/html/mov_bbb.mp4",
-            poster: "/hero-bg.png",
-        },
-        {
-            id: 4,
-            video: "https://www.w3schools.com/html/movie.mp4",
-            poster: "/hero-bg.png",
-        },
-        {
-            id: 5,
-            video: "https://www.w3schools.com/html/mov_bbb.mp4",
-            poster: "/hero-bg.png",
-        },
+        { color: "bg-red-100" },
+        { color: "bg-blue-100" },
+        { color: "bg-green-100" },
+        { color: "bg-yellow-100" },
+        { color: "bg-purple-100" },
+        { color: "bg-pink-100" },
     ];
 
     const handleProgress = (swiper: SwiperType) => {
+        // Calculate progress based on active index
         const total = swiper.slides.length;
         const current = swiper.realIndex + 1;
         const prog = (current / total) * 100;
         setProgress(prog);
-    };
-
-    const handleSlideChange = (swiper: SwiperType) => {
-        handleProgress(swiper);
-
-        // Pause all videos
-        videoRefs.current.forEach((video) => {
-            if (video) {
-                video.pause();
-                video.currentTime = 0;
-            }
-        });
-
-        // Play active video
-        const activeIndex = swiper.realIndex;
-        const activeVideo = videoRefs.current[activeIndex];
-        if (activeVideo) {
-            activeVideo.play().catch((e) => console.log("Autoplay prevented:", e));
-        }
     };
 
     return (
@@ -75,13 +37,56 @@ const MomentsSection = () => {
                 </h2>
             </div>
 
-            <div className="relative max-w-[1400px] mx-auto px-4 md:px-12">
+            <div className="relative max-w-[1400px] mx-auto ">
+                {/* Navigation Buttons - Absolute positioned */}
+                <button
+                    onClick={() => swiperRef.current?.slidePrev()}
+                    className="absolute left-4 md:left-20 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/80 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
+                    aria-label="Previous"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15.75 19.5 8.25 12l7.5-7.5"
+                        />
+                    </svg>
+                </button>
+
+                <button
+                    onClick={() => swiperRef.current?.slideNext()}
+                    className="absolute right-4 md:right-20 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/80 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
+                    aria-label="Next"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                        />
+                    </svg>
+                </button>
+
                 <Swiper
                     modules={[Navigation, Pagination]}
                     onBeforeInit={(swiper) => {
                         swiperRef.current = swiper;
                     }}
-                    onSlideChange={handleSlideChange}
+                    onSlideChange={(swiper) => handleProgress(swiper)}
                     spaceBetween={20}
                     slidesPerView={1.2}
                     centeredSlides={true}
@@ -99,104 +104,24 @@ const MomentsSection = () => {
                     className="w-full"
                 >
                     {moments.map((moment, index) => (
-                        <SwiperSlide key={moment.id} className="transition-all duration-300">
+                        <SwiperSlide key={index} className="transition-all duration-300">
                             {({ isActive }) => (
                                 <div
-                                    className={`relative w-full aspect-[9/16] bg-black overflow-hidden transition-transform duration-500 ${isActive ? "scale-100 shadow-2xl" : "scale-90 opacity-60"
+                                    className={`relative w-full aspect-[3/4] ${moment.color
+                                        } overflow-hidden transition-transform duration-500 ${isActive ? "scale-100" : "scale-90 opacity-80"
                                         }`}
                                 >
-                                    <video
-                                        ref={(el) => {
-                                            videoRefs.current[index] = el;
-                                        }}
-                                        src={moment.video}
-                                        poster={moment.poster}
-                                        className="w-full h-full object-cover"
-                                        muted
-                                        loop
-                                        playsInline
-                                    />
-
-                                    {/* Overlay Content for Active Slide */}
-                                    {isActive && (
-                                        <>
-                                            {/* Center Play Icon/Logo */}
-                                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                                {/* Assuming 'K' logo is a placeholder, using a simple circle for now */}
-                                                {/* <div className="w-16 h-16 rounded-full bg-[#0099FF] flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                          K
-                        </div> */}
-                                            </div>
-
-                                            {/* Bottom Right Pause Icon */}
-                                            <div className="absolute bottom-4 right-4 text-white/80">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    strokeWidth={1.5}
-                                                    stroke="currentColor"
-                                                    className="w-6 h-6"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        d="M15.75 5.25v13.5m-7.5-13.5v13.5"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </>
+                                    <div className="absolute inset-0 flex items-center justify-center text-gray-500">
+                                        Moment {index + 1}
+                                    </div>
+                                    {/* Overlay for non-active slides */}
+                                    {!isActive && (
+                                        <div className="absolute inset-0 bg-black/20"></div>
                                     )}
-
-                                    {/* Navigation Arrows Overlay (Only visible on active slide contextually in design, 
-                      but typically arrows are outside or on edges. 
-                      The design shows arrows ON the previous/next slides. 
-                      Let's implement that logic.) */}
                                 </div>
                             )}
                         </SwiperSlide>
                     ))}
-
-                    {/* Custom Navigation Arrows positioned over the adjacent slides */}
-                    <button
-                        onClick={() => swiperRef.current?.slidePrev()}
-                        className="absolute left-[10%] top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full border border-white flex items-center justify-center text-white hover:bg-white/10 transition-colors hidden md:flex"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1}
-                            stroke="currentColor"
-                            className="w-8 h-8"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                            />
-                        </svg>
-                    </button>
-
-                    <button
-                        onClick={() => swiperRef.current?.slideNext()}
-                        className="absolute right-[10%] top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full border border-white flex items-center justify-center text-white hover:bg-white/10 transition-colors hidden md:flex"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1}
-                            stroke="currentColor"
-                            className="w-8 h-8"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                            />
-                        </svg>
-                    </button>
                 </Swiper>
 
                 {/* Custom Progress Bar */}

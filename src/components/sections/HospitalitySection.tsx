@@ -5,7 +5,7 @@ import SectionHeader from "../ui/SectionHeader";
 
 const HospitalitySection = () => {
     return (
-        <section className="bg-white py-20 md:py-32">
+        <section className="relative bg-white py-20 md:py-32">
             <div className="container mx-auto px-6 text-center">
                 <SectionHeader
                     heading="A Glimpse Into Our Hospitality"
