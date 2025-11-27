@@ -1,0 +1,36 @@
+import React from "react";
+import SectionHeader from "./SectionHeader";
+
+interface TextSectionProps {
+    label?: string;
+    heading: string;
+    description: string;
+    align?: "left" | "center";
+    className?: string;
+}
+
+const TextSection: React.FC<TextSectionProps> = ({
+    label,
+    heading,
+    description,
+    align = "center",
+    className = "",
+}) => {
+    return (
+        <section className={`relative bg-white py-20 md:py-32 ${className}`}>
+            <div className="container mx-auto px-6 text-center">
+                <SectionHeader
+                    label={label}
+                    heading={heading}
+                    align={align}
+                    className="mb-8"
+                />
+                <p className="max-w-4xl mx-auto text-[#0F2A1D] text-lg md:text-xl font-light leading-relaxed">
+                    {description}
+                </p>
+            </div>
+        </section>
+    );
+};
+
+export default TextSection;

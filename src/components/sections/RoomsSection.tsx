@@ -9,40 +9,11 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import Button from "../ui/Button";
 
+import { rooms } from "@/data/rooms";
+
 const RoomsSection = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef<SwiperType | null>(null);
-
-    const rooms = [
-        {
-            id: 1,
-            title: "The Comfort Room",
-            description:
-                "A well-appointed split AC room designed for a calm, restful stay. It offers essential comforts, thoughtful touches and a welcoming atmosphere that makes every guest feel at ease.",
-            imageColor: "bg-gray-300",
-        },
-        {
-            id: 2,
-            title: "The Premium Stay Room",
-            description:
-                "Elevate your experience with our Premium Stay Room, featuring enhanced amenities, extra space, and stylish decor for a truly relaxing retreat.",
-            imageColor: "bg-gray-400",
-        },
-        {
-            id: 3,
-            title: "The Family Suite",
-            description:
-                "Spacious and inviting, the Family Suite is perfect for creating lasting memories together, offering separate living areas and all the comforts of home.",
-            imageColor: "bg-gray-500",
-        },
-        {
-            id: 4,
-            title: "The Executive Retreat",
-            description:
-                "Designed for the discerning traveler, the Executive Retreat offers a sophisticated blend of luxury, privacy, and modern convenience for work or leisure.",
-            imageColor: "bg-gray-600",
-        },
-    ];
 
     const handleSlideChange = (swiper: SwiperType) => {
         setActiveIndex(swiper.realIndex);
@@ -76,7 +47,7 @@ const RoomsSection = () => {
                                 {rooms[activeIndex].description}
                             </p>
                             <a
-                                href="#"
+                                href={`/rooms/${rooms[activeIndex].slug}`}
                                 className="inline-block border-b border-white pb-1 text-sm uppercase tracking-wider hover:text-gray-200 transition-colors"
                             >
                                 Learn More
