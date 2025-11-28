@@ -14,8 +14,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     heading,
     className = "",
     align = "left",
-    textColor = "text-[#0F2A1D]",
-    labelColor = "text-[#4A6741]",
+    textColor = "text-[#012219]",
+    labelColor = "text-[#165F41CC]",
 }) => {
     const alignmentClasses =
         align === "center" ? "items-center text-center" : "items-start text-left";
@@ -30,7 +30,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
                 </span>
             )}
             <h2
-                className={`text-4xl md:text-5xl font-serif ${textColor} leading-tight`}
+                className={`text-4xl md:text-5xl font-serif ${textColor} leading-tight font-semibold`}
             >
                 {heading}
             </h2>

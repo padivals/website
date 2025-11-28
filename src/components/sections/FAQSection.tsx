@@ -37,7 +37,7 @@ const FAQSection = () => {
         <section className="bg-white py-20">
             <div className="container mx-auto px-6">
                 {/* Top Divider Line */}
-                <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50"></div>
+                <div className="w-full h-px bg-[#165F41] mb-12 "></div>
 
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
                     {/* Left Side - Static Content */}
@@ -54,13 +54,13 @@ const FAQSection = () => {
                             {faqs.map((faq, index) => (
                                 <div
                                     key={index}
-                                    className="border-b border-[#A3B19C]/30 last:border-b-0"
+                                    className="border-b border-[#165F41] last:border-b-0"
                                 >
                                     <button
                                         onClick={() => toggleFAQ(index)}
-                                        className="w-full py-6 flex items-center justify-between text-left group"
+                                        className="w-full py-6 flex items-center justify-between text-left group lg:px-8"
                                     >
-                                        <span className="text-[#0F2A1D] font-medium text-lg pr-8">
+                                        <span className="text-[#012219CC] font-bold text-lg  ">
                                             {faq.question}
                                         </span>
                                         <span className="text-[#D4AF37] text-2xl font-light transition-transform duration-300">
@@ -73,7 +73,7 @@ const FAQSection = () => {
                                             : "max-h-0 opacity-0"
                                             }`}
                                     >
-                                        <p className="text-gray-600 font-light leading-relaxed">
+                                        <p className="text-[#012219]/80 font-medium max-w-3xl leading-relaxed lg:px-8">
                                             {faq.answer}
                                         </p>
                                     </div>

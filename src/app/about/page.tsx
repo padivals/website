@@ -4,32 +4,14 @@ import ContentSection from "@/components/sections/ContentSection";
 import ReservationBar from "@/components/sections/ReservationBar";
 import WhatToExpectSection from "@/components/sections/WhatToExpectSection";
 import FAQSection from "@/components/sections/FAQSection";
+import HalfHeroSection from "@/components/sections/HalfHeroSection";
 
 export default function AboutPage() {
     return (
         <main className="min-h-screen flex flex-col relative pb-24 bg-[#F9F5EC]">
             <Header />
 
-            {/* Custom Hero Section */}
-            <section className="relative bg-[#1B4D3E] pt-40 pb-20 px-6 overflow-hidden">
-                {/* Background Pattern (Placeholder) */}
-                <div className="absolute inset-0 opacity-10 pointer-events-none">
-                    {/* You would typically put an SVG or Image of the leaf pattern here */}
-                    <div className="absolute right-0 bottom-0 w-1/2 h-full bg-[url('/leaf-pattern.png')] bg-no-repeat bg-contain bg-right-bottom"></div>
-                </div>
-
-                <div className="container mx-auto relative z-10">
-                    <div className="flex flex-col gap-2 mb-12">
-                        {/* Breadcrumb-like or small label if needed, but screenshot shows just title */}
-                    </div>
-                    <h1 className="font-serif text-5xl md:text-7xl text-white mb-8">
-                        Who We Are
-                    </h1>
-                    <p className="text-white/60 text-lg uppercase tracking-widest font-light">
-                        History
-                    </p>
-                </div>
-            </section>
+            <HalfHeroSection title="Who We Are" />
 
             {/* History Section */}
             <ContentSection
@@ -64,7 +46,7 @@ export default function AboutPage() {
                         </p>
                     </>
                 }
-                image="/hero-bg.png" // Placeholder (Logo placeholder in screenshot)
+                image="/mahaveer-ventures.png" // Placeholder (Logo placeholder in screenshot)
                 imagePosition="left"
             />
 
