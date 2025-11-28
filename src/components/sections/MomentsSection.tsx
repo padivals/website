@@ -48,7 +48,7 @@ const MomentsSection = () => {
                     spaceBetween: 20,
                 },
                 1024: {
-                    slidesPerView: 3., // Shows center + small peek of sides (approx 15% visible)
+                    slidesPerView: 3.5, // Shows center + small peek of sides (approx 15% visible)
                     spaceBetween: 30,
                 },
             }}

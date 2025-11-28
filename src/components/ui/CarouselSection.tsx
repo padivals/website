@@ -154,7 +154,8 @@ const CarouselSection = <T,>({
                             </button>
                         </>
                     )}
-
+ <div className="w-full flex justify-center">
+        <div className="w-full max-w-[1400px] px-4">
                     <Swiper
                         modules={[Navigation, Pagination]}
                         onBeforeInit={(swiper) => {
@@ -174,6 +175,9 @@ const CarouselSection = <T,>({
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
+            </div>
+        
 
                     {/* Custom Progress Bar */}
                     {showProgressBar && (
