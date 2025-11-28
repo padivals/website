@@ -17,7 +17,7 @@ const TextSection: React.FC<TextSectionProps> = ({
     className = "",
 }) => {
     return (
-        <section className={`relative bg-white py-20 md:py-32 ${className}`}>
+        <section className={`relative bg-white py-20 md:py-22 ${className}`}>
             <div className="container mx-auto px-6 text-center">
                 <SectionHeader
                     label={label}

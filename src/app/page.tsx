@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import EventsSection from "@/components/sections/EventsSection";
 import ContactSection from "@/components/sections/ContactSection";
+import MomentSectionTest from "@/components/sections/MomentSectionTest";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
-      <MomentsSection />
+      <MomentSectionTest heading="Discover Moments at The Padival Grand Hotel" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]}/>
+      {/* <MomentsSection /> */}
       <TestimonialsSection />
       <FAQSection />
       <EventsSection />

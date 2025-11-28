@@ -2,6 +2,7 @@
 
 import React from "react";
 import CarouselSection from "../ui/CarouselSection";
+import Image from "next/image";
 
 const NearbyAttractions = () => {
     const attractions = [
@@ -10,27 +11,27 @@ const NearbyAttractions = () => {
             name: "Puttur Shree Mahalingeshwara Temple",
             description:
                 "A historic Shiva temple known for its serene ambience and deep cultural roots.",
-            imageColor: "bg-gray-300",
+            imagesrc: "/hospitalityImg/img1.png",
         },
         {
             id: 2,
             name: "Shivarama Karantha Balavana",
             description:
                 "A peaceful cultural park with a museum, greenery and quiet spaces to unwind.",
-            imageColor: "bg-gray-400",
+            imagesrc: "/hospitalityImg/img2.png",
         },
         {
             id: 3,
             name: "Beeramale Hill",
             description:
                 "A scenic hilltop offering panoramic views of Puttur's landscapes.",
-            imageColor: "bg-gray-500",
+            imagesrc: "/hospitalityImg/img3.png",
         },
         {
             id: 4,
             name: "Bendru Theertha",
             description: "A natural hot water spring located in a serene environment.",
-            imageColor: "bg-gray-600",
+            imagesrc: "/hospitalityImg/img1.png",
         },
     ];
 
@@ -53,20 +54,22 @@ const NearbyAttractions = () => {
                     slidesPerView: 2.2,
                 },
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 2.8,
                 },
             }}
             renderItem={(attraction) => (
-                <div className="group cursor-pointer">
-                    <div
-                        className={`w-full aspect-[3/4] ${attraction.imageColor} mb-6 relative overflow-hidden`}
+                <div className="group cursor-pointer ">
+                    <Image
+                         src={attraction.imagesrc} width={100} height={100} alt={attraction.name} className={`w-full aspect-[3/4] mb-6 relative overflow-hidden`}
                     >
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-                    </div>
-                    <h3 className="text-xl font-serif text-[#0F2A1D] mb-3 group-hover:text-[#D4AF37] transition-colors">
+                        
+                    </Image>         
+                                  {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div> */}
+
+                    <h3 className="text-xl f text-[#012219CC] mb-3  transition-colors">
                         {attraction.name}
                     </h3>
-                    <p className="text-gray-600 text-sm font-light leading-relaxed">
+                    <p className="text-[#012219CC] text-sm font-light leading-relaxed">
                         {attraction.description}
                     </p>
                 </div>

@@ -78,7 +78,7 @@ const CarouselSection = <T,>({
 
     return (
         <section className={`${backgroundColor} py-20 overflow-hidden ${className}`}>
-            <div className={`container px-6 ${variant === 'split' ? 'ml-32' : 'mx-auto'}`}>
+            <div className={`container px-8 ${variant === 'split' ? 'ml-6' : 'mx-auto'}`}>
 
                 {/* Header Section */}
                 {variant === 'centered' && title && (
@@ -92,7 +92,7 @@ const CarouselSection = <T,>({
                             {title}
                         </h2>
                         {description && (
-                            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+                            <p className="mt-4 text-[#012219CC] max-w-2xl mx-auto">
                                 {description}
                             </p>
                         )}
@@ -103,12 +103,12 @@ const CarouselSection = <T,>({
                 {variant === 'split' && (
                     <>
                         {/* Top Divider Line */}
-                        <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50"></div>
+                        <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50 "></div>
 
-                        <div className="flex flex-col lg:flex-row gap-12 mb-8">
-                            <div className="lg:w-1/4">
+                        <div className="flex flex-col px-20 lg:flex-row  mb-8">
+                            <div className="lg:w-1/5">
                                 {label && (
-                                    <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-sm font-semibold">
+                                    <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-md font-medium">
                                         {label}
                                     </span>
                                 )}
@@ -129,7 +129,7 @@ const CarouselSection = <T,>({
                     </>
                 )}
 
-                <div className={`relative ${variant === 'centered' ? 'max-w-[1400px] mx-auto' : 'lg:pl-[25%] -mt-12'}`}>
+                <div className={`relative ${variant === 'centered' ? 'max-w-[1400px] mx-auto' : 'lg:pl-[23%] -mt-12'}`}>
                     {/* Navigation Buttons - Absolute positioned for Centered */}
                     {showNavigation && variant === 'centered' && (
                         <>
@@ -154,7 +154,8 @@ const CarouselSection = <T,>({
                             </button>
                         </>
                     )}
-
+ <div className="w-full flex justify-center">
+        <div className="w-full max-w-[1400px] px-4">
                     <Swiper
                         modules={[Navigation, Pagination]}
                         onBeforeInit={(swiper) => {
@@ -174,6 +175,9 @@ const CarouselSection = <T,>({
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
+            </div>
+        
 
                     {/* Custom Progress Bar */}
                     {showProgressBar && (
