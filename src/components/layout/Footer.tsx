@@ -112,7 +112,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-light gap-4">
                     <p>A Company of Mahaveer Ventures</p>
                     <div className="flex gap-4">
-                        <a href="#" className="hover:text-gray-400">
+                        <a href="/privacy-policy" className="hover:text-gray-400">
                             Privacy Policy
                         </a>
                         <span>|</span>

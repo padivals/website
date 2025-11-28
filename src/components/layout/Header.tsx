@@ -29,22 +29,21 @@ const Header = () => {
     <>
       {/* ==================== MAIN HEADER ==================== */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 p-10 transition-transform duration-500 ${
-          showHeader ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 p-10 transition-transform duration-500 ${showHeader ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="container mx-auto grid grid-cols-5 items-center gap-2">
 
           {/* LEFT NAV — Desktop only */}
           <Link
-            href="#"
+            href="/rooms"
             className="hidden md:block text-white text-md tracking-widest font-sans hover:text-gold-400 transition-colors text-center"
           >
             <span className="nav-underline">LODGING</span>
           </Link>
 
           <Link
-            href="#"
+            href="/events"
             className="hidden md:block text-white text-md tracking-widest font-sans hover:text-gold-400 transition-colors text-center"
           >
             <span className="nav-underline">EVENT SPACES</span>
@@ -66,14 +65,14 @@ const Header = () => {
 
           {/* RIGHT NAV — Desktop only */}
           <Link
-            href="#"
+            href="/dining"
             className="hidden md:block text-white text-md tracking-widest font-sans hover:text-gold-400 transition-colors text-center"
           >
             <span className="nav-underline">DINING</span>
           </Link>
 
           <Link
-            href="#"
+            href="/about"
             className="hidden md:block text-white text-md tracking-widest font-sans hover:text-gold-400 transition-colors text-center"
           >
             <span className="nav-underline">ABOUT US</span>
@@ -104,14 +103,13 @@ const Header = () => {
 
       {/* ==================== MOBILE SIDEBAR SLIDE IN ==================== */}
       <div
-        className={`fixed top-0 left-0 h-full w-full bg-[#00221A] text-white z-[999] transform transition-transform duration-500 ${
-          mobileOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-full bg-[#00221A] text-white z-[999] transform transition-transform duration-500 ${mobileOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Sidebar Header with logo + close */}
         <div className="flex items-center justify-between p-6 border-b border-white/20">
 
-             <button onClick={() => setMobileOpen(false)} className="text-white">
+          <button onClick={() => setMobileOpen(false)} className="text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -122,31 +120,31 @@ const Header = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
-          </button> 
+          </button>
           <div className=" px-10">
-                <Image
-            src="/Mainlogo.png"
-            alt="logo"
-            width={120}
-            height={40}
-            className="h-auto "
-          /></div>    
-      
-     
+            <Image
+              src="/Mainlogo.png"
+              alt="logo"
+              width={120}
+              height={40}
+              className="h-auto "
+            /></div>
+
+
         </div>
 
         {/* ONLY your 4 header links */}
         <nav className="flex flex-col gap-6 p-6 text-lg tracking-wide font-sans">
-          <Link href="#" onClick={() => setMobileOpen(false)}>
+          <Link href="/rooms" onClick={() => setMobileOpen(false)}>
             LODGING
           </Link>
-          <Link href="#" onClick={() => setMobileOpen(false)}>
+          <Link href="/events" onClick={() => setMobileOpen(false)}>
             EVENT SPACES
           </Link>
-          <Link href="#" onClick={() => setMobileOpen(false)}>
+          <Link href="/dining" onClick={() => setMobileOpen(false)}>
             DINING
           </Link>
-          <Link href="#" onClick={() => setMobileOpen(false)}>
+          <Link href="/about" onClick={() => setMobileOpen(false)}>
             ABOUT US
           </Link>
         </nav>

@@ -6,6 +6,10 @@ import PageHero from "@/components/ui/PageHero";
 import ReservationBar from "@/components/sections/ReservationBar";
 import { rooms } from "@/data/rooms";
 import RoomCard from "@/components/ui/RoomCard";
+import CommonAmenities from "@/components/sections/CommonAmenities";
+import RelatedRooms from "@/components/sections/RelatedRooms";
+import FoodAndDining from "@/components/sections/FoodAndDining";
+import FAQSection from "@/components/sections/FAQSection";
 
 export default function RoomsPage() {
     return (
@@ -14,6 +18,7 @@ export default function RoomsPage() {
             <PageHero
                 title="Our Rooms"
                 subtitle="Accommodation"
+                image="/hero-bg.png"
             />
 
             <section className="container mx-auto px-6 py-20">
@@ -32,6 +37,9 @@ export default function RoomsPage() {
                 </div>
             </section>
 
+            <CommonAmenities />
+            <FoodAndDining />
+            <FAQSection />
             <ReservationBar />
             <Footer />
         </main>

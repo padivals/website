@@ -4,7 +4,7 @@ export const rooms = [
         slug: "comfort-room",
         title: "The Comfort Room",
         description:
-            "Quiet, well-cooled rooms with neat interiors, ideal for guests who prefer steady comfort and a peaceful environment.",
+            "A neatly arranged room with a comfortable bed, calm interiors and essential amenities. Well suited for solo guests or pairs, it offers a simple and steady stay for up to two people.",
         imageColor: "bg-gray-300",
         heroImage: "/hero-bg.png", // Placeholder, using existing image
         details: {
@@ -12,7 +12,23 @@ export const rooms = [
             occupancy: "2 Adults",
             bed: "Queen Size Bed",
             amenities: ["Free Wi-Fi", "Air Conditioning", "Flat-screen TV", "Tea/Coffee Maker", "Room Service"]
-        }
+        },
+        features: [
+            "King size bed",
+            "Fresh linens and neatly prepared bedding",
+            "In room tea and coffee setup",
+            "Complimentary slippers",
+            "Private sit out area",
+            "Comfort driven furnishings",
+            "Smart television with streaming",
+            "High speed Wi Fi",
+            "Calm, well ventilated interiors",
+            "Round the clock front desk support",
+            "Daily housekeeping",
+            "Essential bath amenities",
+            "Early check in subject to availability"
+        ],
+        images: ["/hero-bg.png", "/hero-bg.png"] // Placeholders for side-by-side images
     },
     {
         id: 2,
