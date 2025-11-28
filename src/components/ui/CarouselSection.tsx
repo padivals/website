@@ -78,7 +78,7 @@ const CarouselSection = <T,>({
 
     return (
         <section className={`${backgroundColor} py-20 overflow-hidden ${className}`}>
-            <div className={`container px-8 ${variant === 'split' ? 'ml-6' : 'mx-auto'}`}>
+            <div className={`  ${variant === 'split' ? 'ml-0' : 'mx-auto'}`}>
 
                 {/* Header Section */}
                 {variant === 'centered' && title && (
@@ -105,10 +105,10 @@ const CarouselSection = <T,>({
                         {/* Top Divider Line */}
                         <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50 "></div>
 
-                        <div className="flex flex-col px-20 lg:flex-row  mb-8">
-                            <div className="lg:w-1/5">
+                        <div className="flex flex-col px-10 lg:flex-row  mb-8">
+                            <div className="lg:w-1/6   ">
                                 {label && (
-                                    <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-md font-medium">
+                                    <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-sm font-medium">
                                         {label}
                                     </span>
                                 )}
@@ -129,7 +129,7 @@ const CarouselSection = <T,>({
                     </>
                 )}
 
-                <div className={`relative ${variant === 'centered' ? 'max-w-[1400px] mx-auto' : 'lg:pl-[23%] -mt-12'}`}>
+                <div className={`relative ${variant === 'centered' ? 'max-w-[1400px] mx-auto' : 'lg:pl-[19%] -mt-12'}`}>
                     {/* Navigation Buttons - Absolute positioned for Centered */}
                     {showNavigation && variant === 'centered' && (
                         <>
@@ -155,7 +155,7 @@ const CarouselSection = <T,>({
                         </>
                     )}
  <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1400px] px-4">
+        <div className="w-full max-w-[1400px] ">
                     <Swiper
                         modules={[Navigation, Pagination]}
                         onBeforeInit={(swiper) => {
