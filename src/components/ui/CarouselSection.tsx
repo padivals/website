@@ -34,6 +34,7 @@ interface CarouselSectionProps<T> {
     loop?: boolean;
     showProgressBar?: boolean;
     showNavigation?: boolean;
+    navigationTop?: string;
 }
 
 const CarouselSection = <T,>({
@@ -53,9 +54,12 @@ const CarouselSection = <T,>({
     loop = true,
     showProgressBar = true,
     showNavigation = true,
+    navigationTop = "top-1/2",
 }: CarouselSectionProps<T>) => {
     const swiperRef = useRef<SwiperType>(null);
     const [progress, setProgress] = useState(0);
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
 
     const handleProgress = (swiper: SwiperType) => {
         const total = swiper.slides.length - (swiper.params.slidesPerView as number) + 1;
@@ -74,11 +78,13 @@ const CarouselSection = <T,>({
         const calculatedProgress = (safeCurrent / safeTotal) * 100;
 
         setProgress(calculatedProgress);
+        setIsBeginning(swiper.isBeginning);
+        setIsEnd(swiper.isEnd);
     };
 
     return (
         <section className={`${backgroundColor} py-20 overflow-hidden ${className}`}>
-            <div className={`  ${variant === 'split' ? 'ml-0' : 'mx-auto'}`}>
+            <div className={`  ${variant === 'split' ? 'md:ml-0 ml-12' : 'mx-auto'}`}>
 
                 {/* Header Section */}
                 {variant === 'centered' && title && (
@@ -105,7 +111,7 @@ const CarouselSection = <T,>({
                         {/* Top Divider Line */}
                         <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50 "></div>
 
-                        <div className="flex flex-col px-10 lg:flex-row  mb-8">
+                        <div className="flex flex-col md:px-10 lg:flex-row  mb-8">
                             <div className="lg:w-1/6   ">
                                 {label && (
                                     <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-sm font-medium">
@@ -129,13 +135,19 @@ const CarouselSection = <T,>({
                     </>
                 )}
 
-                <div className={`relative ${variant === 'centered' ? 'max-w-[1400px] mx-auto' : 'lg:pl-[19%] -mt-12'}`}>
+                <div className={`relative group ${variant === 'centered' ? 'max-w-[1400px] mx-auto' : 'lg:pl-[19%] -mt-12'}`}>
                     {/* Navigation Buttons - Absolute positioned for Centered */}
-                    {showNavigation && variant === 'centered' && (
+                    {/* Navigation Buttons - Absolute positioned for Centered */}
+                    {showNavigation && (
                         <>
                             <button
                                 onClick={() => swiperRef.current?.slidePrev()}
-                                className="absolute left-4 md:left-20 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/80 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
+                                disabled={isBeginning}
+                                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${
+                                    variant === 'centered' 
+                                        ? 'left-4 md:left-20 text-white hover:bg-white/10' 
+                                        : 'left-4 md:left-10 lg:left-[25.5%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80'
+                                } ${isBeginning ? 'group-hover:opacity-50 cursor-not-allowed' : 'group-hover:opacity-100 cursor-pointer'}`}
                                 aria-label="Previous"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -145,7 +157,12 @@ const CarouselSection = <T,>({
 
                             <button
                                 onClick={() => swiperRef.current?.slideNext()}
-                                className="absolute right-4 md:right-20 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/80 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
+                                disabled={isEnd}
+                                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 bg-[gray]/30 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${
+                                    variant === 'centered'
+                                        ? 'right-4 md:right-10 text-white hover:bg-white/10'
+                                        : 'right-4 md:right-0 border-[#0F2A1D]/30 text-[#0F2A1D]  bg-[gray]/70  hover:text-[white] hover:bg-[#0F2A1D]/80'
+                                } ${isEnd ? 'group-hover:opacity-50 cursor-not-allowed' : 'group-hover:opacity-100 cursor-pointer'}`}
                                 aria-label="Next"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -160,6 +177,8 @@ const CarouselSection = <T,>({
                         modules={[Navigation, Pagination]}
                         onBeforeInit={(swiper) => {
                             swiperRef.current = swiper;
+                            setIsBeginning(swiper.isBeginning);
+                            setIsEnd(swiper.isEnd);
                         }}
                         onSlideChange={(swiper) => handleProgress(swiper)}
                         spaceBetween={spaceBetween}

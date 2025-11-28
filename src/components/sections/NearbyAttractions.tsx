@@ -48,7 +48,8 @@ const NearbyAttractions = () => {
             centeredSlides={false}
             loop={false}
             showProgressBar={false}
-            showNavigation={false}
+            showNavigation={true}
+            navigationTop="top-[40%]"
             breakpoints={{
                 640: {
                     slidesPerView: 2.2,

@@ -68,7 +68,7 @@ const ReservationBar = ({
   return (
     <div
      ref={barRef}
-      className="fixed bottom-0 left-0 w-full z-50 py-5 px-6 md:px-10 border-t    border-white/10"
+      className="fixed bottom-0 left-0 w-full z-50 py-2 px-6 md:px-10 border-t    border-white/10"
       style={{ backgroundColor: bgColor, color: textColor }}
     >
       <div className="max-w-7xl px-12    mx-auto flex items-center justify-between gap-6 ">
@@ -165,7 +165,7 @@ const ReservationBar = ({
               children,
             })
           }
-          className="bg-white text-[#EAB361] px-6 py-3 font-semibold text-xs md:text-lg tracking-wide hover:bg-[#c1c1c1] transition-all whitespace-nowrap"
+          className="bg-white text-[#012219] px-3 py-2 font-bold text-xs md:text-md tracking-wide hover:bg-[#c1c1c1] transition-all whitespace-nowrap"
         >
           {buttonLabel}
         </button>

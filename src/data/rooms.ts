@@ -4,9 +4,9 @@ export const rooms = [
         slug: "comfort-room",
         title: "The Comfort Room",
         description:
-            "A neatly arranged room with a comfortable bed, calm interiors and essential amenities. Well suited for solo guests or pairs, it offers a simple and steady stay for up to two people.",
+            "A well-appointed split AC room designed for a calm, restful stay. It offers essential comforts, thoughtful touches and a welcoming atmosphere that makes every guest feel at ease.",
         imageColor: "bg-gray-300",
-        heroImage: "/hero-bg.png", // Placeholder, using existing image
+        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
         details: {
             size: "250 sq ft",
             occupancy: "2 Adults",
@@ -52,7 +52,7 @@ export const rooms = [
         description:
             "Practical and spacious rooms created for groups and families, offering comfortable bedding and easy shared living.",
         imageColor: "bg-gray-500",
-        heroImage: "/hero-bg.png",
+        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
         details: {
             size: "500 sq ft",
             occupancy: "4 Adults",
