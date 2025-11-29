@@ -14,7 +14,7 @@ export default function HowToGetHereSection() {
                             How to Get Here
                         </h2>
                         <p className="text-[#4A5568] text-lg font-medium leading-relaxed mb-6 max-w-[80%]">
-                            The Padival Grand Hotel sits close to Puttur's central routes, only a few minutes from the main market and local transport points.
+                            The Padival Grand Hotel sits close to Puttur&apos;s central routes, only a few minutes from the main market and local transport points.
                         </p>
 
                         <div className="grid grid-cols-[100px_1fr] gap-y-8 gap-x-4">

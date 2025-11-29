@@ -7,7 +7,6 @@ import ReservationBar from "@/components/sections/ReservationBar";
 import { rooms } from "@/data/rooms";
 import RoomCard from "@/components/ui/RoomCard";
 import CommonAmenities from "@/components/sections/CommonAmenities";
-import RelatedRooms from "@/components/sections/RelatedRooms";
 import FoodAndDining from "@/components/sections/FoodAndDining";
 import FAQSection from "@/components/sections/FAQSection";
 
@@ -22,7 +21,7 @@ export default function RoomsPage() {
             />
 
             <section className="container mx-auto px-6 py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {rooms.map((room) => (
                         <RoomCard
                             key={room.id}

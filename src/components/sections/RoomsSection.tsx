@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -13,12 +13,7 @@ import { rooms } from "@/data/rooms";
 
 const RoomsSection = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [mounted, setMounted] = useState(false);
     const swiperRef = useRef<SwiperType | null>(null);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const handleSlideChange = (swiper: SwiperType) => {
         setActiveIndex(swiper.realIndex);
@@ -132,12 +127,11 @@ const RoomsSection = () => {
                                 {/* Progress Track */}
                                 <div className="absolute top-0 left-0 w-full h-[2px] bg-white/30"></div>
 
-                                {/* Progress Fill (Timer Animation) */}
                                 <div
                                     className="absolute top-0 left-0 h-[2px] bg-white"
                                     style={{
                                         width: index < activeIndex ? "100%" : "0%",
-                                        animation: activeIndex === index && mounted ? "grow 5000ms linear forwards" : "none"
+                                        animation: activeIndex === index ? "grow 5000ms linear forwards" : "none"
                                     }}
                                 ></div>
 

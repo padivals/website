@@ -57,15 +57,18 @@ const NearbyAttractions = () => {
                 1024: {
                     slidesPerView: 2.8,
                 },
+                1280: {
+                    slidesPerView: 3.8,
+                },
             }}
             renderItem={(attraction) => (
                 <div className="group cursor-pointer ">
                     <Image
-                         src={attraction.imagesrc} width={100} height={100} alt={attraction.name} className={`w-full aspect-[3/4] mb-6 relative overflow-hidden`}
+                        src={attraction.imagesrc} width={100} height={100} alt={attraction.name} className={`w-full aspect-[3/4] mb-6 relative overflow-hidden`}
                     >
-                        
-                    </Image>         
-                                  {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div> */}
+
+                    </Image>
+                    {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div> */}
 
                     <h3 className="text-xl f text-[#012219CC] mb-3  transition-colors">
                         {attraction.name}

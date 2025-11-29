@@ -18,7 +18,11 @@ const EventSpaces = () => {
     ];
 
     return (
-        <section className="bg-[#F9F5EC] py-20 border-t border-[#A3B19C]/20">
+        <section className=" py-20 bg-white">
+            <div className="container mx-auto px-6">
+
+                <div className="w-full h-px bg-[#165F41] mb-12  "></div>
+            </div>
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Left Column: Label */}
@@ -37,7 +41,7 @@ const EventSpaces = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {spaces.map((space, index) => (
                                 <div key={index} className="flex flex-col">
-                                    <div className="relative w-full aspect-[4/3] overflow-hidden mb-6">
+                                    <div className="relative w-full aspect-[3.5/3.5] overflow-hidden mb-6">
                                         <Image
                                             src={space.image}
                                             alt={space.title}
@@ -45,10 +49,10 @@ const EventSpaces = () => {
                                             className="object-cover hover:scale-105 transition-transform duration-500"
                                         />
                                     </div>
-                                    <h3 className="text-xl font-serif text-[#0F2A1D] mb-3">
+                                    <p className="text-xl font-medium text-[#012219CC] mb-3">
                                         {space.title}
-                                    </h3>
-                                    <p className="text-gray-600 text-sm font-light leading-relaxed">
+                                    </p>
+                                    <p className="text-[#012219CC] text-sm font-medium leading-relaxed">
                                         {space.description}
                                     </p>
                                 </div>

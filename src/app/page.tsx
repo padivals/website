@@ -5,7 +5,6 @@ import ReservationBar from "@/components/sections/ReservationBar";
 import HospitalitySection from "@/components/sections/HospitalitySection";
 import NearbyAttractions from "@/components/sections/NearbyAttractions";
 import RoomsSection from "@/components/sections/RoomsSection";
-import MomentsSection from "@/components/sections/MomentsSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import EventsSection from "@/components/sections/EventsSection";
@@ -20,7 +19,7 @@ export default function Home() {
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
-      <MomentSectionTest heading="Discover Moments at The Padival Grand Hotel" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]}/>
+      <MomentSectionTest heading="Discover Moments at The Padival Grand Hotel" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} />
       {/* <MomentsSection /> */}
       <TestimonialsSection />
       <FAQSection />

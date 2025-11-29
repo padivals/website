@@ -131,35 +131,39 @@ const amenities = [
 
 const CommonAmenities = () => {
     return (
-        <section className="bg-[#F9F5EC] py-20 border-t border-[#A3B19C]/20">
+        <section className="bg-[#F9F5EC] py-20 ">
+            <div className="container mx-auto px-6">
+
+                <div className="w-full h-px bg-[#165F41] mb-12  "></div>
+            </div>
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Left Column: Title */}
                     <div className="lg:w-1/4">
-                        <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-sm font-semibold">
+                        <p className="block text-[#4A6741]  uppercase text-sm font-semibold">
                             COMMON AMENITIES
-                        </span>
+                        </p>
                     </div>
 
                     {/* Right Column: Content */}
                     <div className="lg:w-3/4">
-                        <p className="text-[#0F2A1D] text-lg font-light leading-relaxed max-w-3xl mb-12">
-                            At The Padival Grand, each amenity is thoughtfully maintained to make your stay comfortable, calm and dependable. Every facility is designed to support a smooth experience, whether you are here for a short visit or a longer stay.
+                        <p className="text-[#0F2A1D] text-lg  leading-relaxed font-medium  mb-12">
+                            At The Padival Grand, each amenity is thoughtfully maintained to make your stay comfortable, calm and dependable.<br /> Every facility is designed to support a smooth experience, whether you are here for a short visit or a longer stay.
                         </p>
 
                         <div className="space-y-12">
                             {amenities.map((category, index) => (
                                 <div key={index}>
-                                    <h3 className="text-xl font-serif text-[#0F2A1D] mb-6">
+                                    <p className="text-xl font-bold text-[#012219CC] mb-6">
                                         {category.category}
-                                    </h3>
+                                    </p>
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                                         {category.items.map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-4">
-                                                <div className="text-[#4A6741] mt-1">
+                                                <div className="text-[#4A6741] flex items-center">
                                                     {icons[item.icon as keyof typeof icons]}
                                                 </div>
-                                                <span className="text-gray-600 text-sm font-light leading-relaxed">
+                                                <span className="text-[#0F2A1D] text-sm font-medium flex items-center leading-relaxed">
                                                     {item.text}
                                                 </span>
                                             </div>

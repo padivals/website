@@ -34,7 +34,7 @@ const EventsSection = () => {
                     {/* Right Side - Description */}
                     <div className="lg:w-2/3">
                         <p className="text-gray-600 text-lg leading-relaxed mb-6 font-light">
-                            Celebrate life's special moments or host purposeful corporate
+                            Celebrate life&apos;s special moments or host purposeful corporate
                             gatherings with ease and elegance. Our thoughtfully designed
                             spaces adapt seamlessly to your occasion.
                         </p>

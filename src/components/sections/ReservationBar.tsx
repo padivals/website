@@ -27,7 +27,6 @@ const ReservationBar = ({
   buttonLabel = "Book Now",
   bgColor = "#012219",
   textColor = "#FFFFFF",
-  highlightColor = "#1D8842",
   onSubmit,
 }: Props) => {
   const [openDate, setOpenDate] = useState(false);
@@ -35,9 +34,9 @@ const ReservationBar = ({
   const [dates, setDates] = useState<Date[]>([]);
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
-    const barRef = useRef<HTMLDivElement | null>(null);
+  const barRef = useRef<HTMLDivElement | null>(null);
 
- useEffect(() => {
+  useEffect(() => {
     gsap.fromTo(
       barRef.current,
       { y: 150, opacity: 0 },
@@ -67,7 +66,7 @@ const ReservationBar = ({
   const formattedTo = dates[1] ? format(dates[1], "dd / MM / yyyy ") : " -- / -- / ---- ";
   return (
     <div
-     ref={barRef}
+      ref={barRef}
       className="fixed bottom-0 left-0 w-full z-50 py-2 px-6 md:px-10 border-t    border-white/10"
       style={{ backgroundColor: bgColor, color: textColor }}
     >
@@ -89,7 +88,7 @@ const ReservationBar = ({
               setOpenGuests(false);
             }}
             className="flex items-center gap-3 border-b-2 border-white/50 py-2 cursor-pointer min-w-[240px] px-6 justify-center relative"
-           >
+          >
             <span className="text-xs md:text-sm tracking-wider">{formattedFrom}</span>
             <span className="text-white/60 text-xs px-3">    -   </span>
             <span className="text-xs md:text-sm tracking-wider">{formattedTo}</span>
@@ -100,7 +99,7 @@ const ReservationBar = ({
                 opacity-0 translate-y-2 animate-fadeSlide"
                 onClick={(e) => e.stopPropagation()}
               >
-              <DateRangePicker value={dates} onChange={setDates} />
+                <DateRangePicker value={dates} onChange={setDates} />
 
               </div>
             )}

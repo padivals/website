@@ -29,7 +29,7 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Left Label */}
                     <div className="lg:w-1/4">
-                        <span className="text-[#4A6C58] uppercase tracking-widest text-sm font-medium">
+                        <span className="text-[#165F41CC] uppercase  text-sm font-medium">
                             OUR OTHER ROOMS
                         </span>
                     </div>
@@ -46,9 +46,9 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>
-                                <h3 className="text-lg font-serif text-[#0F2A1D] group-hover:text-[#1B4D3E] transition-colors">
+                                <p className="text-lg font-medium text-[#0F2A1D] group-hover:text-[#1B4D3E] transition-colors">
                                     {room.title}
-                                </h3>
+                                </p>
                             </Link>
                         ))}
                     </div>

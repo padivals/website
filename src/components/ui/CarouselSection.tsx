@@ -28,7 +28,12 @@ interface CarouselSectionProps<T> {
 
     // Swiper Config
     slidesPerView?: number | 'auto';
-    breakpoints?: any;
+    breakpoints?: {
+        [width: number]: {
+            slidesPerView: number | 'auto';
+            spaceBetween?: number;
+        };
+    };
     spaceBetween?: number;
     centeredSlides?: boolean;
     loop?: boolean;
@@ -62,10 +67,6 @@ const CarouselSection = <T,>({
     const [isEnd, setIsEnd] = useState(false);
 
     const handleProgress = (swiper: SwiperType) => {
-        const total = swiper.slides.length - (swiper.params.slidesPerView as number) + 1;
-        const current = swiper.realIndex;
-        // Simple progress calculation
-        const prog = ((current + 1) / swiper.slides.length) * 100;
 
         // If loop is true, the calculation can be tricky. 
         // Let's use the logic from MomentsSection which seemed to work for them:
@@ -95,7 +96,7 @@ const CarouselSection = <T,>({
                             </span>
                         )}
                         <h2 className="text-3xl md:text-4xl font-serif text-[#0F2A1D] tracking-wide">
-                            {title}
+                            {title}ss
                         </h2>
                         {description && (
                             <p className="mt-4 text-[#012219CC] max-w-2xl mx-auto">
@@ -143,11 +144,10 @@ const CarouselSection = <T,>({
                             <button
                                 onClick={() => swiperRef.current?.slidePrev()}
                                 disabled={isBeginning}
-                                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${
-                                    variant === 'centered' 
-                                        ? 'left-4 md:left-20 text-white hover:bg-white/10' 
-                                        : 'left-4 md:left-10 lg:left-[25.5%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80'
-                                } ${isBeginning ? 'group-hover:opacity-50 cursor-not-allowed' : 'group-hover:opacity-100 cursor-pointer'}`}
+                                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === 'centered'
+                                    ? 'left-4 md:left-20 text-white hover:bg-white/10'
+                                    : 'left-4 md:left-10 lg:left-[25.5%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80'
+                                    } ${isBeginning ? 'group-hover:opacity-50 cursor-not-allowed' : 'group-hover:opacity-100 cursor-pointer'}`}
                                 aria-label="Previous"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -158,11 +158,10 @@ const CarouselSection = <T,>({
                             <button
                                 onClick={() => swiperRef.current?.slideNext()}
                                 disabled={isEnd}
-                                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 bg-[gray]/30 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${
-                                    variant === 'centered'
-                                        ? 'right-4 md:right-10 text-white hover:bg-white/10'
-                                        : 'right-4 md:right-0 border-[#0F2A1D]/30 text-[#0F2A1D]  bg-[gray]/70  hover:text-[white] hover:bg-[#0F2A1D]/80'
-                                } ${isEnd ? 'group-hover:opacity-50 cursor-not-allowed' : 'group-hover:opacity-100 cursor-pointer'}`}
+                                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 bg-[gray]/30 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === 'centered'
+                                    ? 'right-4 md:right-10 text-white hover:bg-white/10'
+                                    : 'right-4 md:right-0 border-[#0F2A1D]/30 text-[#0F2A1D]  bg-[gray]/70  hover:text-[white] hover:bg-[#0F2A1D]/80'
+                                    } ${isEnd ? 'group-hover:opacity-50 cursor-not-allowed' : 'group-hover:opacity-100 cursor-pointer'}`}
                                 aria-label="Next"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -171,32 +170,32 @@ const CarouselSection = <T,>({
                             </button>
                         </>
                     )}
- <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1400px] ">
-                    <Swiper
-                        modules={[Navigation, Pagination]}
-                        onBeforeInit={(swiper) => {
-                            swiperRef.current = swiper;
-                            setIsBeginning(swiper.isBeginning);
-                            setIsEnd(swiper.isEnd);
-                        }}
-                        onSlideChange={(swiper) => handleProgress(swiper)}
-                        spaceBetween={spaceBetween}
-                        slidesPerView={slidesPerView}
-                        centeredSlides={centeredSlides}
-                        loop={loop}
-                        breakpoints={breakpoints}
-                        className="w-full"
-                    >
-                        {items.map((item, index) => (
-                            <SwiperSlide key={keyExtractor(item, index)} className="transition-all duration-300">
-                                {({ isActive }) => renderItem(item, isActive)}
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            </div>
-        
+                    <div className="w-full flex ">
+                        <div className="w-full max-w-[1400px] xl:max-w-full">
+                            <Swiper
+                                modules={[Navigation, Pagination]}
+                                onBeforeInit={(swiper) => {
+                                    swiperRef.current = swiper;
+                                    setIsBeginning(swiper.isBeginning);
+                                    setIsEnd(swiper.isEnd);
+                                }}
+                                onSlideChange={(swiper) => handleProgress(swiper)}
+                                spaceBetween={spaceBetween}
+                                slidesPerView={slidesPerView}
+                                centeredSlides={centeredSlides}
+                                loop={loop}
+                                breakpoints={breakpoints}
+                                className="w-full"
+                            >
+                                {items.map((item, index) => (
+                                    <SwiperSlide key={keyExtractor(item, index)} className="transition-all duration-300">
+                                        {({ isActive }) => renderItem(item, isActive)}
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+                    </div>
+
 
                     {/* Custom Progress Bar */}
                     {showProgressBar && (
