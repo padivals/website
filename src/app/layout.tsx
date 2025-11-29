@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -76,7 +77,7 @@ export default function RootLayout({
       <body
         className={`${cormorantGaramond.variable} ${manrope.variable} antialiased font-sans`}
       >
-        {children}
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );

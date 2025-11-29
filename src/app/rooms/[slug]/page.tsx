@@ -3,17 +3,12 @@ import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/ui/PageHero";
-import ReservationBar from "@/components/sections/ReservationBar";
 import RoomDetailsSection from "@/components/sections/RoomDetailsSection";
 import RoomImagesSection from "@/components/sections/RoomImagesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import OtherRoomsSection from "@/components/sections/OtherRoomsSection";
 import { rooms } from "@/data/rooms";
-import RelatedRooms from "@/components/sections/RelatedRooms";
-import CommonAmenities from "@/components/sections/CommonAmenities";
-import FoodAndDining from "@/components/sections/FoodAndDining";
-import FAQSection from "@/components/sections/FAQSection";
 
 export async function generateStaticParams() {
     return rooms.map((room) => ({

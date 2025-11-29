@@ -7,8 +7,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import RoomCard from "../ui/RoomCard";
 
+interface Room {
+    id: number;
+    title: string;
+    description: string;
+    slug: string;
+    heroImage: string;
+    imageColor?: string;
+}
+
 interface RelatedRoomsProps {
-    rooms: any[];
+    rooms: Room[];
 }
 
 const RelatedRooms = ({ rooms }: RelatedRoomsProps) => {

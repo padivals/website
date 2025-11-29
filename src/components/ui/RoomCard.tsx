@@ -26,17 +26,17 @@ const RoomCard = ({ title, description, slug, heroImage, imageColor }: RoomCardP
 
             {/* Content */}
             <div className="flex flex-col flex-grow">
-                <h3 className="text-xl font-serif text-[#0F2A1D] mb-3">
+                <p className="text-xl font-medium text-[#0F2A1D] mb-3">
                     {title}
-                </h3>
-                <p className="text-gray-600 text-sm font-light leading-relaxed mb-6 flex-grow">
+                </p>
+                <p className="text-sm font-medium text-[#012219CC] leading-relaxed mb-6 flex-grow">
                     {description}
                 </p>
 
                 <div>
                     <Link
                         href={`/rooms/${slug}`}
-                        className="inline-block border border-[#4A6741] text-[#1B4D3E] px-6 py-2 text-xs font-semibold uppercase tracking-wider hover:bg-[#1B4D3E] hover:text-white transition-colors"
+                        className="inline-block border border-[#4A6741] text-[#165F41] px-5 py-3 text-xs font-extrabold uppercase tracking-wider hover:bg-[#1B4D3E] hover:text-white transition-colors"
                     >
                         Learn More
                     </Link>

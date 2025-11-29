@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const FoodAndDining = () => {
     return (
-        <section className="bg-[#F9F5EC] py-20 border-t border-[#A3B19C]/20">
+        <section className="bg-[#F9F5EC] py-20 ">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Left Column: Spacer/Label (Empty to match alignment of previous sections if needed, or just full width) */}
@@ -40,7 +40,7 @@ const FoodAndDining = () => {
 
                     <div className="lg:w-3/4">
                         <div className="flex justify-between items-end mb-8">
-                            <h2 className="text-4xl font-serif text-[#0F2A1D]">
+                            <h2 className="text-4xl font-serif font-semibold text-[#0F2A1D]">
                                 Food and Dining
                             </h2>
                             <Link
@@ -51,7 +51,7 @@ const FoodAndDining = () => {
                             </Link>
                         </div>
 
-                        <div className="relative w-full aspect-[16/9] mb-8 overflow-hidden">
+                        <div className="relative w-full aspect-[16/6] mb-8 overflow-hidden">
                             <Image
                                 src="/hero-bg.png" // Placeholder
                                 alt="Dining at Padival Grand"
@@ -60,8 +60,8 @@ const FoodAndDining = () => {
                             />
                         </div>
 
-                        <p className="text-[#0F2A1D] text-lg font-light leading-relaxed">
-                            At The Padival Grand, every meal is thoughtfully served through Padival's Palara, our pure vegetarian sister brand located within the same building. Guests enjoy familiar, homely flavours prepared with care, offering a calm, satisfying dining experience that feels dependable whether you choose a light snack or a complete meal.
+                        <p className="text-[#012219CC] text-lg font-medium leading-relaxed">
+                            At The Padival Grand, every meal is thoughtfully served through Padival&apos;s Palara, our pure vegetarian sister brand located within the same building. Guests enjoy familiar, homely flavours prepared with care, offering a calm, satisfying dining experience that feels dependable whether you choose a light snack or a complete meal.
                         </p>
                     </div>
                 </div>

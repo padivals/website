@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import Image from "next/image";
 import ReservationBar from "@/components/sections/ReservationBar";
 import FAQSection from "@/components/sections/FAQSection";
 import ContactHeroSection from "@/components/sections/ContactHeroSection";

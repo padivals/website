@@ -9,6 +9,7 @@ import Image from "next/image";
 interface VideoCarouselProps {
   heading?: string;
   videos?: string[];
+  backgroundColor?: string;
 }
 
 const DEFAULT_VIDEOS = [
@@ -22,6 +23,7 @@ const DEFAULT_VIDEOS = [
 export default function VideoCarousel({
   heading = "Discover Moments at The Padival Grand Hotel",
   videos = DEFAULT_VIDEOS,
+  backgroundColor = "bg-[#F9F5EC]",
 }: VideoCarouselProps) {
   const VIDEOS = videos;
   const [index, setIndex] = useState(0);
@@ -50,7 +52,7 @@ export default function VideoCarousel({
     const centerCard = cardRefs.current[2];
     if (!centerCard) return;
     const activeVid = centerCard.querySelector(".active-vid") as HTMLVideoElement;
-    
+
     if (activeVid) {
       if (activeVid.paused) {
         activeVid.play();
@@ -81,7 +83,7 @@ export default function VideoCarousel({
     const distance = touchStartX.current - touchEndX.current;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe) next();
     if (isRightSwipe) prev();
   };
@@ -93,7 +95,7 @@ export default function VideoCarousel({
    */
   const animateVideo = (card: HTMLDivElement, newSrc: string, isCenter: boolean) => {
     const dir = directionRef.current; // 1 = next (move left), -1 = prev (move right)
-    
+
     const oldVid = card.querySelector(".active-vid") as HTMLVideoElement;
     const newVid = card.querySelector(".incoming-vid") as HTMLVideoElement;
 
@@ -102,10 +104,10 @@ export default function VideoCarousel({
     // 1. Prepare New Video (Hidden initially)
     newVid.src = newSrc;
     newVid.currentTime = 0;
-    
+
     // Play/Pause logic
     if (isCenter && isPlaying) {
-      newVid.play().catch(() => {});
+      newVid.play().catch(() => { });
     } else {
       newVid.pause();
     }
@@ -115,13 +117,13 @@ export default function VideoCarousel({
     // If Prev (dir=-1): New slides in from Left (-100%)
     const startX = dir > 0 ? "100%" : "-100%";
 
-    gsap.set(newVid, { 
-      x: startX, 
+    gsap.set(newVid, {
+      x: startX,
       zIndex: 2, // On top
       display: "block"
     });
-    
-    gsap.set(oldVid, { 
+
+    gsap.set(oldVid, {
       zIndex: 1, // Underneath
       x: "0%"    // Stay put (or slight parallax)
     });
@@ -147,7 +149,7 @@ export default function VideoCarousel({
     tl.add(() => {
       oldVid.classList.remove("active-vid");
       oldVid.classList.add("incoming-vid");
-      
+
       newVid.classList.remove("incoming-vid");
       newVid.classList.add("active-vid");
 
@@ -166,9 +168,10 @@ export default function VideoCarousel({
       if (activeVid) {
         const offset = [-2, -1, 0, 1, 2][i];
         activeVid.src = getVid(offset);
-        if (i === 2) activeVid.play().catch(() => {});
+        if (i === 2) activeVid.play().catch(() => { });
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Run once on mount
 
   // Handle Index Change (Animation)
@@ -182,32 +185,33 @@ export default function VideoCarousel({
 
       animateVideo(card, newSrc, isCenter);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center py-0 md:py-8  bg-[#F9F5EC] overflow-hidden md:min-h-[800px]">
-      
+    <div className={`w-full flex flex-col justify-center items-center py-0 md:py-8 ${backgroundColor} overflow-hidden md:min-h-[800px]`}>
+
       {/* <h2 className="text-3xl md:text-4xl font-serif text-[#1A3C34] mb-12 tracking-wide text-center">
         {heading}
       </h2> */}
-<div className="items-center py-20">
-    <ScrollReveal
-  enableBlur={false}
-  baseOpacity={0}
-  baseRotation={0}
-  rotationEnd="top center"
-  wordAnimationEnd="top 05%"
-  containerClassName="text-center"
-  textClassName="text-[#012219] text-3xl md:text-[42px] font-serif font-medium"
-  blurStrength={10}
->
-{heading}
+      <div className="items-center py-20">
+        <ScrollReveal
+          enableBlur={false}
+          baseOpacity={0}
+          baseRotation={0}
+          rotationEnd="top center"
+          wordAnimationEnd="top 05%"
+          containerClassName="text-center"
+          textClassName="text-[#012219] text-3xl md:text-[42px] font-serif font-medium"
+          blurStrength={10}
+        >
+          {heading}
 
-</ScrollReveal>
-</div>
+        </ScrollReveal>
+      </div>
 
       {/* Container: items-end for bottom alignment */}
-      <div 
+      <div
         className="w-full md:w-[120%] flex justify-center items-end gap-3 md:gap-10 touch-pan-y"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -219,39 +223,39 @@ export default function VideoCarousel({
 
         {/* Left Mid */}
         <Card refIndex={1} size="md" registerRef={registerRef}>
-          <button 
+          <button
             onClick={prev}
             className="w-12 h-12 rounded-full hidden md:block  flex items-center justify-center hover:bg-white/10 transition-colors"
           >
             {/* <ChevronLeft size={24} className="text-white" /> */}
-            <Image src='/svgs/leftArrow.svg' alt="leftArrow" height={64} width={64}/>
+            <Image src='/svgs/leftArrow.svg' alt="leftArrow" height={64} width={64} />
           </button>
         </Card>
 
         {/* Center */}
-        <Card 
-          refIndex={2} 
-          size="lg" 
-          main 
+        <Card
+          refIndex={2}
+          size="lg"
+          main
           registerRef={registerRef}
           onEnded={next} // Auto-slide on end
         >
-           {/* Play/Pause Button */}
-           <button 
-             onClick={togglePlay}
-             className="absolute bottom-6 right-5 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all z-30"
-           >
-             {isPlaying ? <Pause size={20} fill="white" /> : <Play size={20} fill="white" />}
-           </button>
+          {/* Play/Pause Button */}
+          <button
+            onClick={togglePlay}
+            className="absolute bottom-6 right-5 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all z-30"
+          >
+            {isPlaying ? <Pause size={20} fill="white" /> : <Play size={20} fill="white" />}
+          </button>
         </Card>
 
         {/* Right Mid */}
         <Card refIndex={3} size="md" registerRef={registerRef}>
-          <button 
+          <button
             onClick={next}
             className="w-12 h-12 rounded-full hidden md:block  flex items-center justify-center hover:bg-white/10 transition-colors"
           >
-           <Image src='/svgs/rightArrow.svg' alt="rightArrow" height={74  } width={74}/>
+            <Image src='/svgs/rightArrow.svg' alt="rightArrow" height={74} width={74} />
           </button>
         </Card>
 
@@ -262,11 +266,11 @@ export default function VideoCarousel({
 
       {/* Progress Bar */}
       <div className=" hidden md:block  mt-12 w-[80%] md:w-[31rem] h-1 bg-[#F9F2E8] rounded-full relative overflow-hidden">
-        <div 
+        <div
           className="absolute top-0 bottom-0 bg-[#165F41] transition-all duration-500 ease-out"
-          style={{ 
+          style={{
             left: `${(index / VIDEOS.length) * 100}%`,
-            width: `${(1 / VIDEOS.length) * 100}%` 
+            width: `${(1 / VIDEOS.length) * 100}%`
           }}
         />
       </div>
@@ -293,11 +297,11 @@ function Card({
   onEnded,
 }: CardProps) {
   const sizeMap = {
-    sm: "hidden md:block md:w-[420px] h-[60vh] opacity-80", 
-    md: "w-[28vw] md:w-[400px] h-[45vh] md:h-[72vh]",            
-    lg: "w-[65vw] md:w-[470px] h-[55vh] md:h-[85vh]",            
+    sm: "hidden md:block md:w-[420px] h-[60vh] opacity-80",
+    md: "w-[28vw] md:w-[400px] h-[45vh] md:h-[72vh]",
+    lg: "w-[65vw] md:w-[470px] h-[55vh] md:h-[85vh]",
   };
-  
+
 
   return (
     <div
@@ -331,10 +335,10 @@ function Card({
           {children}
         </div>
       </div>
-    
-    
+
+
 
     </div>
-    
+
   );
 }

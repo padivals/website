@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/dark.css";
 import "./custom-flatpickr.css";

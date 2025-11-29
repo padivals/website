@@ -39,10 +39,10 @@ export default function AboutPage() {
                 description={
                     <>
                         <p className="mb-6">
-                            Mahaveer Ventures is the steady presence that anchors The Padival Grand Hotel. As the parent group, it brings the clarity, structure, and long-term vision that shape the way we operate. The group's identity is intentionally minimal and refined, built on trust, consistency, and a quiet confidence that lets each of its ventures shine.
+                            Mahaveer Ventures is the steady presence that anchors The Padival Grand Hotel. As the parent group, it brings the clarity, structure, and long-term vision that shape the way we operate. The group&apos;s identity is intentionally minimal and refined, built on trust, consistency, and a quiet confidence that lets each of its ventures shine.
                         </p>
                         <p>
-                            Guided by these values, Mahaveer Ventures provides the foundation that allows The Padival Grand to deliver hospitality that feels dependable, warm, and thoughtfully crafted. Every aspect of the hotel is strengthened by the group's commitment to quality, discipline, and purposeful design, ensuring that our guests experience comfort supported by an organisation that believes in doing things with care and intention.
+                            Guided by these values, Mahaveer Ventures provides the foundation that allows The Padival Grand to deliver hospitality that feels dependable, warm, and thoughtfully crafted. Every aspect of the hotel is strengthened by the group&apos;s commitment to quality, discipline, and purposeful design, ensuring that our guests experience comfort supported by an organisation that believes in doing things with care and intention.
                         </p>
                     </>
                 }

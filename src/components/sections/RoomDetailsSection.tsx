@@ -13,10 +13,10 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left: Details */}
                 <div className="flex flex-col">
-                    <h2 className="text-3xl md:text-4xl font-serif text-[#0F2A1D] mb-6">
+                    <p className="text-3xl  font-semibold  text-[#0F2A1D] mb-6">
                         {title}
-                    </h2>
-                    <p className="text-lg text-gray-700 font-light leading-relaxed mb-8">
+                    </p>
+                    <p className="text-lg text-gray-700 font-medium leading-relaxed mb-8">
                         {description}
                     </p>
 
@@ -28,12 +28,12 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
 
                     <div className="w-full h-px bg-[#A3B19C]/50 mb-12"></div>
 
-                    <h3 className="text-2xl font-serif text-[#0F2A1D] mb-6">
+                    <p className="text-2xl  font-medium text-[#0F2A1D] mb-4">
                         Accommodation details
-                    </h3>
-                    <ul className="space-y-2">
+                    </p>
+                    <ul className="">
                         {features.map((feature, index) => (
-                            <li key={index} className="text-gray-700 font-light">
+                            <li key={index} className="text-[#012219CC] font-medium">
                                 {feature}
                             </li>
                         ))}
