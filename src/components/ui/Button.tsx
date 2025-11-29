@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
     ...props
 }) => {
     const baseStyles =
-        "px-8 py-3 text-sm font-bold uppercase tracking-wider transition-colors duration-300 flex items-center justify-center";
+        " text-sm font-bold uppercase tracking-wider transition-colors duration-300 flex items-center justify-center";
 
     const variants = {
         primary: "bg-[#1B4D3E] hover:bg-[#143a2f] text-[#EAB361]",
