@@ -91,7 +91,7 @@ const CarouselSection = <T,>({
         {variant === "centered" && title && (
           <div className="text-center mb-12">
             {label && (
-              <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-sm font-semibold mb-4">
+              <span className="block text-[#165F41CC] font-sans tracking-widest uppercase text-sm font-semibold mb-4">
                 {label}
               </span>
             )}

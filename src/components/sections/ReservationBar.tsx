@@ -53,7 +53,7 @@ const ReservationBar = ({
 
   return (
     <div
-      className="relative w-full py-5 px-8 md:px-12 backdrop-blur-md border-t border-white/10"
+      className="relative w-full py-4  px-8 md:px-12 backdrop-blur-md border-t border-white/10"
       style={{ backgroundColor: bgColor, color: textColor }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-6">

@@ -299,7 +299,7 @@ function Card({
   const sizeMap = {
     sm: "hidden md:block md:w-[420px] h-[60vh] opacity-80",
     md: "w-[28vw] md:w-[400px] h-[45vh] md:h-[72vh]",
-    lg: "w-[65vw] md:w-[470px] h-[55vh] md:h-[85vh]",
+    lg: "w-[65vw] md:w-[470px] h-[55vh] md:h-[85vh]", 
   };
 
 
