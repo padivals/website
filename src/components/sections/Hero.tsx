@@ -35,7 +35,7 @@ const Hero = () => {
   return (
     <div
       id="hero-section"
-      className="sticky top-0 w-full h-screen min-h-[800px] overflow-hidden -z-10"
+      className="sticky top-0 w-full h-screen overflow-hidden -z-10"
     >
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -48,7 +48,8 @@ const Hero = () => {
           quality={100}
         />
       </div>
-
+{/* Dark Gradient Overlay */}
+<div className="absolute inset-0 z-10 h-64 pointer-events-none bg-gradient-to-b from-[#000000a0] via-[#23222217]  to-transparent"></div>
       {/* Content Container */}
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">
@@ -60,7 +61,7 @@ const Hero = () => {
       </div>
 
       {/* Reservation Bar - Positioned at bottom of hero */}
-      <div
+      {/* <div
         className="absolute bottom-0 left-0 right-0 z-20 transition-all duration-300 ease-out hidden lg:block"
         style={{
           opacity: reservationBarOpacity,
@@ -69,7 +70,7 @@ const Hero = () => {
         }}
       >
         <ReservationBar />
-      </div>
+      </div> */}
     </div>
   );
 };

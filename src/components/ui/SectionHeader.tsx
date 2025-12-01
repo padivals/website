@@ -30,7 +30,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
         </span>
       )}
       <h2
-        className={`text-4xl md:text-5xl font-serif ${textColor} leading-tight font-semibold max-w-3xl`}
+        className={`text-4xl md:text-5xl lg2:text-6xl font-serif ${textColor} leading-tight font-semibold max-w-3xl`}
       >
         {heading}
       </h2>

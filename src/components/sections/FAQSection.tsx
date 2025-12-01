@@ -35,7 +35,7 @@ const FAQSection = () => {
 
   return (
     <section className="bg-white py-20">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto md:px-16 px-6">
         {/* Top Divider Line */}
         <div className="w-full h-px bg-[#165F41] mb-12 "></div>
 

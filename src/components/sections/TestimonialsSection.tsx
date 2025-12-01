@@ -69,9 +69,9 @@ const TestimonialsSection = ({
 
   return (
     <section className="bg-[#F9F5EC] py-20">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto md:pl-16 px-8">
         {/* Top Divider Line */}
-        <div className="w-full h-px bg-[#165F41] mb-12 opacity-50"></div>
+        <div className="md:mr-16  h-px bg-[#165F41] mb-12 opacity-50"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Side - Header */}
@@ -126,7 +126,7 @@ const TestimonialsSection = ({
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mt-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mt-16 gap-8">
           {/* Rating Info */}
           <div>
             <h3 className="text-[32px] font-semibold text-[#0F2A1D] mb-1 font-sans">
@@ -165,56 +165,36 @@ const TestimonialsSection = ({
           </div>
 
           {/* Controls */}
-          <div className="flex items-center gap-6 w-full md:w-auto">
+          <div className="flex items-center gap-8 w-full md:w-auto">
             {/* Progress Bar */}
-            <div className="flex-1 md:w-64 h-1 bg-[#E2E8F0] rounded-full overflow-hidden">
+            <div className="flex-1 md:w-84 h-1 bg-[#E2E8F0] rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#1B4D3E] transition-all duration-300"
+                className="h-full bg-[#1B4D3E] transition-all duration-300 "
                 style={{ width: `${progress}%` }}
               ></div>
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex gap-4">
+            <div className="flex pr-12 gap-4  ">
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
-                className="text-[#165F41] hover:opacity-70 transition-opacity w-10"
+                className="text-[#165F41] hover:opacity-70 transition-opacity "
                 aria-label="Previous"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-2.5 h-1.5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 19.5 8.25 12l7.5-7.5"
-                  />
-                </svg>
+               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 11L1 6L6 1" stroke="#165F41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
               </button>
               <button
                 onClick={() => swiperRef.current?.slideNext()}
-                className="text-[#1B4D3E] hover:opacity-70 transition-opacity"
+                className="text-[#1B4D3E] hover:opacity-70 transition-opacity "
                 aria-label="Next"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
+           <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6L1 11" stroke="#165F41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
               </button>
             </div>
           </div>

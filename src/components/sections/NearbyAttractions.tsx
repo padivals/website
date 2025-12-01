@@ -59,7 +59,7 @@ const NearbyAttractions = () => {
           slidesPerView: 2.8,
         },
         1280: {
-          slidesPerView: 3.8,
+          slidesPerView: 3.2,
         },
       }}
       renderItem={(attraction) => (
@@ -73,10 +73,10 @@ const NearbyAttractions = () => {
           ></Image>
           {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div> */}
 
-          <h3 className="text-2xl font-sans font-medium text-[#012219CC] mb-3  transition-colors">
+          <h3 className="text-2xl  font-medium text-[#012219CC] mb-3  transition-colors">
             {attraction.name}
           </h3>
-          <p className="text-[#012219CC] text-xl font-medium leading-relaxed">
+          <p className="text-[#012219CC] text-lg font-medium leading-relaxed">
             {attraction.description}
           </p>
         </div>

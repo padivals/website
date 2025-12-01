@@ -12,15 +12,15 @@ import FAQSection from "@/components/sections/FAQSection";
 
 export default function RoomsPage() {
     return (
-        <main className="min-h-screen flex flex-col relative pb-24 bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
             <Header />
             <PageHero
-                title="Our Rooms"
-                subtitle="Accommodation"
-                image="/hero-bg.png"
+                title=""
+                subtitle=""
+                image="/roomsImg/bgImg1.png"
             />
 
-            <section className="container mx-auto px-6 py-20">
+            <section className="container mx-auto px-16 py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {rooms.map((room) => (
                         <RoomCard
@@ -39,7 +39,10 @@ export default function RoomsPage() {
             <CommonAmenities />
             <FoodAndDining />
             <FAQSection />
-            <ReservationBar />
+            <section className="hidden md:block">
+                 <ReservationBar />
+            </section>
+           
             <Footer />
         </main>
     );

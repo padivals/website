@@ -112,11 +112,11 @@ const CarouselSection = <T,>({
             {/* Top Divider Line */}
             <div className=" h-px bg-[#165F41] mb-12 opacity-50 mx-6 md:mx-12 lg:mx-20"></div>
 
-            <div className="px-6 md:px-12 lg:px-20">
+            <div className="px-6 md:px-12 lg:px-10 pb-14">
               <div className="flex flex-col md:px-10 lg:flex-row gap-4 lg:gap-6 mb-6">
-                <div className="lg:w-1/6">
+                <div className="lg:w-1/7">
                   {label && (
-                    <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-sm font-medium">
+                    <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-md font-medium">
                       {label}
                     </span>
                   )}
@@ -145,15 +145,14 @@ const CarouselSection = <T,>({
             }`}
         >
           {/* Navigation Buttons - Absolute positioned for Centered */}
-          {/* Navigation Buttons - Absolute positioned for Centered */}
           {showNavigation && (
             <>
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
                 disabled={isBeginning}
-                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === "centered"
+                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-12 h-12  border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === "centered"
                     ? "left-4 md:left-20 text-white hover:bg-white/10"
-                    : "left-4 md:left-10 lg:left-[25.5%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80"
+                    : "left-4 md:left-10 lg:left-[24.2%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80"
                   } ${isBeginning
                     ? "group-hover:opacity-50 cursor-not-allowed"
                     : "group-hover:opacity-100 cursor-pointer"
@@ -179,7 +178,7 @@ const CarouselSection = <T,>({
               <button
                 onClick={() => swiperRef.current?.slideNext()}
                 disabled={isEnd}
-                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-10 h-10 bg-[gray]/30 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === "centered"
+                className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-12 h-12 bg-[gray]/30 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === "centered"
                     ? "right-4 md:right-10 text-white hover:bg-white/10"
                     : "right-4 md:right-0 border-[#0F2A1D]/30 text-[#0F2A1D]  bg-[gray]/70  hover:text-[white] hover:bg-[#0F2A1D]/80"
                   } ${isEnd

@@ -25,7 +25,7 @@ const TextSection: React.FC<TextSectionProps> = ({
                     align={align}
                     className="mb-8"
                 />
-                <p className="max-w-4xl xl:max-w-6xl mx-auto text-[#012219CC] text-lg md:text-xl font-medium leading-relaxed">
+                <p className="max-w-4xl xl:max-w-5xl mx-auto text-[#012219CC] text-lg md:text-lg font-medium leading-relaxed">
                     {description}
                 </p>
             </div>

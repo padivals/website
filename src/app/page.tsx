@@ -9,10 +9,11 @@ import FAQSection from "@/components/sections/FAQSection";
 import EventsSection from "@/components/sections/EventsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import MomentSectionTest from "@/components/sections/MomentSectionTest";
+import ReservationBar from "@/components/sections/ReservationBar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col relative pb-24">
+    <main className="min-h-screen flex flex-col relative ">
       <Header />
       <Hero />
       <HospitalitySection />
@@ -34,6 +35,10 @@ export default function Home() {
       <EventsSection />
       <ContactSection />
       <Footer />
+
+         <section className="hidden lg:block">
+        <ReservationBar />
+      </section>
     </main>
   );
 }
