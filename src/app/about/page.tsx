@@ -8,12 +8,14 @@ import HalfHeroSection from "@/components/sections/HalfHeroSection";
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen flex flex-col relative pb-24 bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
             <Header />
 
             <HalfHeroSection title="Who We Are" />
+        
+          <section className="md:px-16 px-6">
 
-            {/* History Section */}
+              {/* History Section */}
             <ContentSection
                 title="The Padival Grand Hotel"
                 description={
@@ -46,15 +48,22 @@ export default function AboutPage() {
                         </p>
                     </>
                 }
-                image="/mahaveer-ventures.png" // Placeholder (Logo placeholder in screenshot)
+                image="/mahaveerImg.png" // Placeholder (Logo placeholder in screenshot)
                 imagePosition="left"
             />
 
             <WhatToExpectSection />
 
-            <FAQSection />
-
+            
+          </section>
+          <FAQSection />
+          
+          <section className="hidden md:block">
             <ReservationBar />
+
+
+          </section>
+
             <Footer />
         </main>
     );

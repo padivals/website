@@ -17,15 +17,15 @@ const TextSection: React.FC<TextSectionProps> = ({
     className = "",
 }) => {
     return (
-        <section className={`relative bg-white py-20 md:py-22 ${className}`}>
-            <div className="container mx-auto px-6 text-center">
+        <section className={`relative bg-white  py-8 md:py-22 ${className}`}>
+            <div className="container mx-auto px-6 md:text-center text-start">
                 <SectionHeader
                     label={label}
                     heading={heading}
                     align={align}
                     className="mb-8"
                 />
-                <p className="max-w-4xl xl:max-w-6xl mx-auto text-[#012219CC] text-lg md:text-xl font-medium leading-relaxed">
+                <p className="max-w-4xl xl:max-w-5xl mx-auto text-[#012219CC] text-lg md:text-lg font-medium leading-relaxed">
                     {description}
                 </p>
             </div>

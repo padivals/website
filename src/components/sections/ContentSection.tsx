@@ -19,7 +19,7 @@ const ContentSection = ({
     textColor = "text-[#012219]",
 }: ContentSectionProps) => {
     return (
-        <section className={`${bgColor} py-20`}>
+        <section className={`${bgColor} py-10`}>
             <div className="container mx-auto ">
                 <div className={`flex flex-col lg:flex-row gap-12 items-center ${imagePosition === "left" ? "lg:flex-row-reverse" : ""}`}>
                     {/* Text Content */}

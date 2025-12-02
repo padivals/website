@@ -12,16 +12,16 @@ import FAQSection from "@/components/sections/FAQSection";
 
 export default function RoomsPage() {
     return (
-        <main className="min-h-screen flex flex-col relative pb-24 bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
             <Header />
             <PageHero
-                title="Our Rooms"
-                subtitle="Accommodation"
-                image="/hero-bg.png"
+                underlineClass="hidden"
+                image="/roomsImg/bgImg1.png"
             />
 
-            <section className="container mx-auto px-6 py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <section className="container mx-auto md:px-16 px-6 py-20">
+                {/* Desktop grid (visible md+) */}
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {rooms.map((room) => (
                         <RoomCard
                             key={room.id}
@@ -34,12 +34,32 @@ export default function RoomsPage() {
                         />
                     ))}
                 </div>
+
+                {/* Mobile swiper (visible only on small screens) */}
+                <div className="md:hidden">
+                    <div className="flex gap-4 overflow-x-auto px-4 py-2 snap-x snap-mandatory scrollbar-hide">
+                        {rooms.map((room) => (
+                            <RoomCard
+                                key={room.id}
+                                id={room.id}
+                                title={room.title}
+                                description={room.description}
+                                slug={room.slug}
+                                heroImage={room.heroImage}
+                                imageColor={room.imageColor}
+                            />
+                        ))}
+                    </div>
+                </div>
             </section>
 
             <CommonAmenities />
             <FoodAndDining />
             <FAQSection />
-            <ReservationBar />
+            <section className="hidden md:block">
+                 <ReservationBar />
+            </section>
+           
             <Footer />
         </main>
     );

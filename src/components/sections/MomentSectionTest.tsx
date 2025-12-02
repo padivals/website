@@ -23,7 +23,7 @@ const DEFAULT_VIDEOS = [
 export default function VideoCarousel({
   heading = "Discover Moments at The Padival Grand Hotel",
   videos = DEFAULT_VIDEOS,
-  backgroundColor = "bg-[#F9F5EC]",
+  backgroundColor = "bg-[#F9F2E8]",
 }: VideoCarouselProps) {
   const VIDEOS = videos;
   const [index, setIndex] = useState(0);
@@ -194,7 +194,7 @@ export default function VideoCarousel({
       {/* <h2 className="text-3xl md:text-4xl font-serif text-[#1A3C34] mb-12 tracking-wide text-center">
         {heading}
       </h2> */}
-      <div className="items-center py-20">
+      <div className="items-center pb-3  md:pt-12 md:pb-20 md:px-0 px-12">
         <ScrollReveal
           enableBlur={false}
           baseOpacity={0}
@@ -265,9 +265,9 @@ export default function VideoCarousel({
       </div>
 
       {/* Progress Bar */}
-      <div className=" hidden md:block  mt-12 w-[80%] md:w-[31rem] h-1 bg-[#F9F2E8] rounded-full relative overflow-hidden">
+      <div className=" hidden md:block  mt-12 w-[80%] md:w-[31rem] h-1 bg-[#ebe6e2] rounded-full relative overflow-hidden">
         <div
-          className="absolute top-0 bottom-0 bg-[#165F41] transition-all duration-500 ease-out"
+          className="absolute top-0 bottom-0 bg-[#165F41] rounded-2xl transition-all duration-500 ease-out"
           style={{
             left: `${(index / VIDEOS.length) * 100}%`,
             width: `${(1 / VIDEOS.length) * 100}%`
@@ -297,16 +297,16 @@ function Card({
   onEnded,
 }: CardProps) {
   const sizeMap = {
-    sm: "hidden md:block md:w-[420px] h-[60vh] opacity-80",
-    md: "w-[28vw] md:w-[400px] h-[45vh] md:h-[72vh]",
-    lg: "w-[65vw] md:w-[470px] h-[55vh] md:h-[85vh]",
+    sm: "hidden md:block md:w-[26vw] h-[70vh] opacity-80",
+    md: "w-[18vw] md:w-[30vw] h-[45vh] md:h-[82vh]  ",
+    lg: "w-[65vw] md:w-[34vw] h-[55vh] md:h-[90vh]  ", 
   };
 
 
   return (
     <div
       ref={(el) => registerRef(refIndex, el)}
-      className={`relative overflow-hidden transition-all  shadow-3xl duration-500 ${sizeMap[size]} bg-[#ab1515]`}
+      className={`relative overflow-hidden transition-all  shadow-3xl duration-500 ${sizeMap[size]} bg-transparent `}
     >
       {/* Active Video - No src initially, set by JS */}
       <video

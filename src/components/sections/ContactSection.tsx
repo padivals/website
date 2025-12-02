@@ -11,18 +11,52 @@ import { StyledMap } from "../ui/StyledMap";
 
 const ContactSection = () => {
   const [description, setDescription] = useState("");
+  const [preferredFrom, setPreferredFrom] = useState("");
+  const [preferredTo, setPreferredTo] = useState("");
+
+  const formatDateDigits = (digits: string) => {
+    // Keep numbers only and limit to 8 digits (DDMMYYYY)
+    const nums = digits.replace(/\D/g, "").slice(0, 8);
+    const parts = [];
+    if (nums.length >= 2) {
+      parts.push(nums.slice(0, 2));
+      if (nums.length >= 4) {
+        parts.push(nums.slice(2, 4));
+        if (nums.length > 4) parts.push(nums.slice(4));
+      } else if (nums.length > 2) {
+        parts.push(nums.slice(2));
+      }
+    } else if (nums.length > 0) {
+      parts.push(nums);
+    }
+
+    // Join with separators
+    if (parts.length === 0) return "";
+    if (parts.length === 1) return parts[0];
+    if (parts.length === 2) return `${parts[0]} / ${parts[1]}`;
+    return `${parts[0]} / ${parts[1]} / ${parts[2]}`;
+  };
+
+  const handlePreferredFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPreferredFrom(formatDateDigits(e.target.value));
+  };
+
+  const handlePreferredToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPreferredTo(formatDateDigits(e.target.value));
+  };
 
   return (
-    <section className="bg-[#F9F5EC] py-20 border-t border-gray-200">
-      <div className="container mx-auto px-6">
+    <section className="bg-[#F9F5EC] md:py-20 py-0 border-t border-gray-200">
+      <div className="container mx-auto md:px-16 px-6
+      ">
         {/* Top Divider Line */}
-        <div className="w-full h-px bg-[#165F41] mb-12 opacity-50 lg:-ml-16 lg:w-[calc(100%+4rem)]"></div>
+        <div className="w-full h-px bg-[#165F41] mb-12 opacity-50  "></div>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
           {/* Left Side - Info & Map */}
           {/* Left Side - Info & Map */}
           <div className="lg:w-2/5">
-            <div className="lg:-ml-16">
+            <div className="">
               <SectionHeader
                 label="CONTACT US"
                 heading="Get in Touch With The Padival Grand Hotel"
@@ -37,7 +71,7 @@ const ContactSection = () => {
             </div>
 
             {/* Map Container */}
-            <div className="w-full aspect-square relative overflow-hidden lg:-ml-16 lg:w-[calc(100%+4rem)]">
+            <div className="w-full aspect-square relative overflow-hidden  ">
               {/* The StyledMap now handles everything (Styles + Marker) */}
               <StyledMap />
             </div>
@@ -108,13 +142,21 @@ const ContactSection = () => {
                 <div className="flex gap-2">
                   <input
                     type="text"
-                    placeholder="24 / 11 / 25"
-                    className="w-1/2 bg-transparent border border-[#165F41] p-4 placeholder:text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="25  /  11  /  2025 "
+                    value={preferredFrom}
+                    onChange={handlePreferredFromChange}
+                    className="w-1/2 bg-transparent border border-[#165F41] p-4 placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
                   />
                   <input
                     type="text"
-                    placeholder="30 / 11 / 25"
-                    className="w-1/2 bg-transparent border border-[#165F41] p-4  placeholder:text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="30  /  11  /  2025"
+                    value={preferredTo}
+                    onChange={handlePreferredToChange}
+                    className="w-1/2 bg-transparent border border-[#165F41] p-4  placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
                   />
                 </div>
               </div>
@@ -146,7 +188,7 @@ const ContactSection = () => {
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-[#1B4D3E] rounded-sm text-[#1B4D3E] focus:ring-0"
+                    className="w-5 h-5 border-2 border-[#1B4D3E] rounded-sm  text-[#1B4D3E] focus:ring-0"
                   />
                   <span className="text-[#165F41] text-sm font-light">
                     I give my consent to be contacted via Call, SMS, Email, or

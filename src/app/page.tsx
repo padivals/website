@@ -9,16 +9,19 @@ import FAQSection from "@/components/sections/FAQSection";
 import EventsSection from "@/components/sections/EventsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import MomentSectionTest from "@/components/sections/MomentSectionTest";
+import ReservationBar from "@/components/sections/ReservationBar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col relative pb-24">
+    <main className="min-h-screen flex flex-col relative ">
       <Header />
       <Hero />
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
-      <MomentSectionTest
+      <div className="bg-[#F9F5EC] py-8">
+
+          <MomentSectionTest
         heading="Discover Moments at The Padival Grand Hotel"
         videos={[
           "/momentsImg/vid1.mp4",
@@ -28,12 +31,27 @@ export default function Home() {
           "/momentsImg/vid1.mp4",
         ]}
       />
+      </div>
+    
       {/* <MomentsSection /> */}
       <TestimonialsSection />
-      <FAQSection />
-      <EventsSection />
-      <ContactSection />
+      <div className="pt-14 bg-white">
+
+        <FAQSection />
+      </div>
+      
+      <div className=" bg-white md:pb-12 pb-4">
+          <EventsSection />
+      </div>
+    
+      <div className="md:py-0 py-14 bg-[#F9F5EC]">
+        <ContactSection />
+      </div>
       <Footer />
+
+         <section className="hidden lg:block">
+        <ReservationBar />
+      </section>
     </main>
   );
 }

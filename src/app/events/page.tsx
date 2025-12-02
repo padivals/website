@@ -17,12 +17,11 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
     return (
-        <main className="min-h-screen flex flex-col relative pb-24 bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
             <Header />
 
             <PageHero
-                title="Celebrations & Gatherings"
-                subtitle="Elegant Spaces for Every Occasion"
+               underlineClass="hidden"
                 image="/hero-bg.png" // Placeholder
             />
 
@@ -33,7 +32,7 @@ export default function EventsPage() {
 
             <EventTypes />
 
-            <MomentSectionTest backgroundColor="bg-white" heading="A Calm, Homely Dining Experience" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} />
+            <MomentSectionTest backgroundColor="bg-white" heading="What Awaits You in Our Event Venues" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} />
 
             <EventSpaces />
             <ContactSection />

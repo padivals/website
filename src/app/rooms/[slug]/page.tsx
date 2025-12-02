@@ -28,11 +28,11 @@ export default async function RoomPage({ params }: { params: Promise<{ slug: str
     const features = room.features || room.details.amenities;
 
     return (
-        <main className="min-h-screen flex flex-col relative pb-24 bg-white">
+        <main className="min-h-screen flex flex-col relative  bg-white">
             <Header />
             <PageHero
                 title={room.title}
-                subtitle="Accommodation"
+                subtitle="Accommodation"        
                 image={room.heroImage}
             />
 

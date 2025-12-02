@@ -13,7 +13,9 @@ interface RoomCardProps {
 
 const RoomCard = ({ title, description, slug, heroImage, imageColor }: RoomCardProps) => {
     return (
-        <div className="flex flex-col h-full">
+        // Mobile slide behaviour: become a fixed-width snap slide on small screens.
+        // On `md` and larger the card keeps its original flex layout.
+        <div className="inline-block snap-center flex-shrink-0 w-[72vw] max-w-[360px] md:inline-block md:w-auto md:flex md:flex-col h-full">
             {/* Image Container */}
             <div className={`relative w-full aspect-[3/4] mb-6 overflow-hidden ${imageColor || 'bg-gray-200'}`}>
                 <Image
