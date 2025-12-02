@@ -1,36 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import ReservationBar from "./ReservationBar";
 
 const Hero = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [heroHeight, setHeroHeight] = useState(0);
-
-  useEffect(() => {
-    const updateScrollY = () => setScrollY(window.scrollY);
-    const updateHeroHeight = () => {
-      const heroElement = document.getElementById("hero-section");
-      if (heroElement) {
-        setHeroHeight(heroElement.offsetHeight);
-      }
-    };
-
-    window.addEventListener("scroll", updateScrollY);
-    window.addEventListener("resize", updateHeroHeight);
-    updateHeroHeight();
-
-    return () => {
-      window.removeEventListener("scroll", updateScrollY);
-      window.removeEventListener("resize", updateHeroHeight);
-    };
-  }, []);
-
-  // Calculate opacity based on scroll position
-  const scrollProgress =
-    heroHeight > 0 ? Math.min(scrollY / (heroHeight * 0.6), 1) : 0;
-  const reservationBarOpacity = Math.max(1 - scrollProgress, 0);
 
   return (
     <div
@@ -48,8 +21,8 @@ const Hero = () => {
           quality={100}
         />
       </div>
-{/* Dark Gradient Overlay */}
-<div className="absolute inset-0 z-10 h-64 pointer-events-none bg-gradient-to-b from-[#000000a0] via-[#23222217]  to-transparent"></div>
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 z-10 h-64 pointer-events-none bg-gradient-to-b from-[#000000a0] via-[#23222217]  to-transparent"></div>
       {/* Content Container */}
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">

@@ -196,6 +196,7 @@ export default function VideoCarousel({
       </h2> */}
       <div className="items-center pb-3  md:pt-12 md:pb-20 md:px-0 px-12">
         <ScrollReveal
+          scrollContainerRef={undefined}
           enableBlur={false}
           baseOpacity={0}
           baseRotation={0}
@@ -299,7 +300,7 @@ function Card({
   const sizeMap = {
     sm: "hidden md:block md:w-[26vw] h-[70vh] opacity-80",
     md: "w-[18vw] md:w-[30vw] h-[45vh] md:h-[82vh]  ",
-    lg: "w-[65vw] md:w-[34vw] h-[55vh] md:h-[90vh]  ", 
+    lg: "w-[65vw] md:w-[34vw] h-[55vh] md:h-[90vh]  ",
   };
 
 

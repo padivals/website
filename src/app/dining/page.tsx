@@ -3,7 +3,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/ui/PageHero";
 import TextSection from "@/components/ui/TextSection";
-import DiningCarousel from "@/components/sections/DiningCarousel";
 import DiningTestimonials from "@/components/sections/DiningTestimonials";
 import ReservationBar from "@/components/sections/ReservationBar";
 
@@ -21,7 +20,7 @@ export default function DiningPage() {
         <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
             <Header />
             <PageHero
-               underlineClass="hidden"
+                underlineClass="hidden"
                 image="/hero-bg.png" // Using placeholder for now
             />
 
@@ -31,8 +30,8 @@ export default function DiningPage() {
             />
 
             {/* <DiningCarousel /> */}
-                        <MomentSectionTest backgroundColor="bg-white" heading="A Calm, Homely Dining Experience" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} />
-            
+            <MomentSectionTest backgroundColor="bg-white" heading="A Calm, Homely Dining Experience" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} />
+
 
             <DiningTestimonials />
 

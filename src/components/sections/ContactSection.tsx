@@ -6,7 +6,6 @@ import Input from "../ui/Input";
 import Select from "../ui/Select";
 import Button from "../ui/Button";
 import { useState } from "react";
-import Image from "next/image";
 import { StyledMap } from "../ui/StyledMap";
 
 const ContactSection = () => {

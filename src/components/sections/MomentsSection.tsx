@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import CarouselSection from "../ui/CarouselSection";
 
 const MomentsSection = () => {
@@ -60,17 +61,18 @@ const MomentsSection = () => {
       renderItem={(moment, isActive) => (
         <div
           className={`relative w-full aspect-[3/4] overflow-hidden transition-all duration-500 ease-out 
-                        ${
-                          isActive
-                            ? "scale-100 z-10 shadow-2xl"
-                            : "scale-90 opacity-60 grayscale-[30%] z-0"
-                        }
+                        ${isActive
+              ? "scale-100 z-10 shadow-2xl"
+              : "scale-90 opacity-60 grayscale-[30%] z-0"
+            }
                     `}
         >
-          <img
+          <Image
             src={moment.image}
             alt={moment.title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 83vw, (max-width: 1024px) 80vw, 28vw"
           />
 
           {/* Content Overlay - Only visible on active slide or always? 
@@ -78,9 +80,8 @@ const MomentsSection = () => {
                         Let's keep it simple as per request "image must replace existing image".
                     */}
           <div
-            className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500 ${
-              isActive ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"
+              }`}
           >
             <div className="absolute bottom-8 left-8 text-white">
               <h3 className="text-4xl font-serif font-semibold tracking-wide">

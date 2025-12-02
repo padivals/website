@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Button from "../ui/Button";
 
 interface RoomDetailsSectionProps {
@@ -22,7 +23,7 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
                     </p>
 
                     <div className="mb-12">
-                        <Button variant="primary"  className=" text-white py-4 px-6 uppercase tracking-widest text-sm transition-colors">
+                        <Button variant="primary" className=" text-white py-4 px-6 uppercase tracking-widest text-sm transition-colors">
                             Book Now
                         </Button>
                     </div>
@@ -43,10 +44,12 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
 
                 {/* Right: Image */}
                 <div className="relative w-full aspect-[4/5] lg:aspect-square bg-gray-100">
-                    <img
+                    <Image
                         src={image}
                         alt={title}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                 </div>
             </div>

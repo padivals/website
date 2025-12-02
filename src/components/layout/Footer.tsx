@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -85,11 +86,11 @@ const Footer = () => {
       {/* === MIDDLE LINKS SECTION === */}
       <div className="px-6 md:px-12 lg:px-20 mb-10">
         <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-6 text-gray-300 text-base md:text-lg font-sans font-medium">
-          <a href="/contact" className="hover:text-[#EAB361]">Bookings</a>
-          <a href="/dining" className="hover:text-[#EAB361]">Dining</a>
-          <a href="/events" className="hover:text-[#EAB361]">Events</a>
-          <a href="/rooms" className="hover:text-[#EAB361]">Leisure</a>
-          <a href="/contact" className="hover:text-[#EAB361]">Contact Us</a>
+          <Link href="/contact" className="hover:text-[#EAB361]">Bookings</Link>
+          <Link href="/dining" className="hover:text-[#EAB361]">Dining</Link>
+          <Link href="/events" className="hover:text-[#EAB361]">Events</Link>
+          <Link href="/rooms" className="hover:text-[#EAB361]">Leisure</Link>
+          <Link href="/contact" className="hover:text-[#EAB361]">Contact Us</Link>
         </div>
       </div>
 
