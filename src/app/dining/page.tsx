@@ -21,8 +21,7 @@ export default function DiningPage() {
         <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
             <Header />
             <PageHero
-                title="Food and Dining"
-                subtitle="Experience"
+               underlineClass="hidden"
                 image="/hero-bg.png" // Using placeholder for now
             />
 

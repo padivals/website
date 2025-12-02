@@ -23,7 +23,7 @@ const DEFAULT_VIDEOS = [
 export default function VideoCarousel({
   heading = "Discover Moments at The Padival Grand Hotel",
   videos = DEFAULT_VIDEOS,
-  backgroundColor = "bg-[#F9F5EC]",
+  backgroundColor = "bg-[#F9F2E8]",
 }: VideoCarouselProps) {
   const VIDEOS = videos;
   const [index, setIndex] = useState(0);
@@ -194,7 +194,7 @@ export default function VideoCarousel({
       {/* <h2 className="text-3xl md:text-4xl font-serif text-[#1A3C34] mb-12 tracking-wide text-center">
         {heading}
       </h2> */}
-      <div className="items-center py-20">
+      <div className="items-center pb-3  md:pt-12 md:pb-20 md:px-0 px-12">
         <ScrollReveal
           enableBlur={false}
           baseOpacity={0}
@@ -297,8 +297,8 @@ function Card({
   onEnded,
 }: CardProps) {
   const sizeMap = {
-    sm: "hidden md:block md:w-[32vw] h-[70vh] opacity-80",
-    md: "w-[28vw] md:w-[30vw] h-[45vh] md:h-[82vh]  ",
+    sm: "hidden md:block md:w-[26vw] h-[70vh] opacity-80",
+    md: "w-[18vw] md:w-[30vw] h-[45vh] md:h-[82vh]  ",
     lg: "w-[65vw] md:w-[34vw] h-[55vh] md:h-[90vh]  ", 
   };
 

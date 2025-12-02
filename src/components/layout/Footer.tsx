@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#052216] text-white pt-16 pb-10 font-serif">
+    <footer className="bg-[#052216] text-white pt-16 md:pb-[20vh] pb-10 font-serif">
 
       {/* === TOP SECTION === */}
       <div className="px-6 md:px-12 lg:px-20">
@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-3 text-[#F9F2E8CC] font-sans text-base md:text-lg">
               <p>
                 Call:{" "}
-                <a href="tel:9686804784" className="underline hover:text-white">
+                <a href="tel:9686804784" className="border-b hover:text-white">
                   96868 04784
                 </a>
               </p>
@@ -44,15 +44,15 @@ const Footer = () => {
                 Email:{" "}
                 <a
                   href="mailto:info@padival-grand-hotel.com"
-                  className="underline hover:text-white"
+                  className="border-b hover:text-white"
                 >
                   info@padival-grand-hotel.com
                 </a>
               </p>
-              <a href="#" className="underline hover:text-white w-fit">
+              <a href="#" className="border-b hover:text-white w-fit">
                 WhatsApp
               </a>
-              <a href="#" className="underline hover:text-white w-fit">
+              <a href="#" className="border-b hover:text-white w-fit">
                 Instagram
               </a>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
               Karnataka 574201
             </p>
 
-            <a href="#" className="underline hover:text-white mt-3 block w-fit">
+            <a href="#" className=" border-b hover:text-white mt-3  block w-fit">
               View on Google Maps
             </a>
           </div>
@@ -85,11 +85,11 @@ const Footer = () => {
       {/* === MIDDLE LINKS SECTION === */}
       <div className="px-6 md:px-12 lg:px-20 mb-10">
         <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-6 text-gray-300 text-base md:text-lg font-sans font-medium">
-          <a href="#" className="hover:text-[#EAB361]">Bookings</a>
-          <a href="#" className="hover:text-[#EAB361]">Dining</a>
-          <a href="#" className="hover:text-[#EAB361]">Events</a>
-          <a href="#" className="hover:text-[#EAB361]">Leisure</a>
-          <a href="#" className="hover:text-[#EAB361]">Contact Us</a>
+          <a href="/contact" className="hover:text-[#EAB361]">Bookings</a>
+          <a href="/dining" className="hover:text-[#EAB361]">Dining</a>
+          <a href="/events" className="hover:text-[#EAB361]">Events</a>
+          <a href="/rooms" className="hover:text-[#EAB361]">Leisure</a>
+          <a href="/contact" className="hover:text-[#EAB361]">Contact Us</a>
         </div>
       </div>
 
@@ -105,7 +105,7 @@ const Footer = () => {
           <div className="flex justify-center gap-3">
             <a href="/privacy-policy" className="hover:text-white">Privacy Policy</a>
             <span>|</span>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+            <a href="/terms-conditions" className="hover:text-white">Terms of Service</a>
           </div>
 
           <p className="text-center md:text-right">

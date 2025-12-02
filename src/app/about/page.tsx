@@ -12,7 +12,7 @@ export default function AboutPage() {
             <Header />
 
             <HalfHeroSection title="Who We Are" />
-
+        
           <section className="md:px-16 px-6">
 
               {/* History Section */}
@@ -59,7 +59,7 @@ export default function AboutPage() {
           <FAQSection />
           
           <section className="hidden md:block">
-            {/* <ReservationBar /> */}
+            <ReservationBar />
 
 
           </section>

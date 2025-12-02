@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../ui/Button";
 
 interface RoomDetailsSectionProps {
     title: string;
@@ -9,26 +10,26 @@ interface RoomDetailsSectionProps {
 
 const RoomDetailsSection = ({ title, description, features, image }: RoomDetailsSectionProps) => {
     return (
-        <section className="container mx-auto px-6 py-20">
+        <section className="container md:px-0 px-6 mx-auto md:pl-16 md:py-20  py-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left: Details */}
                 <div className="flex flex-col">
-                    <p className="text-3xl  font-semibold  text-[#0F2A1D] mb-6">
+                    <p className="text-3xl  font-semibold  text-[#012219CC] mb-6">
                         {title}
                     </p>
-                    <p className="text-lg text-gray-700 font-medium leading-relaxed mb-8">
+                    <p className="text-lg text-[#012219CC] font-medium leading-relaxed mb-8">
                         {description}
                     </p>
 
                     <div className="mb-12">
-                        <button className="bg-[#1B4D3E] text-white py-3 px-8 uppercase tracking-widest text-sm hover:bg-[#143a2f] transition-colors">
+                        <Button variant="primary"  className=" text-white py-4 px-6 uppercase tracking-widest text-sm transition-colors">
                             Book Now
-                        </button>
+                        </Button>
                     </div>
 
-                    <div className="w-full h-px bg-[#A3B19C]/50 mb-12"></div>
+                    <div className="w-full h-px bg-[#165F41] mb-8"></div>
 
-                    <p className="text-2xl  font-medium text-[#0F2A1D] mb-4">
+                    <p className="text-2xl  font-medium text-[#012219CC] mb-4">
                         Accommodation details
                     </p>
                     <ul className="">

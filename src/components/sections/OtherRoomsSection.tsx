@@ -34,8 +34,8 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
                         </span>
                     </div>
 
-                    {/* Right Grid */}
-                    <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* Right Grid (visible on md and up) */}
+                    <div className="lg:w-3/4 hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
                         {otherRooms.map((room) => (
                             <Link key={room.id} href={`/rooms/${room.slug}`} className="group block">
                                 <div className="relative w-full aspect-square mb-6 overflow-hidden bg-gray-200">
@@ -51,6 +51,31 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
                                 </p>
                             </Link>
                         ))}
+                    </div>
+
+                    {/* Mobile swiper (visible only on small screens) */}
+                    <div className="md:hidden lg:w-3/4 mt-4">
+                        <div className="flex gap-4 overflow-x-auto px-4 py-2 snap-x snap-mandatory scrollbar-hide">
+                            {otherRooms.map((room) => (
+                                <Link
+                                    key={room.id}
+                                    href={`/rooms/${room.slug}`}
+                                    className="inline-block snap-center flex-shrink-0 w-[72vw] max-w-[360px]"
+                                >
+                                    <div className="relative w-full aspect-square mb-4 overflow-hidden bg-gray-200 ">
+                                        <Image
+                                            src={room.heroImage}
+                                            alt={room.title}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                    <p className="text-base font-medium text-[#0F2A1D]">
+                                        {room.title}
+                                    </p>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

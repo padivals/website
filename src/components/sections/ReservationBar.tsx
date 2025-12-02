@@ -68,7 +68,7 @@ const ReservationBar = ({
   return (
     <div
      ref={barRef}
-      className="fixed bottom-0 left-0 w-full z-50 py-5 px-6 md:px-10 border-t    border-white/10"
+      className=" md:block hidden     fixed bottom-0 left-0 w-full z-50 py-5 px-6 md:px-10 border-t     border-white/10"
       style={{ backgroundColor: bgColor, color: textColor }}
     >
       <div className="max-w-7xl px-12    mx-auto flex items-center justify-between gap-6 ">

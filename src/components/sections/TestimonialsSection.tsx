@@ -68,7 +68,7 @@ const TestimonialsSection = ({
   };
 
   return (
-    <section className="bg-[#F9F5EC] py-20">
+    <section className="bg-[#F9F5EC] py-15">
       <div className="container mx-auto md:pl-16 px-8">
         {/* Top Divider Line */}
         <div className="md:mr-16  h-px bg-[#165F41] mb-12 opacity-50"></div>
@@ -129,9 +129,9 @@ const TestimonialsSection = ({
         <div className="flex flex-col md:flex-row justify-between md:items-end mt-16 gap-8">
           {/* Rating Info */}
           <div>
-            <h3 className="text-[32px] font-semibold text-[#0F2A1D] mb-1 font-sans">
+            <p className="text-[22px] font-extrabold    text-[#012219CC] mb-1 ">
               {rating} Stars
-            </h3>
+            </p>
             <p className="text-[#012219CC] text-sm mb-3">{ratingLabel}</p>
             <div className="flex gap-1 text-[#1B4D3E]">
               {[1, 2, 3, 4].map((star) => (

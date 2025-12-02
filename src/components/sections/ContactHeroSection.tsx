@@ -17,7 +17,7 @@ export default function ContactHeroSection() {
                 {/* <div className="absolute inset-0 bg-black/20"></div> */}
             </div>
 
-            <div className="container mx-auto relative z-10">
+            <div className="container mx-auto relative z-10 px-4 md:px-16">
                 <div className="flex flex-col gap-2 mb-12">
                     {/* Breadcrumb or label if needed */}
                 </div>

@@ -46,8 +46,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#F9F5EC] py-20 border-t border-gray-200">
-      <div className="container mx-auto px-16">
+    <section className="bg-[#F9F5EC] md:py-20 py-0 border-t border-gray-200">
+      <div className="container mx-auto md:px-16 px-6
+      ">
         {/* Top Divider Line */}
         <div className="w-full h-px bg-[#165F41] mb-12 opacity-50  "></div>
 

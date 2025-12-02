@@ -6,7 +6,7 @@ export const rooms = [
         description:
             "Quiet, well-cooled rooms with neat interiors, ideal for guests who prefer steady comfort and a peaceful environment.",
         imageColor: "bg-gray-300",
-        heroImage: "/roomsImg/comfort.png", // Placeholder, using existing image
+        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
         details: {
             size: "250 sq ft",
             occupancy: "2 Adults",
@@ -37,7 +37,7 @@ export const rooms = [
         description:
             "Large, homely rooms made for groups of four, providing ample space and a comfortable setup for family or group stays.",
         imageColor: "bg-gray-400",
-        heroImage: "/roomsImg/premium.png", // Placeholder, using existing image
+        heroImage: "/hero-bg.png", // Placeholder, using existing image
         details: {
             size: "350 sq ft",
             occupancy: "2 Adults, 1 Child",
@@ -52,7 +52,7 @@ export const rooms = [
         description:
             "Practical and spacious rooms created for groups and families, offering comfortable bedding and easy shared living.",
         imageColor: "bg-gray-500",
-        heroImage: "/roomsImg/familySuite.png", // Placeholder, using existing image
+        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
         details: {
             size: "500 sq ft",
             occupancy: "4 Adults",
@@ -67,7 +67,7 @@ export const rooms = [
         description:
             "Simple, clean, and naturally ventilated rooms that offer a calm and comfortable stay for short visits and family travel.",
         imageColor: "bg-gray-600",
-        heroImage: "/roomsImg/executive.png", // Placeholder, using existing image
+        heroImage: "/hero-bg.png", // Placeholder, using existing image
         details: {
             size: "450 sq ft",
             occupancy: "2 Adults",

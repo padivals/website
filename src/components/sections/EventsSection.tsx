@@ -10,7 +10,7 @@ const EventsSection = () => {
   ];
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white md:py-4 py-6">
       <div className="container mx-auto px-[6vw]">
         
         {/* Top Divider */}

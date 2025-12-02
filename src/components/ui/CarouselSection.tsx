@@ -84,7 +84,7 @@ const CarouselSection = <T,>({
 
   return (
     <section
-      className={`${backgroundColor} py-20 overflow-hidden ${className}`}
+      className={`${backgroundColor} md:py-20 py-12 overflow-hidden ${className}`}
     >
       <div className={`  ${variant === "split" ? "md:ml-0 ml-12" : "mx-auto"}`}>
         {/* Header Section */}

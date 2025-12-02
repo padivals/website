@@ -10,7 +10,7 @@ const RoomImagesSection = ({ images }: RoomImagesSectionProps) => {
 
     return (
         <section className="container mx-auto px-6 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex gap-6">
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
                     <Image
                         src={images[0]}
@@ -19,7 +19,7 @@ const RoomImagesSection = ({ images }: RoomImagesSectionProps) => {
                         className="object-cover hover:scale-105 transition-transform duration-700"
                     />
                 </div>
-                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <div className="relative w-3/5 aspect-[4/3] overflow-hidden">
                     <Image
                         src={images[1]}
                         alt="Room View 2"

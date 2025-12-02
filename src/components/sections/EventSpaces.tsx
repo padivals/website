@@ -24,10 +24,10 @@ const EventSpaces = () => {
                 <div className="w-full h-px bg-[#165F41] mb-12  "></div>
             </div>
             <div className="container mx-auto px-6">
-                <div className="flex flex-col lg:flex-row gap-12">
+                <div className="flex flex-col lg:flex-row md:gap-12 gap-6">
                     {/* Left Column: Label */}
                     <div className="lg:w-1/4">
-                        <span className="block text-[#4A6741] font-sans tracking-widest uppercase text-sm font-semibold">
+                        <span className="block text-[#4A6741] font-sans tracking-widest uppercase md:text-sm text-md font-semibold">
                             OUR SPACES
                         </span>
                     </div>

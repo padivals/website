@@ -19,7 +19,9 @@ export default function Home() {
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
-      <MomentSectionTest
+      <div className="bg-[#F9F5EC] py-8">
+
+          <MomentSectionTest
         heading="Discover Moments at The Padival Grand Hotel"
         videos={[
           "/momentsImg/vid1.mp4",
@@ -29,11 +31,22 @@ export default function Home() {
           "/momentsImg/vid1.mp4",
         ]}
       />
+      </div>
+    
       {/* <MomentsSection /> */}
       <TestimonialsSection />
-      <FAQSection />
-      <EventsSection />
-      <ContactSection />
+      <div className="pt-14 bg-white">
+
+        <FAQSection />
+      </div>
+      
+      <div className=" bg-white md:pb-12 pb-4">
+          <EventsSection />
+      </div>
+    
+      <div className="md:py-0 py-14 bg-[#F9F5EC]">
+        <ContactSection />
+      </div>
       <Footer />
 
          <section className="hidden lg:block">

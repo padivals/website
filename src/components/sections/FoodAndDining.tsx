@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const FoodAndDining = () => {
     return (
-        <section className="bg-[#F9F5EC] py-20 ">
-            <div className="container mx-auto px-6">
+        <section className="bg-[#F9F5EC] md:py-20 py-10 ">
+            <div className="container mx-auto px-8">
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Left Column: Spacer/Label (Empty to match alignment of previous sections if needed, or just full width) */}
                     {/* Looking at the screenshot, it seems to be indented similarly to the previous section's content, 
@@ -30,7 +30,7 @@ const FoodAndDining = () => {
                          Let's try to align it with the "Common Amenities" content block (the right side).
                      */}
 
-                    <div className="lg:w-1/4 hidden lg:block">
+                    <div className="lg:w-1/5 hidden lg:block">
                         {/* Empty left column to maintain alignment with Common Amenities label if desired, 
                             or we can just make this section full width if it's meant to stand out.
                             The screenshot doesn't show the left margin context clearly.
@@ -40,12 +40,12 @@ const FoodAndDining = () => {
 
                     <div className="lg:w-3/4">
                         <div className="flex justify-between items-end mb-8">
-                            <h2 className="text-4xl font-serif font-semibold text-[#0F2A1D]">
+                            <h2 className="md:text-4xl text-3xl font-serif font-semibold text-[#0F2A1D]">
                                 Food and Dining
                             </h2>
                             <Link
                                 href="/dining"
-                                className="inline-block border-b border-[#0F2A1D] pb-1 text-sm uppercase tracking-wider text-[#0F2A1D] hover:text-gray-600 transition-colors"
+                                className="inline-block border-b border-[#0F2A1D] pb-1 md:text-sm text-xs uppercase tracking-wider text-[#0F2A1D] hover:text-gray-600 transition-colors"
                             >
                                 Learn More
                             </Link>
@@ -53,7 +53,7 @@ const FoodAndDining = () => {
 
                         <div className="relative w-full aspect-[16/6] mb-8 overflow-hidden">
                             <Image
-                                src="/hero-bg.png" // Placeholder
+                                src="/images/card.png" // Placeholder
                                 alt="Dining at Padival Grand"
                                 fill
                                 className="object-cover"

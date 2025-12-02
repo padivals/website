@@ -9,7 +9,7 @@ import HowToGetHereSection from "@/components/sections/HowToGetHereSection";
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen flex flex-col relative pb-24 bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
             <Header />
 
             <ContactHeroSection />
@@ -17,8 +17,11 @@ export default function ContactPage() {
             <GetInTouchSection />
 
             <HowToGetHereSection />
+<div className="md:pb-0 pb-6 bg-white">
+     <FAQSection />
+</div>
 
-            <FAQSection />
+           
 
             <ReservationBar />
             <Footer />

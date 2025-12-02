@@ -18,7 +18,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   labelColor = "text-[#165F41CC]",
 }) => {
   const alignmentClasses =
-    align === "center" ? "items-center text-center" : "items-start text-left";
+    align === "center" ? "items-center md:text-center text-start " : "items-start text-left";
 
   return (
     <div className={`flex flex-col ${alignmentClasses} ${className}`}>

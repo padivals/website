@@ -123,16 +123,16 @@ const amenities = [
 
 const CommonAmenities = () => {
     return (
-        <section className="bg-[#F9F5EC] py-20 md:px-16 px-4 ">
+        <section className="bg-[#F9F5EC] md:py-20 py-0 md:px-16 px-6 ">
             <div className="container mx-auto ">
 
                 <div className="w-full h-px bg-[#165F41] mb-12  "></div>
             </div>
             <div className="container mx-auto px-6">
-                <div className="flex flex-col lg:flex-row gap-12">
+                <div className="flex flex-col lg:flex-row md:gap-12 gap-8">
                     {/* Left Column: Title */}
-                    <div className="lg:w-1/4">
-                        <p className="block text-[#4A6741]  uppercase text-sm font-semibold">
+                    <div className="lg:w-1/5">
+                        <p className="block text-[#4A6741]  uppercase md:text-sm text-lg font-semibold">
                             COMMON AMENITIES
                         </p>
                     </div>
