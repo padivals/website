@@ -73,10 +73,10 @@ const NearbyAttractions = () => {
           ></Image>
           {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div> */}
 
-          <h3 className="text-2xl  font-medium text-[#012219CC] mb-3  transition-colors">
+          <p className="text-xl  font-medium text-[#012219CC] mb-3  transition-colors">
             {attraction.name}
-          </h3>
-          <p className="text-[#012219CC] text-lg font-medium leading-relaxed">
+          </p>
+          <p className="text-[#012219CC] text-md font-medium leading-relaxed">
             {attraction.description}
           </p>
         </div>

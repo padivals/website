@@ -226,7 +226,7 @@ export default function VideoCarousel({
         <Card refIndex={1} size="md" registerRef={registerRef}>
           <button
             onClick={prev}
-            className="w-12 h-12 rounded-full hidden md:block  flex items-center justify-center hover:bg-white/10 transition-colors"
+            className="md:w-12 md:h-12 h-8 w-8 rounded-full   flex items-center justify-center hover:bg-white/10 transition-colors"
           >
             {/* <ChevronLeft size={24} className="text-white" /> */}
             <Image src='/svgs/leftArrow.svg' alt="leftArrow" height={64} width={64} />
@@ -254,7 +254,7 @@ export default function VideoCarousel({
         <Card refIndex={3} size="md" registerRef={registerRef}>
           <button
             onClick={next}
-            className="w-12 h-12 rounded-full hidden md:block  flex items-center justify-center hover:bg-white/10 transition-colors"
+            className="md:w-12 md:h-12 h-8 w-8 rounded-full   flex items-center justify-center hover:bg-white/10 transition-colors"
           >
             <Image src='/svgs/rightArrow.svg' alt="rightArrow" height={74} width={74} />
           </button>
@@ -266,7 +266,7 @@ export default function VideoCarousel({
       </div>
 
       {/* Progress Bar */}
-      <div className=" hidden md:block  mt-12 w-[80%] md:w-[31rem] h-1 bg-[#ebe6e2] rounded-full relative overflow-hidden">
+      <div className="  mt-12 w-[80%] md:w-[31rem] h-1 bg-[#ebe6e2] rounded-full relative overflow-hidden">
         <div
           className="absolute top-0 bottom-0 bg-[#165F41] rounded-2xl transition-all duration-500 ease-out"
           style={{
@@ -298,9 +298,9 @@ function Card({
   onEnded,
 }: CardProps) {
   const sizeMap = {
-    sm: "hidden md:block md:w-[26vw] h-[70vh] opacity-80",
-    md: "w-[18vw] md:w-[30vw] h-[45vh] md:h-[82vh]  ",
-    lg: "w-[65vw] md:w-[34vw] h-[55vh] md:h-[90vh]  ",
+    sm: "hidden md:block md:w-[26vw] h-[60vh] opacity-80",
+    md: "w-[18vw] md:w-[25vw] h-[45vh] md:h-[70vh]  ",
+    lg: "w-[65vw] md:w-[28vw] h-[55vh] md:h-[80vh]  ",
   };
 
 

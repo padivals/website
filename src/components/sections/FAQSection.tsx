@@ -37,7 +37,7 @@ const FAQSection = () => {
     <section className="bg-white md:py-20 py-6">
       <div className="container mx-auto md:px-16 px-6">
         {/* Top Divider Line */}
-        <div className="w-full h-px bg-[#165F41] mb-12 mt-8 md:mt-0 "></div>
+        <div className="w-full hidden md:block  h-px bg-[#165F41] mb-12 mt-8 md:mt-0 "></div>
 
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-24">
           {/* Left Side - Static Content */}

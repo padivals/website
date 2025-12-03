@@ -35,7 +35,7 @@ export default function Home() {
     
       {/* <MomentsSection /> */}
       <TestimonialsSection />
-      <div className="pt-14 bg-white">
+      <div className="pt-16 bg-white">
 
         <FAQSection />
       </div>

@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-[#052216] text-white pt-16 md:pb-[20vh] pb-10 font-serif">
 
       {/* === TOP SECTION === */}
-      <div className="px-6 md:px-12 lg:px-20">
+      <div className="px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 mb-16">
 
           {/* Logo + Desc */}
@@ -84,7 +84,7 @@ const Footer = () => {
       <div className="w-full h-px bg-[#165F41] opacity-70 mb-10"></div>
 
       {/* === MIDDLE LINKS SECTION === */}
-      <div className="px-6 md:px-12 lg:px-20 mb-10">
+      <div className="px-6 md:px-12 lg:px-38 mb-10">
         <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-6 text-gray-300 text-base md:text-lg font-sans font-medium">
           <Link href="/contact" className="hover:text-[#EAB361]">Bookings</Link>
           <Link href="/dining" className="hover:text-[#EAB361]">Dining</Link>
@@ -99,7 +99,7 @@ const Footer = () => {
 
       {/* === BOTTOM SECTION === */}
       <div className="px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-4 text-[#165F41] font-sans text-sm md:text-base">
+        <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-4 text-[#165F41] font-sans text-sm md:text-sm">
 
           <p>A Company of Mahaveer Ventures</p>
 

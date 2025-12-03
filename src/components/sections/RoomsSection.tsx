@@ -39,7 +39,7 @@ const RoomsSection = () => {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8 text-white">
             {/* Left Label */}
             <div className="lg:w-1/6">
-              <span className="block font-sans tracking-widest uppercase text-xs lg:text-xl font-semibold">
+              <span className="block font-sans  uppercase text-xs lg:text-xl font-semibold">
                 OUR ROOMS
               </span>
             </div>
@@ -61,7 +61,7 @@ const RoomsSection = () => {
             <div className="lg:w-1/6 flex justify-end">
               <Button
                 variant="primary"
-                className="bg-[#1B4D3E] hover:bg-[#143a2f] text-white px-[31px] py-[18px] rounded-none uppercase text-xs lg:text-sm tracking-wider"
+                className="bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-xs lg:text-sm tracking-wider"
               >
                 Book Now
               </Button>
