@@ -88,7 +88,7 @@ const TestimonialsSection = ({
           <div className="lg:col-span-8">
             <Swiper
               modules={[Navigation, Autoplay]}
-              spaceBetween={24}
+              spaceBetween={27}
               slidesPerView={1}
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
@@ -100,14 +100,14 @@ const TestimonialsSection = ({
                   slidesPerView: 1.5,
                 },
                 1024: {
-                  slidesPerView: 2,
+                  slidesPerView: 1.6,
                 },
               }}
               className="w-full"
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id} className="h-auto">
-                  <div className="border border-[#A3B19C] p-8 h-full flex flex-col justify-between min-h-[320px] bg-transparent">
+                  <div className="border border-[#A3B19C] p-8  h-full flex flex-col justify-between  min-h-[320px] bg-transparent">
                     <div>
                       <p className="text-[#012219CC] text-base md:text-lg leading-relaxed font-bold">
                         “{testimonial.text}”

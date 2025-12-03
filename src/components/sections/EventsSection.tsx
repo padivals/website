@@ -11,7 +11,7 @@ const EventsSection = () => {
 
   return (
     <section className="bg-white md:py-4 py-6">
-      <div className="container mx-auto px-[6vw]">
+      <div className="container mx-auto px-[4vw]">
         
         {/* Top Divider */}
         <div className="w-full h-px bg-[#165F41] opacity-50 mb-12"></div>
@@ -55,9 +55,9 @@ const EventsSection = () => {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
               </div>
 
-              <h4 className="text-[#0F2A1D] font-medium text-lg mt-4">
+              <p className="text-[#012219CC] font-semibold text-md mt-4">
                 {event.title}
-              </h4>
+              </p>
 
             </div>
           ))}

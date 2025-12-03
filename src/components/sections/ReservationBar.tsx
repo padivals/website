@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { format } from "date-fns";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import DateRangePicker from "../ui/DateRangePicker";
+import Button from "../ui/Button";
 
 type ReservationData = {
   from: Date | undefined;
@@ -73,12 +74,12 @@ const ReservationBar = ({
       <div className="max-w-7xl px-12    mx-auto flex items-center justify-between gap-6 ">
 
         {/* Heading */}
-        <h2 className="font-sans text-sm md:text-[20px] font-medium whitespace-nowrap tracking-wide">
+        <p className="font-sans text-sm md:text-[20px] font-medium whitespace-nowrap tracking-wide">
           {heading}
-        </h2>
+        </p>
 
         {/* Inputs */}
-        <div className="flex items-center gap-10 flex-1 justify-center">
+        <div className="flex items-center gap-18 flex-1 justify-center">
 
           {/* DATE PICKER */}
           <div
@@ -114,7 +115,7 @@ const ReservationBar = ({
             }}
             className="flex items-center gap-2 border-b-2 border-white/50 py-2 cursor-pointer min-w-[200px] relative justify-center"
           >
-            <span className="text-xs md:text-sm tracking-wider whitespace-nowrap text-center">
+            <span className="text-xs md:text-sm  font-medium whitespace-nowrap text-center">
               {adults} Adult{adults > 1 ? "s" : ""}, {children} Children
             </span>
             <div className="ml-2">
@@ -163,8 +164,9 @@ const ReservationBar = ({
               adults,
               children,
             })
+            
           }
-          className="bg-white text-[#EAB361] px-6 py-3 font-semibold text-xs md:text-lg tracking-wide hover:bg-[#c1c1c1] transition-all whitespace-nowrap"
+          className={ `   bg-white text-[#012219] px-6 py-3 font-extrabold md:text-lg  hover:bg-[#c1c1c1] transition-all`}
         >
           {buttonLabel}
         </button>

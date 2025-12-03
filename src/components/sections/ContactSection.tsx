@@ -7,11 +7,27 @@ import Select from "../ui/Select";
 import Button from "../ui/Button";
 import { useState } from "react";
 import { StyledMap } from "../ui/StyledMap";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+
 
 const ContactSection = () => {
   const [description, setDescription] = useState("");
   const [preferredFrom, setPreferredFrom] = useState("");
   const [preferredTo, setPreferredTo] = useState("");
+  const [phone, setPhone] = useState("");
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [openGuests, setOpenGuests] = useState(false);
+
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    const close = () => setOpenGuests(false);
+    if (openGuests) {
+      window.addEventListener("click", close);
+    }
+    return () => window.removeEventListener("click", close);
+  }, [openGuests]);
 
   const formatDateDigits = (digits: string) => {
     // Keep numbers only and limit to 8 digits (DDMMYYYY)
@@ -45,8 +61,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#F9F5EC] md:py-20 py-0 border-t border-gray-200">
-      <div className="container mx-auto md:px-16 px-6
+    <section className="bg-[#F9F5EC] md:py-20 md:pb-32 py-0 border-t border-gray-200">
+      <div className="container mx-auto md:px-16 px-6 
       ">
         {/* Top Divider Line */}
         <div className="w-full h-px bg-[#165F41] mb-12 opacity-50  "></div>
@@ -70,7 +86,7 @@ const ContactSection = () => {
             </div>
 
             {/* Map Container */}
-            <div className="w-full aspect-square relative overflow-hidden  ">
+            <div className="w-full h-88 relative overflow-hidden  ">
               {/* The StyledMap now handles everything (Styles + Marker) */}
               <StyledMap />
             </div>
@@ -89,31 +105,136 @@ const ContactSection = () => {
               />
 
               {/* Number of Guests */}
-              <Select
-                label="Number of Guests"
-                options={[
-                  "01 Adult, 0 Children",
-                  "02 Adults, 0 Children",
-                  "02 Adults, 1 Child",
-                ]}
-              />
-
-              {/* Phone */}
-              <div className="flex flex-col">
+              <div className="flex flex-col relative">
                 <label className="text-[#165F41] text-lg font-medium uppercase tracking-wider mb-2">
-                  Phone
+                  Number of Guests
                 </label>
-                <div className="flex">
-                  <div className="w-20 border border-[#165F41] border-r-0 p-4 flex items-center justify-center text-[#165F41B2] bg-transparent">
-                    +91
-                  </div>
-                  <input
-                    type="tel"
-                    placeholder="Your Phone Number"
-                    className="flex-1 bg-transparent border border-[#165F41] p-4 text-[#165F41B2] placeholder:text-[#165F41B2] placeholder:text-lg"
-                  />
+                <div
+                  className="w-full bg-transparent border border-[#165F41] p-4 text-[#165F41B2] cursor-pointer flex justify-between items-center"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpenGuests(!openGuests);
+                  }}
+                >
+                  <span>
+                    {adults < 10 ? `0${adults}` : adults} Adult{adults !== 1 ? "s" : ""}, {children < 10 ? `0${children}` : children} Child{children !== 1 ? "ren" : ""}
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className={`w-4 h-4 text-gray-500 transition-transform ${openGuests ? "rotate-180" : ""}`}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
                 </div>
+
+                {/* Dropdown */}
+                {openGuests && (
+                  <div 
+                    className="absolute top-full left-0 w-full bg-[#F9F5EC] border border-[#165F41] border-t-0 z-10 p-6 flex flex-col gap-6 shadow-lg"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {/* Adults Row */}
+                    <div className="flex justify-between items-center">
+                      <span className="text-[#165F41] font-medium text-lg">Adults</span>
+                      <div className="flex items-center gap-4">
+                        <button
+                          type="button"
+                          onClick={() => setAdults(Math.max(1, adults - 1))}
+                          className="w-8 h-8  text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1"
+                        >
+                          -
+                        </button>
+                        <span className="text-[#165F41] w-6 text-center text-lg font-medium">{adults}</span>
+                        <button
+                          type="button"
+                          onClick={() => setAdults(adults + 1)}
+                          className="w-8 h-8 text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Children Row */}
+                    <div className="flex justify-between items-center">
+                      <span className="text-[#165F41] font-medium text-lg">Children</span>
+                      <div className="flex items-center gap-4">
+                        <button
+                          type="button"
+                          onClick={() => setChildren(Math.max(0, children - 1))}
+                          className="w-8 h-8 text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1"
+                        >
+                          -
+                        </button>
+                        <span className="text-[#165F41] w-6 text-center text-lg font-medium">{children}</span>
+                        <button
+                          type="button"
+                          onClick={() => setChildren(children + 1)}
+                          className="w-8 h-8 text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
+ {/* phone */}
+        <div className="flex flex-col">
+  <label className="text-[#165F41] text-lg font-medium uppercase tracking-wider mb-2">
+    Phone
+  </label>
+   <PhoneInput
+        defaultCountry="IN"
+        value={phone}
+        onChange={setPhone}
+        className="w-full"
+        inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg"
+        inputStyle={{
+          width: "100%",
+          background: "transparent",
+          border: "1px solid #165F41",
+          
+          borderRadius: "0px",            // no rounded corners
+          padding: "28px",
+          fontSize: "16px",
+          color: "#165F41B2",
+        }}
+        countrySelectorStyleProps={{
+          buttonStyle: {
+            background: "transparent",
+            border: "1px solid #165F41",
+            borderRight: "0px",
+            borderRadius: "0px",          // no rounded corners
+            padding: "28px",
+            width: "80px",
+            color: "#165F41",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+          dropdownStyleProps: {
+            style: {
+              maxHeight: "220px",         // enables scroll
+              overflowY: "auto",          // scrollable dropdown
+              borderRadius: "0px",
+              border: "1px solid #165F41",
+              background: "white",
+              zIndex: 9999,
+              overscrollBehavior: "contain",
+            },
+          },
+        }}
+      />
+</div>
 
               {/* Email */}
               <Input
@@ -187,7 +308,7 @@ const ContactSection = () => {
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-[#1B4D3E] rounded-sm  text-[#1B4D3E] focus:ring-0"
+                    className="w-5 h-5 border-2 border-[#1B4D3E] rounded-sm accent-[#1B4D3E] focus:ring-0"
                   />
                   <span className="text-[#165F41] text-sm font-light">
                     I give my consent to be contacted via Call, SMS, Email, or

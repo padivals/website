@@ -40,27 +40,27 @@ const Header = () => {
     <>
       {/* ==================== MAIN HEADER ==================== */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 backdrop-brightness-105
+        className={`fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 
         ${showHeader ? "translate-y-0" : "-translate-y-full"}
         ${
           isTop
             ? "bg-transparent py-6 border-transparent" // Clean & Transparent at top
-            : "bg-[#052216]/90 backdrop-blur-md py-4 shadow-lg" // Dark Green & Blurred when scrolling
+            : "bg-none   backdrop-blur-lg py-6 shadow-xl" // Dark Green & Blurred when scrolling
         }
         `}
       >
-        <div className="container mx-auto grid grid-cols-5 items-center gap-2">
+        <div className="px-16 mx-auto grid grid-cols-5 items-center gap-2">
           {/* LEFT NAV — Desktop only */}
           <Link
             href="/rooms"
-            className="hidden md:block text-white text-lg font-medium tracking-widest font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
+            className="hidden md:block text-white text-lg font-medium  font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
           >
             <span className="nav-underline">LODGING</span>
           </Link>
 
           <Link
             href="/events"
-            className="hidden md:block text-white text-lg font-medium tracking-widest font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
+            className="hidden md:block text-white text-lg font-medium  font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
           >
             <span className="nav-underline">EVENT SPACES</span>
           </Link>
@@ -69,7 +69,7 @@ const Header = () => {
           <div className="col-span-5 md:col-span-1 text-center">
             <Link href="/">
               <Image
-                src="/MainLogo.png"
+                src="/svgs/MainLogo.svg"
                 alt="The Padival Grand Hotel"
                 width={400}
                 height={90}
@@ -84,14 +84,14 @@ const Header = () => {
           {/* RIGHT NAV — Desktop only */}
           <Link
             href="/dining"
-            className="hidden md:block text-white text-lg font-medium tracking-widest font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
+            className="hidden md:block text-white text-lg font-medium  font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
           >
             <span className="nav-underline">DINING</span>
           </Link>
 
           <Link
             href="/about"
-            className="hidden md:block text-white text-lg font-medium tracking-widest font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
+            className="hidden md:block text-white text-lg font-medium  font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
           >
             <span className="nav-underline">ABOUT US</span>
           </Link>
@@ -127,7 +127,18 @@ const Header = () => {
       >
         {/* Sidebar Header with logo + close */}
         <div className="flex items-center justify-between p-6 border-b border-white/20">
-          <button onClick={() => setMobileOpen(false)} className="text-white">
+
+          <Link className="" href="/">
+            <Image
+              src="/MainLogo.png"
+              alt="logo"
+              width={120}
+              height={40}
+              className="h-auto"
+            />
+          </Link>
+
+                    <button onClick={() => setMobileOpen(false)} className="text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -143,19 +154,10 @@ const Header = () => {
               />
             </svg>
           </button>
-          <div className="px-10">
-            <Image
-              src="/MainLogo.png"
-              alt="logo"
-              width={120}
-              height={40}
-              className="h-auto"
-            />
-          </div>
         </div>
 
         {/* ONLY your 4 header links */}
-        <nav className="flex flex-col gap-6 p-6 text-lg tracking-wide font-sans text-center">
+        <nav className="flex flex-col mt-2 gap-6 p-6 text-lg tracking-wide font-sans text-start">
           <Link href="/rooms" onClick={() => setMobileOpen(false)}>
             LODGING
           </Link>
