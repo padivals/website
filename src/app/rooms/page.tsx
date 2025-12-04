@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 
 import Header from "@/components/layout/Header";
@@ -9,6 +10,26 @@ import RoomCard from "@/components/ui/RoomCard";
 import CommonAmenities from "@/components/sections/CommonAmenities";
 import FoodAndDining from "@/components/sections/FoodAndDining";
 import FAQSection from "@/components/sections/FAQSection";
+
+export const metadata: Metadata = {
+    title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
+    description:
+        "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats. Each room features modern amenities and exceptional comfort.",
+    keywords: [
+        "hotel rooms Puttur",
+        "luxury suites Puttur",
+        "accommodation Puttur",
+        "family rooms Puttur",
+        "executive rooms Puttur",
+        "comfortable stay Puttur",
+    ],
+    openGraph: {
+        title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
+        description:
+            "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats.",
+        url: "https://padivals-megamind.vercel.app//rooms",
+    },
+};
 
 export default function RoomsPage() {
     return (
@@ -57,9 +78,9 @@ export default function RoomsPage() {
             <FoodAndDining />
             <FAQSection />
             <section className="hidden md:block">
-                 <ReservationBar />
+                <ReservationBar />
             </section>
-           
+
             <Footer />
         </main>
     );

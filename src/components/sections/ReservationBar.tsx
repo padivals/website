@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import { format } from "date-fns";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import DateRangePicker from "../ui/DateRangePicker";
-import Button from "../ui/Button";
 
 type ReservationData = {
   from: Date | undefined;
@@ -164,9 +163,9 @@ const ReservationBar = ({
               adults,
               children,
             })
-            
+
           }
-          className={ `   bg-white text-[#012219] px-6 py-3 font-extrabold md:text-lg  hover:bg-[#c1c1c1] transition-all`}
+          className={`   bg-white text-[#012219] px-6 py-3 font-extrabold md:text-lg  hover:bg-[#c1c1c1] transition-all`}
         >
           {buttonLabel}
         </button>

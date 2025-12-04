@@ -1,7 +1,18 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/components/layout/Header";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+    title: "Thank You | The Padival Grand Hotel",
+    description:
+        "Thank you for choosing The Padival Grand Hotel. We look forward to welcoming you.",
+    robots: {
+        index: false,
+        follow: false,
+    },
+};
 
 export default function ThankYouPage() {
     return (

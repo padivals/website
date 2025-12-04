@@ -16,6 +16,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://padivals-megamind.vercel.app/"),
   title: "The Padival Grand Hotel | Luxury Stay in Puttur",
   description:
     "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
@@ -31,14 +32,14 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
       "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    url: "https://thepadivalgrand.com",
+    url: "https://padivals-megamind.vercel.app/",
     siteName: "The Padival Grand Hotel",
     images: [
       {
-        url: "/hero-bg.png", // Ensure this image exists or use a representative one
+        url: "/image.png",
         width: 1200,
         height: 630,
-        alt: "The Padival Grand Hotel Lobby",
+        alt: "The Padival Grand Hotel - Luxury Accommodation in Puttur",
       },
     ],
     locale: "en_US",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
       "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    images: ["/hero-bg.png"],
+    images: ["/image.png"],
   },
   robots: {
     index: true,
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://thepadivalgrand.com",
+    canonical: "https://padivals-megamind.vercel.app/",
   },
 };
 

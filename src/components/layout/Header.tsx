@@ -42,11 +42,10 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 
         ${showHeader ? "translate-y-0" : "-translate-y-full"}
-        ${
-          isTop
+        ${isTop
             ? "bg-transparent py-6 border-transparent" // Clean & Transparent at top
             : "bg-none   backdrop-blur-lg py-6 shadow-xl" // Dark Green & Blurred when scrolling
-        }
+          }
         `}
       >
         <div className="px-16 mx-auto grid grid-cols-5 items-center gap-2">
@@ -69,13 +68,12 @@ const Header = () => {
           <div className="col-span-5 md:col-span-1 text-center">
             <Link href="/">
               <Image
-                src="/svgs/MainLogo.svg"
+                src="/svgs/mainLogo.svg"
                 alt="The Padival Grand Hotel"
                 width={400}
                 height={90}
-                className={`h-auto mx-auto drop-shadow-lg transition-all duration-300 ${
-                  isTop ? "w-48 md:w-80" : "w-40 md:w-64"
-                }`} // Logo gets slightly smaller on scroll
+                className={`h-auto mx-auto drop-shadow-lg transition-all duration-300 ${isTop ? "w-48 md:w-80" : "w-40 md:w-64"
+                  }`} // Logo gets slightly smaller on scroll
                 priority
               />
             </Link>
@@ -121,9 +119,8 @@ const Header = () => {
 
       {/* ==================== MOBILE SIDEBAR SLIDE IN ==================== */}
       <div
-        className={`fixed top-0 left-0 h-full w-full bg-[#00221A] text-white z-[60] transform transition-transform duration-500 ${
-          mobileOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-full bg-[#00221A] text-white z-[60] transform transition-transform duration-500 ${mobileOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Sidebar Header with logo + close */}
         <div className="flex items-center justify-between p-6 border-b border-white/20">
@@ -138,7 +135,7 @@ const Header = () => {
             />
           </Link>
 
-                    <button onClick={() => setMobileOpen(false)} className="text-white">
+          <button onClick={() => setMobileOpen(false)} className="text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

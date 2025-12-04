@@ -137,7 +137,7 @@ const ContactSection = () => {
 
                 {/* Dropdown */}
                 {openGuests && (
-                  <div 
+                  <div
                     className="absolute top-full left-0 w-full bg-[#F9F5EC] border border-[#165F41] border-t-0 z-10 p-6 flex flex-col gap-6 shadow-lg"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -187,54 +187,54 @@ const ContactSection = () => {
                   </div>
                 )}
               </div>
- {/* phone */}
-        <div className="flex flex-col">
-  <label className="text-[#165F41] text-lg font-medium uppercase tracking-wider mb-2">
-    Phone
-  </label>
-   <PhoneInput
-        defaultCountry="IN"
-        value={phone}
-        onChange={setPhone}
-        className="w-full"
-        inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg"
-        inputStyle={{
-          width: "100%",
-          background: "transparent",
-          border: "1px solid #165F41",
-          
-          borderRadius: "0px",            // no rounded corners
-          padding: "28px",
-          fontSize: "16px",
-          color: "#165F41B2",
-        }}
-        countrySelectorStyleProps={{
-          buttonStyle: {
-            background: "transparent",
-            border: "1px solid #165F41",
-            borderRight: "0px",
-            borderRadius: "0px",          // no rounded corners
-            padding: "28px",
-            width: "80px",
-            color: "#165F41",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          },
-          dropdownStyleProps: {
-            style: {
-              maxHeight: "220px",         // enables scroll
-              overflowY: "auto",          // scrollable dropdown
-              borderRadius: "0px",
-              border: "1px solid #165F41",
-              background: "white",
-              zIndex: 9999,
-              overscrollBehavior: "contain",
-            },
-          },
-        }}
-      />
-</div>
+              {/* phone */}
+              <div className="flex flex-col">
+                <label className="text-[#165F41] text-lg font-medium uppercase tracking-wider mb-2">
+                  Phone
+                </label>
+                <PhoneInput
+                  defaultCountry="in"
+                  value={phone}
+                  onChange={setPhone}
+                  className="w-full"
+                  inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg"
+                  inputStyle={{
+                    width: "100%",
+                    background: "transparent",
+                    border: "1px solid #165F41",
+
+                    borderRadius: "0px",            // no rounded corners
+                    padding: "28px",
+                    fontSize: "16px",
+                    color: "#165F41B2",
+                  }}
+                  countrySelectorStyleProps={{
+                    buttonStyle: {
+                      background: "transparent",
+                      border: "1px solid #165F41",
+                      borderRight: "0px",
+                      borderRadius: "0px",          // no rounded corners
+                      padding: "28px",
+                      width: "80px",
+                      color: "#165F41",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    },
+                    dropdownStyleProps: {
+                      style: {
+                        maxHeight: "220px",         // enables scroll
+                        overflowY: "auto",          // scrollable dropdown
+                        borderRadius: "0px",
+                        border: "1px solid #165F41",
+                        background: "white",
+                        zIndex: 9999,
+                        overscrollBehavior: "contain",
+                      },
+                    },
+                  }}
+                />
+              </div>
 
               {/* Email */}
               <Input

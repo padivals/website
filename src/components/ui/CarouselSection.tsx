@@ -110,7 +110,7 @@ const CarouselSection = <T,>({
         {variant === "split" && (
           <>
             {/* Top Divider Line */}
-            <div className=" h-px bg-[#165F41] mb-12 opacity-50 mx-6 md:mx-12 lg:mx-20"></div>
+            <div className=" h-[2px] bg-[#165F41] mb-12 opacity-50 mx-6 md:mx-10 lg:mx-16 "></div>
 
             <div className="px-6 md:px-12 lg:px-10 pb-14">
               <div className="flex flex-col items-center text-center md:items-start md:text-left md:px-6 lg:flex-row gap-4 lg:gap-4 mb-6">
@@ -128,7 +128,7 @@ const CarouselSection = <T,>({
                 </div>
                 <div className="lg:w-3/4">
                   {description && (
-                    <p className="text-[#0F2A1D] text-lg font-light leading-relaxed max-w-2xl mb-6">
+                    <p className=" text-lg font-medium text-[#012219CC] leading-relaxed max-w-2xl mb-6 xl:ml-10">
                       {description}
                     </p>
                   )}
@@ -140,8 +140,8 @@ const CarouselSection = <T,>({
 
         <div
           className={`relative group ${variant === "centered"
-              ? "max-w-[1400px] mx-auto"
-              : "lg:pl-[19%] pl-0 -mt-12"
+            ? "max-w-[1400px] mx-auto"
+            : "lg:pl-[19%] pl-0 -mt-12"
             }`}
         >
           {/* Navigation Buttons - Absolute positioned for Centered */}
@@ -151,8 +151,8 @@ const CarouselSection = <T,>({
                 onClick={() => swiperRef.current?.slidePrev()}
                 disabled={isBeginning}
                 className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-12 h-12  border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === "centered"
-                    ? "left-4 md:left-20 text-white hover:bg-white/10"
-                    : "left-4 md:left-10 lg:left-[24.2%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80"
+                  ? "left-4 md:left-20 text-white hover:bg-white/10"
+                  : "left-4 md:left-10 lg:left-[24.2%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80"
                   } ${isBeginning
                     ? "group-hover:opacity-50 cursor-not-allowed"
                     : "group-hover:opacity-100 cursor-pointer"
@@ -179,8 +179,8 @@ const CarouselSection = <T,>({
                 onClick={() => swiperRef.current?.slideNext()}
                 disabled={isEnd}
                 className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-12 h-12 bg-[gray]/30 border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === "centered"
-                    ? "right-4 md:right-10 text-white hover:bg-white/10"
-                    : "right-4 md:right-0 border-[#0F2A1D]/30 text-[#0F2A1D]  bg-[gray]/70  hover:text-[white] hover:bg-[#0F2A1D]/80"
+                  ? "right-4 md:right-10 text-white hover:bg-white/10"
+                  : "right-4 md:right-0 border-[#0F2A1D]/30 text-[#0F2A1D]  bg-[gray]/70  hover:text-[white] hover:bg-[#0F2A1D]/80"
                   } ${isEnd
                     ? "group-hover:opacity-50 cursor-not-allowed"
                     : "group-hover:opacity-100 cursor-pointer"
@@ -205,7 +205,7 @@ const CarouselSection = <T,>({
             </>
           )}
           <div className="w-full flex ">
-            <div className="w-full max-w-[1400px]   ml-4 xl:max-w-full">
+            <div className="w-full max-w-[1400px]   ml-4  xl:max-w-full">
               <Swiper
                 modules={[Navigation, Pagination]}
                 onBeforeInit={(swiper) => {
