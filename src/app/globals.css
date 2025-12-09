@@ -56,6 +56,16 @@ html.lenis body {
   transform: translateY(0);
 }
 
+ @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 40 !important;
+            padding-bottom: 20 !important;
+          }
+        }
+
+
 @keyframes fadeSlide {
   0% {
     opacity: 0;

@@ -189,7 +189,7 @@ export default function VideoCarousel({
   }, [index]);
 
   return (
-    <div className={`w-full flex flex-col justify-center items-center py-0 md:py-8 ${backgroundColor} overflow-hidden md:min-h-[800px]`}>
+    <div className={`  w-full flex flex-col justify-center items-center py-0 md:py-8 ${backgroundColor} overflow-hidden md:min-h-[800px]`}>
 
       {/* <h2 className="text-3xl md:text-4xl font-serif text-[#1A3C34] mb-12 tracking-wide text-center">
         {heading}

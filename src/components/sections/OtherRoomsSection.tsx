@@ -22,7 +22,17 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
 
     return (
         <section className="bg-[#F9F5EC] py-20">
-            <div className="container mx-auto md:px-16 px-6">
+                <style>{`
+        @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 40 !important;
+            pzdding-bottom: 20 !important;
+          }
+        }
+      `}</style>
+            <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
                 {/* Top Divider Line */}
                 <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50"></div>
 

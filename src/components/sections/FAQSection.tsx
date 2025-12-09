@@ -35,7 +35,15 @@ const FAQSection = () => {
 
   return (
     <section className="bg-white md:py-20 py-6">
-      <div className="container mx-auto md:px-16 px-6">
+      <style>{`
+        @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+        }
+      `}</style>
+      <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
         {/* Top Divider Line */}
         <div className="w-full hidden md:block  h-px bg-[#165F41] mb-4 mt-8 md:mt-0 "></div>
 

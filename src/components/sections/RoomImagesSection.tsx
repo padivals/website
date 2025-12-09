@@ -9,7 +9,18 @@ const RoomImagesSection = ({ images }: RoomImagesSectionProps) => {
     if (!images || images.length < 2) return null;
 
     return (
-        <section className="container mx-auto md:px-16 px-6 py-12">
+        <>
+         <style>{`
+        @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 40 !important;
+            pzdding-bottom: 20 !important;
+          }
+        }
+      `}</style>
+        <section className="container mx-auto md:px-16 px-6 py-12 xl-faq-padding">
             <div className="flex gap-6">
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
                     <Image
@@ -29,6 +40,7 @@ const RoomImagesSection = ({ images }: RoomImagesSectionProps) => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 
