@@ -40,7 +40,17 @@ export default function RoomsPage() {
                 image="/roomsImg/bgImg1.png"
             />
 
-            <section className="container mx-auto md:px-16 px-6 py-20">
+           <style>{`
+        @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 40 !important;
+            pzdding-bottom: 20 !important;
+          }
+        }
+      `}</style>
+      <section className="container mx-auto md:px-16 px-6 py-20 xl-faq-padding">
                 {/* Desktop grid (visible md+) */}
                 <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {rooms.map((room) => (

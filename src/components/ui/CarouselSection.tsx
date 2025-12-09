@@ -110,11 +110,11 @@ const CarouselSection = <T,>({
         {variant === "split" && (
           <>
             {/* Top Divider Line */}
-            <div className=" h-[2px] bg-[#165F41] mb-12 opacity-50 mx-6 md:mx-10 lg:mx-16 "></div>
+            <div className="h-[2px] bg-[#165F41] mb-12 opacity-50  mx-6 md:mx-10 lg:mx-16  container xl-line-width"></div>
 
-            <div className="px-6 md:px-12 lg:px-10 pb-14">
-              <div className="flex flex-col items-center text-center md:items-start md:text-left md:px-6 lg:flex-row gap-4 lg:gap-4 mb-6">
-                <div className="lg:w-1/7">
+            <div className="px-6 md:px-12 lg:px-0 pb-14  container mx-auto  ">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left md:px-16 lg:flex-row gap-4 lg:gap-12 mb-6 xl-title-padding">
+                <div className="lg:w-1/7  xl-title-width   ">
                   {label && (
                     <span className="block text-[#165F41CC] font-sans  uppercase text-md font-semibold">
                       {label}
@@ -126,9 +126,9 @@ const CarouselSection = <T,>({
                     </h2>
                   )}
                 </div>
-                <div className="lg:w-3/4">
+                <div className="lg:w-3/4 xl-desc-width ">
                   {description && (
-                    <p className=" text-lg font-medium text-[#012219CC] leading-relaxed max-w-2xl mb-6 xl:ml-10">
+                    <p className=" text-lg font-medium text-[#012219CC] leading-relaxed max-w-2xl mb-6 ">
                       {description}
                     </p>
                   )}
@@ -141,7 +141,26 @@ const CarouselSection = <T,>({
         <style>{`
           @media (min-width: 2100px) {
             .carousel-responsive-padding {
-              padding-left: 17.5% !important;
+              padding-left: 38.5% !important;
+            }
+            .xl-title-width {
+              width: 25% !important;
+             
+            }
+            .xl-title-padding {
+              padding-left: 1rem !important;
+              padding-right: 1rem !important;
+            }
+            .xl-desc-width {
+              width: 65% !important;
+              padding-left: 2rem !important;
+              
+              
+             
+            }
+            .xl-line-width {
+              margin: auto !important;
+              margin-bottom: 2rem !important;
             }
           }
         `}</style>

@@ -72,7 +72,7 @@ const TestimonialsSection = ({
       <style>{`
         @media (min-width: 2100px) {
           .testimonial-responsive-padding {
-            padding-left: 22vw !important;
+            padding-left: 20vw !important;
           }
         }
       `}</style>

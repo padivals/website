@@ -11,7 +11,20 @@ interface RoomDetailsSectionProps {
 
 const RoomDetailsSection = ({ title, description, features, image }: RoomDetailsSectionProps) => {
     return (
-        <section className="container md:px-0 px-6 mx-auto md:pl-16 md:py-20  py-10">
+
+ <>
+ <style>{`
+        @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 40 !important;
+            pzdding-bottom: 20 !important;
+          }
+        }
+      `}</style>
+          
+        <section className="container md:px-0 px-6 mx-auto md:pl-16 md:py-20  py-10 xl-faq-padding ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left: Details */}
                 <div className="flex flex-col">
@@ -54,6 +67,7 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
                 </div>
             </div>
         </section>
+    </>
     );
 };
 

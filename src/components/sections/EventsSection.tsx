@@ -11,7 +11,15 @@ const EventsSection = () => {
 
   return (
     <section className="bg-white md:py-4 py-6">
-      <div className="container mx-auto px-16">
+      <style>{`
+        @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+        }
+      `}</style>
+      <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
         
         {/* Top Divider */}
         <div className="w-full h-px bg-[#165F41] opacity-50 mb-12"></div>

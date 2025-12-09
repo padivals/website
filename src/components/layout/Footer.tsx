@@ -4,12 +4,22 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+
+
 const Footer = () => {
   return (
-    <footer className="bg-[#052216] text-white pt-16 md:pb-[18vh] pb-10 font-serif">
-
+    <footer className="bg-[#052216] text-white pt-16 md:pb-[18vh] pb-10 font-serif ">
+ <style>{`
+        @media (min-width: 2100px) {
+          .xl-faq-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+        }
+      `}</style>
+      <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
       {/* === TOP SECTION === */}
-      <div className="px-6 md:px-12 lg:px-16">
+      <div className="">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 mb-16">
 
           {/* Logo + Desc */}
@@ -113,6 +123,7 @@ const Footer = () => {
             All Rights Reserved. The Grand Padival Hotel 2025
           </p>
         </div>
+      </div>
       </div>
     </footer>
   );

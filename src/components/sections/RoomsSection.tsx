@@ -36,29 +36,29 @@ const RoomsSection = () => {
           {/* Top Divider */}
           <div className="w-full h-px bg-[#FFFFFF] mb-8 lg:mb-12"></div>
 
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-8 text-white">
-            {/* Left Label */}
-            <div className="lg:w-1/6">
-              <span className="block font-sans  uppercase text-xs lg:text-xl font-semibold">
+          <div className="flex flex-col lg:flex-row  justify-between text-white text-center lg:text-left  gap-6 lg:gap-8">
+            {/* OUR ROOMS Label */}
+            <div className="flex-shrink-0">
+              <span className="block font-sans uppercase text-xs lg:text-xl font-semibold whitespace-nowrap">
                 OUR ROOMS
               </span>
             </div>
 
-            {/* Middle Description */}
-            <div className="lg:w-1/2">
-              <p className="text-base lg:text-xl font-med leading-relaxed mb-6 max-w-3xl">
+            {/* Description */}
+            <div className="flex-1">
+              <p className="text-base lg:text-xl font-med leading-relaxed mb-4 lg:mb-6">
                 {rooms[activeIndex].description}
               </p>
               <a
                 href={`/rooms/${rooms[activeIndex].slug}`}
-                className="inline-block border-b border-white pb-1 text-xs lg:text-lg font-medium    uppercase tracking-wider hover:text-gray-200 transition-colors"
+                className="inline-block border-b border-white pb-1 text-xs lg:text-lg font-medium uppercase tracking-wider hover:text-gray-200 transition-colors"
               >
                 Learn More
               </a>
             </div>
 
-            {/* Right Button */}
-            <div className="lg:w-1/6 flex justify-end">
+            {/* Book Now Button */}
+            <div className="flex-shrink-0">
               <Button
                 variant="primary"
                 className="bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-xs lg:text-sm tracking-wider"
@@ -68,6 +68,7 @@ const RoomsSection = () => {
             </div>
           </div>
         </div>
+        
       </div>
 
       {/* Slider Container - Just for content transitions if needed, but bg is static now */}
