@@ -21,7 +21,7 @@ export default function DiningPage() {
             <Header />
             <PageHero
                 underlineClass="hidden"
-                image="/hero-bg.png" // Using placeholder for now
+                image="/dining-bg.png" // Using placeholder for now
             />
 
             <TextSection

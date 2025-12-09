@@ -8,12 +8,12 @@ const EventSpaces = () => {
         {
             title: "Conference Hall",
             description: "A clean and comfortable indoor venue suited for meetings, family events, and small gatherings held in a calm setting.",
-            image: "/hero-bg.png", // Placeholder
+            image: "/eventImg/ourspaces1.png", // Placeholder
         },
         {
             title: "Rooftop Terrace Space",
             description: "An open-air, breezy venue ideal for evening functions and intimate celebrations with a relaxed, homely atmosphere.",
-            image: "/hero-bg.png", // Placeholder
+            image: "/eventImg/ourspaces2.png", // Placeholder
         },
     ];
 
@@ -27,7 +27,7 @@ const EventSpaces = () => {
                 <div className="flex flex-col lg:flex-row md:gap-12 gap-6">
                     {/* Left Column: Label */}
                     <div className="lg:w-1/4">
-                        <span className="block text-[#4A6741] font-sans tracking-widest uppercase md:text-sm text-md font-semibold">
+                        <span className="block text-[#4A6741] font-sans tracking-widest uppercase md:text-md text-md font-semibold">
                             OUR SPACES
                         </span>
                     </div>

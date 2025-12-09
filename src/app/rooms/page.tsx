@@ -50,7 +50,7 @@ export default function RoomsPage() {
                             title={room.title}
                             description={room.description}
                             slug={room.slug}
-                            heroImage={room.heroImage}
+                            heroImage={room.cardImg}
                             imageColor={room.imageColor}
                         />
                     ))}

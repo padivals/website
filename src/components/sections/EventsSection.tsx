@@ -11,7 +11,7 @@ const EventsSection = () => {
 
   return (
     <section className="bg-white md:py-4 py-6">
-      <div className="container mx-auto px-[4vw]">
+      <div className="container mx-auto px-16">
         
         {/* Top Divider */}
         <div className="w-full h-px bg-[#165F41] opacity-50 mb-12"></div>
@@ -44,7 +44,7 @@ const EventsSection = () => {
         </div>
 
         {/* IMAGE CARDS ROW with exact spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-[17vw]  ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-[18vw]  ">
           {events.map((event, index) => (
             <div key={index} className="flex flex-col group cursor-pointer">
 

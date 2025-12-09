@@ -75,7 +75,7 @@ const ContactSection = () => {
               <SectionHeader
                 label="CONTACT US"
                 heading="Get in Touch With The Padival Grand Hotel"
-                className="mb-8"
+                className="mb-3"
               />
               <a
                 href="#"
@@ -86,7 +86,7 @@ const ContactSection = () => {
             </div>
 
             {/* Map Container */}
-            <div className="w-full h-88 relative overflow-hidden  ">
+            <div className="w-full h-92 relative overflow-hidden  ">
               {/* The StyledMap now handles everything (Styles + Marker) */}
               <StyledMap />
             </div>
@@ -308,7 +308,7 @@ const ContactSection = () => {
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-[#1B4D3E] rounded-sm accent-[#1B4D3E] focus:ring-0"
+                    className="checkbox-custom focus:ring-0"
                   />
                   <span className="text-[#165F41] text-sm font-light">
                     I give my consent to be contacted via Call, SMS, Email, or

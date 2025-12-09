@@ -26,7 +26,7 @@ const RoomsSection = () => {
   };
 
   return (
-    <section className="relative h-screen flex flex-col">
+    <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
       {/* Dark Overlay for better text readability if needed, matching the photo's look */}
       {/* <div className="absolute inset-0 bg-black/20 z-0"></div> */}
 
@@ -96,8 +96,7 @@ const RoomsSection = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${room.heroImage})` }}
                 >
-                  {/* Optional overlay for text readability */}
-                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
                 </div>
               </div>
             </SwiperSlide>
@@ -147,7 +146,7 @@ const RoomsSection = () => {
 
                 <span
                   className={`text-xl font-light tracking-wide block mt-4 transition-colors duration-300 ${
-                    activeIndex === index ? "text-white" : "text-white/60"
+                    activeIndex === index ? "text-white" : "text-white"
                   }`}
                 >
                   {room.title}

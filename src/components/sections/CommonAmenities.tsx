@@ -128,18 +128,18 @@ const CommonAmenities = () => {
 
                 <div className="w-full h-px bg-[#165F41] mb-12  "></div>
             </div>
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto ">
                 <div className="flex flex-col lg:flex-row md:gap-12 gap-8">
                     {/* Left Column: Title */}
                     <div className="lg:w-1/5">
-                        <p className="block text-[#4A6741]  uppercase md:text-sm text-lg font-semibold">
+                        <p className="block text-[#165F41CC]  uppercase md:text-lg text-lg font-semibold">
                             COMMON AMENITIES
                         </p>
                     </div>
 
                     {/* Right Column: Content */}
                     <div className="lg:w-3/4">
-                        <p className="text-[#0F2A1D] text-lg  leading-relaxed font-medium  mb-12">
+                        <p className="text-[#012219CC] text-lg  leading-relaxed font-medium  mb-12">
                             At The Padival Grand, each amenity is thoughtfully maintained to make your stay comfortable, calm and dependable.<br /> Every facility is designed to support a smooth experience, whether you are here for a short visit or a longer stay.
                         </p>
 
@@ -152,10 +152,10 @@ const CommonAmenities = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                                         {category.items.map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-4">
-                                                <div className="text-[#4A6741] flex items-center">
+                                                <div className="text-[#165F41CC] flex items-center">
                                                     {icons[item.icon as keyof typeof icons]}
                                                 </div>
-                                                <span className="text-[#0F2A1D] text-md font-medium flex items-center leading-relaxed">
+                                                <span className="text-[#012219CC] text-md font-medium flex items-center leading-relaxed">
                                                     {item.text}
                                                 </span>
                                             </div>

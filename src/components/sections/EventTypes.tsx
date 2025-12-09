@@ -10,27 +10,28 @@ const EventTypes = () => {
             id: 1,
             title: "Engagement and Pre-Wedding Rituals",
             description: "Neat, welcoming spaces suited for meaningful ceremonies held with care and simplicity.",
-            image: "/hero-bg.png", // Placeholder
+            image: "/eventImg/evnt1.png", // Placeholder
         },
         {
             id: 2,
             title: "Naming Ceremonies",
             description: "A peaceful space for families to celebrate their special milestone in a calm and supportive setting.",
-            image: "/hero-bg.png", // Placeholder
+            image: "/eventImg/evnt2.png", // Placeholder
         },
         {
             id: 3,
             title: "Small Corporate Meetings",
             description: "Quiet, well-kept rooms ideal for discussions, training sessions, and professional gatherings.",
-            image: "/hero-bg.png", // Placeholder
+            image: "/eventImg/evnt3.png", // Placeholder
         },
         {
             id: 4,
             title: "Birthday Celebrations",
             description: "Intimate spaces perfect for celebrating another year of life with close friends and family.",
-            image: "/hero-bg.png", // Placeholder
+            image: "/eventImg/evnt1.png", // Placeholder
         },
     ];
+
 
     return (
         <CarouselSection
@@ -59,7 +60,7 @@ const EventTypes = () => {
             }}
             renderItem={(item) => (
                 <div className="flex flex-col h-full group cursor-pointer">
-                    <div className="relative w-full aspect-[3/4] overflow-hidden mb-6">
+                    <div className={`w-full h-[53vh] object-cover mb-6 relative overflow-hidden`}>
                         <Image
                             src={item.image}
                             alt={item.title}
