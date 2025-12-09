@@ -22,7 +22,7 @@ export default function EventsPage() {
 
             <PageHero
                underlineClass="hidden"
-                image="/hero-bg.png" // Placeholder
+                image="/event-bg.png" // Placeholder
             />
 
             <TextSection

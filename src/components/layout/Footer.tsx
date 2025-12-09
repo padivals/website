@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#052216] text-white pt-16 md:pb-[20vh] pb-10 font-serif">
+    <footer className="bg-[#052216] text-white pt-16 md:pb-[18vh] pb-10 font-serif">
 
       {/* === TOP SECTION === */}
       <div className="px-6 md:px-12 lg:px-16">
@@ -73,7 +73,7 @@ const Footer = () => {
               Karnataka 574201
             </p>
 
-            <a href="#" className=" border-b hover:text-white mt-3  block w-fit">
+            <a href="#" className=" border-b font-sans text-[#F9F2E8CC] hover:text-white mt-3  block w-fit">
               View on Google Maps
             </a>
           </div>

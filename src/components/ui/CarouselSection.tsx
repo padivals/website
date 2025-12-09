@@ -138,10 +138,18 @@ const CarouselSection = <T,>({
           </>
         )}
 
+        <style>{`
+          @media (min-width: 2100px) {
+            .carousel-responsive-padding {
+              padding-left: 17.5% !important;
+            }
+          }
+        `}</style>
+
         <div
           className={`relative group ${variant === "centered"
             ? "max-w-[1400px] mx-auto"
-            : "lg:pl-[19%] pl-0 -mt-12"
+            : "carousel-responsive-padding lg:pl-[19.5%] pl-0 -mt-12"
             }`}
         >
           {/* Navigation Buttons - Absolute positioned for Centered */}

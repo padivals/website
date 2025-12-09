@@ -69,7 +69,7 @@ const NearbyAttractions = () => {
             width={100}
             height={100}
             alt={attraction.name}
-            className={`w-full aspect-[3/4] mb-6 relative overflow-hidden`}
+            className={`w-full h-[48vh] object-cover mb-6 relative overflow-hidden`}
           ></Image>
           {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div> */}
 

@@ -266,9 +266,10 @@ export default function VideoCarousel({
       </div>
 
       {/* Progress Bar */}
-      <div className="  mt-12 w-[80%] md:w-[31rem] h-1 bg-[#ebe6e2] rounded-full relative overflow-hidden">
+      <div className="relative mt-12 w-[80%] md:w-[31rem] h-4">
+        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-[#EADFCF]"></div>
         <div
-          className="absolute top-0 bottom-0 bg-[#165F41] rounded-2xl transition-all duration-500 ease-out"
+          className="absolute top-1/2 -translate-y-1/2 h-2 bg-[#165F41]  transition-all duration-500 ease-out"
           style={{
             left: `${(index / VIDEOS.length) * 100}%`,
             width: `${(1 / VIDEOS.length) * 100}%`
@@ -343,3 +344,4 @@ function Card({
 
   );
 }
+

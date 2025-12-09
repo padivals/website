@@ -22,7 +22,7 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
 
     return (
         <section className="bg-[#F9F5EC] py-20">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto md:px-16 px-6">
                 {/* Top Divider Line */}
                 <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50"></div>
 

@@ -9,7 +9,7 @@ const RoomImagesSection = ({ images }: RoomImagesSectionProps) => {
     if (!images || images.length < 2) return null;
 
     return (
-        <section className="container mx-auto px-6 py-12">
+        <section className="container mx-auto md:px-16 px-6 py-12">
             <div className="flex gap-6">
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
                     <Image

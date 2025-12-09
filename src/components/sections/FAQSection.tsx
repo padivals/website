@@ -37,12 +37,12 @@ const FAQSection = () => {
     <section className="bg-white md:py-20 py-6">
       <div className="container mx-auto md:px-16 px-6">
         {/* Top Divider Line */}
-        <div className="w-full hidden md:block  h-px bg-[#165F41] mb-12 mt-8 md:mt-0 "></div>
+        <div className="w-full hidden md:block  h-px bg-[#165F41] mb-4 mt-8 md:mt-0 "></div>
 
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-24">
           {/* Left Side - Static Content */}
           <div className="lg:w-1/3 lg:pr-8">
-            <div className="flex flex-col items-start text-left">
+            <div className="flex flex-col items-start text-left md:mt-6 mt-0">
               <span className="block text-[#165F41CC] uppercase text-sm md:text-lg font-semibold mb-4">
                 FREQUENTLY ASKED QUESTIONS
               </span>

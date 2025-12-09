@@ -68,8 +68,15 @@ const TestimonialsSection = ({
   };
 
   return (
-    <section className="bg-[#F9F5EC] py-15">
-      <div className="container mx-auto md:pl-16 px-8">
+    <section className="bg-[#F9F2E8] py-15">
+      <style>{`
+        @media (min-width: 2100px) {
+          .testimonial-responsive-padding {
+            padding-left: 22vw !important;
+          }
+        }
+      `}</style>
+      <div className="testimonial-responsive-padding lg:pl-16 md:px-0 px-8">
         {/* Top Divider Line */}
         <div className="md:mr-16  h-px bg-[#165F41] mb-12 opacity-50"></div>
 
@@ -167,9 +174,10 @@ const TestimonialsSection = ({
           {/* Controls */}
           <div className="flex items-center gap-8 w-full md:w-auto">
             {/* Progress Bar */}
-            <div className="flex-1 md:w-84 h-1 bg-[#E2E8F0] rounded-full overflow-hidden">
+            <div className="relative flex-1 md:w-84 h-4">
+              <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-[#EADFCF]"></div>
               <div
-                className="h-full bg-[#1B4D3E] transition-all duration-300 "
+                className="absolute left-0 top-1/2 -translate-y-1/2 h-2 bg-[#1B4D3E]   transition-all duration-300"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function GetInTouchSection() {
     return (
         <section className="bg-[#F9F5EC] md:py-24">
-            <div className="container mx-auto md:px-16 px-6">
+            <div className="container mx-auto md:px-0 px-6">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
                     {/* Left Content */}
                     <div className="lg:w-7/12 flex flex-col justify-center h-full ">
