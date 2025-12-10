@@ -69,14 +69,14 @@ const TestimonialsSection = ({
 
   return (
     <section className="bg-[#F9F2E8] py-15">
-      <style>{`
-        @media (min-width: 2100px) {
+      {/* <style>{`
+        @media (min-width: 1910px) {
           .testimonial-responsive-padding {
-            padding-left: 20vw !important;
+            padding-left: 14vw !important;
           }
         }
-      `}</style>
-      <div className="testimonial-responsive-padding lg:pl-16 md:px-0 px-8">
+      `}</style> */}
+      <div className="padding-left lg:pl-16 md:px-0 px-8">
         {/* Top Divider Line */}
         <div className="md:mr-16  h-px bg-[#165F41] mb-12 opacity-50"></div>
 

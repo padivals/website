@@ -9,14 +9,14 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-[#052216] text-white pt-16 md:pb-[18vh] pb-10 font-serif ">
- <style>{`
+ {/* <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {
             padding-left: 0 !important;
             padding-right: 0 !important;
           }
         }
-      `}</style>
+      `}</style> */}
       <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
       {/* === TOP SECTION === */}
       <div className="">

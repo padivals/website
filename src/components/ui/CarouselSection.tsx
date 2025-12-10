@@ -139,12 +139,12 @@ const CarouselSection = <T,>({
         )}
 
         <style>{`
-          @media (min-width: 2100px) {
+          @media (min-width: 1910px) {
             .carousel-responsive-padding {
-              padding-left: 38.5% !important;
+              padding-left: 26% !important;
             }
             .xl-title-width {
-              width: 25% !important;
+              width: 15% !important;
              
             }
             .xl-title-padding {
