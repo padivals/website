@@ -12,35 +12,32 @@ import FoodAndDining from "@/components/sections/FoodAndDining";
 import FAQSection from "@/components/sections/FAQSection";
 
 export const metadata: Metadata = {
+  title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
+  description:
+    "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats. Each room features modern amenities and exceptional comfort.",
+  keywords: [
+    "hotel rooms Puttur",
+    "luxury suites Puttur",
+    "accommodation Puttur",
+    "family rooms Puttur",
+    "executive rooms Puttur",
+    "comfortable stay Puttur",
+  ],
+  openGraph: {
     title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
     description:
-        "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats. Each room features modern amenities and exceptional comfort.",
-    keywords: [
-        "hotel rooms Puttur",
-        "luxury suites Puttur",
-        "accommodation Puttur",
-        "family rooms Puttur",
-        "executive rooms Puttur",
-        "comfortable stay Puttur",
-    ],
-    openGraph: {
-        title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
-        description:
-            "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats.",
-        url: "https://padivals-megamind.vercel.app//rooms",
-    },
+      "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats.",
+    url: "https://padivals-megamind.vercel.app//rooms",
+  },
 };
 
 export default function RoomsPage() {
-    return (
-        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
-            <Header />
-            <PageHero
-                underlineClass="hidden"
-                image="/roomsImg/bgImg1.png"
-            />
+  return (
+    <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
+      <Header />
+      <PageHero underlineClass="hidden" image="/roomsImg/bgImg1.png" />
 
-           <style>{`
+      <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {
             padding-left: 0 !important;
@@ -51,47 +48,47 @@ export default function RoomsPage() {
         }
       `}</style>
       <section className="container mx-auto md:px-16 px-6 py-20 xl-faq-padding">
-                {/* Desktop grid (visible md+) */}
-                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    {rooms.map((room) => (
-                        <RoomCard
-                            key={room.id}
-                            id={room.id}
-                            title={room.title}
-                            description={room.description}
-                            slug={room.slug}
-                            heroImage={room.cardImg}
-                            imageColor={room.imageColor}
-                        />
-                    ))}
-                </div>
+        {/* Desktop grid (visible md+) */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {rooms.map((room) => (
+            <RoomCard
+              key={room.id}
+              id={room.id}
+              title={room.title}
+              description={room.description}
+              slug={room.slug}
+              heroImage={room.cardImg}
+              imageColor={room.imageColor}
+            />
+          ))}
+        </div>
 
-                {/* Mobile swiper (visible only on small screens) */}
-                <div className="md:hidden">
-                    <div className="flex gap-4 overflow-x-auto px-4 py-2 snap-x snap-mandatory scrollbar-hide">
-                        {rooms.map((room) => (
-                            <RoomCard
-                                key={room.id}
-                                id={room.id}
-                                title={room.title}
-                                description={room.description}
-                                slug={room.slug}
-                                heroImage={room.heroImage}
-                                imageColor={room.imageColor}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </section>
+        {/* Mobile swiper (visible only on small screens) */}
+        <div className="md:hidden">
+          <div className="flex gap-4 overflow-x-auto px-4 py-2 snap-x snap-mandatory scrollbar-hide">
+            {rooms.map((room) => (
+              <RoomCard
+                key={room.id}
+                id={room.id}
+                title={room.title}
+                description={room.description}
+                slug={room.slug}
+                heroImage={room.cardImg}
+                imageColor={room.imageColor}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <CommonAmenities />
-            <FoodAndDining />
-            <FAQSection />
-            <section className="hidden md:block">
-                <ReservationBar />
-            </section>
+      <CommonAmenities />
+      <FoodAndDining />
+      <FAQSection />
+      <section className="hidden md:block">
+        <ReservationBar />
+      </section>
 
-            <Footer />
-        </main>
-    );
+      <Footer />
+    </main>
+  );
 }
