@@ -10,7 +10,6 @@ import { StyledMap } from "../ui/StyledMap";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 
-
 const ContactSection = () => {
   const [description, setDescription] = useState("");
   const [preferredFrom, setPreferredFrom] = useState("");
@@ -52,7 +51,9 @@ const ContactSection = () => {
     return `${parts[0]} / ${parts[1]} / ${parts[2]}`;
   };
 
-  const handlePreferredFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePreferredFromChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setPreferredFrom(formatDateDigits(e.target.value));
   };
 
@@ -124,7 +125,10 @@ const ContactSection = () => {
                   }}
                 >
                   <span>
-                    {adults < 10 ? `0${adults}` : adults} Adult{adults !== 1 ? "s" : ""}, {children < 10 ? `0${children}` : children} Child{children !== 1 ? "ren" : ""}
+                    {adults < 10 ? `0${adults}` : adults} Adult
+                    {adults !== 1 ? "s" : ""},{" "}
+                    {children < 10 ? `0${children}` : children} Child
+                    {children !== 1 ? "ren" : ""}
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +136,9 @@ const ContactSection = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className={`w-4 h-4 text-gray-500 transition-transform ${openGuests ? "rotate-180" : ""}`}
+                    className={`w-4 h-4 text-gray-500 transition-transform ${
+                      openGuests ? "rotate-180" : ""
+                    }`}
                   >
                     <path
                       strokeLinecap="round"
@@ -150,7 +156,9 @@ const ContactSection = () => {
                   >
                     {/* Adults Row */}
                     <div className="flex justify-between items-center">
-                      <span className="text-[#165F41] font-medium text-lg">Adults</span>
+                      <span className="text-[#165F41] font-medium text-lg">
+                        Adults
+                      </span>
                       <div className="flex items-center gap-4">
                         <button
                           type="button"
@@ -159,7 +167,9 @@ const ContactSection = () => {
                         >
                           -
                         </button>
-                        <span className="text-[#165F41] w-6 text-center text-lg font-medium">{adults}</span>
+                        <span className="text-[#165F41] w-6 text-center text-lg font-medium">
+                          {adults}
+                        </span>
                         <button
                           type="button"
                           onClick={() => setAdults(adults + 1)}
@@ -172,7 +182,9 @@ const ContactSection = () => {
 
                     {/* Children Row */}
                     <div className="flex justify-between items-center">
-                      <span className="text-[#165F41] font-medium text-lg">Children</span>
+                      <span className="text-[#165F41] font-medium text-lg">
+                        Children
+                      </span>
                       <div className="flex items-center gap-4">
                         <button
                           type="button"
@@ -181,7 +193,9 @@ const ContactSection = () => {
                         >
                           -
                         </button>
-                        <span className="text-[#165F41] w-6 text-center text-lg font-medium">{children}</span>
+                        <span className="text-[#165F41] w-6 text-center text-lg font-medium">
+                          {children}
+                        </span>
                         <button
                           type="button"
                           onClick={() => setChildren(children + 1)}
@@ -210,7 +224,7 @@ const ContactSection = () => {
                     background: "transparent",
                     border: "1px solid #165F41",
 
-                    borderRadius: "0px",            // no rounded corners
+                    borderRadius: "0px", // no rounded corners
                     padding: "28px",
                     fontSize: "16px",
                     color: "#165F41B2",
@@ -220,7 +234,7 @@ const ContactSection = () => {
                       background: "transparent",
                       border: "1px solid #165F41",
                       borderRight: "0px",
-                      borderRadius: "0px",          // no rounded corners
+                      borderRadius: "0px", // no rounded corners
                       padding: "28px",
                       width: "80px",
                       color: "#165F41",
@@ -230,8 +244,8 @@ const ContactSection = () => {
                     },
                     dropdownStyleProps: {
                       style: {
-                        maxHeight: "220px",         // enables scroll
-                        overflowY: "auto",          // scrollable dropdown
+                        maxHeight: "220px", // enables scroll
+                        overflowY: "auto", // scrollable dropdown
                         borderRadius: "0px",
                         border: "1px solid #165F41",
                         background: "white",
@@ -311,7 +325,7 @@ const ContactSection = () => {
               </div>
 
               {/* Footer */}
-              <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between mt-4 gap-4">
+              <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between mt-4 gap-4 pb-10 md:pb-0">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"

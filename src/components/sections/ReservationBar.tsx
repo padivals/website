@@ -50,8 +50,6 @@ const ReservationBar = ({
     );
   }, []);
 
-
-
   // Close dropdown when clicking outside
   useEffect(() => {
     const close = () => {
@@ -62,8 +60,12 @@ const ReservationBar = ({
     return () => window.removeEventListener("click", close);
   }, []);
 
-  const formattedFrom = dates[0] ? format(dates[0], "dd / MM / yyyy ") : " -- / -- / ---- ";
-  const formattedTo = dates[1] ? format(dates[1], "dd / MM / yyyy ") : " -- / -- / ---- ";
+  const formattedFrom = dates[0]
+    ? format(dates[0], "dd / MM / yyyy ")
+    : " -- / -- / ---- ";
+  const formattedTo = dates[1]
+    ? format(dates[1], "dd / MM / yyyy ")
+    : " -- / -- / ---- ";
   return (
     <div
       ref={barRef}
@@ -71,7 +73,6 @@ const ReservationBar = ({
       style={{ backgroundColor: bgColor, color: textColor }}
     >
       <div className="max-w-7xl px-12    mx-auto flex items-center justify-between gap-6 ">
-
         {/* Heading */}
         <p className="font-sans text-sm md:text-[20px] font-medium whitespace-nowrap tracking-wide">
           {heading}
@@ -79,7 +80,6 @@ const ReservationBar = ({
 
         {/* Inputs */}
         <div className="flex items-center gap-18 flex-1 justify-center">
-
           {/* DATE PICKER */}
           <div
             onClick={(e) => {
@@ -89,9 +89,13 @@ const ReservationBar = ({
             }}
             className="flex items-center gap-3 border-b-2 border-white/50 py-2 cursor-pointer min-w-[240px] px-6 justify-center relative"
           >
-            <span className="text-xs md:text-sm tracking-wider">{formattedFrom}</span>
-            <span className="text-white/60 text-xs px-3">    -   </span>
-            <span className="text-xs md:text-sm tracking-wider">{formattedTo}</span>
+            <span className="text-xs md:text-sm tracking-wider">
+              {formattedFrom}
+            </span>
+            <span className="text-white/60 text-xs px-3"> - </span>
+            <span className="text-xs md:text-sm tracking-wider">
+              {formattedTo}
+            </span>
 
             {openDate && (
               <div
@@ -100,7 +104,6 @@ const ReservationBar = ({
                 onClick={(e) => e.stopPropagation()}
               >
                 <DateRangePicker value={dates} onChange={setDates} />
-
               </div>
             )}
           </div>
@@ -118,11 +121,7 @@ const ReservationBar = ({
               {adults} Adult{adults > 1 ? "s" : ""}, {children} Children
             </span>
             <div className="ml-2">
-              {openGuests ? (
-                <ChevronUp size={16} />
-              ) : (
-                <ChevronDown size={16} />
-              )}
+              {openGuests ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </div>
 
             {openGuests && (
@@ -134,7 +133,9 @@ const ReservationBar = ({
                 <div className="flex items-center justify-between">
                   <span className="text-sm">Adults</span>
                   <div className="flex items-center gap-3">
-                    <button onClick={() => setAdults(Math.max(1, adults - 1))}>–</button>
+                    <button onClick={() => setAdults(Math.max(1, adults - 1))}>
+                      –
+                    </button>
                     <span>{adults}</span>
                     <button onClick={() => setAdults(adults + 1)}>+</button>
                   </div>
@@ -144,7 +145,11 @@ const ReservationBar = ({
                 <div className="flex items-center justify-between">
                   <span className="text-sm">Children</span>
                   <div className="flex items-center gap-3">
-                    <button onClick={() => setChildren(Math.max(0, children - 1))}>–</button>
+                    <button
+                      onClick={() => setChildren(Math.max(0, children - 1))}
+                    >
+                      –
+                    </button>
                     <span>{children}</span>
                     <button onClick={() => setChildren(children + 1)}>+</button>
                   </div>
@@ -154,7 +159,7 @@ const ReservationBar = ({
           </div>
         </div>
 
-        {/* CTA BUTTON */}
+        {/* CTA BUTTON  */}
         <button
           onClick={() =>
             onSubmit?.({
@@ -163,7 +168,6 @@ const ReservationBar = ({
               adults,
               children,
             })
-
           }
           className={`   bg-white text-[#012219] px-6 py-3 font-extrabold md:text-lg  hover:bg-[#c1c1c1] transition-all`}
         >
