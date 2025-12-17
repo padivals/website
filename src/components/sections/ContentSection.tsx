@@ -21,9 +21,9 @@ const ContentSection = ({
     return (
         <section className={`${bgColor} py-20`}>
             <div className="container mx-auto ">
-                <div className={`flex flex-col lg:flex-row gap-12 items-center ${imagePosition === "left" ? "lg:flex-row-reverse" : ""}`}>
+                <div className={`flex flex-col lg:flex-row gap-32 justify-between items-center ${imagePosition === "left" ? "lg:flex-row-reverse" : ""}`}>
                     {/* Text Content */}
-                    <div className="lg:w-1/2 ">
+                    <div className="lg:max-w-xl ">
                         <h2 className={`text-3xl md:text-4xl font-semibold ${textColor} mb-6`}>
                             {title}
                         </h2>
@@ -34,7 +34,7 @@ const ContentSection = ({
 
                     {/* Image */}
                     <div className="lg:w-1/2 w-full">
-                        <div className="relative w-full aspect-[4/3] overflow-hidden  shadow-sm">
+                        <div className="relative w-full aspect-[4/4] overflow-hidden  shadow-sm">
                             <Image
                                 src={image}
                                 alt={title}

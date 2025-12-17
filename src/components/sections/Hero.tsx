@@ -5,11 +5,10 @@ import Image from "next/image";
 
 
 interface HeroProps {
-
-  bgImg?: ImageBitmap | string;
+  bgImg?: string;
 }
 
-const Hero = ({ bgImg }: HeroProps ) => {
+const Hero = ({ bgImg = "/default-hero.jpg" }: HeroProps ) => {
 
   return (
     <div
