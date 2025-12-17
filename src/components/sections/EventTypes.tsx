@@ -50,8 +50,8 @@ const EventTypes = () => {
        <ImageShowcaseSwiper
              classname="py-20 bg-[white]"
              variant="split"
-             heading="You can book rooms, event halls and restaurant tables, each supported by attentive service and well-prepared spaces."
-             leftLabel="WHAT'S NEARBY"
+             heading="We offer well-kept event spaces so guests can gather, celebrate, and host meaningful moments in a setting that feels comfortable and thoughtfully managed."
+             leftLabel="Types of events WE CATER TO"
              images={eventTypes}
            />
     );
