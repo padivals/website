@@ -36,15 +36,15 @@ const EventsSection = () => {
 
           {/* RIGHT DESCRIPTION — aligned exactly like screenshot */}
           <div className="lg:flex-1 max-w-[90vw]">
-            <p className="text-[#012219CC] text-lg leading-relaxed mb-6 font-light">
+            <p className="text-[#012219CC] text-lg leading-relaxed mb-6 font-medium">
               Celebrate life&apos;s special moments or host purposeful corporate
               gatherings with ease and elegance. Our thoughtfully designed
               spaces adapt seamlessly to your occasion.
             </p>
 
             <a
-              href="#"
-              className="text-[#1B4D3E] underline underline-offset-4 hover:text-[#143a2f] font-medium"
+              href="/rooms"
+              className="text-[#1B4D3E] underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium"
             >
               Discover Our Spaces
             </a>

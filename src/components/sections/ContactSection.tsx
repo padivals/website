@@ -86,7 +86,7 @@ const ContactSection = () => {
               />
               <a
                 href="#"
-                className="text-[#165F41B2] underline underline-offset-4 hover:text-[#143a2f] font-medium mb-4 inline-block pb-5"
+                className="text-[#165F41B2] underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium mb-4 inline-block pb-5"
               >
                 View on Google Maps
               </a>

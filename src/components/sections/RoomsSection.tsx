@@ -47,7 +47,7 @@ const RoomsSection = () => {
           {/* Top Divider */}
           <div className="w-full h-px bg-[#FFFFFF] mb-8 lg:mb-12"></div>
 
-          <div className=" flex  flex-col lg:flex-row  justify-between text-white text-center lg:text-left  gap-6 lg:gap-8">
+          <div className=" flex  flex-col lg:flex-row  justify-between text-white text-center lg:text-left  gap-6 lg:gap-28">
             {/* OUR ROOMS Label */}
             <div className="flex-shrink-0">
               <span className="block font-sans uppercase text-xs lg:text-xl font-semibold whitespace-nowrap">
@@ -69,7 +69,7 @@ const RoomsSection = () => {
             </div>
 
             {/* Book Now Button */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0"> 
               <Button
                 variant="primary"
                 className="bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-xs lg:text-sm tracking-wider"

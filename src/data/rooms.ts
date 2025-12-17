@@ -7,7 +7,7 @@ export const rooms = [
             "Quiet, well-cooled rooms with neat interiors, ideal for guests who prefer steady comfort and a peaceful environment.",
         imageColor: "bg-gray-300",
         heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
-        cardImg:"/roomsImg/comfort.png",
+        cardImg:"/roomsImg/card1.png",
         details: {
             size: "250 sq ft",
             occupancy: "2 Adults",
@@ -29,54 +29,60 @@ export const rooms = [
             "Essential bath amenities",
             "Early check in subject to availability"
         ],
-        images: ["/hero-bg.png", "/hero-bg.png"] // Placeholders for side-by-side images
+        images: ["/roomsImg/comf1.png", "/roomsImg/comf2.png","/roomsImg/comf3.png"] // Placeholders for side-by-side images
     },
     {
         id: 2,
-        slug: "premium-stay-room",
-        title: "The Premium Stay Room",
+        slug: "deluxe-room",
+        title: "The Deluxe A/C Room",
         description:
             "Large, homely rooms made for groups of four, providing ample space and a comfortable setup for family or group stays.",
         imageColor: "bg-gray-400",
-        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
-        cardImg:"/roomsImg/premium.png",
+        heroImage: "/roomsImg/bgImg2.png", // Placeholder, using existing image
+        cardImg:"/roomsImg/card2.png",
         details: {
             size: "350 sq ft",
             occupancy: "2 Adults, 1 Child",
             bed: "King Size Bed",
             amenities: ["Free Wi-Fi", "Air Conditioning", "Smart TV", "Mini Bar", "Work Desk", "Premium Toiletries"]
-        }
+        },
+         images: ["/roomsImg/del1.png", "/roomsImg/del2.png","/roomsImg/del3.png"]
+        
     },
     {
         id: 3,
-        slug: "family-suite",
-        title: "The Family Suite",
+        slug: "triple-bed-room",
+        title: "The Triple Bed Room",
         description:
             "Practical and spacious rooms created for groups and families, offering comfortable bedding and easy shared living.",
         imageColor: "bg-gray-500",
-        cardImg:"/roomsImg/familySuite.png",
-        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
+        
+        heroImage: "/roomsImg/bgImg3.png", // Placeholder, using existing image
+        cardImg:"/roomsImg/card3.png",
         details: {
             size: "500 sq ft",
             occupancy: "4 Adults",
             bed: "2 Queen Size Beds",
             amenities: ["Free Wi-Fi", "Air Conditioning", "2 Flat-screen TVs", "Living Area", "Dining Table", "Bathtub"]
-        }
+        },
+         images: ["/roomsImg/tri1.png", "/roomsImg/tri2.png","/roomsImg/tri3.png"]
     },
     {
         id: 4,
-        slug: "executive-retreat",
-        title: "The Executive Retreat",
+        slug: "family-quad-room",
+        title: "The Family Quad Room",
         description:
             "Simple, clean, and naturally ventilated rooms that offer a calm and comfortable stay for short visits and family travel.",
         imageColor: "bg-gray-600",
-       cardImg:"/roomsImg/executive.png",
-        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
+        
+        heroImage: "/roomsImg/bgImg4.png", // Placeholder, using existing image
+        cardImg:"/roomsImg/card4.png",
         details: {
             size: "450 sq ft",
             occupancy: "2 Adults",
             bed: "King Size Bed",
             amenities: ["High-speed Wi-Fi", "Air Conditioning", "Smart TV", "Executive Desk", "Lounge Area", "Complimentary Breakfast", "Priority Service"]
-        }
+        },
+         images: ["/roomsImg/fam1.png", "/roomsImg/fam2.png","/roomsImg/fam3.png"]
     },
 ];

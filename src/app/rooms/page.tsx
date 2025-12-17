@@ -10,8 +10,9 @@ import RoomCard from "@/components/ui/RoomCard";
 import CommonAmenities from "@/components/sections/CommonAmenities";
 import FoodAndDining from "@/components/sections/FoodAndDining";
 import FAQSection from "@/components/sections/FAQSection";
+import Hero from "@/components/sections/Hero";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
     title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
     description:
         "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats. Each room features modern amenities and exceptional comfort.",
@@ -33,12 +34,9 @@ export const metadata: Metadata = {
 
 export default function RoomsPage() {
     return (
-        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <PageHero
-                underlineClass="hidden"
-                image="/roomsImg/bgImg1.png"
-            />
+           <Hero bgImg="/roomsImg/bgImg2.png" />
 
            <style>{`
         @media (min-width: 2100px) {
@@ -50,7 +48,7 @@ export default function RoomsPage() {
           }
         }
       `}</style>
-      <section className="container mx-auto md:px-16 px-6 py-20 xl-faq-padding">
+      <section className="container mx-auto md:px-16 px-6 py-20 xl-faq-padding bg-[#F9F5EC]">
                 {/* Desktop grid (visible md+) */}
                 <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {rooms.map((room) => (

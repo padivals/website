@@ -7,6 +7,7 @@
   box-shadow: none !important;
   font-family: inherit !important;
   width: 320px !important; /* Adjust width if needed */
+  padding-bottom: 14px;
 }
 
 /* Header (Month/Year) */
@@ -71,7 +72,7 @@
 }
 
 .flatpickr-prev-month:hover svg, .flatpickr-next-month:hover svg {
-  fill: #C79A3A !important;
+  fill: #012219 !important;
 }
 
 /* Weekdays */
@@ -81,7 +82,7 @@
 
 span.flatpickr-weekday {
   background: #2E2E2E !important;
-  color: #D9B57D !important; /* Gold color for weekdays */
+  color: #012219 !important; /* Gold color for weekdays */
   font-weight: 600 !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
@@ -98,7 +99,7 @@ span.flatpickr-weekday {
 }
 
 .flatpickr-day:hover {
-  background: #3E3E3E !important;
+  background: #012219 !important;
   color: #FFFFFF !important;
 }
 
@@ -121,8 +122,8 @@ span.flatpickr-weekday {
 .flatpickr-day.selected.nextMonthDay, 
 .flatpickr-day.startRange.nextMonthDay, 
 .flatpickr-day.endRange.nextMonthDay {
-  background: #D9B57D !important; /* Gold background */
-  color: #1F2326 !important; /* Dark text for contrast */
+  background: #012219 !important; /* Gold background */
+  color: #ffffff !important; /* Dark text for contrast */
   border-color: #ffffff !important;
   font-weight: 600 !important;
 }
@@ -134,7 +135,7 @@ span.flatpickr-weekday {
 .flatpickr-day.today.inRange,
 .flatpickr-day.prevMonthDay.today.inRange,
 .flatpickr-day.nextMonthDay.today.inRange {
-  background: #3E3E3E !important; /* Slightly lighter dark for range */
+  background: #03322569 !important; /* Slightly lighter dark for range */
   border-color: #ffffff !important;
   color: #FFFFFF !important;
   box-shadow: -5px 0 0 #3E3E3E, 5px 0 0 #3E3E3E !important;

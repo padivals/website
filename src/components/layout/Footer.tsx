@@ -40,14 +40,14 @@ const Footer = () => {
 
           {/* Get In Touch */}
           <div>
-            <h4 className="text-[#EAB361] text-lg md:text-xl font-semibold uppercase tracking-wide mb-4">
+            <p className="text-[#EAB361] text-lg md:text-xl font-semibold font-sans uppercase tracking-wide mb-4">
               Get In Touch
-            </h4>
+            </p>
 
             <div className="flex flex-col space-y-3 text-[#F9F2E8CC] font-sans text-base md:text-lg">
               <p>
                 Call:{" "}
-                <a href="tel:9686804784" className="border-b hover:text-white">
+                <a href="tel:9686804784" className="border-b hover:text-[#aa8616] transition-all duration-200">
                   96868 04784
                 </a>
               </p>
@@ -55,15 +55,15 @@ const Footer = () => {
                 Email:{" "}
                 <a
                   href="mailto:info@padival-grand-hotel.com"
-                  className="border-b hover:text-white"
+                  className="border-b hover:text-[#aa8616] transition-all duration-200"
                 >
                   info@padival-grand-hotel.com
                 </a>
               </p>
-              <a href="#" className="border-b hover:text-white w-fit">
+              <a href="#" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
                 WhatsApp
               </a>
-              <a href="#" className="border-b hover:text-white w-fit">
+              <a href="#" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
                 Instagram
               </a>
             </div>
@@ -71,9 +71,9 @@ const Footer = () => {
 
           {/* Address */}
           <div>
-            <h4 className="text-[#EAB361] text-lg md:text-xl font-semibold uppercase tracking-wide mb-4">
+            <p className="text-[#EAB361] text-lg md:text-xl font-semibold font-sans uppercase tracking-wide mb-4">
               Address
-            </h4>
+            </p >
 
             <p className="text-[#F9F2E8CC] font-sans text-base md:text-lg leading-relaxed">
               Mahaveer Mall, Main Road,
@@ -83,7 +83,7 @@ const Footer = () => {
               Karnataka 574201
             </p>
 
-            <a href="#" className=" border-b font-sans text-[#F9F2E8CC] hover:text-white mt-3  block w-fit">
+            <a href="#" className=" border-b font-sans text-[#F9F2E8CC] hover:text-[#aa8616] transition-all duration-200 mt-3  block w-fit">
               View on Google Maps
             </a>
           </div>
@@ -114,9 +114,9 @@ const Footer = () => {
           <p>A Company of Mahaveer Ventures</p>
 
           <div className="flex justify-center gap-3">
-            <a href="/privacy-policy" className="hover:text-white">Privacy Policy</a>
+            <a href="/privacy-policy" className="hover:text-[#aa8616] transition-all duration-200">Privacy Policy</a>
             <span>|</span>
-            <a href="/terms-conditions" className="hover:text-white">Terms of Service</a>
+            <a href="/terms-conditions" className="hover:text-[#aa8616] transition-all duration-200">Terms of Service</a>
           </div>
 
           <p className="text-center md:text-right">

@@ -9,6 +9,7 @@ import ReservationBar from "@/components/sections/ReservationBar";
 import { Metadata } from "next";
 import MomentSectionTest from "@/components/sections/MomentSectionTest";
 import ContactSection from "@/components/sections/ContactSection";
+import Hero from "@/components/sections/Hero";
 export const metadata: Metadata = {
     title: "Event Spaces at Padival Grand | Banquet Halls in Puttur",
     description: "Host your weddings, corporate events, and celebrations at The Padival Grand. Our elegant banquet halls and event spaces in Puttur offer the perfect setting for memorable occasions.",
@@ -17,13 +18,10 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
     return (
-        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  ">
             <Header />
 
-            <PageHero
-               underlineClass="hidden"
-                image="/event-bg.png" // Placeholder
-            />
+            <Hero bgImg="/event-bg.png" />
 
             <TextSection
                 heading="Where Every Occasion Finds a Comfortable Setting"
@@ -32,7 +30,7 @@ export default function EventsPage() {
 
             <EventTypes />
 
-            <MomentSectionTest backgroundColor="bg-white" heading="What Awaits You in Our Event Venues" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} />
+            {/* <MomentSectionTest backgroundColor="bg-white" heading="What Awaits You in Our Event Venues" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} /> */}
 
             <EventSpaces />
             <ContactSection />

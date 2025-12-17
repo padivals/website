@@ -52,7 +52,7 @@ const EventSpaces = () => {
                                     <p className="text-xl font-medium text-[#012219CC] mb-3">
                                         {space.title}
                                     </p>
-                                    <p className="text-[#012219CC] text-sm font-medium leading-relaxed">
+                                    <p className="text-[#012219CC] text-md font-medium leading-relaxed">
                                         {space.description}
                                     </p>
                                 </div>

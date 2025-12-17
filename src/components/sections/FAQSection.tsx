@@ -78,9 +78,9 @@ const FAQSection = () => {
                       {faq.question}
                     </span>
                     <span
-                      className={`text-2xl font-light transition-transform duration-300 shrink-0 ${
+                      className={`text-2xl font-light transition-transform duration-500 shrink-0  ${
                         openIndex === index
-                          ? "text-[#EAB361]"
+                          ? "text-[#EAB361] rotate-180"
                           : "text-[#165F41]"
                       }`}
                     >

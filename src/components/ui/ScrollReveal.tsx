@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface ScrollRevealProps {
   children: React.ReactNode;
-  scrollContainerRef: React.RefObject<HTMLElement> | undefined;
+  scrollContainerRef?: React.RefObject<HTMLElement> | undefined;
   enableBlur?: boolean;
   baseOpacity?: number;
   baseRotation?: number;
