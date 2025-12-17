@@ -48,9 +48,9 @@ export default function RoomsPage() {
           }
         }
       `}</style>
-      <section className="container mx-auto md:px-16 px-6 py-20 xl-faq-padding bg-[#F9F5EC]">
+      <section className=" md:px-16 px-6 py-20 xl-faq-padding bg-[#F9F5EC]">
                 {/* Desktop grid (visible md+) */}
-                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="hidden container mx-auto md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {rooms.map((room) => (
                         <RoomCard
                             key={room.id}

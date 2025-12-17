@@ -39,8 +39,8 @@ export default function ImageShowcaseSwiper({
   return (
     <section className={`w-full ${classname} overflow-hidden`}>
      {variant === "split" &&
-       <div className="px-16 mb-10 container mx-auto">
-        <div className="border-t-2 border-[#165F41]/60 w-full"></div>
+       <div className=" px-16 mb-10 container  mx-auto xl-faq-padding  ">
+        <div className="border-t-2 border-[#165F41]/60 "></div>
       </div>
      }
       {/* SPLIT VARIANT */}
@@ -179,7 +179,7 @@ export default function ImageShowcaseSwiper({
 
       {/* CENTERED VARIANT */}
       {variant === "centered" && (
-        <div className="w-full px-6 lg:px-16 mx-auto py-12 pb-22" >
+        <div className="w-full   py-12 pb-22" >
           {/* SWIPER CONTAINER */}
           <div className="relative group w-full">
             {/* Custom Navigation Buttons */}

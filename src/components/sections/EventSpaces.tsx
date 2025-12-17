@@ -18,12 +18,12 @@ const EventSpaces = () => {
     ];
 
     return (
-        <section className=" py-20 bg-white container mx-auto px-16 xl-faq-padding">
-            <div className="">
+        <section className=" py-20 bg-white  px-16 ">
+            <div className="container mx-auto">
 
                 <div className="w-full h-px bg-[#165F41] mb-12  "></div>
             </div>
-            <div className="">
+            <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row md:gap-12 gap-6">
                     {/* Left Column: Label */}
                     <div className="lg:w-1/4">

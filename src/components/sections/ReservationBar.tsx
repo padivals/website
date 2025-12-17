@@ -95,7 +95,7 @@ const ReservationBar = ({
 
             {openDate && (
               <div
-                className="absolute bottom-[120%] left-1/2 -translate-x-1/2 bg-[#2E2E2E] text-white shadow-xl p-4 rounded-sm z-[999]
+                className="absolute bottom-[120%] left-1/2 border-2 border-[#052216] -translate-x-1/2 bg-[#f9f5ec] text-white shadow-xl p-4 rounded-sm z-[999]
                 opacity-0 translate-y-2 animate-fadeSlide"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -127,7 +127,7 @@ const ReservationBar = ({
 
             {openGuests && (
               <div
-                className="absolute bottom-[120%] right-0 bg-[#2E2E2E] text-white shadow-xl p-6 rounded-sm w-64 z-[999] space-y-6 opacity-0 translate-y-2 animate-fadeSlide"
+                className="absolute bottom-[120%] right-0 bg-[#f9f5ec] border-2 border-[#052216] text-[#141414] shadow-xl p-6 rounded-sm w-64 z-[999] space-y-6 opacity-0 translate-y-2 animate-fadeSlide"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Adults */}

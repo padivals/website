@@ -22,6 +22,8 @@ const RoomImagesSection = ({ image }: RoomImagesSectionProps) => {
   images={imageObjects}
   leftLabel="OUR ROOMS"
   heading="Luxury accommodation designed for comfort"
+  classname="padding-left lg:pl-16"
+
 />
 
     </>

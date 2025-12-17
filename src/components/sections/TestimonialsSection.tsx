@@ -59,16 +59,29 @@ const TestimonialsSection = ({
   const [progress, setProgress] = useState(0);
 
   const handleProgress = (swiper: SwiperType) => {
-    const total =
-      swiper.slides.length - (swiper.params.slidesPerView as number) + 1;
+    const slidesPerView = swiper.params.slidesPerView as number;
+    const totalSlides = swiper.slides.length;
     const current = swiper.realIndex;
-    const prog = ((current + 1) / total) * 100;
+    
+    // Calculate the maximum reachable index
+    // For fractional slidesPerView, we can scroll until the last slide is visible
+    const maxIndex = Math.max(0, totalSlides - Math.ceil(slidesPerView));
+    
+    // If we're at or beyond the max index, or if swiper reports we're at the end
+    if (current >= maxIndex || swiper.isEnd) {
+      setProgress(100);
+      return;
+    }
+    
+    // Calculate progress based on current position
+    const prog = maxIndex > 0 ? ((current + 1) / (maxIndex + 1)) * 100 : 100;
+    
     // Clamp between 0 and 100
     setProgress(Math.min(100, Math.max(0, prog)));
   };
 
   return (
-    <section className="bg-[#F9F2E8] py-15">
+    <section className="bg-[#F9F2E8] py-15 ">
       {/* <style>{`
         @media (min-width: 1910px) {
           .testimonial-responsive-padding {
@@ -97,6 +110,7 @@ const TestimonialsSection = ({
               modules={[Navigation, Autoplay]}
               spaceBetween={27}
               slidesPerView={1}
+              slidesOffsetAfter={64}
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
                 handleProgress(swiper);
@@ -105,16 +119,18 @@ const TestimonialsSection = ({
               breakpoints={{
                 640: {
                   slidesPerView: 1.5,
+                  slidesOffsetAfter: 64,
                 },
                 1024: {
                   slidesPerView: 1.6,
+                  slidesOffsetAfter: 64,
                 },
               }}
               className="w-full"
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id} className="h-auto">
-                  <div className="border border-[#A3B19C] p-8  h-full flex flex-col justify-between  min-h-[320px] bg-transparent">
+                  <div className="border border-[#A3B19C] p-8  h-full flex flex-col justify-between  min-h-[320px] bg-transparent mr-auto">
                     <div>
                       <p className="text-[#012219CC] text-base md:text-lg leading-relaxed font-bold">
                         “{testimonial.text}”

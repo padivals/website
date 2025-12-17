@@ -83,7 +83,7 @@ const Footer = () => {
               Karnataka 574201
             </p>
 
-            <a href="#" className=" border-b font-sans text-[#F9F2E8CC] hover:text-[#aa8616] transition-all duration-200 mt-3  block w-fit">
+            <a href="https://maps.app.goo.gl/ZZH15Kq3aBe92WMz6" className=" border-b font-sans text-[#F9F2E8CC] hover:text-[#aa8616] transition-all duration-200 mt-3  block w-fit">
               View on Google Maps
             </a>
           </div>
