@@ -29,14 +29,14 @@ const EventTypes = () => {
       "Quiet, well-kept rooms ideal for discussions, training sessions, and professional gatherings.",
   },
   {
-    src: "/eventImg/evnt1.png",
+    src: "/eventImg/evnt2.png",
     alt: "Birthday Celebrations",
     heading: "Birthday Celebrations",
     content:
       "Intimate spaces perfect for celebrating another year of life with close friends and family.",
   },
    {
-    src: "/eventImg/evnt3.png",
+    src: "/eventImg/evnt1.png",
     alt: "Small Corporate Meetings",
     heading: "Small Corporate Meetings",
     content:

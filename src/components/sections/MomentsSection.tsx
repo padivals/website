@@ -12,11 +12,11 @@ interface ImageCarouselProps {
 }
 
 const DEFAULT_IMAGES = [
-  "/momentsImg/img1.png",
-  "/momentsImg/img2.png",
-  "/momentsImg/img3.png",
-  "/momentsImg/img2.png",
-  "/momentsImg/img1.png",
+  "/diningImg/food1.png",
+  "/diningImg/food2.png",
+  "/diningImg/food3.png",
+  "/diningImg/food2.png",
+  "/diningImg/food1.png",
 ];
 
 export default function ImageCarousel({
