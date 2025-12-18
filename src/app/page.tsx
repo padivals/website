@@ -8,7 +8,6 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import EventsSection from "@/components/sections/EventsSection";
 import ContactSection from "@/components/sections/ContactSection";
-import MomentSectionTest from "@/components/sections/MomentSectionTest";
 import ReservationBar from "@/components/sections/ReservationBar";
 import type { Metadata } from "next";
 

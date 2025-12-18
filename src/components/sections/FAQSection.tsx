@@ -69,7 +69,7 @@ const FAQSection = () => {
           baseOpacity={0}
           baseRotation={0}
           rotationEnd="top center"
-          wordAnimationEnd="top 10%"
+          wordAnimationEnd="top 40%"
           containerClassName="text-start max-w-lg"
           textClassName="text-4xl md:text-5xl lg2:text-7xl  font-serif leading-tight text-[#0F2A1D] font-semibold " 
           blurStrength={10}

@@ -144,7 +144,7 @@ export default function ImageCarousel({
           baseOpacity={0}
           baseRotation={0}
           rotationEnd="top center"
-          wordAnimationEnd="top 05%"
+          wordAnimationEnd="top 40%"
           containerClassName="text-center"
           textClassName="text-[#012219] text-3xl md:text-[42px] font-serif font-medium"
           blurStrength={10}
