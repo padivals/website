@@ -39,7 +39,7 @@ export default function ImageShowcaseSwiper({
   return (
     <section className={`w-full ${classname} overflow-hidden`}>
      {variant === "split" &&
-       <div className=" px-16 mb-10 container  mx-auto xl-faq-padding  ">
+       <div className=" pl-16 mb-10 container  mx-auto xl-faq-padding   ">
         <div className="border-t-2 border-[#165F41]/60 "></div>
       </div>
      }
@@ -140,7 +140,7 @@ export default function ImageShowcaseSwiper({
                     spaceBetween: 32,
                   },
                 }}
-                className="w-full !overflow-visible"
+                className="w-full !overflow-visible xl-padding-right"
               >
                 {images.map((img, idx) => (
                   <SwiperSlide key={idx} className="h-auto">

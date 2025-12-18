@@ -68,6 +68,12 @@ html.lenis body {
           .padding-left {
             padding-left: 10vw !important;
           }
+          .xl-margin-right{
+            margin-right: 10vw !important ;
+          }
+          .xl-padding-right{
+            padding-right: 7.5vw !important ;
+          }
         }
 
 

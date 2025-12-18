@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
       <HalfHeroSection title="Privacy Policy" />
 
       {/* Content Section */}
-      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4 md:py-20">
+      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4 padding-left md:py-20 container">
         <div className="w-full max-w-8xl mx-auto ">
           <p className="text-[#4A5568] text-base sm:text-lg font-light leading-relaxed mb-10 sm:mb-12">
             This Privacy Policy outlines how JK Group collects, uses, and protects the information you provide when using this website. By accessing or using our site, you agree to the terms described below.

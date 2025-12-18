@@ -42,7 +42,7 @@ const EventTypes = () => {
 
     return (
        <ImageShowcaseSwiper
-             classname="py-20 bg-[white]"
+             classname="py-20 bg-[white] md:pr-16"
              variant="split"
              heading="We offer well-kept event spaces so guests can gather, celebrate, and host meaningful moments in a setting that feels comfortable and thoughtfully managed."
              leftLabel="Types of events WE CATER TO"

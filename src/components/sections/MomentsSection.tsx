@@ -15,8 +15,12 @@ const DEFAULT_IMAGES = [
   "/diningImg/food1.png",
   "/diningImg/food2.png",
   "/diningImg/food3.png",
-  "/diningImg/food2.png",
-  "/diningImg/food1.png",
+  "/diningImg/food4.png",
+  "/diningImg/food5.png",
+    "/diningImg/food6.png",
+  "/diningImg/food7.png",
+
+
 ];
 
 export default function ImageCarousel({
