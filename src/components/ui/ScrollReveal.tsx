@@ -17,11 +17,13 @@ interface ScrollRevealProps {
   textClassName?: string;
   rotationEnd?: string;
   wordAnimationEnd?: string;
+  splitbr?:string
 }
 
 const ScrollReveal = ({
   children,
   scrollContainerRef,
+  splitbr,
   enableBlur = true,
   baseOpacity = 0,
   baseRotation = 3,
@@ -130,7 +132,7 @@ const ScrollReveal = ({
       <span
         className={` leading-[1.5]  ${textClassName}`}
       >
-        {splitText}
+        {splitText} <br /> {splitbr}
       </span>
     </h2>
   );

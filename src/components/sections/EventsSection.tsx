@@ -4,9 +4,9 @@ import React from "react";
 
 const EventsSection = () => {
   const events = [
-    { title: "Leisure", image: "/images/carddd.png" },
-    { title: "Celebration", image: "/images/cardd.png" },
-    { title: "Dining", image: "/images/card.png" },
+    { title: "Leisure", image: "/evnts/leisure.png" },
+    { title: "Celebration", image: "/evnts/celeb.png" },
+    { title: "Dining", image: "/evnts/dining.png" },
   ];
 
   return (

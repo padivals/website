@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollReveal from "./ScrollReveal";
 
 interface SectionHeaderProps {
   label?: string;
@@ -7,6 +8,7 @@ interface SectionHeaderProps {
   align?: "left" | "center";
   textColor?: string;
   labelColor?: string;
+  containerClassName?: string;
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -16,6 +18,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   align = "left",
   textColor = "text-[#012219]",
   labelColor = "text-[#165F41CC]",
+  containerClassName = "text-center max-w-3xl",
 }) => {
   const alignmentClasses =
     align === "center" ? "items-center md:text-center text-start " : "items-start text-left";
@@ -29,11 +32,28 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           {label}
         </span>
       )}
-      <h2
+      {/* <h2
         className={`text-4xl md:text-5xl lg2:text-6xl font-serif ${textColor} leading-tight font-semibold max-w-3xl`}
       >
         {heading}
-      </h2>
+      </h2> */}
+
+             <div className="">
+        <ScrollReveal
+          scrollContainerRef={undefined}
+          enableBlur={false}
+          baseOpacity={0}
+          baseRotation={0}
+          rotationEnd="top center"
+          wordAnimationEnd="top 10%"
+          containerClassName={containerClassName}
+          textClassName="text-4xl md:text-5xl  lg2:text-6xl  font-serif leading-tight text-[#0F2A1D] font-semibold " 
+          blurStrength={10}
+        >
+          {heading}
+
+        </ScrollReveal>
+      </div>
     </div>
   );
 };

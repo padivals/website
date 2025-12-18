@@ -9,10 +9,10 @@ const EventTypes = () => {
     const eventTypes = [
   {
     src: "/evnts/img1.png",
-    alt: "Engagement and Pre-Wedding Rituals",
-    heading: "Engagement and Pre-Wedding Rituals",
+    alt: "Engagement Ceremonies",
+    heading: "Engagement Ceremonies",
     content:
-      "Neat, welcoming spaces suited for meaningful ceremonies held with care and simplicity.",
+      "A graceful venue designed to host engagement functions and pre-wedding celebrations, providing a warm and welcoming atmosphere for family and guests to come together. ",
   },
   {
     src: "/evnts/img2.png",
@@ -22,26 +22,20 @@ const EventTypes = () => {
       "A peaceful space for families to celebrate their special milestone in a calm and supportive setting.",
   },
   {
-    src: "/evnts/img3.png",
-    alt: "Small Corporate Meetings",
-    heading: "Small Corporate Meetings",
+    src: "/evnts/img4.png",
+    alt: "Corporate Meetings",
+    heading: "Corporate Meetings",
     content:
-      "Quiet, well-kept rooms ideal for discussions, training sessions, and professional gatherings.",
+      "A professional and well-maintained environment suitable for corporate meetings, discussions, and small business gatherings, ensuring a focused and comfortable setting.",
   },
   {
-    src: "/evnts/img1.png",
-    alt: "Birthday Celebrations",
-    heading: "Birthday Celebrations",
+    src: "/evnts/img5.png",
+    alt: "Naming Ceremony",
+    heading: "Social & Community Gatherings",
     content:
-      "Intimate spaces perfect for celebrating another year of life with close friends and family.",
+      "A serene and well-organized setting ideal for traditional naming ceremonies, allowing families to gather comfortably and celebrate this special milestone in a peaceful and respectful ambience.",
   },
-   {
-    src: "/evnts/img2.png",
-    alt: "Small Corporate Meetings",
-    heading: "Small Corporate Meetings",
-    content:
-      "Quiet, well-kept rooms  ideal for discussions, training sessions, and professional gatherings.",
-  },
+
 ];
 
 

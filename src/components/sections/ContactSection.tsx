@@ -145,6 +145,7 @@ const ContactSection = () => {
                 label="CONTACT US"
                 heading="Get in Touch With The Padival Grand Hotel"
                 className="mb-3"
+                containerClassName="text-start max-w-3xl"
               />
               <a
                 href="https://maps.app.goo.gl/ZZH15Kq3aBe92WMz6"

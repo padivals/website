@@ -48,7 +48,7 @@ export default function ImageShowcaseSwiper({
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[6rem] pl-6 lg:pl-16 padding-left pr-0 max-w-none">
           {/* LEFT VERTICAL TEXT */}
           <div className="flex-shrink-0 pt-0">
-            <div className="flex lg:flex-col gap-4 lg:gap-1 text-[12px] lg:text-[16px] font-semibold text-[#165F41CC] uppercase">
+            <div className="flex lg:flex-col  gap-4 lg:gap-1 text-[12px] lg:text-[16px] font-semibold text-[#165F41CC] uppercase">
               <p>{leftLabel}</p>
             </div>
           </div>

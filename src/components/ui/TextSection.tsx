@@ -20,6 +20,7 @@ const TextSection: React.FC<TextSectionProps> = ({
         <section className={`relative bg-white  py-8 md:py-22 ${className}`}>
             <div className="container mx-auto px-6 md:text-center text-start">
                 <SectionHeader
+                    
                     label={label}
                     heading={heading}
                     align={align}

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
+import ScrollReveal from "../ui/ScrollReveal";
 
 interface Testimonial {
   id: number;
@@ -99,9 +100,25 @@ const TestimonialsSection = ({
             <span className="text-[#165F41CC] uppercase tracking-widest text-md font-semibold mb-4">
               {label}
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-[#0F2A1D] leading-tight">
+            {/* <h2 className="text-4xl md:text-5xl font-serif font-semibold text-[#0F2A1D] leading-tight">
               {title}
-            </h2>
+            </h2> */}
+             <div className="">
+        <ScrollReveal
+          scrollContainerRef={undefined}
+          enableBlur={false}
+          baseOpacity={0}
+          baseRotation={0}
+          rotationEnd="top center"
+          wordAnimationEnd="top 05%"
+          containerClassName="text-start"
+          textClassName="text-4xl md:text-5xl font-serif leading-tight text-[#0F2A1D] font-semibold " 
+          blurStrength={10}
+        >
+          {title}
+
+        </ScrollReveal>
+      </div>
           </div>
 
           {/* Right Side - Slider */}

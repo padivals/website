@@ -137,13 +137,20 @@ export default function ImageCarousel({
 
   return (
     <div className={`w-full flex flex-col items-center ${backgroundColor} overflow-hidden md:min-h-[800px]`}>
-      <div className="pb-3 md:pt-12 md:pb-20 px-12 text-center">
+   <div className="items-center pb-3  md:pt-12 md:pb-20 md:px-0 px-12">
         <ScrollReveal
+          scrollContainerRef={undefined}
           enableBlur={false}
           baseOpacity={0}
+          baseRotation={0}
+          rotationEnd="top center"
+          wordAnimationEnd="top 05%"
+          containerClassName="text-center"
           textClassName="text-[#012219] text-3xl md:text-[42px] font-serif font-medium"
+          blurStrength={10}
         >
           {heading}
+
         </ScrollReveal>
       </div>
 
