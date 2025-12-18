@@ -4,7 +4,7 @@ import { StyledMap } from "../ui/StyledMap";
 export default function HowToGetHereSection() {
     return (
         <section className="bg-[#F9F5EC] py-20">
-            <div className="container mx-auto px-6 md:px-0">
+            <div className="container mx-auto px-6 md:px-16">
                 <div className="flex flex-col gap-12 h-[45vh] lg:flex-row-reverse">
                     {/* Right Content (Text) */}
                     <div className="lg:w-7/12">

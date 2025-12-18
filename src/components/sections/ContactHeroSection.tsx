@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ContactHeroSection() {
     return (
-        <section className="relative h-[60vh] min-h-[500px] flex flex-col justify-center px-6 overflow-hidden">
+        <section className="relative h-[60vh] min-h-[500px] flex flex-col justify-center px-16 overflow-hidden container ">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image

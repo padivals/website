@@ -71,6 +71,16 @@ export default function ImageCarousel({
     if (distance < -minSwipeDistance) prev();
   };
 
+  /* Autoplay */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 4000); // 4s per slide
+
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   /* GSAP animation */
   const animateImage = (card: HTMLDivElement, newSrc: string) => {
     const dir = directionRef.current;
@@ -187,7 +197,8 @@ export default function ImageCarousel({
         <div
           className="absolute top-1/2 -translate-y-1/2 h-2 bg-[#165F41] transition-all duration-500"
           style={{
-            left: `${(index / IMAGES.length) * 100}%`,
+            // Start from the center of the track and loop around
+            left: `${(((index + Math.floor(IMAGES.length / 2)) % IMAGES.length) / IMAGES.length) * 100}%`,
             width: `${(1 / IMAGES.length) * 100}%`,
           }}
         />

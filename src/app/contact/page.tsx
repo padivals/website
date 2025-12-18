@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
+        <main className="">
             <Header />
 
             <ContactHeroSection />
