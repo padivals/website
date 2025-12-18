@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import ScrollReveal from "../ui/ScrollReveal";
 
 const FAQSection = () => {
+   const heading = "Helpful Information for Your Visit"
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
@@ -51,14 +53,31 @@ const FAQSection = () => {
           {/* Left Side - Static Content */}
           <div className="lg:w-1/3 lg:pr-8">
             <div className="flex flex-col items-start text-left md:mt-6 mt-0">
-              <span className="block text-[#165F41CC] uppercase text-sm md:text-lg font-semibold mb-4">
+               <span className="block text-[#165F41CC] uppercase text-sm md:text-lg font-semibold mb-4">
                 FREQUENTLY ASKED QUESTIONS
               </span>
-              <h2 className="text-3xl md:text-5xl font-serif text-[#012219] leading-tight font-semibold max-w-3xl">
+              {/* <h2 className="text-3xl md:text-5xl font-serif text-[#012219] leading-tight font-semibold max-w-3xl">
                 Helpful Information
                 <br />
                 for Your Visit
-              </h2>
+              </h2>  */}
+
+                 <div className="">
+        <ScrollReveal
+          scrollContainerRef={undefined}
+          enableBlur={false}
+          baseOpacity={0}
+          baseRotation={0}
+          rotationEnd="top center"
+          wordAnimationEnd="top 40%"
+          containerClassName="text-start max-w-lg"
+          textClassName="text-4xl md:text-5xl lg2:text-7xl  font-serif leading-tight text-[#0F2A1D] font-semibold " 
+          blurStrength={10}
+        >
+          {heading}
+
+        </ScrollReveal>
+      </div>
             </div>
           </div>
 
@@ -78,9 +97,9 @@ const FAQSection = () => {
                       {faq.question}
                     </span>
                     <span
-                      className={`text-2xl font-light transition-transform duration-300 shrink-0 ${
+                      className={`text-2xl font-light transition-transform duration-500 shrink-0  ${
                         openIndex === index
-                          ? "text-[#EAB361]"
+                          ? "text-[#EAB361] rotate-180"
                           : "text-[#165F41]"
                       }`}
                     >

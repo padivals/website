@@ -3,7 +3,12 @@
 import React from "react";
 import Image from "next/image";
 
-const Hero = () => {
+
+interface HeroProps {
+  bgImg?: string;
+}
+
+const Hero = ({ bgImg = "/default-hero.jpg" }: HeroProps ) => {
 
   return (
     <div
@@ -13,25 +18,25 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/hero-bg.png"
+          src={bgImg}
           alt="Hotel Lobby"
           fill
           priority
-          className="object-cover object-[center_25%]"
+          className="object-cover object-center"
           quality={100}
         />
       </div>
       {/* Dark Gradient Overlay */}
       <div className="absolute inset-0 z-10 h-64 pointer-events-none bg-gradient-to-b from-[#000000a0] via-[#23222217]  to-transparent"></div>
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
+      {/* <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">
           The Padival Grand
         </h1>
         <p className="text-lg md:text-2xl font-light tracking-widest uppercase drop-shadow-md">
           Luxury Redefined in Puttur
         </p>
-      </div>
+      </div> */}
 
       {/* Reservation Bar - Positioned at bottom of hero */}
       {/* <div

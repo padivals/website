@@ -56,12 +56,17 @@ html.lenis body {
   transform: translateY(0);
 }
 
- @media (min-width: 2100px) {
+ @media (min-width: 1910px) {
           .xl-faq-padding {
             padding-left: 0 !important;
             padding-right: 0 !important;
             padding-top: 40 !important;
             padding-bottom: 20 !important;
+          }
+        }
+       @media (min-width: 1910px) {
+          .padding-left {
+            padding-left: 10vw !important;
           }
         }
 

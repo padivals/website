@@ -3,80 +3,51 @@
 import React from "react";
 import Image from "next/image";
 import CarouselSection from "@/components/ui/CarouselSection";
+import ImageShowcaseSwiper from "../ui/newCarousel";
 
 const EventTypes = () => {
     const eventTypes = [
-        {
-            id: 1,
-            title: "Engagement and Pre-Wedding Rituals",
-            description: "Neat, welcoming spaces suited for meaningful ceremonies held with care and simplicity.",
-            image: "/eventImg/evnt1.png", // Placeholder
-        },
-        {
-            id: 2,
-            title: "Naming Ceremonies",
-            description: "A peaceful space for families to celebrate their special milestone in a calm and supportive setting.",
-            image: "/eventImg/evnt2.png", // Placeholder
-        },
-        {
-            id: 3,
-            title: "Small Corporate Meetings",
-            description: "Quiet, well-kept rooms ideal for discussions, training sessions, and professional gatherings.",
-            image: "/eventImg/evnt3.png", // Placeholder
-        },
-        {
-            id: 4,
-            title: "Birthday Celebrations",
-            description: "Intimate spaces perfect for celebrating another year of life with close friends and family.",
-            image: "/eventImg/evnt1.png", // Placeholder
-        },
-    ];
+  {
+    src: "/evnts/img1.png",
+    alt: "Engagement Ceremonies",
+    heading: "Engagement Ceremonies",
+    content:
+      "A graceful venue designed to host engagement functions and pre-wedding celebrations, providing a warm and welcoming atmosphere for family and guests to come together. ",
+  },
+  {
+    src: "/evnts/img2.png",
+    alt: "Naming Ceremonies",
+    heading: "Naming Ceremonies",
+    content:
+      "A peaceful space for families to celebrate their special milestone in a calm and supportive setting.",
+  },
+  {
+    src: "/evnts/img4.png",
+    alt: "Corporate Meetings",
+    heading: "Corporate Meetings",
+    content:
+      "A professional and well-maintained environment suitable for corporate meetings, discussions, and small business gatherings, ensuring a focused and comfortable setting.",
+  },
+  {
+    src: "/evnts/img5.png",
+    alt: "Naming Ceremony",
+    heading: "Social & Community Gatherings",
+    content:
+      "A serene and well-organized setting ideal for traditional naming ceremonies, allowing families to gather comfortably and celebrate this special milestone in a peaceful and respectful ambience.",
+  },
+
+];
+
 
 
     return (
-        <CarouselSection
-            items={eventTypes}
-            keyExtractor={(item) => item.id}
-            variant="split"
-            label="TYPES OF EVENTS WE CATER TO"
-            description="We offer well-kept event spaces so guests can gather, celebrate, and host meaningful moments in a setting that feels comfortable and thoughtfully managed."
-            backgroundColor="bg-white"
-            slidesPerView={1.2}
-            spaceBetween={24}
-            centeredSlides={false}
-            loop={false}
-            showProgressBar={false}
-            showNavigation={true}
-            navigationTop="top-[40%]"
-            breakpoints={{
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-            }}
-            renderItem={(item) => (
-                <div className="flex flex-col h-full group cursor-pointer">
-                    <div className={`w-full h-[53vh] object-cover mb-6 relative overflow-hidden`}>
-                        <Image
-                            src={item.image}
-                            alt={item.title}
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
-                    </div>
-                    <p className="text-xl font-medium text-[#012219CC] mb-3 group-hover:text-[#4A6741] transition-colors">
-                        {item.title}
-                    </p>
-                    <p className="text-[#012219CC] text-sm font-medium leading-relaxed">
-                        {item.description}
-                    </p>
-                </div>
-            )}
-        />
+       <ImageShowcaseSwiper
+             classname="py-20 bg-[white]"
+             variant="split"
+             heading="We offer well-kept event spaces so guests can gather, celebrate, and host meaningful moments in a setting that feels comfortable and thoughtfully managed."
+             leftLabel="Types of events WE CATER TO"
+             images={eventTypes}
+           />
     );
 };
 

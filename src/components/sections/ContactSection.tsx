@@ -19,6 +19,7 @@ const ContactSection = () => {
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [openGuests, setOpenGuests] = useState(false);
+  const [dateError, setDateError] = useState<string | null>(null);
 
   // Close dropdown when clicking outside
   React.useEffect(() => {
@@ -52,6 +53,57 @@ const ContactSection = () => {
     return `${parts[0]} / ${parts[1]} / ${parts[2]}`;
   };
 
+  const parseAndValidateDate = (value: string) => {
+    // Extract only digits from the formatted value
+    const nums = value.replace(/\D/g, "");
+
+    // Only run validation when we have full DDMMYYYY (8 digits)
+    if (nums.length !== 8) {
+      return { date: null as Date | null, error: null as string | null };
+    }
+
+    const day = parseInt(nums.slice(0, 2), 10);
+    const month = parseInt(nums.slice(2, 4), 10);
+    const year = parseInt(nums.slice(4), 10);
+
+    const today = new Date();
+    const currentYear = today.getFullYear();
+
+    if (month < 1 || month > 12) {
+      return { date: null, error: "Please enter a valid month (01–12)." };
+    }
+
+    // Basic year validation: current year or later, 4 digits
+    if (year < currentYear || year < 1000 || year > 9999) {
+      return { date: null, error: "Please enter a valid year (current or future)." };
+    }
+
+    const candidate = new Date(year, month - 1, day);
+
+    // Check that JS date didn't overflow (e.g. 31/02)
+    if (
+      candidate.getFullYear() !== year ||
+      candidate.getMonth() !== month - 1 ||
+      candidate.getDate() !== day
+    ) {
+      return { date: null, error: "Please enter a valid calendar date." };
+    }
+
+    // Disallow dates before today
+    const todayMidnight = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate()
+    );
+    const candidateMidnight = new Date(year, month - 1, day);
+
+    if (candidateMidnight < todayMidnight) {
+      return { date: null, error: "Date cannot be earlier than today." };
+    }
+
+    return { date: candidate, error: null };
+  };
+
   const handlePreferredFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPreferredFrom(formatDateDigits(e.target.value));
   };
@@ -60,16 +112,26 @@ const ContactSection = () => {
     setPreferredTo(formatDateDigits(e.target.value));
   };
 
+  const handlePreferredFromBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { error } = parseAndValidateDate(e.target.value);
+    setDateError(error);
+  };
+
+  const handlePreferredToBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { error } = parseAndValidateDate(e.target.value);
+    setDateError(error);
+  };
+
   return (
     <section className="bg-[#F9F5EC] md:py-20 md:pb-32 py-0 border-t border-gray-200">
-      <style>{`
+      {/* <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {
             padding-left: 0 !important;
             padding-right: 0 !important;
           }
         }
-      `}</style>
+      `}</style> */}
       <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
         {/* Top Divider Line */}
         <div className="w-full h-px bg-[#165F41] mb-12 opacity-50  "></div>
@@ -83,10 +145,11 @@ const ContactSection = () => {
                 label="CONTACT US"
                 heading="Get in Touch With The Padival Grand Hotel"
                 className="mb-3"
+                containerClassName="text-start max-w-3xl"
               />
               <a
-                href="#"
-                className="text-[#165F41B2] underline underline-offset-4 hover:text-[#143a2f] font-medium mb-4 inline-block pb-5"
+                href="https://maps.app.goo.gl/ZZH15Kq3aBe92WMz6"
+                className="text-[#165F41B2] underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium mb-4 inline-block pb-5"
               >
                 View on Google Maps
               </a>
@@ -95,7 +158,8 @@ const ContactSection = () => {
             {/* Map Container */}
             <div className="w-full h-92 relative overflow-hidden  ">
               {/* The StyledMap now handles everything (Styles + Marker) */}
-              <StyledMap />
+              {/* <StyledMap /> */}
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.451541113612!2d74.9977007!3d13.0705444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4aae94dd942f7%3A0x66bc1006e2ed0be1!2sPadiwals%20Restaurant%20(Pure%20Veg%20Since%201986)!5e0!3m2!1sen!2sin!4v1765967776961!5m2!1sen!2sin" width="600" height="450" style={{border: "0"}}  loading="lazy" ></iframe>
             </div>
 
             {/* DELETED THE EXTRA FLOATING IMAGES FROM HERE */}
@@ -274,6 +338,7 @@ const ContactSection = () => {
                     placeholder="25  /  11  /  2025 "
                     value={preferredFrom}
                     onChange={handlePreferredFromChange}
+                    onBlur={handlePreferredFromBlur}
                     className="w-1/2 bg-transparent border border-[#165F41] p-4 placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
                   />
                   <input
@@ -283,9 +348,15 @@ const ContactSection = () => {
                     placeholder="30  /  11  /  2025"
                     value={preferredTo}
                     onChange={handlePreferredToChange}
+                    onBlur={handlePreferredToBlur}
                     className="w-1/2 bg-transparent border border-[#165F41] p-4  placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
                   />
                 </div>
+                {dateError && (
+                  <p className="mt-2 text-sm text-red-600">
+                    {dateError}
+                  </p>
+                )}
               </div>
 
               {/* Description */}

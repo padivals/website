@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -7,22 +9,16 @@ import DiningTestimonials from "@/components/sections/DiningTestimonials";
 import ReservationBar from "@/components/sections/ReservationBar";
 
 import { Metadata } from "next";
-import MomentSectionTest from "@/components/sections/MomentSectionTest";
+import Hero from "@/components/sections/Hero";
+import ImageCarousel from "@/components/sections/MomentsSection";
 
-export const metadata: Metadata = {
-    title: "Dining at Padival Grand | Padival's Palara Vegetarian Restaurant",
-    description: "Experience authentic vegetarian dining at Padival's Palara within The Padival Grand Hotel. Enjoy homely flavours and a calm atmosphere.",
-    keywords: ["Vegetarian Restaurant Puttur", "Padival's Palara", "Hotel Dining Puttur", "Family Restaurant Puttur"],
-};
+
 
 export default function DiningPage() {
     return (
-        <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
+        <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <PageHero
-                underlineClass="hidden"
-                image="/dining-bg.png" // Using placeholder for now
-            />
+            <Hero bgImg="/dining-bg.png" />
 
             <TextSection
                 heading="Where Familiar Flavours Meet Thoughtful Cooking"
@@ -30,8 +26,7 @@ export default function DiningPage() {
             />
 
             {/* <DiningCarousel /> */}
-            <MomentSectionTest backgroundColor="bg-white" heading="A Calm, Homely Dining Experience" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} />
-
+<ImageCarousel/>
 
             <DiningTestimonials />
 

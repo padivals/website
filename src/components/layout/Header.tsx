@@ -44,7 +44,7 @@ const Header = () => {
         ${showHeader ? "translate-y-0" : "-translate-y-full"}
         ${isTop
             ? "bg-transparent py-6 border-transparent" // Clean & Transparent at top
-            : "bg-none   backdrop-blur-lg py-6 shadow-xl" // Dark Green & Blurred when scrolling
+            : "bg-[#012219]   backdrop-blur-lg py-6 shadow-xl" // Dark Green & Blurred when scrolling
           }
         `}
       >

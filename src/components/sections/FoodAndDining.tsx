@@ -53,7 +53,7 @@ const FoodAndDining = () => {
 
                         <div className="relative w-full aspect-[16/6] mb-8 overflow-hidden">
                             <Image
-                                src="/images/card.png" // Placeholder
+                                src="/roomsImg/foodDining.png" // Placeholder
                                 alt="Dining at Padival Grand"
                                 fill
                                 className="object-cover"

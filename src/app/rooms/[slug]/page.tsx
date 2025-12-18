@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         ],
         openGraph: {
             title: `${room.title} | The Padival Grand Hotel Puttur`,
-            description: room.description,
+            description: room.pagedescription,
             url: `https://padivals-megamind.vercel.app//rooms/${slug}`,
             images: [
                 {
@@ -76,13 +76,13 @@ export default async function RoomPage({ params }: { params: Promise<{ slug: str
 
             <RoomDetailsSection
                 title={room.title}
-                description={room.description}
+                description={room.pagedescription}
                 features={features}
                 image={room.heroImage}
             />
 
             {/* Additional Sections */}
-            {room.images && <RoomImagesSection images={room.images} />}
+            {room.images && <RoomImagesSection image={room.images} />}
             <TestimonialsSection />
             <ContactSection />
             <OtherRoomsSection rooms={rooms} currentSlug={slug} />

@@ -26,7 +26,7 @@ export default function HowToGetHereSection() {
                                 <p className="text-[#0F2A1D] text-lg font-light leading-relaxed mb-4 max-w-[80%]">
                                     Mahaveer Mall, Main Road, Above Reliance Trendz, Bolwar, Puttur, Karnataka 574201
                                 </p>
-                                <a href="#" className="text-[#4A6C58] text-sm underline underline-offset-4 font-medium hover:text-[#1B4D3E]">
+                                <a href="https://maps.app.goo.gl/ZZH15Kq3aBe92WMz6" className="text-[#4A6C58] text-sm underline underline-offset-4 font-medium hover:text-[#1B4D3E]">
                                     View on Google Maps
                                 </a>
                             </div>

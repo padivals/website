@@ -8,7 +8,6 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import EventsSection from "@/components/sections/EventsSection";
 import ContactSection from "@/components/sections/ContactSection";
-import MomentSectionTest from "@/components/sections/MomentSectionTest";
 import ReservationBar from "@/components/sections/ReservationBar";
 import type { Metadata } from "next";
 
@@ -47,11 +46,11 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col relative ">
       <Header />
-      <Hero />
+      <Hero bgImg="/hero-bg.png" />
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
-      <div className="bg-[#F9F5EC] py-8">
+      {/* <div className="bg-[#F9F5EC] py-8">
 
         <MomentSectionTest
           heading="Discover Moments at The Padival Grand Hotel"
@@ -63,10 +62,13 @@ export default function Home() {
             "/momentsImg/vid1.mp4",
           ]}
         />
-      </div>
+      </div> */}
 
       {/* <MomentsSection /> */}
-      <TestimonialsSection />
+      <div className="py-12 bg-[#F9F2E8]">
+         <TestimonialsSection />
+      </div>
+     
       <div className="pt-16 bg-white">
 
         <FAQSection />

@@ -30,13 +30,24 @@ const RoomsSection = () => {
       {/* Dark Overlay for better text readability if needed, matching the photo's look */}
       {/* <div className="absolute inset-0 bg-black/20 z-0"></div> */}
 
+
+{/* <style>{`
+        @media (min-width: 1910px) {
+          .rooms-responsive-padding {
+            padding-left: 10vw !important;
+            padding-right: 10vw !important;
+            
+          }
+        }
+      `}</style> */}
       {/* Static Header Overlay */}
-      <div className="absolute top-0 left-0 w-full z-20 pt-24 lg:pt-20 px-6 md:px-12 lg:px-16">
-        <div className="container mx-auto">
+      <div className="absolute top-0 left-0 w-full z-20 pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+ 
+        <div className="container mx-auto  ">
           {/* Top Divider */}
           <div className="w-full h-px bg-[#FFFFFF] mb-8 lg:mb-12"></div>
 
-          <div className="flex flex-col lg:flex-row  justify-between text-white text-center lg:text-left  gap-6 lg:gap-8">
+          <div className=" flex  flex-col lg:flex-row  justify-between text-white text-center lg:text-left  gap-6 lg:gap-28">
             {/* OUR ROOMS Label */}
             <div className="flex-shrink-0">
               <span className="block font-sans uppercase text-xs lg:text-xl font-semibold whitespace-nowrap">
@@ -58,7 +69,7 @@ const RoomsSection = () => {
             </div>
 
             {/* Book Now Button */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0"> 
               <Button
                 variant="primary"
                 className="bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-xs lg:text-sm tracking-wider"
@@ -115,7 +126,7 @@ const RoomsSection = () => {
                     }
                     `}
         </style>
-        <div className="container mx-auto">
+        <div className="container mx-auto ">
           {/* Desktop: Room Names */}
           <div className="hidden lg:flex w-full justify-between gap-8">
             {rooms.map((room, index) => (

@@ -139,12 +139,12 @@ const CarouselSection = <T,>({
         )}
 
         <style>{`
-          @media (min-width: 2100px) {
+          @media (min-width: 1910px) {
             .carousel-responsive-padding {
-              padding-left: 38.5% !important;
+              padding-left: 26% !important;
             }
             .xl-title-width {
-              width: 25% !important;
+              width: 15% !important;
              
             }
             .xl-title-padding {
@@ -161,6 +161,10 @@ const CarouselSection = <T,>({
             .xl-line-width {
               margin: auto !important;
               margin-bottom: 2rem !important;
+            }
+            .xl-nav-left {
+              left: 25% !important;
+              margin-left: 1.5rem !important;
             }
           }
         `}</style>
@@ -179,7 +183,7 @@ const CarouselSection = <T,>({
                 disabled={isBeginning}
                 className={`absolute ${navigationTop} -translate-y-1/2 z-20 w-12 h-12  border border-white/80 flex items-center justify-center transition-all duration-300 opacity-0 ${variant === "centered"
                   ? "left-4 md:left-20 text-white hover:bg-white/10"
-                  : "left-4 md:left-10 lg:left-[24.2%] lg:-ml-20 bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80"
+                  : "left-4 md:left-10 lg:left-[19%] lg:ml-6 xl-nav-left bg-[gray]/70 border-[#0F2A1D]/30 text-[#0F2A1D] hover:text-[white] hover:bg-[#0F2A1D]/80"
                   } ${isBeginning
                     ? "group-hover:opacity-50 cursor-not-allowed"
                     : "group-hover:opacity-100 cursor-pointer"
