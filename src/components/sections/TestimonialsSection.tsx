@@ -49,6 +49,71 @@ const defaultTestimonials = [
   },
 ];
 
+const rating = 4.5 
+
+// start calculation 
+
+const MAX_STARS = 5;
+
+const fullStars = Math.floor(rating);
+const hasHalfStar = rating % 1 >= 0.5;
+const emptyStars =
+  MAX_STARS - fullStars - (hasHalfStar ? 1 : 0);
+
+  const FullStar = () => (
+     <svg
+                  
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6 "
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                    clipRule="evenodd"
+                    className=""
+                  />
+                </svg>
+);
+
+const HalfStar = () => (
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  className="w-6 h-6 text-[#1B4D3E]"
+>
+  <defs>
+    <linearGradient id="half-fill">
+      <stop offset="50%" stopColor="currentColor" />
+      <stop offset="50%" stopColor="transparent" />
+    </linearGradient>
+  </defs>
+
+  <path
+    fill="url(#half-fill)"
+    stroke="currentColor"
+    strokeWidth="2"
+    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+  />
+</svg>
+);
+const EmptyStar = () => (
+         <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="w-6 h-6 text-[#A3B19C] "
+              >
+                <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+              </svg>
+);
+
+
+
+
 const TestimonialsSection = ({
   title = "What Our Guests Appreciate Most",
   label = "REVIEWS",
@@ -63,20 +128,20 @@ const TestimonialsSection = ({
     const slidesPerView = swiper.params.slidesPerView as number;
     const totalSlides = swiper.slides.length;
     const current = swiper.realIndex;
-    
+
     // Calculate the maximum reachable index
     // For fractional slidesPerView, we can scroll until the last slide is visible
     const maxIndex = Math.max(0, totalSlides - Math.ceil(slidesPerView));
-    
+
     // If we're at or beyond the max index, or if swiper reports we're at the end
     if (current >= maxIndex || swiper.isEnd) {
       setProgress(100);
       return;
     }
-    
+
     // Calculate progress based on current position
     const prog = maxIndex > 0 ? ((current + 1) / (maxIndex + 1)) * 100 : 100;
-    
+
     // Clamp between 0 and 100
     setProgress(Math.min(100, Math.max(0, prog)));
   };
@@ -103,22 +168,21 @@ const TestimonialsSection = ({
             {/* <h2 className="text-4xl md:text-5xl font-serif font-semibold text-[#0F2A1D] leading-tight">
               {title}
             </h2> */}
-             <div className="">
-        <ScrollReveal
-          scrollContainerRef={undefined}
-          enableBlur={false}
-          baseOpacity={0}
-          baseRotation={0}
-          rotationEnd="top center"
-          wordAnimationEnd="top 40%"
-          containerClassName="text-start"
-          textClassName="text-4xl md:text-5xl font-serif leading-tight text-[#0F2A1D] font-semibold " 
-          blurStrength={10}
-        >
-          {title}
-
-        </ScrollReveal>
-      </div>
+            <div className="">
+              <ScrollReveal
+                scrollContainerRef={undefined}
+                enableBlur={false}
+                baseOpacity={0}
+                baseRotation={0}
+                rotationEnd="top center"
+                wordAnimationEnd="top 40%"
+                containerClassName="text-start"
+                textClassName="text-4xl md:text-5xl font-serif leading-tight text-[#0F2A1D] font-semibold "
+                blurStrength={10}
+              >
+                {title}
+              </ScrollReveal>
+            </div>
           </div>
 
           {/* Right Side - Slider */}
@@ -127,7 +191,7 @@ const TestimonialsSection = ({
               modules={[Navigation, Autoplay]}
               spaceBetween={27}
               slidesPerView={1}
-              slidesOffsetAfter={64}
+              slidesOffsetAfter={24}
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
                 handleProgress(swiper);
@@ -135,15 +199,15 @@ const TestimonialsSection = ({
               onSlideChange={(swiper) => handleProgress(swiper)}
               breakpoints={{
                 640: {
-                  slidesPerView: 1.5,
-                  slidesOffsetAfter: 64,
+                  slidesPerView: 1.3,
+                  slidesOffsetAfter: 40,
                 },
                 1024: {
                   slidesPerView: 1.6,
                   slidesOffsetAfter: 64,
                 },
               }}
-              className="w-full md:pr-16 xl-padding-right"
+              className="w-full px-4 sm:px-6 md:pr-16 xl-padding-right"
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id} className="h-auto">
@@ -172,37 +236,21 @@ const TestimonialsSection = ({
             <p className="text-[22px] font-extrabold    text-[#012219CC] mb-1 ">
               {rating} Stars
             </p>
-            <p className="text-[#012219CC] font-semibold text-md mb-3">{ratingLabel}</p>
-            <div className="flex gap-1 text-[#1B4D3E]">
-              {[1, 2, 3, 4].map((star) => (
-                <svg
-                  key={star}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 "
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                    clipRule="evenodd"
-                    className=""
-                  />
-                </svg>
-              ))}
+            <p className="text-[#012219CC] font-semibold text-md mb-3">
+              {ratingLabel}
+            </p>
+          <div className="flex justify-center md:justify-start gap-1 text-[#1B4D3E]">
+  {[...Array(fullStars)].map((_, i) => (
+    <FullStar key={`full-${i}`} />
+  ))}
 
-              {/* 5th Star - Outlined only */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="w-6 h-6 text-[#A3B19C] "
-              >
-                <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-              </svg>
-            </div>
+  {hasHalfStar && <HalfStar />}
+
+  {[...Array(emptyStars)].map((_, i) => (
+    <EmptyStar key={`empty-${i}`} />
+  ))}
+</div>
+
           </div>
 
           {/* Controls */}
@@ -217,26 +265,48 @@ const TestimonialsSection = ({
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex pr-12 gap-4  ">
+            <div className="flex pr-12 md:gap-6  gap-8 ">
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
                 className="text-[#165F41] hover:opacity-70 transition-opacity "
                 aria-label="Previous"
               >
-               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 11L1 6L6 1" stroke="#165F41" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-
+                <svg
+                  width="7"
+                  height="12"
+                  viewBox="0 0 7 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 11L1 6L6 1"
+                    stroke="#165F41"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
               <button
                 onClick={() => swiperRef.current?.slideNext()}
                 className="text-[#1B4D3E] hover:opacity-70 transition-opacity "
                 aria-label="Next"
               >
-           <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L6 6L1 11" stroke="#165F41" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-
+                <svg
+                  width="7"
+                  height="12"
+                  viewBox="0 0 7 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L6 6L1 11"
+                    stroke="#165F41"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
             </div>
           </div>

@@ -7,6 +7,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import ContactHeroSection from "@/components/sections/ContactHeroSection";
 import GetInTouchSection from "@/components/sections/GetInTouchSection";
 import HowToGetHereSection from "@/components/sections/HowToGetHereSection";
+import ContactAndLocationSection from "@/components/sections/GetInTouchSection";
 
 export const metadata: Metadata = {
     title: "Contact Us | The Padival Grand Hotel Puttur",
@@ -34,10 +35,10 @@ export default function ContactPage() {
 
             <ContactHeroSection />
 
-            <GetInTouchSection />
+            <ContactAndLocationSection />
 
-            <HowToGetHereSection />
-            <div className="md:pb-0 pb-6 bg-white">
+            {/* <HowToGetHereSection /> */}
+            <div className="md:pb-0 pb-6 py-12 bg-white">
                 <FAQSection />
             </div>
 

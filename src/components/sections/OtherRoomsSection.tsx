@@ -36,10 +36,10 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
                 {/* Top Divider Line */}
                 <div className="w-full h-px bg-[#A3B19C] mb-12 opacity-50"></div>
 
-                <div className="flex flex-col lg:flex-row gap-12">
+                <div className="flex flex-col lg:flex-row md:gap-12 gap-6">
                     {/* Left Label */}
                     <div className="lg:w-1/4">
-                        <span className="text-[#165F41CC] uppercase  text-sm font-medium">
+                        <span className="text-[#165F41CC] uppercase  md:text-sm text-md font-medium md:px-0 px-4">
                             OUR OTHER ROOMS
                         </span>
                     </div>

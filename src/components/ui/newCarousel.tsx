@@ -38,17 +38,17 @@ export default function ImageShowcaseSwiper({
 
   return (
     <section className={`w-full ${classname} overflow-hidden`}>
-     {variant === "split" &&
-       <div className=" pl-16 mb-10 container  mx-auto xl-faq-padding   ">
-        <div className="border-t-2 border-[#165F41]/60 "></div>
-      </div>
-     }
+      {variant === "split" && (
+        <div className="mb-10 container mx-auto xl-faq-padding px-6 lg:px-0 lg:pl-16">
+          <div className="border-t-2 border-[#165F41]/60 mx-auto lg:mx-0"></div>
+        </div>
+      )}
       {/* SPLIT VARIANT */}
       {variant === "split" && (
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[6rem] pl-6 lg:pl-16 padding-left pr-0 max-w-none">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-[6rem] px-6 lg:px-0 lg:pl-16 padding-left max-w-none">
           {/* LEFT VERTICAL TEXT */}
-          <div className="flex-shrink-0 pt-0">
-            <div className="flex lg:flex-col  gap-4 lg:gap-1 text-[12px] lg:text-[16px] font-semibold text-[#165F41CC] uppercase">
+          <div className="flex-shrink-0 pt-0 text-center lg:text-left">
+            <div className="flex lg:flex-col  gap-4 lg:gap-1 text-[18px] lg:text-[16px] font-semibold text-[#165F41CC] uppercase">
               <p>{leftLabel}</p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function ImageShowcaseSwiper({
           {/* RIGHT CONTENT */}
           <div className="flex-1 w-full min-w-0">
             {/* HEADING */}
-            <p className="text-[28px] lg:text-[16px] font-medium mb-8 lg:mb-14 text-[#012219CC] max-w-xl leading-tight">
+            <p className="text-[16px] lg:text-[16px] font-medium mb-8 lg:mb-14 text-[#012219CC] max-w-xl leading-tight ">
               {heading}
             </p>
 
@@ -140,7 +140,7 @@ export default function ImageShowcaseSwiper({
                     spaceBetween: 32,
                   },
                 }}
-                className="w-full !overflow-visible xl-padding-right"
+                className="w-full !overflow-visible xl-padding-right px-8"
               >
                 {images.map((img, idx) => (
                   <SwiperSlide key={idx} className="h-auto">
@@ -179,7 +179,7 @@ export default function ImageShowcaseSwiper({
 
       {/* CENTERED VARIANT */}
       {variant === "centered" && (
-        <div className="w-full   py-12 pb-22" >
+        <div className="w-full   py-12 pb-22">
           {/* SWIPER CONTAINER */}
           <div className="relative group w-full">
             {/* Custom Navigation Buttons */}
@@ -249,7 +249,7 @@ export default function ImageShowcaseSwiper({
                 setIsEnd(swiper.isEnd);
               }}
               slidesPerView={1}
-              spaceBetween={20}
+              spaceBetween={10}
               breakpoints={{
                 768: {
                   slidesPerView: 2,

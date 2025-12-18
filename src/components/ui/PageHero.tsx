@@ -50,7 +50,7 @@ const PageHero = ({
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto h-full flex flex-col justify-end items-start text-white text-left  px-6 md:px-16 py-6 md:py-14">
+      <div className="relative z-10 container mx-auto h-full flex flex-col justify-end items-start text-white text-left  px-6 md:px-16 py-22 md:py-14">
         <h1 className="font-serif text-3xl md:text-6xl lg:text-7xl  drop-shadow-lg">
           {title}
         </h1>

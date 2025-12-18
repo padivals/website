@@ -26,43 +26,36 @@ const RoomsSection = () => {
   };
 
   return (
-    <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
+   <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
       {/* Dark Overlay for better text readability if needed, matching the photo's look */}
-      {/* <div className="absolute inset-0 bg-black/20 z-0"></div> */}
+      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-0% z-99999999"></div>
 
 
-{/* <style>{`
-        @media (min-width: 1910px) {
-          .rooms-responsive-padding {
-            padding-left: 10vw !important;
-            padding-right: 10vw !important;
-            
-          }
-        }
-      `}</style> */}
+
+
       {/* Static Header Overlay */}
-      <div className="absolute top-0 left-0 w-full z-20 pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
- 
+     <div className="absolute top-0 left-0 w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+
         <div className="container mx-auto  ">
           {/* Top Divider */}
           <div className="w-full h-px bg-[#FFFFFF] mb-8 lg:mb-12"></div>
 
-          <div className=" flex  flex-col lg:flex-row  justify-between text-white text-center lg:text-left  gap-6 lg:gap-28">
+          <div className="flex flex-col lg:flex-row justify-between text-white text-start lg:text-left gap-8 lg:gap-28">
             {/* OUR ROOMS Label */}
             <div className="flex-shrink-0">
-              <span className="block font-sans uppercase text-xs lg:text-xl font-semibold whitespace-nowrap">
+              <span className="block font-sans uppercase text-xl lg:text-xl font-semibold whitespace-nowrap">
                 OUR ROOMS
               </span>
             </div>
 
             {/* Description */}
             <div className="flex-1">
-              <p className="text-base lg:text-xl font-med leading-relaxed mb-4 lg:mb-6">
+              <p className="text-lg lg:text-xl font-med leading-relaxed mb-4 lg:mb-6">
                 {rooms[activeIndex].description}
               </p>
               <a
                 href={`/rooms/${rooms[activeIndex].slug}`}
-                className="inline-block border-b border-white pb-1 text-xs lg:text-lg font-medium uppercase tracking-wider hover:text-gray-200 transition-colors"
+                className="inline-block border-b border-white pb-1 text-sm lg:text-lg font-medium uppercase tracking-wider hover:text-gray-200 transition-colors"
               >
                 Learn More
               </a>
@@ -72,7 +65,7 @@ const RoomsSection = () => {
             <div className="flex-shrink-0"> 
               <Button
                 variant="primary"
-                className="bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-xs lg:text-sm tracking-wider"
+                className="bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-sm lg:text-sm tracking-wider"
               >
                 Book Now
               </Button>

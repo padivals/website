@@ -36,7 +36,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white md:py-20 py-6">
+    <section className="bg-white md:py-14 py-6">
       <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {
@@ -49,11 +49,11 @@ const FAQSection = () => {
         {/* Top Divider Line */}
         <div className="w-full hidden md:block  h-px bg-[#165F41] mb-4 mt-8 md:mt-0 "></div>
 
-        <div className="flex flex-col lg:flex-row gap-4 lg:gap-24">
+        <div className="flex flex-col lg:flex-row gap-0 lg:gap-24">
           {/* Left Side - Static Content */}
           <div className="lg:w-1/3 lg:pr-8">
             <div className="flex flex-col items-start text-left md:mt-6 mt-0">
-               <span className="block text-[#165F41CC] uppercase text-sm md:text-lg font-semibold mb-4">
+               <span className="block text-[#165F41CC] uppercase text-lg md:text-lg font-semibold md:mb-4">
                 FREQUENTLY ASKED QUESTIONS
               </span>
               {/* <h2 className="text-3xl md:text-5xl font-serif text-[#012219] leading-tight font-semibold max-w-3xl">

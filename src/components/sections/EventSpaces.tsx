@@ -18,7 +18,7 @@ const EventSpaces = () => {
     ];
 
     return (
-        <section className=" py-20 bg-white  px-16 ">
+        <section className=" md:py-20 pb-20  bg-white px-6 md:px-16 ">
             <div className="container mx-auto">
 
                 <div className="w-full h-px bg-[#165F41] mb-12  "></div>

@@ -132,7 +132,7 @@ const ContactSection = () => {
           }
         }
       `}</style> */}
-      <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
+      <div className="container mx-auto md:px-16 px-6 xl-faq-padding md:py-0 py-16">
         {/* Top Divider Line */}
         <div className="w-full h-px bg-[#165F41] mb-12 opacity-50  "></div>
 
