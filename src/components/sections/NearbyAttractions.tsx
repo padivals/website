@@ -36,7 +36,7 @@ const NearbyAttractions = () => {
 
   return (
     <ImageShowcaseSwiper
-      classname="py-20 bg-[white]"
+      classname="py-20 bg-[white] md:pr-16  "
       variant="split"
       heading="You can book rooms, event halls and restaurant tables, each supported by attentive service and well-prepared spaces."
       leftLabel="WHAT'S NEARBY"

@@ -92,7 +92,7 @@ const TestimonialsSection = ({
       `}</style> */}
       <div className="padding-left lg:pl-16 md:px-0 px-8">
         {/* Top Divider Line */}
-        <div className="md:mr-16  h-px bg-[#165F41] mb-12 opacity-50"></div>
+        <div className="md:mr-16 xl-margin-right  h-px bg-[#165F41] mb-12 opacity-50"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Side - Header */}
@@ -143,7 +143,7 @@ const TestimonialsSection = ({
                   slidesOffsetAfter: 64,
                 },
               }}
-              className="w-full"
+              className="w-full md:pr-16 xl-padding-right"
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id} className="h-auto">
@@ -166,7 +166,7 @@ const TestimonialsSection = ({
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between md:items-end mt-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mt-16 gap-8 xl-padding-right">
           {/* Rating Info */}
           <div>
             <p className="text-[22px] font-extrabold    text-[#012219CC] mb-1 ">
