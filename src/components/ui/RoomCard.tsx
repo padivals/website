@@ -15,9 +15,9 @@ const RoomCard = ({ title, description, slug, heroImage, imageColor }: RoomCardP
     return (
         // Mobile slide behaviour: become a fixed-width snap slide on small screens.
         // On `md` and larger the card keeps its original flex layout.
-        <div className="inline-block snap-center flex-shrink-0 w-[72vw] max-w-[360px] md:inline-block md:w-auto md:flex md:flex-col h-full">
+        <div className="flex flex-col snap-center shrink-0 w-[72vw] max-w-[360px] md:w-auto">
             {/* Image Container */}
-            <div className={`relative w-full aspect-[3/4] mb-6 overflow-hidden ${imageColor || 'bg-gray-200'}`}>
+            <div className={`relative w-full aspect-3/4 mb-6 overflow-hidden ${imageColor || 'bg-gray-200'}`}>
                 <Image
                     src={heroImage}
                     alt={title}
@@ -27,11 +27,11 @@ const RoomCard = ({ title, description, slug, heroImage, imageColor }: RoomCardP
             </div>
 
             {/* Content */}
-            <div className="flex flex-col flex-grow">
+            <div className="flex flex-col grow">
                 <p className="text-xl font-medium text-[#0F2A1D] mb-3">
                     {title}
                 </p>
-                <p className="text-sm font-medium text-[#012219CC] leading-relaxed mb-6 flex-grow">
+                <p className="text-sm font-medium text-[#012219CC] leading-relaxed mb-6 grow">
                     {description}
                 </p>
 

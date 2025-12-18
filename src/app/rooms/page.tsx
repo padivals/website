@@ -12,7 +12,7 @@ import FoodAndDining from "@/components/sections/FoodAndDining";
 import FAQSection from "@/components/sections/FAQSection";
 import Hero from "@/components/sections/Hero";
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
     title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
     description:
         "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats. Each room features modern amenities and exceptional comfort.",
@@ -36,9 +36,9 @@ export default function RoomsPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-           <Hero bgImg="/roomsImg/bgImg2.png" />
+            <Hero bgImg="/roomsImg/bgImg2.png" />
 
-           <style>{`
+            <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {
             padding-left: 0 !important;
@@ -48,7 +48,7 @@ export default function RoomsPage() {
           }
         }
       `}</style>
-      <section className=" md:px-16 px-6 py-20 xl-faq-padding bg-[#F9F5EC]">
+            <section className=" md:px-16 px-6 py-20 xl-faq-padding bg-[#F9F5EC]">
                 {/* Desktop grid (visible md+) */}
                 <div className="hidden container mx-auto md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {rooms.map((room) => (
@@ -66,7 +66,7 @@ export default function RoomsPage() {
 
                 {/* Mobile swiper (visible only on small screens) */}
                 <div className="md:hidden">
-                    <div className="flex gap-4 overflow-x-auto px-4 py-2 snap-x snap-mandatory scrollbar-hide">
+                    <div className="flex gap-4 overflow-x-auto px-4 py-2 snap-x snap-mandatory scrollbar-hide items-stretch">
                         {rooms.map((room) => (
                             <RoomCard
                                 key={room.id}

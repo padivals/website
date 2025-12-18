@@ -8,12 +8,12 @@ const EventSpaces = () => {
         {
             title: "Conference Hall",
             description: "A clean and comfortable indoor venue suited for meetings, family events, and small gatherings held in a calm setting.",
-            image: "/eventImg/ourspaces1.png", // Placeholder
+            image: "/evnts/celeb.png", // Placeholder
         },
         {
             title: "Rooftop Terrace Space",
             description: "An open-air, breezy venue ideal for evening functions and intimate celebrations with a relaxed, homely atmosphere.",
-            image: "/eventImg/ourspaces2.png", // Placeholder
+            image: "/evnts/dining.png", // Placeholder
         },
     ];
 

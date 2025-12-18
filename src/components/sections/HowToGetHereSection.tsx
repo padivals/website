@@ -35,13 +35,15 @@ export default function HowToGetHereSection() {
 
                     {/* Left Map */}
                     <div className="lg:w-5/12 w-full ">
-                                   
-                                  
-                                     <StyledMap />
-                                 
+
+
+                        {/* <StyledMap /> */}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.451541113612!2d74.9977007!3d13.0705444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4aae94dd942f7%3A0x66bc1006e2ed0be1!2sPadiwals%20Restaurant%20(Pure%20Veg%20Since%201986)!5e0!3m2!1sen!2sin!4v1765967776961!5m2!1sen!2sin" width="600" height="450" style={{ border: "0" }} loading="lazy" ></iframe>
+
+
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
