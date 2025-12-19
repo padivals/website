@@ -36,16 +36,16 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white md:py-14 py-6">
+    <section className="bg-white md:py-14 py-12">
       <style>{`
-        @media (min-width: 2100px) {
-          .xl-faq-padding {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
+        @media (min-width: 1920px) {
+          .xl-faqq-padding {
+            padding-left: 10vw !important;
+            padding-right: 10vw !important;
           }
         }
       `}</style>
-      <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
+      <div className=" mx-auto container  md:px-16 px-6 xl-faq-padding">
         {/* Top Divider Line */}
         <div className="w-full hidden md:block  h-px bg-[#165F41] mb-4 mt-8 md:mt-0 "></div>
 

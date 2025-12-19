@@ -35,13 +35,31 @@ const NearbyAttractions = () => {
   ];
 
   return (
+    <>
+    <div className=" bg-[#FFFFFF]">
+           <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+
+        <div className="container mx-auto  md:block hidden  ">
+          {/* Top Divider */}
+          <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-12"></div>
+
+       
+        </div>
+          <div className="container mx-auto md:hidden block">
+
+                <div className="w-full h-px bg-[#165F41] mb-12  "></div>
+            </div>
+        
+      </div>
     <ImageShowcaseSwiper
-      classname="py-20 bg-[white] md:pr-16  "
+      classname="py-20 bg-[white] md:pr-16 xl-faq-padding 16  "
       variant="split"
       heading="You can book rooms, event halls and restaurant tables, each supported by attentive service and well-prepared spaces."
       leftLabel="WHAT'S NEARBY"
       images={attractionsData}
     />
+    </div>
+    </>
   );
 };
 

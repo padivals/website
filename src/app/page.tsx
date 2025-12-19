@@ -69,7 +69,7 @@ export default function Home() {
          <TestimonialsSection />
       </div>
      
-      <div className="pt-16 bg-white">
+      <div className="pt-6 bg-white">
 
         <FAQSection />
       </div>

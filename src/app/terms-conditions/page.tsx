@@ -21,8 +21,8 @@ export default function TermsConditionsPage() {
       <HalfHeroSection title="Terms Of Service" />
 
       {/* Content Section */}
-      <section className="bg-[#F9F2E8] py-16 px-6 md:px-16  padding-left container md:py-20">
-        <div className="w-full max-w-8xl mx-auto px-6 sm:px-6 md:px-8">
+    <section className="bg-[#F9F2E8] py-16 md:px-16 px-4 padding-left md:py-20 container">
+        <div className="w-full max-w-8xl mx-auto ">
           <p className="text-[#4A5568] text-base sm:text-lg font-light leading-relaxed mb-10 sm:mb-12">
             These Terms and Conditions govern your use of this website. By accessing or browsing our site, you acknowledge that you have read, understood, and agreed to comply with the terms outlined below.
           </p>

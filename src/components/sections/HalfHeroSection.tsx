@@ -27,7 +27,7 @@ export default function HalfHeroSection({
                 {/* <div className="absolute inset-0 bg-black/20"></div> */}
             </div>
 
-            <div className="  relative z-10 md:px-16 px-6 py-28 padding-left">
+            <div className="  relative z-10 md:px-16 px-6 py-28 textpadding-left ">
                 <div className="flex flex-col gap-2 mb-12">
                     {/* Breadcrumb or label if needed */}
                 </div>

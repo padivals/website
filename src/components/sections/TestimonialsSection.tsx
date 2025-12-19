@@ -147,7 +147,7 @@ const TestimonialsSection = ({
   };
 
   return (
-    <section className="bg-[#F9F2E8] py-15 ">
+    <section className="bg-[#F9F2E8] md:py-15 ">
       {/* <style>{`
         @media (min-width: 1910px) {
           .testimonial-responsive-padding {
@@ -155,9 +155,20 @@ const TestimonialsSection = ({
           }
         }
       `}</style> */}
-      <div className="padding-left lg:pl-16 md:px-0 px-8">
-        {/* Top Divider Line */}
-        <div className="md:mr-16 xl-margin-right  h-px bg-[#165F41] mb-12 opacity-50"></div>
+     <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+
+        <div className="container mx-auto  ">
+          {/* Top Divider */}
+          <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-22"></div>
+
+       
+        </div>
+        
+      </div>
+
+      <div className="padding-left lg:pl-16  px-8">
+   
+
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Side - Header */}
@@ -207,10 +218,10 @@ const TestimonialsSection = ({
                   slidesOffsetAfter: 64,
                 },
               }}
-              className="w-full px-4 sm:px-6 md:pr-16 xl-padding-right"
+              className="w-full px-4 sm:px-6 md:pr-10 xl-padding-right"
             >
               {testimonials.map((testimonial) => (
-                <SwiperSlide key={testimonial.id} className="h-auto">
+                <SwiperSlide key={testimonial.id} className="h-full">
                   <div className="border border-[#A3B19C] p-8  h-full flex flex-col justify-between  min-h-[320px] bg-transparent mr-auto">
                     <div>
                       <p className="text-[#012219CC] text-base md:text-lg leading-relaxed font-bold">
@@ -230,7 +241,7 @@ const TestimonialsSection = ({
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between md:items-end mt-16 gap-8 xl-padding-right">
+        <div className="flex flex-col-reverse md:flex-row justify-between md:items-end mt-16 gap-8 xl-padding-right">
           {/* Rating Info */}
           <div>
             <p className="text-[22px] font-extrabold    text-[#012219CC] mb-1 ">
@@ -239,7 +250,7 @@ const TestimonialsSection = ({
             <p className="text-[#012219CC] font-semibold text-md mb-3">
               {ratingLabel}
             </p>
-          <div className="flex justify-center md:justify-start gap-1 text-[#1B4D3E]">
+          <div className="flex justify-start md:justify-start gap-1 text-[#1B4D3E]">
   {[...Array(fullStars)].map((_, i) => (
     <FullStar key={`full-${i}`} />
   ))}
@@ -265,7 +276,7 @@ const TestimonialsSection = ({
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex pr-12 md:gap-6  gap-8 ">
+            <div className="flex  md:gap-6  gap-8 ">
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
                 className="text-[#165F41] hover:opacity-70 transition-opacity "

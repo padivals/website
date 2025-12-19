@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function ContactAndLocationSection() {
   return (
-    <section className="bg-[#F9F5EC] py-20">
-      <div className="container mx-auto px-6 md:px-16">
+    <section className="bg-[#F9F5EC] md:py-20">
+      <div className="container mx-auto px-6 md:px-16 xl-faq-padding">
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-y-40 gap-y-20 gap-x-20">
 
@@ -27,6 +27,7 @@ export default function ContactAndLocationSection() {
                 Call
               </span>
               <a
+              target="_blank"
                 href="tel:+919686804784"
                 className="text-[#0F2A1D] md:text-xl text-md font-medium underline underline-offset-4 decoration-[#A3B19C] hover:text-[#1B4D3E]"
               >
@@ -37,6 +38,7 @@ export default function ContactAndLocationSection() {
                 Email
               </span>
               <a
+              target="_blank"
                 href="mailto:info@padival-grand-hotel.com"
                 className="text-[#0F2A1D] md:text-xl text-md font-medium underline underline-offset-4 decoration-[#A3B19C] hover:text-[#1B4D3E]"
               >
@@ -60,7 +62,7 @@ export default function ContactAndLocationSection() {
           {/* ───────────── BOTTOM LEFT : MAP ───────────── */}
           <div className="w-full h-[280px] sm:h-[340px] lg:h-[320px] overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.451541113612!2d74.9977007!3d13.0705444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4aae94dd942f7%3A0x66bc1006e2ed0be1!2sPadiwals%20Restaurant%20(Pure%20Veg%20Since%201986)!5e0!3m2!1sen!2sin!4v1765967776961!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.193579366762!2d75.19388537587785!3d12.765937219352285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd11b23b38bf%3A0x29973ec88814e99b!2sMahaveer%20Ventures%20Hotel%20and%20Resort%20-%20The%20Padival%20Grand!5e0!3m2!1sen!2sin!4v1766124232524!5m2!1sen!2sin"
               className="w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -92,7 +94,8 @@ export default function ContactAndLocationSection() {
                 </p>
 
                 <a
-                  href="https://maps.app.goo.gl/ZZH15Kq3aBe92WMz6"
+                target="_blank"
+                  href="https://maps.app.goo.gl/t6pdJoL1R8tTRo8f9"
                   className="text-[#4A6C58] text-sm underline underline-offset-4 font-medium hover:text-[#1B4D3E]"
                 >
                   View on Google Maps

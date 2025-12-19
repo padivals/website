@@ -10,9 +10,11 @@ import "swiper/css/effect-fade";
 import Button from "../ui/Button";
 
 import { rooms } from "@/data/rooms";
+import { useBookingModal } from "../providers/BookingModalContext";
 
 const RoomsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { openModal } = useBookingModal();
   const swiperRef = useRef<SwiperType | null>(null);
 
   const handleSlideChange = (swiper: SwiperType) => {
@@ -28,7 +30,7 @@ const RoomsSection = () => {
   return (
    <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
       {/* Dark Overlay for better text readability if needed, matching the photo's look */}
-      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-0% z-99999999"></div>
+      {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 to-0% z-99999999"></div> */}
 
 
 
@@ -65,7 +67,8 @@ const RoomsSection = () => {
             <div className="flex-shrink-0"> 
               <Button
                 variant="primary"
-                className="bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-sm lg:text-sm tracking-wider"
+                className=" z-999999999999999999 bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-sm lg:text-sm tracking-wider"
+                onClick={openModal}
               >
                 Book Now
               </Button>

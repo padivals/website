@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { format } from "date-fns";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import DateRangePicker from "../ui/DateRangePicker";
+import { useBookingModal } from "../providers/BookingModalContext";
 
 type ReservationData = {
   from: Date | undefined;
@@ -29,6 +30,7 @@ const ReservationBar = ({
   textColor = "#FFFFFF",
   onSubmit,
 }: Props) => {
+  const { openModal } = useBookingModal();
   const [openDate, setOpenDate] = useState(false);
   const [openGuests, setOpenGuests] = useState(false);
   const [dates, setDates] = useState<Date[]>([]);
@@ -156,15 +158,7 @@ const ReservationBar = ({
 
         {/* CTA BUTTON */}
         <button
-          onClick={() =>
-            onSubmit?.({
-              from: dates[0],
-              to: dates[1],
-              adults,
-              children,
-            })
-
-          }
+          onClick={openModal}
           className={`   bg-white text-[#012219] px-6 py-3 font-extrabold md:text-lg  hover:bg-[#c1c1c1] transition-all`}
         >
           {buttonLabel}

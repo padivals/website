@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
       {/* Content Section */}
       <section className="bg-[#F9F2E8] py-16 md:px-16 px-4 padding-left md:py-20 container">
         <div className="w-full max-w-8xl mx-auto ">
-          <p className="text-[#4A5568] text-base sm:text-lg font-light leading-relaxed mb-10 sm:mb-12">
+         <p className="text-[#4A5568] text-sm lg:text-lg font-normal  mb-10 sm:mb-12 ">
             This Privacy Policy outlines how JK Group collects, uses, and protects the information you provide when using this website. By accessing or using our site, you agree to the terms described below.
           </p>
 
@@ -31,41 +31,41 @@ export default function PrivacyPolicyPage() {
 
             {/* Information We Collect */}
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-semibold text-[#0F2A1D] mb-3 sm:mb-4">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#0F2A1D] mb-3 sm:mb-4">
                 Information We Collect
               </h2>
-              <p className="text-[#4A5568] text-sm sm:text-base font-light leading-relaxed">
+             <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 We may collect basic information such as your name, email address, phone number, and any details you submit through forms or inquiries on the website. We may also gather non-personal data including browser type, device information, and website usage patterns.
               </p>
             </div>
 
             {/* How We Use Your Information */}
             <div>
-              <h2 className="text-xl sm:text-2xl font-semibold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
                 How We Use Your Information
               </h2>
 
-              <p className="text-[#4A5568] text-sm sm:text-base font-light leading-relaxed mb-4">
+              <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 The information collected is used to:
               </p>
 
-              <ul className="list-disc list-inside text-[#4A5568] text-sm sm:text-base font-light leading-relaxed space-y-1 sm:space-y-2 ml-1 sm:ml-2">
+              <ul className="list-disc list-inside text-[#4A5568] text-sm lg:text-lg font-normal leading-relaxed space-y-1 sm:space-y-2 ml-1 sm:ml-2">
                 <li>Respond to your inquiries</li>
                 <li>Improve website performance and user experience</li>
                 <li>Share relevant updates or information, if you choose to receive them</li>
               </ul>
 
-              <p className="text-[#4A5568] text-sm sm:text-base font-light leading-relaxed mt-4">
+              <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 We do not sell or share your personal information with third parties unless required by law.
               </p>
             </div>
 
             {/* Cookies */}
             <div>
-              <h2 className="text-xl sm:text-2xl font-semibold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
                 Cookies
               </h2>
-              <p className="text-[#4A5568] text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 Our website may use cookies to enhance your browsing experience. You can choose to disable cookies in your browser settings, though some features may not function as intended.
               </p>
             </div>

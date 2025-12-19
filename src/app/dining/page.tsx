@@ -28,7 +28,9 @@ export default function DiningPage() {
             {/* <DiningCarousel /> */}
 <ImageCarousel/>
 
-            <DiningTestimonials />
+            <div className="pt-20 bg-[#F9F2E8]">
+                <DiningTestimonials />
+            </div>
 
             <ReservationBar />
             <Footer />
