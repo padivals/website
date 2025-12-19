@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const EventsSection = () => {
+const   EventsSection = () => {
   const events = [
     { title: "Leisure", image: "/evnts/leisure.png" },
     { title: "Celebration", image: "/evnts/celeb.png" },
@@ -22,7 +22,7 @@ const EventsSection = () => {
       <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
         
         {/* Top Divider */}
-        <div className="w-full h-px bg-[#165F41] opacity-50 mb-12"></div>
+        <div className="w-full h-px bg-[#165F41] opacity-50 md:mb-12 mb-20"></div>
 
         {/* TOP TEXT ROW */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-[6vw] mb-18">
@@ -44,7 +44,7 @@ const EventsSection = () => {
 
             <a
               href="/rooms"
-              className="text-[#1B4D3E] underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium"
+              className="text-[#1B4D3E] text-lg md:text-md shadow-md underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium"
             >
               Discover Our Spaces
             </a>
@@ -55,6 +55,9 @@ const EventsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-[18vw]  ">
           {events.map((event, index) => (
             <div key={index} className="flex flex-col group cursor-pointer">
+              <p className="text-[#012219CC] font-semibold text-xl   mb-4  md:hidden block">
+                {event.title}
+              </p>
 
               <div
                 className="w-full aspect-[5/3]  overflow-hidden relative bg-cover bg-center"
@@ -63,7 +66,7 @@ const EventsSection = () => {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
               </div>
 
-              <p className="text-[#012219CC] font-semibold text-md mt-4">
+              <p className="text-[#012219CC] font-semibold md:text-md  mt-4  md:block hidden">
                 {event.title}
               </p>
 

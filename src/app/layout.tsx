@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import { BookingModalProvider } from "@/components/providers/BookingModalContext";
+import BookingModal from "@/components/modals/BookingModal";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -78,7 +80,12 @@ export default function RootLayout({
       <body
         className={`${cormorantGaramond.variable} ${manrope.variable} antialiased font-sans`}
       >
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <SmoothScrollProvider>
+          <BookingModalProvider>
+            {children}
+            <BookingModal />
+          </BookingModalProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

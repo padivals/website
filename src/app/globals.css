@@ -66,15 +66,27 @@ html.lenis body {
         }
        @media (min-width: 1910px) {
           .padding-left {
-            padding-left: 10vw !important;
+            padding-left: 9.7vw !important;
+          }
+          .textpadding-left{
+            padding-left: 9.5vw !important;
           }
           .xl-margin-right{
             margin-right: 10vw !important ;
           }
-          .xl-padding-right{
-            padding-right: 7.5vw !important ;
+          .xl-px{
+            padding-left: 9.5vw !important;
+            padding-right: 9.5vw !important ;
           }
+          .xl-padding-right{
+            padding-right: 8vw !important ;
+          }
+          .xl-divider-width {
+           max-width: 1830px !important;
+          }
+          
         }
+       
 
 
 @keyframes fadeSlide {

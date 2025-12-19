@@ -65,20 +65,20 @@ export default function Home() {
       </div> */}
 
       {/* <MomentsSection /> */}
-      <div className="py-12 bg-[#F9F2E8]">
+      <div className="md:py-12 py-6 bg-[#F9F2E8]">
          <TestimonialsSection />
       </div>
      
-      <div className="pt-16 bg-white">
+      <div className="pt-6 bg-white">
 
         <FAQSection />
       </div>
 
-      <div className=" bg-white md:pb-12 pb-4">
+      <div className=" bg-white md:pb-12 pb-14">
         <EventsSection />
       </div>
 
-      <div className="md:py-0 py-14 bg-[#F9F5EC]">
+      <div className="md:py-0 py-16 bg-[#F9F5EC]">
         <ContactSection />
       </div>
       <Footer />

@@ -299,9 +299,11 @@ function Card({
   onEnded,
 }: CardProps) {
   const sizeMap = {
+    // On mobile, only the main (lg) card is visible so the layout stays centered
+    // and avoids horizontal scrolling. Side cards appear from md and up.
     sm: "hidden md:block md:w-[26vw] h-[60vh] opacity-80",
-    md: "w-[18vw] md:w-[25vw] h-[45vh] md:h-[70vh]  ",
-    lg: "w-[65vw] md:w-[28vw] h-[55vh] md:h-[80vh]  ",
+    md: "hidden md:block md:w-[25vw] h-[70vh]",
+    lg: "w-[88vw] md:w-[28vw] h-[55vh] md:h-[80vh]",
   };
 
 

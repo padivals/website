@@ -1,0 +1,405 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { X, ChevronDown, ChevronUp } from "lucide-react";
+import Input from "../ui/Input";
+import Select from "../ui/Select";
+import Button from "../ui/Button";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+import { useBookingModal } from "../providers/BookingModalContext";
+import { format } from "date-fns";
+
+const BookingModal = () => {
+  const { isOpen, closeModal } = useBookingModal();
+
+  const [description, setDescription] = useState("");
+  const [preferredFrom, setPreferredFrom] = useState("");
+  const [preferredTo, setPreferredTo] = useState("");
+  const [phone, setPhone] = useState("");
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [openGuests, setOpenGuests] = useState(false);
+  const [openDate, setOpenDate] = useState(false);
+  const [dates, setDates] = useState<Date[]>([]);
+  const [dateError, setDateError] = useState<string | null>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const close = () => {
+        setOpenGuests(false);
+        setOpenDate(false);
+    }
+    if (openGuests || openDate) {
+      window.addEventListener("click", close);
+    }
+    return () => window.removeEventListener("click", close);
+  }, [openGuests, openDate]);
+
+  useEffect(() => {
+      if(dates.length > 0 && dates[0]){
+          setPreferredFrom(format(dates[0], "dd / MM / yyyy"));
+      }
+      if(dates.length > 1 && dates[1]){
+           setPreferredTo(format(dates[1], "dd / MM / yyyy"));
+      }
+  }, [dates])
+
+  // Prevent background scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [isOpen]);
+
+  const formatDateDigits = (digits: string) => {
+    // Keep numbers only and limit to 8 digits (DDMMYYYY)
+    const nums = digits.replace(/\D/g, "").slice(0, 8);
+    const parts = [];
+    if (nums.length >= 2) {
+      parts.push(nums.slice(0, 2));
+      if (nums.length >= 4) {
+        parts.push(nums.slice(2, 4));
+        if (nums.length > 4) parts.push(nums.slice(4));
+      } else if (nums.length > 2) {
+        parts.push(nums.slice(2));
+      }
+    } else if (nums.length > 0) {
+      parts.push(nums);
+    }
+
+    // Join with separators
+    if (parts.length === 0) return "";
+    if (parts.length === 1) return parts[0];
+    if (parts.length === 2) return `${parts[0]} / ${parts[1]}`;
+    return `${parts[0]} / ${parts[1]} / ${parts[2]}`;
+  };
+
+   const parseAndValidateDate = (value: string) => {
+    // Extract only digits from the formatted value
+    const nums = value.replace(/\D/g, "");
+
+    // Only run validation when we have full DDMMYYYY (8 digits)
+    if (nums.length !== 8) {
+      return { date: null as Date | null, error: null as string | null };
+    }
+
+    const day = parseInt(nums.slice(0, 2), 10);
+    const month = parseInt(nums.slice(2, 4), 10);
+    const year = parseInt(nums.slice(4), 10);
+
+    const today = new Date();
+    const currentYear = today.getFullYear();
+
+    if (month < 1 || month > 12) {
+      return { date: null, error: "Please enter a valid month (01–12)." };
+    }
+
+    // Basic year validation: current year or later, 4 digits
+    if (year < currentYear || year < 1000 || year > 9999) {
+      return { date: null, error: "Please enter a valid year (current or future)." };
+    }
+
+    const candidate = new Date(year, month - 1, day);
+
+    // Check that JS date didn't overflow (e.g. 31/02)
+    if (
+      candidate.getFullYear() !== year ||
+      candidate.getMonth() !== month - 1 ||
+      candidate.getDate() !== day
+    ) {
+      return { date: null, error: "Please enter a valid calendar date." };
+    }
+
+    // Disallow dates before today
+    const todayMidnight = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate()
+    );
+    const candidateMidnight = new Date(year, month - 1, day);
+
+    if (candidateMidnight < todayMidnight) {
+      return { date: null, error: "Date cannot be earlier than today." };
+    }
+
+    return { date: candidate, error: null };
+  };
+
+
+  const handlePreferredFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPreferredFrom(formatDateDigits(e.target.value));
+  };
+
+  const handlePreferredToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPreferredTo(formatDateDigits(e.target.value));
+  };
+
+    const handlePreferredFromBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { error } = parseAndValidateDate(e.target.value);
+    setDateError(error);
+  };
+
+  const handlePreferredToBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { error } = parseAndValidateDate(e.target.value);
+    setDateError(error);
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+      {/* Modal Content */}
+      <div className="bg-white p-6 md:p-10 w-full max-w-5xl shadow-2xl relative max-h-[90vh] overflow-y-auto animate-fadeSlide">
+        {/* Close Button */}
+        <button
+          onClick={closeModal}
+          className="absolute top-4 right-4 text-[#165F41] hover:text-[#0F2A1D] transition-colors"
+        >
+          <X size={28} />
+        </button>
+
+        <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-4">
+          {/* Name */}
+          <Input
+            label="NAME"
+             placeholder="Your Full Name"
+            className="placeholder:text-[#165F41B2] text-[#165F41B2]"
+          />
+
+          {/* Number of Guests */}
+          <div className="flex flex-col relative z-20">
+            <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2">
+              NUMBER OF GUESTS
+            </label>
+            <div
+              className="w-full bg-transparent border border-[#165F41] p-4 text-[#165F41B2] cursor-pointer flex justify-between items-center"
+              onClick={(e) => {
+                e.stopPropagation();
+                setOpenGuests(!openGuests);
+                setOpenDate(false); 
+              }}
+            >
+              <span>
+                {adults < 10 ? `0${adults}` : adults} Adult, {children} Children
+              </span>
+              <button type="button" className="text-[#165F41]">
+                 <ChevronDown size={20} className={`transform transition-transform ${openGuests ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+
+            {/* Dropdown */}
+            {openGuests && (
+              <div
+                className="absolute top-full left-0 w-full bg-[white] border border-[#165F41] border-t-0 z-50 p-6 flex flex-col gap-6 shadow-lg"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Adults Row */}
+                <div className="flex justify-between items-center">
+                  <span className="text-[#165F41] font-medium text-lg">Adults</span>
+                  <div className="flex items-center gap-4">
+                    <button
+                      type="button"
+                      onClick={() => setAdults(Math.max(1, adults - 1))}
+                      className="w-8 h-8 text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1  border border-[#165F41]"
+                    >
+                      -
+                    </button>
+                    <span className="text-[#165F41] w-6 text-center text-lg font-medium">{adults}</span>
+                    <button
+                      type="button"
+                      onClick={() => setAdults(adults + 1)}
+                      className="w-8 h-8 text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1 border border-[#165F41]"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                {/* Children Row */}
+                <div className="flex justify-between items-center">
+                  <span className="text-[#165F41] font-medium text-lg">Children</span>
+                  <div className="flex items-center gap-4">
+                    <button
+                      type="button"
+                      onClick={() => setChildren(Math.max(0, children - 1))}
+                      className="w-8 h-8 text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1 border border-[#165F41]"
+                    >
+                      -
+                    </button>
+                    <span className="text-[#165F41] w-6 text-center text-lg font-medium">{children}</span>
+                    <button
+                      type="button"
+                      onClick={() => setChildren(children + 1)}
+                      className="w-8 h-8 text-[#165F41] flex items-center justify-center hover:bg-[#165F41] hover:text-white transition-colors text-xl pb-1 border border-[#165F41]"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Phone */}
+           <div className="flex flex-col">
+                <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2">
+                  PHONE
+                </label>
+                <PhoneInput
+                  defaultCountry="in"
+                  value={phone}
+                  onChange={setPhone}
+                  className="w-full"
+                  inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg"
+                  inputStyle={{
+                    width: "100%",
+                    background: "transparent",
+                    border: "1px solid #165F41",
+
+                    borderRadius: "0px",            // no rounded corners
+                    padding: "28px",
+                    fontSize: "16px",
+                    color: "#165F41B2",
+                  }}
+                  countrySelectorStyleProps={{
+                    buttonStyle: {
+                      background: "transparent",
+                      border: "1px solid #165F41",
+                      borderRight: "0px",
+                      borderRadius: "0px",          // no rounded corners
+                      padding: "28px",
+                      width: "80px",
+                      color: "#165F41",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    },
+                    dropdownStyleProps: {
+                      style: {
+                        maxHeight: "220px",         // enables scroll
+                        overflowY: "auto",          // scrollable dropdown
+                        borderRadius: "0px",
+                        border: "1px solid #165F41",
+                        background: "white",
+                        zIndex: 9999,
+                        overscrollBehavior: "contain",
+                      },
+                    },
+                  }}
+                />
+              </div>
+
+          {/* Email */}
+          <Input
+            label="EMAIL"
+            type="email"
+            placeholder="Your Email ID"
+            
+            className="text-[#165F41B2] placeholder:text-[#165F41B2]"
+          />
+
+          {/* Reservation Type */}
+          <Select
+            label="RESERVATION TYPE"
+            options={[
+              "Room Booking",
+              "Event Hosting",
+              "Dining Reservation",
+            ]}
+          />
+
+          {/* Preferred Dates */}
+           <div className="flex flex-col relative"
+             onClick={(e) => {
+                 e.stopPropagation();
+                 setOpenDate(!openDate);
+                 setOpenGuests(false);
+             }}
+           >
+                <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2">
+                  PREFERRED DATES
+                </label>
+                 <div className="flex gap-2">
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="25  /  11  /  2025 "
+                    value={preferredFrom}
+                    onChange={handlePreferredFromChange}
+                    onBlur={handlePreferredFromBlur}
+                    className="w-1/2 bg-transparent border border-[#165F41] p-4 placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
+                  />
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="30  /  11  /  2025"
+                    value={preferredTo}
+                    onChange={handlePreferredToChange}
+                    onBlur={handlePreferredToBlur}
+                    className="w-1/2 bg-transparent border border-[#165F41] p-4  placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
+                  />
+                </div>
+                {dateError && (
+                  <p className="mt-2 text-sm text-red-600">
+                    {dateError}
+                  </p>
+                )}
+
+            
+              </div>
+
+          {/* Description */}
+          <div className="flex flex-col md:col-span-2">
+            <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2 flex items-end gap-1">
+              DESCRIPTION
+              <span className="text-[11px] text-[#165F41]/70 normal-case align-bottom mb-[2px]">
+                (OPTIONAL)
+              </span>
+            </label>
+            <div className="relative w-full">
+              <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                rows={4}
+                placeholder="Please mention any special requests or preferences our team ought to notified of"
+                className="w-full bg-transparent text-[#165F41B2] border border-[#165F41] p-4 placeholder:text-[#165F41B2] focus:outline-none focus:border-[#1B4D3E] resize-none"
+              ></textarea>
+              <span className="absolute top-2 right-3 text-[10px] text-[#165F41]">
+                {description.length}/125
+              </span>
+            </div>
+          </div>
+
+          {/* Footer - Consent & Submit */}
+          <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between mt-6 gap-6">
+            <label className="flex items-center gap-3 cursor-pointer self-start md:self-center">
+              <input
+                type="checkbox"
+                className="w-5 h-5 border border-[#165F41] aspect-square  checked:bg-[#165F41] focus:ring-0 mr-2 accent-[#165F41]"
+              />
+              <span className="text-[#165F41] text-sm md:text-sm font-light">
+                I give my consent to be contacted via Call, SMS, Email, or WhatsApp
+              </span>
+            </label>
+            <Button
+              type="submit"
+              className="w-full md:w-auto px-10 py-4 bg-[#165F41] text-white hover:bg-[#124b33] uppercase tracking-widest text-sm font-bold"
+            >
+              Submit
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default BookingModal;

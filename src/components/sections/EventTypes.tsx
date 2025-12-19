@@ -41,6 +41,21 @@ const EventTypes = () => {
 
 
     return (
+      <div className=" bg-white">
+                     <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+
+        <div className="container mx-auto  md:block hidden  ">
+          {/* Top Divider */}
+          <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-12"></div>
+
+       
+        </div>
+          <div className="container mx-auto md:hidden block">
+
+                <div className="w-full h-px bg-[#165F41] mb-12  "></div>
+            </div>
+        
+      </div>
        <ImageShowcaseSwiper
              classname="py-20 bg-[white] md:pr-16"
              variant="split"
@@ -48,6 +63,9 @@ const EventTypes = () => {
              leftLabel="Types of events WE CATER TO"
              images={eventTypes}
            />
+      </div>
+
+   
     );
 };
 

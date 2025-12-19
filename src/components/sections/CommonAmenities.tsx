@@ -129,7 +129,7 @@ const CommonAmenities = () => {
                 <div className="w-full h-px bg-[#165F41] mb-12  "></div>
             </div>
             <div className="container mx-auto ">
-                <div className="flex flex-col lg:flex-row md:gap-12 gap-8">
+                <div className="flex flex-col lg:flex-row lg:gap-29 gap-8">
                     {/* Left Column: Title */}
                     <div className="lg:w-1/5">
                         <p className="block text-[#165F41CC]  uppercase md:text-lg text-lg font-semibold">

@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
+import { useBookingModal } from "../providers/BookingModalContext";
 
 interface RoomDetailsSectionProps {
     title: string;
@@ -10,21 +13,13 @@ interface RoomDetailsSectionProps {
 }
 
 const RoomDetailsSection = ({ title, description, features, image }: RoomDetailsSectionProps) => {
+    const { openModal } = useBookingModal();
     return (
 
  <>
- <style>{`
-        @media (min-width: 2100px) {
-          .xl-faq-padding {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            padding-top: 40 !important;
-            pzdding-bottom: 20 !important;
-          }
-        }
-      `}</style>
+
           
-        <section className="container md:px-0 px-6 mx-auto md:pl-16 md:py-20  py-10 xl-faq-padding ">
+        <section className=" md:px-0 px-6 mx-auto md:pl-16 md:py-20  py-10 padding-left ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left: Details */}
                 <div className="flex flex-col">
@@ -36,7 +31,7 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
                     </p>
 
                     <div className="mb-12">
-                        <Button variant="primary" className=" text-white py-4 px-6 uppercase tracking-widest text-sm transition-colors">
+                        <Button variant="primary" className=" z-999999999999 text-white py-4 px-6 uppercase tracking-widest text-sm transition-colors" onClick={openModal}>
                             Book Now
                         </Button>
                     </div>

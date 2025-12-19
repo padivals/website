@@ -5,7 +5,7 @@ import Link from "next/link";
 const FoodAndDining = () => {
     return (
         <section className="bg-[#F9F5EC] md:py-20 py-10 ">
-            <div className="container mx-auto px-8">
+            <div className="container xl-faq-padding mx-auto px-6 md:px-16">
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Left Column: Spacer/Label (Empty to match alignment of previous sections if needed, or just full width) */}
                     {/* Looking at the screenshot, it seems to be indented similarly to the previous section's content, 
@@ -30,7 +30,7 @@ const FoodAndDining = () => {
                          Let's try to align it with the "Common Amenities" content block (the right side).
                      */}
 
-                    <div className="lg:w-1/5 hidden lg:block">
+                    <div className="lg:w-1/4 hidden lg:block">
                         {/* Empty left column to maintain alignment with Common Amenities label if desired, 
                             or we can just make this section full width if it's meant to stand out.
                             The screenshot doesn't show the left margin context clearly.

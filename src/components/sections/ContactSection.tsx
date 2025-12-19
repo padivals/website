@@ -123,7 +123,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#F9F5EC] md:py-20 md:pb-32 py-0 border-t border-gray-200">
+    <section className="bg-[#F9F5EC] md:py-20 md:pb-32 py-0 ">
       {/* <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {
@@ -132,7 +132,7 @@ const ContactSection = () => {
           }
         }
       `}</style> */}
-      <div className="container mx-auto md:px-16 px-6 xl-faq-padding">
+      <div className="container mx-auto md:px-16 px-6 xl-faq-padding md:py-0 py-0">
         {/* Top Divider Line */}
         <div className="w-full h-px bg-[#165F41] mb-12 opacity-50  "></div>
 
@@ -148,7 +148,8 @@ const ContactSection = () => {
                 containerClassName="text-start max-w-3xl"
               />
               <a
-                href="https://maps.app.goo.gl/ZZH15Kq3aBe92WMz6"
+              target="_blank"
+                href="https://maps.app.goo.gl/t6pdJoL1R8tTRo8f9"
                 className="text-[#165F41B2] underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium mb-4 inline-block pb-5"
               >
                 View on Google Maps
@@ -159,7 +160,7 @@ const ContactSection = () => {
             <div className="w-full h-92 relative overflow-hidden  ">
               {/* The StyledMap now handles everything (Styles + Marker) */}
               {/* <StyledMap /> */}
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.451541113612!2d74.9977007!3d13.0705444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4aae94dd942f7%3A0x66bc1006e2ed0be1!2sPadiwals%20Restaurant%20(Pure%20Veg%20Since%201986)!5e0!3m2!1sen!2sin!4v1765967776961!5m2!1sen!2sin" width="600" height="450" style={{border: "0"}}  loading="lazy" ></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.193579366762!2d75.19388537587785!3d12.765937219352285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd11b23b38bf%3A0x29973ec88814e99b!2sMahaveer%20Ventures%20Hotel%20and%20Resort%20-%20The%20Padival%20Grand!5e0!3m2!1sen!2sin!4v1766124232524!5m2!1sen!2sin" width="600" height="450" style={{border: "0"}}  loading="lazy" ></iframe>
             </div>
 
             {/* DELETED THE EXTRA FLOATING IMAGES FROM HERE */}
@@ -312,7 +313,7 @@ const ContactSection = () => {
                 label="Email"
                 type="email"
                 placeholder="Your Email ID"
-                className="text-[#165F41B2]"
+                className="text-[#165F41B2] placeholder:text-[#165F41B2]"
               />
 
               {/* Reservation Type */}
@@ -386,7 +387,7 @@ const ContactSection = () => {
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="checkbox-custom focus:ring-0"
+                    className="checkbox-custom focus:ring-0 aspect-square"
                   />
                   <span className="text-[#165F41] text-sm font-light">
                     I give my consent to be contacted via Call, SMS, Email, or
@@ -395,7 +396,7 @@ const ContactSection = () => {
                 </label>
                 <Button
                   type="submit"
-                  className="w-full md:w-auto px-[31px] py-[18px]"
+                  className="w-full md:w-auto px-[31px] text-white py-[18px]"
                 >
                   Submit
                 </Button>
