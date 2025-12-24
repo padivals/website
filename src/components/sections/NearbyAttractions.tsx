@@ -37,7 +37,7 @@ const NearbyAttractions = () => {
   return (
     <>
     <div className=" bg-[#FFFFFF]">
-           <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+           <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-0 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
 
         <div className="container mx-auto  md:block hidden  ">
           {/* Top Divider */}

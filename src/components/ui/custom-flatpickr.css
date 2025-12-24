@@ -46,6 +46,13 @@
   background: #F9F5EC !important;
   color: #000000 !important;
   fill: #000000 !important;
+   display: flex;
+  justify-content: center;
+  align-items: center; /* To vertically align them if they are on the same line */
+}
+.flatpickr-month .numInput.cur-year,
+.flatpickr-month .flatpickr-monthDropdown-months {
+  text-align: center;
 }
 
 .flatpickr-current-month {
