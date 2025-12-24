@@ -8,10 +8,11 @@ import "swiper/css";
 import ScrollReveal from "../ui/ScrollReveal";
 
 interface Testimonial {
-  id: number;
+  id: string | number;
   text: string;
   author: string;
   location?: string;
+  backgroundColor?: string;
 }
 
 interface TestimonialsSectionProps {
@@ -20,6 +21,7 @@ interface TestimonialsSectionProps {
   testimonials?: Testimonial[];
   rating?: number;
   ratingLabel?: string;
+  backgroundColor?: string;
 }
 
 const defaultTestimonials = [
@@ -49,16 +51,7 @@ const defaultTestimonials = [
   },
 ];
 
-const rating = 4.5 
 
-// start calculation 
-
-const MAX_STARS = 5;
-
-const fullStars = Math.floor(rating);
-const hasHalfStar = rating % 1 >= 0.5;
-const emptyStars =
-  MAX_STARS - fullStars - (hasHalfStar ? 1 : 0);
 
   const FullStar = () => (
      <svg
@@ -117,12 +110,46 @@ const EmptyStar = () => (
 const TestimonialsSection = ({
   title = "What Our Guests Appreciate Most",
   label = "REVIEWS",
-  testimonials = defaultTestimonials,
-  rating = 4.3,
+  testimonials: initialTestimonials = defaultTestimonials,
+  backgroundColor = "bg-[#F9F2E8]",
+  rating: initialRating = 4.3,
   ratingLabel = "Average Rating by Past Guests",
 }: TestimonialsSectionProps) => {
   const swiperRef = useRef<SwiperType | null>(null);
   const [progress, setProgress] = useState(0);
+  const [rating, setRating] = useState(initialRating);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>(initialTestimonials);
+  const [isLoading, setIsLoading] = useState(true);
+
+  React.useEffect(() => {
+    const fetchRatings = async () => {
+      try {
+        const response = await fetch("/api/google-ratings");
+        if (!response.ok) {
+          throw new Error("Failed to fetch ratings from server");
+        }
+        const data = await response.json();
+        
+        if (data && typeof data.rating === 'number') {
+          setRating(data.rating);
+          // If we had reviews in the API, we could set them here too
+          // For now, the user requested rating and user_ratings_total
+        }
+      } catch (error) {
+        console.error("Error fetching Google Place data from API:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchRatings();
+  }, []);
+
+  // Star calculation based on current rating state
+  const MAX_STARS = 5;
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+  const emptyStars = MAX_STARS - fullStars - (hasHalfStar ? 1 : 0);
 
   const handleProgress = (swiper: SwiperType) => {
     const slidesPerView = swiper.params.slidesPerView as number;
@@ -147,7 +174,7 @@ const TestimonialsSection = ({
   };
 
   return (
-    <section className="bg-[#F9F2E8] md:py-15 ">
+    <section className={`${backgroundColor} md:py-0 `}>
       {/* <style>{`
         @media (min-width: 1910px) {
           .testimonial-responsive-padding {
@@ -155,7 +182,7 @@ const TestimonialsSection = ({
           }
         }
       `}</style> */}
-     <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+     <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-10 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
 
         <div className="container mx-auto  ">
           {/* Top Divider */}
@@ -188,7 +215,7 @@ const TestimonialsSection = ({
                 rotationEnd="top center"
                 wordAnimationEnd="top 40%"
                 containerClassName="text-start"
-                textClassName="text-4xl md:text-5xl font-serif leading-tight text-[#0F2A1D] font-semibold "
+                textClassName="text-4xl md:text-5xl font-serif leading-tight text-[#012219] font-semibold "
                 blurStrength={10}
               >
                 {title}

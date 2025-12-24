@@ -26,9 +26,11 @@ export default function DiningPage() {
             />
 
             {/* <DiningCarousel /> */}
-<ImageCarousel/>
+<div className="py-0 bg-[white]">
+    <ImageCarousel/>
+</div>
 
-            <div className="pt-20 bg-[#F9F2E8]">
+            <div className="py-20 md:pb-[12rem] bg-[white]">
                 <DiningTestimonials />
             </div>
 

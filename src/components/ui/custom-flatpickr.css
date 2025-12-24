@@ -124,7 +124,7 @@ span.flatpickr-weekday {
 .flatpickr-day.selected.nextMonthDay, 
 .flatpickr-day.startRange.nextMonthDay, 
 .flatpickr-day.endRange.nextMonthDay {
-  background: #012219 !important; /* Gold background */
+  background: #033225 !important; /* Gold background */
   color: #ffffff !important; /* Dark text for contrast */
   border-color: #ffffff !important;
   font-weight: 600 !important;
@@ -137,10 +137,10 @@ span.flatpickr-weekday {
 .flatpickr-day.today.inRange,
 .flatpickr-day.prevMonthDay.today.inRange,
 .flatpickr-day.nextMonthDay.today.inRange {
-  background: #03322569 !important; /* Slightly lighter dark for range */
+  background: #033225 !important; /* Slightly lighter dark for range */
   border-color: #a0a0a0 !important;
   color: #FFFFFF !important;
-  box-shadow: -5px 0 0 #012219, 5px 0 0 #3E3E3E !important;
+  box-shadow: -5px 0 0 #F9F5EC, 5px 0 0 #F9F5EC !important;
 }
 
 /* Today */
@@ -157,7 +157,7 @@ span.flatpickr-weekday {
 /* Disabled */
 .flatpickr-day.flatpickr-disabled, 
 .flatpickr-day.flatpickr-disabled:hover {
-  color: #4a4a4a42 !important;
+  color: #b8c71142 !important;
   background: none !important;
   border-color: #bb2121 !important;
 }

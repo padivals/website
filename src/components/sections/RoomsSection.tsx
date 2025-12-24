@@ -11,6 +11,7 @@ import Button from "../ui/Button";
 
 import { rooms } from "@/data/rooms";
 import { useBookingModal } from "../providers/BookingModalContext";
+import Typography from "../ui/Typography";
 
 const RoomsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,7 +31,7 @@ const RoomsSection = () => {
   return (
    <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
       {/* Dark Overlay for better text readability if needed, matching the photo's look */}
-      {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 to-0% z-99999999"></div> */}
+      <div className="absolute top-0 h-84  inset-0 bg-linear-to-b from-black/70 to-transparent z-100 pointer-events-none  "></div>
 
 
 
@@ -42,19 +43,19 @@ const RoomsSection = () => {
           {/* Top Divider */}
           <div className="w-full h-px bg-[#FFFFFF] mb-8 lg:mb-12"></div>
 
-          <div className="flex flex-col lg:flex-row justify-between text-white text-start lg:text-left gap-8 lg:gap-28">
+          <div className="flex flex-col lg:flex-row justify-between text-white text-start lg:text-left gap-8 lg:gap-28 z-100000000000">
             {/* OUR ROOMS Label */}
             <div className="flex-shrink-0">
-              <span className="block font-sans uppercase text-xl lg:text-xl font-semibold whitespace-nowrap">
+              <Typography variant="description" className="block font-sans uppercase text-xl text-white lg:text-xl font-semibold whitespace-nowrap">
                 OUR ROOMS
-              </span>
+              </Typography>
             </div>
 
             {/* Description */}
             <div className="flex-1">
-              <p className="text-lg lg:text-xl font-med leading-relaxed mb-4 lg:mb-6">
+              <Typography variant="description" className="text-lg lg:text-xl font-medium text-white leading-relaxed mb-4 lg:mb-6">
                 {rooms[activeIndex].description}
-              </p>
+              </Typography>
               <a
                 href={`/rooms/${rooms[activeIndex].slug}`}
                 className="inline-block border-b border-white pb-1 text-sm lg:text-lg font-medium uppercase tracking-wider hover:text-gray-200 transition-colors"

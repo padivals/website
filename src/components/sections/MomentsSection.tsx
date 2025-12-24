@@ -26,7 +26,7 @@ const DEFAULT_IMAGES = [
 export default function ImageCarousel({
   heading = "Discover Moments at The Padival Grand Hotel",
   images = DEFAULT_IMAGES,
-  backgroundColor = "bg-[#F9F2E8]",
+  backgroundColor = "bg-[white]",
 }: ImageCarouselProps) {
   const IMAGES = images;
   const [index, setIndex] = useState(0);

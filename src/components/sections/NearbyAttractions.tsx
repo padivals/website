@@ -41,7 +41,7 @@ const NearbyAttractions = () => {
 
         <div className="container mx-auto  md:block hidden  ">
           {/* Top Divider */}
-          <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-12"></div>
+          <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-0"></div>
 
        
         </div>
@@ -52,7 +52,7 @@ const NearbyAttractions = () => {
         
       </div>
     <ImageShowcaseSwiper
-      classname="py-20 bg-[white] md:pr-16 xl-faq-padding 16  "
+      classname="py-16 bg-[white] md:pr-16 xl-faq-padding 16  "
       variant="split"
       heading="You can book rooms, event halls and restaurant tables, each supported by attentive service and well-prepared spaces."
       leftLabel="WHAT'S NEARBY"

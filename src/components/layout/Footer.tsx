@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#052216] text-white pt-16 md:pb-[18vh] pb-10 font-serif ">
+    <footer className="bg-[#052216] text-white pt-16 pb-10 font-serif ">
  {/* <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {
@@ -31,7 +31,7 @@ const Footer = () => {
               height={100}
               className="mb-6 mx-auto md:mx-0"
             />
-            <p className="text-[#F9F2E8CC] text-sm md:text-base md;text-start text-center leading-relaxed font-sans max-w-sm mx-auto md:mx-0">
+            <p className="text-[#F9F2E8CC] text-sm md:text-base md:text-start text-center leading-relaxed font-sans max-w-sm mx-auto md:mx-0">
               The Padival Grand Hotel offers warm, reliable and refined
               hospitality, creating meaningful spaces for celebrations, stays
               and memorable moments.

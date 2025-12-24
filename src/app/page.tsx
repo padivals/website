@@ -78,14 +78,15 @@ export default function Home() {
         <EventsSection />
       </div>
 
-      <div className="md:py-0 py-16 bg-[#F9F5EC]">
+      <div className="md:py-0 py-16 md:mb-16 mb-0 bg-[#F9F5EC]">
         <ContactSection />
       </div>
-      <Footer />
-
+      
       <section className="hidden lg:block">
         <ReservationBar />
       </section>
+      
+      <Footer />
     </main>
   );
 }

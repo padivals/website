@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Typography from "../ui/Typography";
 
 interface ContentSectionProps {
     title: string;
@@ -24,11 +25,11 @@ const ContentSection = ({
                 <div className={`flex flex-col lg:flex-row gap-32 justify-between items-center ${imagePosition === "left" ? "lg:flex-row-reverse" : ""}`}>
                     {/* Text Content */}
                     <div className="lg:max-w-xl ">
-                        <h2 className={`text-3xl md:text-4xl font-semibold ${textColor} mb-6`}>
+                        <Typography variant="title2" className={`text-3xl md:text-4xl font-semibold ${textColor} mb-6`}>
                             {title}
-                        </h2>
+                        </Typography>
                         <div className={`text-lg ${textColor} font-medium leading-relaxed opacity-90`}>
-                            {typeof description === "string" ? <p>{description}</p> : description}
+                            {typeof description === "string" ? <Typography variant="description">{description}</Typography> : description}
                         </div>
                     </div>
 
