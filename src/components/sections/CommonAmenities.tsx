@@ -1,4 +1,5 @@
 import React from "react";
+import Typography from "../ui/Typography";
 
 const icons = {
     wifi: (
@@ -132,16 +133,16 @@ const CommonAmenities = () => {
                 <div className="flex flex-col lg:flex-row lg:gap-29 gap-8">
                     {/* Left Column: Title */}
                     <div className="lg:w-1/5">
-                        <p className="block text-[#165F41CC]  uppercase md:text-lg text-lg font-semibold">
+                        <Typography variant="description" className="block text-[#165F41CC]  uppercase md:text-lg text-lg font-semibold">
                             COMMON AMENITIES
-                        </p>
+                        </Typography>
                     </div>
 
                     {/* Right Column: Content */}
                     <div className="lg:w-3/4">
-                        <p className="text-[#012219CC] text-lg  leading-relaxed font-medium  mb-12">
+                        <Typography variant="description" className="text-[#012219CC] text-lg  leading-relaxed font-medium  mb-12">
                             At The Padival Grand, each amenity is thoughtfully maintained to make your stay comfortable, calm and dependable.<br /> Every facility is designed to support a smooth experience, whether you are here for a short visit or a longer stay.
-                        </p>
+                        </Typography>
 
                         <div className="space-y-12">
                             {amenities.map((category, index) => (
@@ -155,9 +156,9 @@ const CommonAmenities = () => {
                                                 <div className="text-[#165F41CC] flex items-center">
                                                     {icons[item.icon as keyof typeof icons]}
                                                 </div>
-                                                <span className="text-[#012219CC] text-md font-medium flex items-center leading-relaxed">
+                                                <Typography variant="description" className="text-[#012219CC] text-md font-medium flex items-center leading-relaxed">
                                                     {item.text}
-                                                </span>
+                                                </Typography>
                                             </div>
                                         ))}
                                     </div>

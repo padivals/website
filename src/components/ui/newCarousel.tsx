@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 
 import Image from "next/image";
 import clsx from "clsx";
+import Typography from "./Typography";
 
 type Variant = "split" | "centered";
 
@@ -56,16 +57,16 @@ export default function ImageShowcaseSwiper({
             {/* LEFT VERTICAL TEXT */}
             <div className="flex-shrink-0 pt-0 text-center lg:text-left">
               <div className="flex lg:flex-col  gap-4 lg:gap-1 text-[18px] lg:text-[16px] font-semibold text-[#165F41CC] uppercase">
-                <p>{leftLabel}</p>
+                <Typography variant="description">{leftLabel}</Typography>
               </div>
             </div>
 
             {/* RIGHT CONTENT */}
             <div className="flex-1 w-full min-w-0">
               {/* HEADING */}
-              <p className="text-[16px] lg:text-[16px] font-medium mb-8 lg:mb-14 text-[#012219CC] max-w-xl leading-tight ">
+              <Typography variant="description" className="text-[16px] lg:text-[16px] font-medium mb-8 lg:mb-14 text-[#012219CC] max-w-xl leading-tight ">
                 {heading}
-              </p>
+              </Typography>
 
               {/* SWIPER CONTAINER */}
               <div className="relative group w-full">
@@ -164,14 +165,14 @@ export default function ImageShowcaseSwiper({
                         {(img.heading || img.content) && (
                           <div className="flex flex-col gap-2">
                             {img.heading && (
-                              <p className="text-[18px] font-medium text-[#012219CC]">
+                              <Typography variant="description" className="text-[18px] font-medium text-[#012219CC]">
                                 {img.heading}
-                              </p>
+                              </Typography>
                             )}
                             {img.content && (
-                              <p className="text-[16px] font-medium text-[#012219CC] leading-relaxed">
+                              <Typography variant="swipercontent" className="text-[16px] font-medium text-[#012219CC] leading-relaxed">
                                 {img.content}
-                              </p>
+                              </Typography>
                             )}
                           </div>
                         )}
@@ -285,14 +286,14 @@ export default function ImageShowcaseSwiper({
                     {(img.heading || img.content) && (
                       <div className="flex flex-col gap-2">
                         {img.heading && (
-                          <p className="text-[18px] font-medium text-[#012219CC]">
+                          <Typography variant="description" className="text-[18px] font-medium text-[#012219CC]">
                             {img.heading}
-                          </p>
+                          </Typography>
                         )}
                         {img.content && (
-                          <p className="text-[16px] font-medium text-[#012219CC] leading-relaxed">
+                          <Typography variant="swipercontent" className="text-[16px] font-medium text-[#012219CC] leading-relaxed">
                             {img.content}
-                          </p>
+                          </Typography>
                         )}
                       </div>
                     )}

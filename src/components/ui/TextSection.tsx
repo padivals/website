@@ -1,5 +1,6 @@
 import React from "react";
 import SectionHeader from "./SectionHeader";
+import Typography from "./Typography";
 
 interface TextSectionProps {
     label?: string;
@@ -26,9 +27,9 @@ const TextSection: React.FC<TextSectionProps> = ({
                     align={align}
                     className="mb-8"
                 />
-                <p className="max-w-4xl xl:max-w-5xl mx-auto text-[#012219CC] text-lg md:text-lg font-medium leading-relaxed">
+                <Typography variant="description"  className="max-w-4xl xl:max-w-5xl mx-auto   font-medium leading-relaxed">
                     {description}
-                </p>
+                </Typography>
             </div>
         </section>
     );

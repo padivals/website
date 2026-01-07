@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ScrollReveal from "../ui/ScrollReveal";
+import Typography from "../ui/Typography";
 
 const FAQSection = () => {
    const heading = "Helpful Information for Your Visit"
@@ -36,7 +37,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white md:py-14 py-12">
+    <section className="bg-white md:py-20 py-12">
       <style>{`
         @media (min-width: 1920px) {
           .xl-faqq-padding {
@@ -113,9 +114,9 @@ const FAQSection = () => {
                         : "max-h-0 opacity-0"
                     }`}
                   >
-                    <p className="text-[#012219]/80 font-medium max-w-3xl leading-relaxed pr-8">
+                    <Typography variant="description" className="text-[#012219]/80 font-medium max-w-3xl leading-relaxed pr-8">
                       {faq.answer}
-                    </p>
+                    </Typography>
                   </div>
                 </div>
               ))}

@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal from "../ui/ScrollReveal";
+import Typography from "../ui/Typography";
 
 const FoodAndDining = () => {
+    const title = "Food and Dining";
     return (
         <section className="bg-[#F9F5EC] md:py-20 py-10 ">
             <div className="container xl-faq-padding mx-auto px-6 md:px-16">
@@ -40,9 +43,24 @@ const FoodAndDining = () => {
 
                     <div className="lg:w-3/4">
                         <div className="flex justify-between items-end mb-8">
-                            <h2 className="md:text-4xl text-3xl font-serif font-semibold text-[#0F2A1D]">
+                            {/* <h2 className="md:text-4xl text-3xl font-serif font-semibold text-[#0F2A1D]">
                                 Food and Dining
-                            </h2>
+                            </h2> */}
+                                <div className="">
+                                          <ScrollReveal
+                                            scrollContainerRef={undefined}
+                                            enableBlur={false}
+                                            baseOpacity={0}
+                                            baseRotation={0}
+                                            rotationEnd="top center"
+                                            wordAnimationEnd="top 40%"
+                                            containerClassName="text-start"
+                                            textClassName="text-4xl md:text-5xl font-serif leading-tight text-[#012219] font-semibold "
+                                            blurStrength={10}
+                                          >
+                                            {title}
+                                          </ScrollReveal>
+                                        </div>
                             <Link
                                 href="/dining"
                                 className="inline-block border-b border-[#0F2A1D] pb-1 md:text-sm text-xs uppercase tracking-wider text-[#0F2A1D] hover:text-gray-600 transition-colors"
@@ -60,9 +78,9 @@ const FoodAndDining = () => {
                             />
                         </div>
 
-                        <p className="text-[#012219CC] text-lg font-medium leading-relaxed">
+                        <Typography variant="description" className="text-[#012219CC] text-lg font-medium leading-relaxed">
                             At The Padival Grand, every meal is thoughtfully served through Padival&apos;s Palara, our pure vegetarian sister brand located within the same building. Guests enjoy familiar, homely flavours prepared with care, offering a calm, satisfying dining experience that feels dependable whether you choose a light snack or a complete meal.
-                        </p>
+                        </Typography>
                     </div>
                 </div>
             </div>

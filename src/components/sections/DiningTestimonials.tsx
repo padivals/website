@@ -38,6 +38,7 @@ const DiningTestimonials = () => {
             testimonials={testimonials}
             rating={4.3}
             ratingLabel="Average Rating by Past Guests"
+            backgroundColor="bg-[white]"
         />
     );
 };

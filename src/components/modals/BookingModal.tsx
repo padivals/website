@@ -11,18 +11,36 @@ import { useBookingModal } from "../providers/BookingModalContext";
 import { format } from "date-fns";
 
 const BookingModal = () => {
-  const { isOpen, closeModal } = useBookingModal();
+  const { isOpen, closeModal, reservationData } = useBookingModal();
 
   const [description, setDescription] = useState("");
   const [preferredFrom, setPreferredFrom] = useState("");
   const [preferredTo, setPreferredTo] = useState("");
   const [phone, setPhone] = useState("");
+  const [reservationType, setReservationType] = useState("Room Booking");
+  const [roomType, setRoomType] = useState("The Deluxe A/C Room");
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [openGuests, setOpenGuests] = useState(false);
   const [openDate, setOpenDate] = useState(false);
   const [dates, setDates] = useState<Date[]>([]);
   const [dateError, setDateError] = useState<string | null>(null);
+  const [consentChecked, setConsentChecked] = useState(false);
+
+  // Pre-fill form with reservation data when modal opens
+  useEffect(() => {
+    if (isOpen && reservationData) {
+      // Set dates if available
+      const newDates: Date[] = [];
+      if (reservationData.from) newDates.push(reservationData.from);
+      if (reservationData.to) newDates.push(reservationData.to);
+      setDates(newDates);
+
+      // Set adults and children
+      setAdults(reservationData.adults);
+      setChildren(reservationData.children);
+    }
+  }, [isOpen, reservationData]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -153,9 +171,9 @@ const BookingModal = () => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+    <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4" data-lenis-prevent>
       {/* Modal Content */}
-      <div className="bg-white p-6 md:p-10 w-full max-w-5xl shadow-2xl relative max-h-[90vh] overflow-y-auto animate-fadeSlide">
+      <div className="bg-white p-6 md:p-10 w-full max-w-5xl shadow-2xl relative max-h-[90vh] overflow-y-auto animate-fadeSlide" data-lenis-prevent>
         {/* Close Button */}
         <button
           onClick={closeModal}
@@ -305,14 +323,35 @@ const BookingModal = () => {
           />
 
           {/* Reservation Type */}
-          <Select
-            label="RESERVATION TYPE"
-            options={[
-              "Room Booking",
-              "Event Hosting",
-              "Dining Reservation",
-            ]}
-          />
+          <div className="flex flex-col gap-6">
+            <Select
+              label="RESERVATION TYPE"
+              options={["Room Booking", "Event Hosting", "Dining Reservation"]}
+              value={reservationType}
+              onChange={(e) => {
+                const next = e.target.value;
+                setReservationType(next);
+                if (next !== "Room Booking") {
+                  setRoomType("The Deluxe A/C Room");
+                }
+              }}
+            />
+
+            {reservationType === "Room Booking" && (
+              <Select
+                label="ROOM TYPE"
+                options={[
+                  "The Deluxe A/C Room",
+                  "The Standard Room",
+                  "Premium Room",
+                  "The Family Quad Room",
+                  "The Triple Bedroom",
+                ]}
+                value={roomType}
+                onChange={(e) => setRoomType(e.target.value)}
+              />
+            )}
+          </div>
 
           {/* Preferred Dates */}
            <div className="flex flex-col relative"
@@ -330,7 +369,7 @@ const BookingModal = () => {
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
-                    placeholder="25  /  11  /  2025 "
+                    placeholder="--  /  --  /  ---- "
                     value={preferredFrom}
                     onChange={handlePreferredFromChange}
                     onBlur={handlePreferredFromBlur}
@@ -340,7 +379,7 @@ const BookingModal = () => {
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
-                    placeholder="30  /  11  /  2025"
+                    placeholder="--  /  --  /  ----"
                     value={preferredTo}
                     onChange={handlePreferredToChange}
                     onBlur={handlePreferredToBlur}
@@ -383,6 +422,8 @@ const BookingModal = () => {
             <label className="flex items-center gap-3 cursor-pointer self-start md:self-center">
               <input
                 type="checkbox"
+                checked={consentChecked}
+                onChange={(e) => setConsentChecked(e.target.checked)}
                 className="w-5 h-5 border border-[#165F41] aspect-square  checked:bg-[#165F41] focus:ring-0 mr-2 accent-[#165F41]"
               />
               <span className="text-[#165F41] text-sm md:text-sm font-light">
@@ -391,7 +432,12 @@ const BookingModal = () => {
             </label>
             <Button
               type="submit"
-              className="w-full md:w-auto px-10 py-4 bg-[#165F41] text-white hover:bg-[#124b33] uppercase tracking-widest text-sm font-bold"
+              disabled={!consentChecked}
+              className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${
+                consentChecked 
+                  ? 'hover:bg-[#124b33] cursor-pointer opacity-100' 
+                  : 'cursor-not-allowed opacity-80'
+              }`}
             >
               Submit
             </Button>

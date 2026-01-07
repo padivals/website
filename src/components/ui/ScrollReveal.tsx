@@ -130,7 +130,7 @@ const ScrollReveal = ({
   return (
     <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
       <span
-        className={` leading-[1.5]  ${textClassName}`}
+        className={` leading-[1.5] text-[#012219]  ${textClassName} `}
       >
         {splitText} <br /> {splitbr}
       </span>

@@ -27,7 +27,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     <div className={`flex flex-col ${alignmentClasses} ${className}`}>
       {label && (
         <span
-          className={`block ${labelColor}  uppercase text-lg font-semibold mb-4`}
+          className={`block ${labelColor}  uppercase text-lg font-semibold `}
         >
           {label}
         </span>
@@ -47,7 +47,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           rotationEnd="top center"
           wordAnimationEnd="top 40%"
           containerClassName={containerClassName}
-          textClassName="text-4xl md:text-5xl  lg2:text-6xl  font-serif leading-tight text-[#0F2A1D] font-semibold " 
+          textClassName="text-4xl md:text-5xl  lg2:text-6xl  font-serif leading-tight text-[#012219] font-semibold " 
           blurStrength={10}
         >
           {heading}

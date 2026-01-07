@@ -30,12 +30,14 @@ const ReservationBar = ({
   textColor = "#FFFFFF",
   onSubmit,
 }: Props) => {
-  const { openModal } = useBookingModal();
+  const { openModal, setReservationData } = useBookingModal();
   const [openDate, setOpenDate] = useState(false);
   const [openGuests, setOpenGuests] = useState(false);
   const [dates, setDates] = useState<Date[]>([]);
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
+  const [isFixed, setIsFixed] = useState(true);
+  const [bottomOffset, setBottomOffset] = useState(0);
   const barRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -52,7 +54,46 @@ const ReservationBar = ({
     );
   }, []);
 
+  // Handle sticky positioning - stop at footer
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector("footer");
+      const bar = barRef.current;
+      
+      if (!footer || !bar) return;
 
+      const footerRect = footer.getBoundingClientRect();
+      const barHeight = bar.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Calculate the position where the bar should stop (top of footer)
+      const footerTop = scrollY + footerRect.top;
+      const stopPosition = footerTop - barHeight;
+
+      // Current scroll position where the bar would be if fixed
+      const barBottomEdge = scrollY + windowHeight;
+
+      if (barBottomEdge >= footerTop) {
+        // Bar has reached the footer - switch to absolute and stop
+        setIsFixed(false);
+        setBottomOffset(documentHeight - footerTop);
+      } else {
+        // Bar hasn't reached footer yet - keep it fixed at bottom
+        setIsFixed(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    handleScroll(); // Check on mount
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -69,8 +110,12 @@ const ReservationBar = ({
   return (
     <div
       ref={barRef}
-      className=" md:block hidden     fixed bottom-0 left-0 w-full z-50 py-5 px-6 md:px-10 border-t     border-white/10"
-      style={{ backgroundColor: bgColor, color: textColor }}
+      className={`md:block hidden ${isFixed ? 'fixed' : 'absolute'} left-0 w-full z-50 py-5 px-6 md:px-10 border-t border-white/10`}
+      style={{ 
+        backgroundColor: bgColor, 
+        color: textColor,
+        bottom: isFixed ? 0 : `${bottomOffset}px`
+      }}
     >
       <div className="max-w-7xl px-12    mx-auto flex items-center justify-between gap-6 ">
 
@@ -158,7 +203,16 @@ const ReservationBar = ({
 
         {/* CTA BUTTON */}
         <button
-          onClick={openModal}
+          onClick={() => {
+            // Save reservation data to context before opening modal
+            setReservationData({
+              from: dates[0],
+              to: dates[1],
+              adults,
+              children,
+            });
+            openModal();
+          }}
           className={`   bg-white text-[#012219] px-6 py-3 font-extrabold md:text-lg  hover:bg-[#c1c1c1] transition-all`}
         >
           {buttonLabel}

@@ -16,10 +16,13 @@ const ContactSection = () => {
   const [preferredFrom, setPreferredFrom] = useState("");
   const [preferredTo, setPreferredTo] = useState("");
   const [phone, setPhone] = useState("");
+  const [reservationType, setReservationType] = useState("Room Booking");
+  const [roomType, setRoomType] = useState("Deluxe Room");
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [openGuests, setOpenGuests] = useState(false);
   const [dateError, setDateError] = useState<string | null>(null);
+  const [consentChecked, setConsentChecked] = useState(false);
 
   // Close dropdown when clicking outside
   React.useEffect(() => {
@@ -317,14 +320,29 @@ const ContactSection = () => {
               />
 
               {/* Reservation Type */}
-              <Select
-                label="Reservation Type"
-                options={[
-                  "Room Booking",
-                  "Event Hosting",
-                  "Dining Reservation",
-                ]}
-              />
+              <div className="flex flex-col gap-6">
+                <Select
+                  label="Reservation Type"
+                  options={["Room Booking", "Event Hosting", "Dining Reservation"]}
+                  value={reservationType}
+                  onChange={(e) => {
+                    const next = e.target.value;
+                    setReservationType(next);
+                    if (next !== "Room Booking") {
+                      setRoomType("Deluxe Room");
+                    }
+                  }}
+                />
+
+                {reservationType === "Room Booking" && (
+                  <Select
+                    label="Room Type"
+                    options={["The Deluxe A/C Room","The Standard Room", "Premium Room", "The Family Quad Room","The Triple Bedroom"]}
+                    value={roomType}
+                    onChange={(e) => setRoomType(e.target.value)}
+                  />
+                )}
+              </div>
 
               {/* Preferred Dates */}
               <div className="flex flex-col">
@@ -336,7 +354,7 @@ const ContactSection = () => {
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
-                    placeholder="25  /  11  /  2025 "
+                    placeholder="--  /  --  /  ---- "
                     value={preferredFrom}
                     onChange={handlePreferredFromChange}
                     onBlur={handlePreferredFromBlur}
@@ -346,7 +364,7 @@ const ContactSection = () => {
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
-                    placeholder="30  /  11  /  2025"
+                    placeholder="--  /  --  /  ----"
                     value={preferredTo}
                     onChange={handlePreferredToChange}
                     onBlur={handlePreferredToBlur}
@@ -388,6 +406,8 @@ const ContactSection = () => {
                   <input
                     type="checkbox"
                     className="checkbox-custom focus:ring-0 aspect-square"
+                    checked={consentChecked}
+                    onChange={(e) => setConsentChecked(e.target.checked)}
                   />
                   <span className="text-[#165F41] text-sm font-light">
                     I give my consent to be contacted via Call, SMS, Email, or
@@ -395,9 +415,14 @@ const ContactSection = () => {
                   </span>
                 </label>
                 <Button
-                  type="submit"
-                  className="w-full md:w-auto px-[31px] text-white py-[18px]"
-                >
+                              type="submit"
+                              disabled={!consentChecked}
+                              className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${
+                                consentChecked 
+                                  ? 'hover:bg-[#124b33] cursor-pointer opacity-100' 
+                                  : 'cursor-not-allowed opacity-80'
+                              }`}
+                            >
                   Submit
                 </Button>
               </div>

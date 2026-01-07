@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HalfHeroSection from "@/components/sections/HalfHeroSection";
+import Typography from "@/components/ui/Typography";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | The Padival Grand Hotel",
@@ -31,23 +32,23 @@ export default function PrivacyPolicyPage() {
 
             {/* Information We Collect */}
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#0F2A1D] mb-3 sm:mb-4">
+              <Typography variant="title2" className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#0F2A1D] mb-3 sm:mb-4">
                 Information We Collect
-              </h2>
-             <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
+              </Typography>
+             <Typography variant="description" className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 We may collect basic information such as your name, email address, phone number, and any details you submit through forms or inquiries on the website. We may also gather non-personal data including browser type, device information, and website usage patterns.
-              </p>
+              </Typography>
             </div>
 
             {/* How We Use Your Information */}
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
+              <Typography variant="title2" className="text-xl sm:text-2xl font-bold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
                 How We Use Your Information
-              </h2>
+              </Typography>
 
-              <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
+              <Typography variant="description" className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 The information collected is used to:
-              </p>
+              </Typography>
 
               <ul className="list-disc list-inside text-[#4A5568] text-sm lg:text-lg font-normal leading-relaxed space-y-1 sm:space-y-2 ml-1 sm:ml-2">
                 <li>Respond to your inquiries</li>
@@ -55,19 +56,19 @@ export default function PrivacyPolicyPage() {
                 <li>Share relevant updates or information, if you choose to receive them</li>
               </ul>
 
-              <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
+              <Typography variant="description" className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 We do not sell or share your personal information with third parties unless required by law.
-              </p>
+              </Typography>
             </div>
 
             {/* Cookies */}
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
+              <Typography variant="title2" className="text-xl sm:text-2xl font-bold md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
                 Cookies
-              </h2>
-              <p className="text-[#4A5568] text-sm lg:text-lg font-normal ">
+              </Typography>
+              <Typography variant="description" className="text-[#4A5568] text-sm lg:text-lg font-normal ">
                 Our website may use cookies to enhance your browsing experience. You can choose to disable cookies in your browser settings, though some features may not function as intended.
-              </p>
+              </Typography>
             </div>
           </div>
         </div>
