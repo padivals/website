@@ -31,7 +31,8 @@ const RoomsSection = () => {
   return (
    <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
       {/* Dark Overlay for better text readability if needed, matching the photo's look */}
-      <div className="absolute top-0 h-84  inset-0 bg-linear-to-b from-black/70 to-transparent z-100 pointer-events-none  "></div>
+      <div className=" hidden lg:block absolute top-0 h-84  inset-0 bg-linear-to-b from-black/70 to-transparent z-100 pointer-events-none  "></div>
+      <div className=" lg:hidden   absolute top-0 h-full  inset-0 bg-linear-to-b from-black/40  via-black/30  to-transparent z-100 pointer-events-none  "></div>
 
 
 
@@ -105,7 +106,7 @@ const RoomsSection = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${room.heroImage})` }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
+                  {/* <div className="  absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div> */}
                 </div>
               </div>
             </SwiperSlide>

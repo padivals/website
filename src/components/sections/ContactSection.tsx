@@ -12,10 +12,14 @@ import "react-international-phone/style.css";
 
 
 const ContactSection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [description, setDescription] = useState("");
   const [preferredFrom, setPreferredFrom] = useState("");
   const [preferredTo, setPreferredTo] = useState("");
-  const [phone, setPhone] = useState("");
   const [reservationType, setReservationType] = useState("Room Booking");
   const [roomType, setRoomType] = useState("Deluxe Room");
   const [adults, setAdults] = useState(1);
@@ -125,6 +129,53 @@ const ContactSection = () => {
     setDateError(error);
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!consentChecked) return;
+
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const response = await fetch("/api/google-sheets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          guests: `${adults} Adult(s), ${children} Child(ren)`,
+          reservationType,
+          roomType: reservationType === "Room Booking" ? roomType : "N/A",
+          preferredFrom,
+          preferredTo,
+          description,
+          source: "ContactSection",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage({ type: "success", text: "Thank you! Your message has been sent successfully." });
+        // Reset form
+        setName("");
+        setEmail("");
+        setPhone("");
+        setDescription("");
+        setPreferredFrom("");
+        setPreferredTo("");
+        setConsentChecked(false);
+      } else {
+        throw new Error(data.error || "Failed to send message.");
+      }
+    } catch (error: any) {
+      setSubmitMessage({ type: "error", text: error.message || "An error occurred. Please try again later." });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="bg-[#F9F5EC] md:py-20 md:pb-32 py-0 ">
       {/* <style>{`
@@ -171,11 +222,14 @@ const ContactSection = () => {
 
           {/* Right Side - Form */}
           <div className="lg:w-2/3">
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
               <Input
                 label="Name"
                 placeholder="Your Full Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
                 className="placeholder:text-[#165F41B2] placeholder:text-lg text-[#165F41B2]"
               />
 
@@ -316,6 +370,9 @@ const ContactSection = () => {
                 label="Email"
                 type="email"
                 placeholder="Your Email ID"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="text-[#165F41B2] placeholder:text-[#165F41B2]"
               />
 
@@ -415,17 +472,22 @@ const ContactSection = () => {
                   </span>
                 </label>
                 <Button
-                              type="submit"
-                              disabled={!consentChecked}
-                              className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${
-                                consentChecked 
-                                  ? 'hover:bg-[#124b33] cursor-pointer opacity-100' 
-                                  : 'cursor-not-allowed opacity-80'
-                              }`}
-                            >
-                  Submit
+                  type="submit"
+                  disabled={!consentChecked || isSubmitting}
+                  className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${
+                    consentChecked && !isSubmitting
+                      ? 'hover:bg-[#124b33] cursor-pointer opacity-100' 
+                      : 'cursor-not-allowed opacity-80'
+                  }`}
+                >
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
               </div>
+              {submitMessage && (
+                <div className={`md:col-span-2 mt-4 p-4 text-center ${submitMessage.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+                  {submitMessage.text}
+                </div>
+              )}
             </form>
           </div>
         </div>

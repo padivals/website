@@ -21,7 +21,7 @@ export default function EventsPage() {
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
 
-            <Hero bgImg="/event-bg.jpg" />
+            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566621/events_tehres.mp4" />
 
             <TextSection
                 heading="Where Every Occasion Finds a Comfortable Setting"
@@ -33,8 +33,12 @@ export default function EventsPage() {
             {/* <MomentSectionTest backgroundColor="bg-white" heading="What Awaits You in Our Event Venues" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} /> */}
 
             <EventSpaces />
+               <div className="mb-12 bg-[#F9F5EC] ">
             <ContactSection />
-            <ReservationBar />
+            </div>
+         
+                <ReservationBar />
+            
             <Footer />
         </main>
     );

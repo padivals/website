@@ -42,7 +42,7 @@ const FoodAndDining = () => {
                     </div>
 
                     <div className="lg:w-3/4">
-                        <div className="flex justify-between items-end mb-8">
+                        <div className="flex justify-between items-center mb-8">
                             {/* <h2 className="md:text-4xl text-3xl font-serif font-semibold text-[#0F2A1D]">
                                 Food and Dining
                             </h2> */}
@@ -69,7 +69,7 @@ const FoodAndDining = () => {
                             </Link>
                         </div>
 
-                        <div className="relative w-full aspect-[16/6] mb-8 overflow-hidden">
+                        <div className="relative w-full md:aspect-16/6 aspect-10/6 mb-8 overflow-hidden">
                             <Image
                                 src="/roomsImg/foodDining.png" // Placeholder
                                 alt="Dining at Padival Grand"

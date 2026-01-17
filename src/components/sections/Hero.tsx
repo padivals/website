@@ -6,25 +6,38 @@ import Image from "next/image";
 
 interface HeroProps {
   bgImg?: string;
+  videoSrc?: string;
 }
 
-const Hero = ({ bgImg = "/default-hero.jpg" }: HeroProps ) => {
+const Hero = ({ bgImg = "/default-hero.jpg", videoSrc }: HeroProps) => {
 
   return (
     <div
       id="hero-section"
       className="sticky top-0 w-full h-screen overflow-hidden -z-10"
     >
-      {/* Background Image */}
+      {/* Background Media */}
       <div className="absolute inset-0">
-        <Image
-          src={bgImg}
-          alt="Hotel Lobby"
-          fill
-          priority
-          className="object-cover object-center"
-          quality={100}
-        />
+        {videoSrc ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full"
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            src={bgImg}
+            alt="Hero Background"
+            fill
+            priority
+            className="object-cover object-center"
+            quality={100}
+          />
+        )}
       </div>
       {/* Dark Gradient Overlay */}
       <div className="absolute inset-0 z-10 h-64 pointer-events-none bg-gradient-to-b from-[#000000a0] via-[#23222217]  to-transparent"></div>

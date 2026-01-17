@@ -13,10 +13,14 @@ import { format } from "date-fns";
 const BookingModal = () => {
   const { isOpen, closeModal, reservationData } = useBookingModal();
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [description, setDescription] = useState("");
   const [preferredFrom, setPreferredFrom] = useState("");
   const [preferredTo, setPreferredTo] = useState("");
-  const [phone, setPhone] = useState("");
   const [reservationType, setReservationType] = useState("Room Booking");
   const [roomType, setRoomType] = useState("The Deluxe A/C Room");
   const [adults, setAdults] = useState(1);
@@ -168,6 +172,58 @@ const BookingModal = () => {
     setDateError(error);
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!consentChecked) return;
+
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const response = await fetch("/api/google-sheets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          guests: `${adults} Adult(s), ${children} Child(ren)`,
+          reservationType,
+          roomType: reservationType === "Room Booking" ? roomType : "N/A",
+          preferredFrom,
+          preferredTo,
+          description,
+          source: "BookingModal",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage({ type: "success", text: "Booking request submitted successfully! We will contact you soon." });
+        // Reset form
+        setName("");
+        setEmail("");
+        setPhone("");
+        setDescription("");
+        setPreferredFrom("");
+        setPreferredTo("");
+        setConsentChecked(false);
+        // Optionally close modal after delay
+        setTimeout(() => {
+          closeModal();
+          setSubmitMessage(null);
+        }, 3000);
+      } else {
+        throw new Error(data.error || "Failed to submit booking request.");
+      }
+    } catch (error: any) {
+      setSubmitMessage({ type: "error", text: error.message || "An error occurred. Please try again later." });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -182,11 +238,14 @@ const BookingModal = () => {
           <X size={28} />
         </button>
 
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-4">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-4">
           {/* Name */}
           <Input
             label="NAME"
-             placeholder="Your Full Name"
+            placeholder="Your Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
             className="placeholder:text-[#165F41B2] text-[#165F41B2]"
           />
 
@@ -318,7 +377,9 @@ const BookingModal = () => {
             label="EMAIL"
             type="email"
             placeholder="Your Email ID"
-            
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
             className="text-[#165F41B2] placeholder:text-[#165F41B2]"
           />
 
@@ -432,16 +493,21 @@ const BookingModal = () => {
             </label>
             <Button
               type="submit"
-              disabled={!consentChecked}
+              disabled={!consentChecked || isSubmitting}
               className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${
-                consentChecked 
+                consentChecked && !isSubmitting
                   ? 'hover:bg-[#124b33] cursor-pointer opacity-100' 
                   : 'cursor-not-allowed opacity-80'
               }`}
             >
-              Submit
+              {isSubmitting ? "Submitting..." : "Submit"}
             </Button>
           </div>
+          {submitMessage && (
+            <div className={`md:col-span-2 mt-4 p-4 text-center ${submitMessage.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+              {submitMessage.text}
+            </div>
+          )}
         </form>
       </div>
     </div>
