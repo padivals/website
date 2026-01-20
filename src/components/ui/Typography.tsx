@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface TypographyProps {
-  variant: "title" | "subtitle" | "description" | "swipercontent " | "title2";
+  variant: "title" | "subtitle" | "description" | "swipercontent" | "title2";
   as?: React.ElementType;
   className?: string;
   children: React.ReactNode;
