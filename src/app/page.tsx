@@ -51,6 +51,7 @@ export default function Home() {
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
+      
       <div className="bg-[#F9F5EC] py-8">
 
         <VideoCarousel
