@@ -26,7 +26,7 @@ export default function VideoCarousel({
   backgroundColor = "bg-[#F9F2E8]",
 }: VideoCarouselProps) {
   const VIDEOS = videos;
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(Math.floor(VIDEOS.length / 2));
   const [isPlaying, setIsPlaying] = useState(true);
   const directionRef = useRef(1);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);

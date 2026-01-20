@@ -249,7 +249,7 @@ const TestimonialsSection = ({
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id} className="h-full">
-                  <div className="border border-[#A3B19C] p-8  h-full flex flex-col justify-between  min-h-[320px] bg-transparent mr-auto">
+                  <div className="border border-[#A3B19C] p-8  h-full flex flex-col justify-between  min-h-[55vh] md:min-h-[45vh] bg-transparent mr-auto">
                     <div>
                       <p className="text-[#012219CC] text-base md:text-lg leading-relaxed font-bold">
                         “{testimonial.text}”

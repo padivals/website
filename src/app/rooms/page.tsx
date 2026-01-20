@@ -36,7 +36,7 @@ export default function RoomsPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <Hero bgImg="/roomsImg/bgImg2.png" />
+            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768632262/rooms_jx5s0m.mp4" />
 
             <style>{`
         @media (min-width: 2100px) {
@@ -85,7 +85,7 @@ export default function RoomsPage() {
             <CommonAmenities />
             <FoodAndDining />
             <FAQSection />
-            <section className="hidden md:block">
+            <section className="hidden md:block mt-16">
                 <ReservationBar />
             </section>
 

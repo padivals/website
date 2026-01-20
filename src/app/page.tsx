@@ -10,6 +10,7 @@ import EventsSection from "@/components/sections/EventsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ReservationBar from "@/components/sections/ReservationBar";
 import type { Metadata } from "next";
+import VideoCarousel from "@/components/sections/MomentSectionTest";
 
 export const metadata: Metadata = {
   title: "The Padival Grand Hotel | Luxury Hotel in Puttur, Karnataka",
@@ -46,23 +47,23 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col relative ">
       <Header />
-      <Hero bgImg="/hero-bg.png" />
+      <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566629/home_qy3xrp.mp4" />
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
-      {/* <div className="bg-[#F9F5EC] py-8">
+      
+      <div className="bg-[#F9F5EC] py-8">
 
-        <MomentSectionTest
+        <VideoCarousel
           heading="Discover Moments at The Padival Grand Hotel"
           videos={[
-            "/momentsImg/vid1.mp4",
-            "/momentsImg/video2.mp4",
-            "/momentsImg/vid1.mp4",
-            "/momentsImg/video2.mp4",
-            "/momentsImg/vid1.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565807/non-ac_layc97.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565803/new-rooms_aqekai.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565790/fam-quad_gqveli.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565783/triple-sharing_u2zgrj.mp4",
           ]}
         />
-      </div> */}
+      </div>
 
       {/* <MomentsSection /> */}
       <div className="md:py-12 py-6 bg-[#F9F2E8]">

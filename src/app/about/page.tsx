@@ -78,11 +78,11 @@ export default function AboutPage() {
             </section>
             <FAQSection />
 
-            <section className="hidden md:block">
+            {/* <section className="hidden md:block">
                 <ReservationBar />
 
 
-            </section>
+            </section> */}
 
             <Footer />
         </main>

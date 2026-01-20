@@ -31,7 +31,7 @@ export default function HalfHeroSection({
                 <div className="flex flex-col gap-2 mb-12">
                     {/* Breadcrumb or label if needed */}
                 </div>
-                <h1 className="font-serif font-semibold text-5xl md:text-7xl mb-8 text-[#F9F2E8]">
+               <h1 className="font-serif font-semibold text-5xl md:text-7xl mb-8 text-[#F9F2E8]">
                     {title}
                 </h1>
                 {subtitle && (

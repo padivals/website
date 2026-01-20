@@ -11,6 +11,7 @@ import ReservationBar from "@/components/sections/ReservationBar";
 import { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import ImageCarousel from "@/components/sections/MomentsSection";
+import VideoCarousel from "@/components/sections/MomentSectionTest";
 
 
 
@@ -18,7 +19,7 @@ export default function DiningPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <Hero bgImg="/dining-bg.png" />
+            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566618/dining1_yjkyze.mp4" />
 
             <TextSection
                 heading="Where Familiar Flavours Meet Thoughtful Cooking"
@@ -26,9 +27,17 @@ export default function DiningPage() {
             />
 
             {/* <DiningCarousel /> */}
-<div className="py-0 bg-[white]">
-    <ImageCarousel/>
-</div>
+      <div className="bg-[#F9F5EC] py-8">
+
+        <VideoCarousel
+          heading="Discover Moments at The Padival Grand Hotel"
+          videos={[
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566637/dosa_bi2812.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566602/fruitsalad_ymt49q.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768632852/COFFEE__bk8skb.mp4",
+          ]}
+        />
+      </div>
 
             <div className="py-20 md:pb-[12rem] bg-[white]">
                 <DiningTestimonials />

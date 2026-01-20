@@ -110,7 +110,7 @@ const ReservationBar = ({
   return (
     <div
       ref={barRef}
-      className={`md:block hidden ${isFixed ? 'fixed' : 'absolute'} left-0 w-full z-50 py-5 px-6 md:px-10 border-t border-white/10`}
+      className={`md:block hidden ${isFixed ? 'fixed' : 'absolute'} left-0 w-full z-50 py-5 px-6 md:px-10 border-t border-white/10 `}
       style={{ 
         backgroundColor: bgColor, 
         color: textColor,
