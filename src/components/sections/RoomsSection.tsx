@@ -12,11 +12,13 @@ import Button from "../ui/Button";
 import { rooms } from "@/data/rooms";
 import { useBookingModal } from "../providers/BookingModalContext";
 import Typography from "../ui/Typography";
+import { useRouter } from "next/navigation";
 
 const RoomsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { openModal } = useBookingModal();
   const swiperRef = useRef<SwiperType | null>(null);
+  const router = useRouter();
 
   const handleSlideChange = (swiper: SwiperType) => {
     setActiveIndex(swiper.realIndex);
@@ -28,17 +30,26 @@ const RoomsSection = () => {
     }
   };
 
+  const handleTabClick = (index: number) => {
+    if (activeIndex === index) {
+      router.push(`/rooms/${rooms[index].slug}`);
+    } else {
+      if (swiperRef.current) {
+        swiperRef.current.slideToLoop(index);
+      }
+    }
+  };
+
   return (
-   <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
+    <section className="relative h-screen flex flex-col bg-[#f6f6f6]">
       {/* Dark Overlay for better text readability if needed, matching the photo's look */}
-      <div className=" hidden lg:block absolute top-0 h-84  inset-0 bg-linear-to-b from-black/70 to-transparent z-100 pointer-events-none  "></div>
-      <div className=" lg:hidden   absolute top-0 h-full  inset-0 bg-linear-to-b from-black/40  via-black/30  to-transparent z-100 pointer-events-none  "></div>
+
 
 
 
 
       {/* Static Header Overlay */}
-     <div className="absolute top-0 left-0 w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+      <div className="absolute top-0 left-0 w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
 
         <div className="container mx-auto  ">
           {/* Top Divider */}
@@ -66,7 +77,7 @@ const RoomsSection = () => {
             </div>
 
             {/* Book Now Button */}
-            <div className="flex-shrink-0"> 
+            <div className="flex-shrink-0">
               <Button
                 variant="primary"
                 className=" z-999999999999999999 bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-sm lg:text-sm tracking-wider"
@@ -77,7 +88,7 @@ const RoomsSection = () => {
             </div>
           </div>
         </div>
-        
+
       </div>
 
       {/* Slider Container - Just for content transitions if needed, but bg is static now */}
@@ -101,13 +112,23 @@ const RoomsSection = () => {
         >
           {rooms.map((room) => (
             <SwiperSlide key={room.id}>
-              <div className="w-full h-full relative">
+              <div
+                className="w-full h-full relative cursor-pointer"
+                onClick={() => router.push(`/rooms/${room.slug}`)}
+              >
+                {/* TOP → BOTTOM GRADIENT */}
+                <div className="hidden lg:block absolute top-0 h-84 inset-0 bg-linear-to-b from-black/70 to-transparent z-100 pointer-events-none"></div>
+                <div className="lg:hidden absolute top-0 h-full inset-0 bg-linear-to-b from-black/40 via-black/30 to-transparent z-100 pointer-events-none"></div>
+
+                {/* BOTTOM → TOP GRADIENT (NEW) */}
+                <div className="hidden lg:block absolute bottom-0 h-84 inset-x-0 bg-linear-to-t from-black/70 to-transparent z-100 pointer-events-none"></div>
+                <div className="lg:hidden absolute bottom-0 h-full inset-x-0 bg-linear-to-t from-black/40 via-black/30 to-transparent z-100 pointer-events-none"></div>
+
+                {/* BACKGROUND IMAGE */}
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${room.heroImage})` }}
-                >
-                  {/* <div className="  absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div> */}
-                </div>
+                />
               </div>
             </SwiperSlide>
           ))}
@@ -130,7 +151,7 @@ const RoomsSection = () => {
             {rooms.map((room, index) => (
               <button
                 key={room.id}
-                onClick={() => handleDotClick(index)}
+                onClick={() => handleTabClick(index)}
                 className="flex-1 text-left py-4 relative group"
               >
                 {/* Progress Track */}
@@ -149,15 +170,13 @@ const RoomsSection = () => {
 
                 {/* Hover Line (for non-active items) */}
                 <div
-                  className={`absolute top-0 left-0 h-[2px] bg-white/50 transition-all duration-300 ${
-                    activeIndex !== index ? "w-0 group-hover:w-full" : "w-0"
-                  }`}
+                  className={`absolute top-0 left-0 h-[2px] bg-white/50 transition-all duration-300 ${activeIndex !== index ? "w-0 group-hover:w-full" : "w-0"
+                    }`}
                 ></div>
 
                 <span
-                  className={`text-xl font-light tracking-wide block mt-4 transition-colors duration-300 ${
-                    activeIndex === index ? "text-white" : "text-white"
-                  }`}
+                  className={`text-xl font-light tracking-wide block mt-4 transition-colors duration-300 ${activeIndex === index ? "text-white" : "text-white"
+                    }`}
                 >
                   {room.title}
                 </span>
@@ -170,10 +189,9 @@ const RoomsSection = () => {
             {rooms.map((_, index) => (
               <button
                 key={index}
-                onClick={() => handleDotClick(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  activeIndex === index ? "bg-white" : "bg-white/40"
-                }`}
+                onClick={() => handleTabClick(index)}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeIndex === index ? "bg-white" : "bg-white/40"
+                  }`}
               />
             ))}
           </div>

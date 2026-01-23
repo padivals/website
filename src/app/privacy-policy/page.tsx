@@ -191,9 +191,19 @@ We implement reasonable security practices and procedures to protect your person
 
             <Typography variant="description" className="text-[#4A5568] text-sm lg:text-xl space-y-1">
               <p>Mahaveer Ventures</p>
-              <p>Address: Mahaveer Mall, Near Mahaveer Medical Centre, Bolwar, Puttur, Dakshina Kannada 574201, Karnataka, India </p>
-              <p>Email: management@mahaveer.info / padivals@hotmail.com</p>
-              <p>Phone: 09686804784</p>
+              <p> Address:<a href="https://maps.app.goo.gl/t6pdJoL1R8tTRo8f9" className="border-b hover:text-[#aa8616] transition-all duration-200"> Mahaveer Mall, Near Mahaveer Medical Centre, Bolwar, Puttur, Dakshina Kannada 574201, Karnataka, India </a></p>
+              <p>Email:  <a
+                  href="mailto:info@padival-grand-hotel.com"
+                  className="border-b hover:text-[#aa8616] transition-all duration-200"
+                >
+                  info@padival-grand-hotel.com
+                </a></p>
+              <p>Phone: <a className="border-b hover:text-[#aa8616] transition-all duration-200"
+                target="_blank"
+                href="tel:+919686804784"
+              >
+                +91 96868 04784
+              </a></p>
             </Typography>
           </div>
 

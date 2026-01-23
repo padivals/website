@@ -15,14 +15,17 @@ const RoomCard = ({ title, description, slug, heroImage, imageColor }: RoomCardP
     return (
         // Mobile slide behaviour: become a fixed-width snap slide on small screens.
         // On `md` and larger the card keeps its original flex layout.
-        <div className="flex flex-col snap-center shrink-0 w-[72vw] max-w-[360px] md:w-auto">
+        <Link
+            href={`/rooms/${slug}`}
+            className="flex flex-col snap-center shrink-0 w-[72vw] max-w-[360px] md:w-auto overflow-hidden group"
+        >
             {/* Image Container */}
             <div className={`relative w-full aspect-3/4 mb-6 overflow-hidden ${imageColor || 'bg-gray-200'}`}>
                 <Image
                     src={heroImage}
                     alt={title}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
             </div>
 
@@ -36,15 +39,14 @@ const RoomCard = ({ title, description, slug, heroImage, imageColor }: RoomCardP
                 </p>
 
                 <div>
-                    <Link
-                        href={`/rooms/${slug}`}
-                        className="inline-block border border-[#4A6741] text-[#165F41] px-5 py-3 text-xs font-extrabold uppercase tracking-wider hover:bg-[#1B4D3E] hover:text-white transition-colors"
+                    <span
+                        className="inline-block border border-[#4A6741] text-[#165F41] px-5 py-3 text-xs font-extrabold uppercase tracking-wider group-hover:bg-[#1B4D3E] group-hover:text-white transition-colors"
                     >
                         Learn More
-                    </Link>
+                    </span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

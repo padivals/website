@@ -84,8 +84,11 @@ export default function RoomsPage() {
 
             <CommonAmenities />
             <FoodAndDining />
-            <FAQSection />
-            <section className="hidden md:block mt-16">
+            <div className="pb-12 bg-[white] ">
+                 <FAQSection />
+            </div>
+           
+            <section className="">
                 <ReservationBar />
             </section>
 
