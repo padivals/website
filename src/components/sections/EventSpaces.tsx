@@ -46,7 +46,7 @@ const EventSpaces = () => {
                                             src={space.image}
                                             alt={space.title}
                                             fill
-                                            className="object-cover hover:scale-105 transition-transform duration-500"
+                                            className="object-cover "
                                         />
                                     </div>
                                     <p className="text-xl font-medium text-[#012219CC] mb-3">

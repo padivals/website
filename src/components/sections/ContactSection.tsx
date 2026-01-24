@@ -5,10 +5,12 @@ import SectionHeader from "../ui/SectionHeader";
 import Input from "../ui/Input";
 import Select from "../ui/Select";
 import Button from "../ui/Button";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { StyledMap } from "../ui/StyledMap";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import DateRangePicker from "../ui/DateRangePicker";
+import { format } from "date-fns";
 
 
 const ContactSection = () => {
@@ -18,8 +20,10 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [description, setDescription] = useState("");
-  const [preferredFrom, setPreferredFrom] = useState("");
-  const [preferredTo, setPreferredTo] = useState("");
+  const [dates, setDates] = useState<Date[]>([]);
+  const [openDate, setOpenDate] = useState(false);
+  const [isDropdownUp, setIsDropdownUp] = useState(false);
+  const dateContainerRef = useRef<HTMLDivElement>(null);
   const [reservationType, setReservationType] = useState("Room Booking");
   const [roomType, setRoomType] = useState("Deluxe Room");
   const [adults, setAdults] = useState(1);
@@ -29,105 +33,17 @@ const ContactSection = () => {
   const [consentChecked, setConsentChecked] = useState(false);
 
   // Close dropdown when clicking outside
-  React.useEffect(() => {
-    const close = () => setOpenGuests(false);
-    if (openGuests) {
-      window.addEventListener("click", close);
-    }
+  useEffect(() => {
+    const close = () => {
+      setOpenGuests(false);
+      setOpenDate(false);
+    };
+    window.addEventListener("click", close);
     return () => window.removeEventListener("click", close);
-  }, [openGuests]);
+  }, []);
 
-  const formatDateDigits = (digits: string) => {
-    // Keep numbers only and limit to 8 digits (DDMMYYYY)
-    const nums = digits.replace(/\D/g, "").slice(0, 8);
-    const parts = [];
-    if (nums.length >= 2) {
-      parts.push(nums.slice(0, 2));
-      if (nums.length >= 4) {
-        parts.push(nums.slice(2, 4));
-        if (nums.length > 4) parts.push(nums.slice(4));
-      } else if (nums.length > 2) {
-        parts.push(nums.slice(2));
-      }
-    } else if (nums.length > 0) {
-      parts.push(nums);
-    }
-
-    // Join with separators
-    if (parts.length === 0) return "";
-    if (parts.length === 1) return parts[0];
-    if (parts.length === 2) return `${parts[0]} / ${parts[1]}`;
-    return `${parts[0]} / ${parts[1]} / ${parts[2]}`;
-  };
-
-  const parseAndValidateDate = (value: string) => {
-    // Extract only digits from the formatted value
-    const nums = value.replace(/\D/g, "");
-
-    // Only run validation when we have full DDMMYYYY (8 digits)
-    if (nums.length !== 8) {
-      return { date: null as Date | null, error: null as string | null };
-    }
-
-    const day = parseInt(nums.slice(0, 2), 10);
-    const month = parseInt(nums.slice(2, 4), 10);
-    const year = parseInt(nums.slice(4), 10);
-
-    const today = new Date();
-    const currentYear = today.getFullYear();
-
-    if (month < 1 || month > 12) {
-      return { date: null, error: "Please enter a valid month (01–12)." };
-    }
-
-    // Basic year validation: current year or later, 4 digits
-    if (year < currentYear || year < 1000 || year > 9999) {
-      return { date: null, error: "Please enter a valid year (current or future)." };
-    }
-
-    const candidate = new Date(year, month - 1, day);
-
-    // Check that JS date didn't overflow (e.g. 31/02)
-    if (
-      candidate.getFullYear() !== year ||
-      candidate.getMonth() !== month - 1 ||
-      candidate.getDate() !== day
-    ) {
-      return { date: null, error: "Please enter a valid calendar date." };
-    }
-
-    // Disallow dates before today
-    const todayMidnight = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate()
-    );
-    const candidateMidnight = new Date(year, month - 1, day);
-
-    if (candidateMidnight < todayMidnight) {
-      return { date: null, error: "Date cannot be earlier than today." };
-    }
-
-    return { date: candidate, error: null };
-  };
-
-  const handlePreferredFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPreferredFrom(formatDateDigits(e.target.value));
-  };
-
-  const handlePreferredToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPreferredTo(formatDateDigits(e.target.value));
-  };
-
-  const handlePreferredFromBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    const { error } = parseAndValidateDate(e.target.value);
-    setDateError(error);
-  };
-
-  const handlePreferredToBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    const { error } = parseAndValidateDate(e.target.value);
-    setDateError(error);
-  };
+  const formattedFrom = dates[0] ? format(dates[0], "dd / MM / yyyy ") : " -- / -- / ---- ";
+  const formattedTo = dates[1] ? format(dates[1], "dd / MM / yyyy ") : " -- / -- / ---- ";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -147,8 +63,8 @@ const ContactSection = () => {
           guests: `${adults} Adult(s), ${children} Child(ren)`,
           reservationType,
           roomType: reservationType === "Room Booking" ? roomType : "N/A",
-          preferredFrom,
-          preferredTo,
+          preferredFrom: formattedFrom,
+          preferredTo: formattedTo,
           description,
           source: "ContactSection",
         }),
@@ -163,8 +79,7 @@ const ContactSection = () => {
         setEmail("");
         setPhone("");
         setDescription("");
-        setPreferredFrom("");
-        setPreferredTo("");
+        setDates([]);
         setConsentChecked(false);
       } else {
         throw new Error(data.error || "Failed to send message.");
@@ -202,7 +117,7 @@ const ContactSection = () => {
                 containerClassName="text-start max-w-3xl"
               />
               <a
-              target="_blank"
+                target="_blank"
                 href="https://maps.app.goo.gl/t6pdJoL1R8tTRo8f9"
                 className="text-[#165F41B2] underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium mb-4 inline-block pb-5"
               >
@@ -214,7 +129,7 @@ const ContactSection = () => {
             <div className="w-full h-92 relative overflow-hidden  ">
               {/* The StyledMap now handles everything (Styles + Marker) */}
               {/* <StyledMap /> */}
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.193579366762!2d75.19388537587785!3d12.765937219352285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd11b23b38bf%3A0x29973ec88814e99b!2sMahaveer%20Ventures%20Hotel%20and%20Resort%20-%20The%20Padival%20Grand!5e0!3m2!1sen!2sin!4v1766124232524!5m2!1sen!2sin" width="600" height="450" style={{border: "0"}}  loading="lazy" ></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.193579366762!2d75.19388537587785!3d12.765937219352285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd11b23b38bf%3A0x29973ec88814e99b!2sMahaveer%20Ventures%20Hotel%20and%20Resort%20-%20The%20Padival%20Grand!5e0!3m2!1sen!2sin!4v1766124232524!5m2!1sen!2sin" width="600" height="450" style={{ border: "0" }} loading="lazy" ></iframe>
             </div>
 
             {/* DELETED THE EXTRA FLOATING IMAGES FROM HERE */}
@@ -230,7 +145,7 @@ const ContactSection = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="placeholder:text-[#165F41B2] placeholder:text-lg text-[#165F41B2]"
+                className="placeholder:text-[#165F41B2] placeholder:text-lg text-[#165F41] font-medium"
               />
 
               {/* Number of Guests */}
@@ -239,7 +154,7 @@ const ContactSection = () => {
                   Number of Guests
                 </label>
                 <div
-                  className="w-full bg-transparent border border-[#165F41] p-4 text-[#165F41B2] cursor-pointer flex justify-between items-center"
+                  className="w-full bg-transparent border border-[#165F41] p-4 text-[#165F41] font-medium cursor-pointer flex justify-between items-center"
                   onClick={(e) => {
                     e.stopPropagation();
                     setOpenGuests(!openGuests);
@@ -326,7 +241,7 @@ const ContactSection = () => {
                   value={phone}
                   onChange={setPhone}
                   className="w-full"
-                  inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg"
+                  inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg text-[#165F41]"
                   inputStyle={{
                     width: "100%",
                     background: "transparent",
@@ -335,7 +250,9 @@ const ContactSection = () => {
                     borderRadius: "0px",            // no rounded corners
                     padding: "28px",
                     fontSize: "16px",
-                    color: "#165F41B2",
+                    color: "#165F41",
+                    fontStyle: "medium",
+
                   }}
                   countrySelectorStyleProps={{
                     buttonStyle: {
@@ -373,7 +290,7 @@ const ContactSection = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="text-[#165F41B2] placeholder:text-[#165F41B2]"
+                className="text-[#165F41] font-medium placeholder:text-[#165F41B2]"
               />
 
               {/* Reservation Type */}
@@ -389,45 +306,61 @@ const ContactSection = () => {
                       setRoomType("Deluxe Room");
                     }
                   }}
+                  className="text-[#165F41] font-medium"
                 />
 
                 {reservationType === "Room Booking" && (
                   <Select
                     label="Room Type"
-                    options={["The Deluxe A/C Room","The Standard Room", "Premium Room", "The Family Quad Room","The Triple Bedroom"]}
+                    options={["The Deluxe A/C Room", "The Standard Room", "Premium Room", "The Family Quad Room", "The Triple Bedroom"]}
                     value={roomType}
                     onChange={(e) => setRoomType(e.target.value)}
+                    className="text-[#165F41] font-medium"
                   />
                 )}
               </div>
 
               {/* Preferred Dates */}
-              <div className="flex flex-col">
+              <div ref={dateContainerRef} className="flex flex-col relative">
                 <label className="text-[#165F41] text-lg font-medium uppercase tracking-wider mb-2">
                   Preferred Dates
                 </label>
-                <div className="flex gap-2">
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    placeholder="--  /  --  /  ---- "
-                    value={preferredFrom}
-                    onChange={handlePreferredFromChange}
-                    onBlur={handlePreferredFromBlur}
-                    className="w-1/2 bg-transparent border border-[#165F41] p-4 placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
-                  />
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    placeholder="--  /  --  /  ----"
-                    value={preferredTo}
-                    onChange={handlePreferredToChange}
-                    onBlur={handlePreferredToBlur}
-                    className="w-1/2 bg-transparent border border-[#165F41] p-4  placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
-                  />
+                <div
+                  className="flex gap-2 bg-transparent border border-[#165F41] p-4 cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+
+                    // Check if dropdown should open upwards
+                    if (dateContainerRef.current) {
+                      const rect = dateContainerRef.current.getBoundingClientRect();
+                      const spaceBelow = window.innerHeight - rect.bottom;
+                      // If less than 400px (approx height of flatpickr) below, open upwards
+                      setIsDropdownUp(spaceBelow < 400);
+                    }
+
+                    setOpenDate(!openDate);
+                    setOpenGuests(false);
+                  }}
+                >
+                  <div className="w-1/2 text-[#165F41B2] text-center focus:outline-none">
+                    {formattedFrom}
+                  </div>
+                  <div className="w-px bg-[#165F41] opacity-50 mx-1"></div>
+                  <div className="w-1/2 text-[#165F41B2] text-center focus:outline-none">
+                    {formattedTo}
+                  </div>
                 </div>
+
+                {openDate && (
+                  <div
+                    className={`absolute left-0 w-full bg-[#f9f5ec] border border-[#165F41] z-10 p-4 shadow-lg flex justify-center ${isDropdownUp ? "bottom-full mb-1" : "top-full"
+                      }`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <DateRangePicker value={dates} onChange={setDates} />
+                  </div>
+                )}
+
                 {dateError && (
                   <p className="mt-2 text-sm text-red-600">
                     {dateError}
@@ -449,7 +382,7 @@ const ContactSection = () => {
                     onChange={(e) => setDescription(e.target.value)}
                     rows={4}
                     placeholder="Please mention any special requests or preferences our team ought to notified of"
-                    className="w-full bg-transparent text-[#165F41B2] border border-[#165F41] p-4 placeholder:text-[#165F41B2] placeholder:text-lg focus:outline-none focus:border-[#1B4D3E] resize-none"
+                    className="w-full bg-transparent text-[#165F41] font-medium border border-[#165F41] p-4 placeholder:text-[#165F41B2] placeholder:text-lg focus:outline-none focus:border-[#1B4D3E] resize-none"
                   ></textarea>
                   <span className="absolute top-2 right-3 text-[10px] text-[#165F41]">
                     {description.length}/125
@@ -474,11 +407,10 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   disabled={!consentChecked || isSubmitting}
-                  className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${
-                    consentChecked && !isSubmitting
-                      ? 'hover:bg-[#124b33] cursor-pointer opacity-100' 
-                      : 'cursor-not-allowed opacity-80'
-                  }`}
+                  className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${consentChecked && !isSubmitting
+                    ? 'hover:bg-[#124b33] cursor-pointer opacity-100'
+                    : 'cursor-not-allowed opacity-80'
+                    }`}
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>

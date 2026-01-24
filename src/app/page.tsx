@@ -79,7 +79,7 @@ export default function Home() {
         <EventsSection />
       </div>
 
-      <div className="md:py-0 py-16 md:mb-16 mb-0 bg-[#F9F5EC]">
+      <div className="md:py-0 py-16 md:pb-16 mb-0 bg-[#F9F5EC]">
         <ContactSection />
       </div>
       

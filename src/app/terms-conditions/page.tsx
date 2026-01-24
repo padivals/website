@@ -72,7 +72,7 @@ export default function TermsConditionsPage() {
 
             {/* Changes to Terms */}
             <div>
-              <Typography variant="title2" className="text-xl sm:text-2xl  md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
+             <Typography variant="title2" className="font-semibold text-xl sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
                 Changes to Terms
               </Typography>
               <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">

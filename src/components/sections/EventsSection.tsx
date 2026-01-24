@@ -44,7 +44,7 @@ const   EventsSection = () => {
 
             <a
               href="/rooms"
-              className="text-[#1B4D3E] text-lg md:text-md shadow-md underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium"
+              className="text-[#1B4D3E] text-lg md:text-md  underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium"
             >
               Discover Our Spaces
             </a>
@@ -59,12 +59,13 @@ const   EventsSection = () => {
                 {event.title}
               </p>
 
-              <div
-                className="w-full aspect-[5/3]  overflow-hidden relative bg-cover bg-center"
-                style={{ backgroundImage: `url(${event.image})` }}
-              >
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
+           <div className="w-full aspect-[5/3] overflow-hidden relative group">
+  <div
+    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
+    style={{ backgroundImage: `url(${event.image})` }}
+  />
+  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
 
               <p className="text-[#012219CC] font-semibold md:text-md  mt-4  md:block hidden">
                 {event.title}

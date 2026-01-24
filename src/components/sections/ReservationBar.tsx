@@ -59,7 +59,7 @@ const ReservationBar = ({
     const handleScroll = () => {
       const footer = document.querySelector("footer");
       const bar = barRef.current;
-      
+
       if (!footer || !bar) return;
 
       const footerRect = footer.getBoundingClientRect();
@@ -78,7 +78,7 @@ const ReservationBar = ({
       if (barBottomEdge >= footerTop) {
         // Bar has reached the footer - switch to absolute and stop
         setIsFixed(false);
-        setBottomOffset(documentHeight - footerTop);
+        setBottomOffset(documentHeight - footerTop - 1);
       } else {
         // Bar hasn't reached footer yet - keep it fixed at bottom
         setIsFixed(true);
@@ -88,7 +88,7 @@ const ReservationBar = ({
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleScroll);
     handleScroll(); // Check on mount
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
@@ -110,9 +110,9 @@ const ReservationBar = ({
   return (
     <div
       ref={barRef}
-      className={`md:block hidden ${isFixed ? 'fixed' : 'absolute'} left-0 w-full z-50 py-5 px-6 md:px-10 border-t border-white/10 `}
-      style={{ 
-        backgroundColor: bgColor, 
+      className={`md:block hidden ${isFixed ? 'fixed' : 'absolute'} left-0 w-full z-50 py-6 px-6 md:px-10 border-t border-white/10 `}
+      style={{
+        backgroundColor: bgColor,
         color: textColor,
         bottom: isFixed ? 0 : `${bottomOffset}px`
       }}
