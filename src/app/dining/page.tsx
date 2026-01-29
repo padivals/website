@@ -19,7 +19,7 @@ export default function DiningPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566618/dining1_yjkyze.mp4" />
+            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769672614/HERO_ROOFTOP_DINNING_rcrk1i.mp4" />
 
             <TextSection
                 heading="Where Familiar Flavours Meet Thoughtful Cooking"
