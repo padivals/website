@@ -110,7 +110,7 @@ const Footer = () => {
       <div className="px-0 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-4 text-[#165F41] font-sans text-sm md:text-sm">
 
-          <p>A Company of Mahaveer Ventures</p>
+          <p>A Company of unit</p>
 
           <div className="flex justify-center gap-3">
             <a href="/privacy-policy" className="hover:text-[#aa8616] transition-all duration-200">Privacy Policy</a>

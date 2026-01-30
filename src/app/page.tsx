@@ -52,7 +52,7 @@ export default function Home() {
       <NearbyAttractions />
       <RoomsSection />
       
-      <div className="bg-[#F9F5EC] py-8">
+      <div className="bg-[#F9F5EC] ">
 
         <VideoCarousel
           heading="Discover Moments at The Padival Grand Hotel"
