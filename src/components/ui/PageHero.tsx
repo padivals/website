@@ -51,7 +51,7 @@ const PageHero = ({
 
       {/* Content Container */}
       <div className="relative z-10 container mx-auto h-full xl-faq-padding flex flex-col justify-end items-start text-white text-left  px-6 md:px-16 py-22 md:py-14">
-        <h1 className="font-serif text-3xl md:text-6xl lg:text-7xl  drop-shadow-lg">
+        <h1 className="font-serif text-3xl md:text-6xl lg:text-7xl  drop-shadow-lg ">
           {title}
         </h1>
         <div className={` h-px bg-[#FFFFFF] w-full my-4 ${underlineClass} `}>

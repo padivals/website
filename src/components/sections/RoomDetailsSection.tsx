@@ -23,7 +23,7 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left: Details */}
                 <div className="flex flex-col">
-                    <p className="text-3xl  font-semibold  text-[#012219CC] mb-6">
+                    <p className={`text-3xl  font-semibold  text-[#012219CC] mb-6  md:max-w-none${title.length > 12 ? "md:max-w-xs" : "md:max-w-none"}`}>
                         {title}
                     </p>
                     <p className="text-lg text-[#012219CC] font-medium leading-relaxed mb-8">

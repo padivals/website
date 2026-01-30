@@ -36,7 +36,7 @@ export default function RoomsPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768632262/rooms_jx5s0m.mp4" />
+            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769776483/ROOMS_1_noiwpx.mp4" />
 
             <style>{`
         @media (min-width: 2100px) {

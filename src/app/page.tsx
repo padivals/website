@@ -68,7 +68,7 @@ export default function Home() {
       </div>
 
       {/* <MomentsSection /> */}
-      <div className="md:py-12 py-6 bg-[#F9F2E8]">
+      <div className="md:py-12 py-12 bg-[#F9F2E8]">
          <TestimonialsSection />
       </div>
      
