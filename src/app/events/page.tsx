@@ -21,7 +21,7 @@ export default function EventsPage() {
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
 
-            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566621/events_tehres.mp4" />
+            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769672618/HERO_EVENTS_vfd6k6.mp4" />
 
             <TextSection
                 heading="Where Every Occasion Finds a Comfortable Setting"

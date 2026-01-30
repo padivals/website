@@ -92,7 +92,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#F9F5EC] md:py-20 md:pb-32 py-0 ">
+    <section className=" md:py-20 md:pb-32 py-0 ">
       {/* <style>{`
         @media (min-width: 2100px) {
           .xl-faq-padding {

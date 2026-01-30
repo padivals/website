@@ -52,15 +52,17 @@ export default function Home() {
       <NearbyAttractions />
       <RoomsSection />
       
-      <div className="bg-[#F9F5EC] py-8">
+      <div className="bg-[#F9F5EC] ">
 
         <VideoCarousel
           heading="Discover Moments at The Padival Grand Hotel"
           videos={[
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565807/non-ac_layc97.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565803/new-rooms_aqekai.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565790/fam-quad_gqveli.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768565783/triple-sharing_u2zgrj.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517453/new-non-ac_hjyg6b.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517451/new-fam-quad_dxwsh1.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517450/new-triple-room_eljvdj.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517409/new-non-ac_w08kk0.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517405/new-delux-non_dhrg88.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517401/new-triple-room_zfjrmg.mp4",
           ]}
         />
       </div>

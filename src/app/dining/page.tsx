@@ -19,7 +19,7 @@ export default function DiningPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566618/dining1_yjkyze.mp4" />
+            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769672614/HERO_ROOFTOP_DINNING_rcrk1i.mp4" />
 
             <TextSection
                 heading="Where Familiar Flavours Meet Thoughtful Cooking"
@@ -32,9 +32,9 @@ export default function DiningPage() {
         <VideoCarousel
           heading="Discover Moments at The Padival Grand Hotel"
           videos={[
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566637/dosa_bi2812.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566602/fruitsalad_ymt49q.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768632852/COFFEE__bk8skb.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769751838/Set_Dosa_1_wr1k0h.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769751834/COFFEE_1_ahjxif.mp4",
+            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769751823/Fruit_Salad_1_q3njnn.mp4",
           ]}
         />
       </div>
