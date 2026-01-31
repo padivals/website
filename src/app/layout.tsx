@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
       "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    images: ["/image.png"],
+    images: ["https://padivals-megamind.vercel.app/ogImage.png"],
   },
   robots: {
     index: true,
