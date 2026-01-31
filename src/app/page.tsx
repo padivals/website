@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: "https://padivals-megamind.vercel.app/",
     images: [
       {
-        url: "/image.png",
+        url: "https://padivals-megamind.vercel.app/ogImage.png",
         width: 1200,
         height: 630,
         alt: "The Padival Grand Hotel Puttur - Luxury Accommodation",
