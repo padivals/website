@@ -43,7 +43,7 @@ export default function DiningPage() {
                 <DiningTestimonials />
             </div>
 
-            <ReservationBar />
+            {/* <ReservationBar /> */}
             <Footer />
         </main>
     );

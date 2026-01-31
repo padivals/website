@@ -29,7 +29,7 @@ export default function TermsConditionsPage() {
             {/* TERMS OF QUOTATION */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                TERMS OF QUOTATION
+                Terms Of Quotation
               </Typography>
               <div className="space-y-4">
                 <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
@@ -44,7 +44,7 @@ export default function TermsConditionsPage() {
             {/* CONFIRMATION OF BOOKING */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                CONFIRMATION OF BOOKING
+                Confirmation Of Booking
               </Typography>
               <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
                 The service user/clients’ confirmation means the s/he OR they have accepted these terms and conditions and the quotation. Once the clients deposit has been received a receipt will be issued by Mahaveer Ventures which will include your draft menu with selections made by the client at this time.
@@ -54,7 +54,7 @@ export default function TermsConditionsPage() {
             {/* TERMS OF PAYMENT */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                TERMS OF PAYMENT
+                Terms Of Payment
               </Typography>
               <div className="space-y-4">
                 <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
@@ -78,7 +78,7 @@ export default function TermsConditionsPage() {
             {/* EVENT DAY SUBJECTIVITIES */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                EVENT DAY SUBJECTIVITIES
+                Event Day Subjectivities
               </Typography>
               <div className="space-y-4">
                 <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
@@ -111,7 +111,7 @@ export default function TermsConditionsPage() {
             {/* FORCE MAJEURE */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                FORCE MAJEURE
+                Force Majeure
               </Typography>
               <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
                 Caterers shall not be any liable for losses resulting from nonfulfillment of any terms of provisions of event contract, if caterer shall be prevented or delayed from performing in whole or in part because of riots, strikes, and flood or by any other act occurrence not within the reasonable control of caterer, which it could not prevent.
@@ -121,7 +121,7 @@ export default function TermsConditionsPage() {
             {/* PRICES */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                PRICES
+                Prices
               </Typography>
               <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
                 Prices stated are subject to change according to the market price of products and with final guaranteed number of guests. Caterer will inform client of market price changes no later than 10 days prior to the event. Client will have the option of revising products and service to reduce costs prior to payment as described in payment term. Upon payment the final price is fixed and may only change due to a change in number of guests or mutually agreed upon changes in the services and/or menu provided.
@@ -131,7 +131,7 @@ export default function TermsConditionsPage() {
             {/* FOOD POLICY */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                FOOD POLICY
+                Food Policy
               </Typography>
               <div className="space-y-4">
                 <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
@@ -164,7 +164,7 @@ export default function TermsConditionsPage() {
             {/* CLIENTS’ RESPONSIBILITY */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                CLIENTS’ RESPONSIBILITY
+                Clients’ Responsibility
               </Typography>
               <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
                 The caterer is not responsible for any items provided by client to the event (i.e. beverages, flowers, cake, gifts, additional foods, dishes, glassware, serving pieces, etc.) The caterer is only responsible for those items listed on invoice as provided by caterer and no other items. It is understood that the client will conduct the event in an orderly manner, and in full compliance with all applicable laws, ordinances and regulations, and facility contract.
@@ -174,7 +174,7 @@ export default function TermsConditionsPage() {
             {/* DAMAGES */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                DAMAGES
+                Damages
               </Typography>
               <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
                 Caterer assumes no responsibility for any damage or loss of merchandise, alcohol, equipment, furniture, clothing or other valuables prior to, during or after the event. Caterer will do everything possible to ensure that all of client’s supplies, rentals and equipment are cared for and maintained in good working order and without damage. When providing the location for the event/function, the client, understands that accidents/breakage and/or damage may sometimes occur. Caterer will not be liable for any damage or loss, unless specifically caused and proved by the wilful negligent actions or conduct of caterer or its employees.
@@ -184,7 +184,7 @@ export default function TermsConditionsPage() {
             {/* UNLAWFUL ACTIVITIES */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                UNLAWFUL ACTIVITIES
+                Unlawful Activities
               </Typography>
               <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">
                 The client will comply with all the laws of Dakshina Kannada, Karnataka, all municipal ordinances and all lawful orders of police and fire departments, and will not do anything on the event/function premises in violation of any laws, ordinances, rules or orders. If unlawful activities should occur on the premises, and the event is cancelled, there will be no refund of any kind from caterer to client.
@@ -194,7 +194,7 @@ export default function TermsConditionsPage() {
             {/* CANCELLATION */}
             <div>
               <Typography variant="title2" className="text-xl font-semibold sm:text-2xl md:text-3xl font-serif text-[#0F2A1D] mb-3 sm:mb-4">
-                CANCELLATION
+                Cancellation
               </Typography>
               <div className="space-y-4">
                 <Typography variant="description" className="text-[#4A5568] text-sm sm:text-base font-normal leading-relaxed">

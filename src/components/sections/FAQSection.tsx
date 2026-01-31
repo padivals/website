@@ -37,7 +37,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white md:py-20 py-12">
+    <section className="bg-white md:py-20 py-6">
       <style>{`
         @media (min-width: 1920px) {
           .xl-faqq-padding {
