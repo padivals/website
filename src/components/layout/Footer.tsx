@@ -64,9 +64,9 @@ const Footer = () => {
               <a href="#" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
                 WhatsApp
               </a>
-              <a href="#" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
+              <Link href="https://www.instagram.com/padivalspalara" target="_blank" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
                 Instagram
-              </a>
+              </Link>
             </div>
           </div>
           {/* Address */}
