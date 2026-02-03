@@ -20,7 +20,7 @@ const NearbyAttractions = () => {
       content: "A peaceful cultural park with a museum, greenery and quiet spaces to unwind.",
     },
     {
-      src: "/hospitalityImg/hill.jpg",
+      src: "/hospitalityImg/BeeramaleImg.jpeg",
       alt: "Beeramale Hill",
       heading: "Beeramale Hill",
       content: "A scenic hilltop offering panoramic views of Puttur's landscapes.",
