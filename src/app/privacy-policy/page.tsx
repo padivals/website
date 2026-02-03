@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Intro */}
           <p className="text-[#4A5568] text-sm lg:text-xl font-normal">
-           Mahaveer Ventures (“Hotel”, “Restaurant”, “Hall”, “Catering”, “we”, “us”, or “our”) is committed to protecting the privacy of users (“you”, “your”) who access our website [website URL] and use our services. This Privacy Policy explains how we collect, use, disclose, and protect your personal data in accordance with applicable laws in India, including the Information Technology Act, 2000, the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011, and the Digital Personal Data Protection Act, 2023, as applicable.
+           Mahaveer Ventures (“Hotel”, “Restaurant”, “Hall”, “Catering”, “we”, “us”, or “our”) is committed to protecting the privacy of users (“you”, “your”) who access our website <span className="font-semibold">thepadivalgrand.com</span> and use our services. This Privacy Policy explains how we collect, use, disclose, and protect your personal data in accordance with applicable laws in India, including the Information Technology Act, 2000, the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011, and the Digital Personal Data Protection Act, 2023, as applicable.
           </p>
 
           {/* 1. Information We Collect */}
