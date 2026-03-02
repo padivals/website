@@ -22,7 +22,7 @@ export default function TermsConditionsPage() {
       <HalfHeroSection title="Terms Of Service" />
 
       {/* Content Section */}
-      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4 padding-left md:py-20 container">
+      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4 padding-left md:py-20 md:pl-32">
         <div className="w-full max-w-8xl mx-auto ">
           <div className="space-y-10 sm:space-y-12">
 

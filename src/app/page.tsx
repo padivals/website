@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col relative ">
       <Header />
-      <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1768566629/home_qy3xrp.mp4" />
+      <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&token=a66474d4-cc5c-4fd3-90e7-782dac157248" />
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
@@ -57,12 +57,12 @@ export default function Home() {
         <VideoCarousel
           heading="Discover Moments at The Padival Grand Hotel"
           videos={[
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517453/new-non-ac_hjyg6b.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517451/new-fam-quad_dxwsh1.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517450/new-triple-room_eljvdj.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517409/new-non-ac_w08kk0.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517405/new-delux-non_dhrg88.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769517401/new-triple-room_zfjrmg.mp4",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FNON%20AC.mp4?alt=media&token=1dba7ef6-7eac-4c4e-bea2-08ef5fc23877",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FROOMS.mp4?alt=media&token=f063c9d0-bd52-4a72-ba84-d3c36e660c61",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FRooms%202.mp4?alt=media&token=c0489353-8b51-4be2-920a-80e1b7a4c5c1",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FTriple%20Sharing%20Room.mp4?alt=media&token=8d19155a-1a93-49f2-b227-29a1b0d4ddd7",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FRooms%202.mp4?alt=media&token=c0489353-8b51-4be2-920a-80e1b7a4c5c1",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FTriple%20Sharing%20Room.mp4?alt=media&token=8d19155a-1a93-49f2-b227-29a1b0d4ddd7",
           ]}
         />
       </div>
