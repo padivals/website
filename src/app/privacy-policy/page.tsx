@@ -22,8 +22,8 @@ export default function PrivacyPolicyPage() {
       <HalfHeroSection title="Privacy Policy" />
 
       {/* Content Section */}
-      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4  md:py-20 ">
-        <div className="w-full max-w-8xl mx-auto space-y-10 sm:space-y-12 container">
+      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4  md:py-20  md:pl-32">
+        <div className="w-full max-w-8xl mx-auto space-y-10 sm:space-y-12 ">
 
           {/* Intro */}
           <p className="text-[#4A5568] text-sm lg:text-xl font-normal">

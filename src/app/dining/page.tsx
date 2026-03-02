@@ -19,7 +19,7 @@ export default function DiningPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769672614/HERO_ROOFTOP_DINNING_rcrk1i.mp4" />
+            <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FPalara.mp4?alt=media&token=1061604b-2c1a-4955-8c5e-5f91d8436590" />
 
             <TextSection
                 heading="Where Familiar Flavours Meet Thoughtful Cooking"
@@ -32,9 +32,9 @@ export default function DiningPage() {
         <VideoCarousel
           heading="Discover Moments at The Padival Grand Hotel"
           videos={[
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769751838/Set_Dosa_1_wr1k0h.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769751834/COFFEE_1_ahjxif.mp4",
-            "https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769751823/Fruit_Salad_1_q3njnn.mp4",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FCOFFEE.mp4?alt=media&token=e93a638b-fc26-4f64-8ac6-11ee4f745e8c",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FFruit%20Salad.mp4?alt=media&token=d2120982-05ff-42b3-a7d3-f4d65bd82c42",
+            "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FSet%20Dosa.mp4?alt=media&token=861d56c8-267f-4754-bbc6-c30fbdbfe532",
           ]}
         />
       </div>

@@ -21,7 +21,7 @@ export default function EventsPage() {
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
 
-            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1770006657/EVENTS_1_z1cm5q.mp4" />
+            <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&token=a73adaea-de2a-46ff-8850-aa56acb7048c" />
 
             <TextSection
                 heading="Where Every Occasion Finds a Comfortable Setting"

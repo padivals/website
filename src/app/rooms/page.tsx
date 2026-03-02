@@ -84,7 +84,7 @@ export default function RoomsPage() {
 
             <CommonAmenities />
             <FoodAndDining />
-            <div className="pb-12 bg-[white] ">
+            <div className="lg:pb-30 pb-12 bg-[white] ">
                  <FAQSection />
             </div>
            
