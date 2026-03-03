@@ -53,7 +53,7 @@ const ContactSection = () => {
     setSubmitMessage(null);
 
     try {
-      const scriptURL = "https://script.google.com/macros/s/AKfycbx2r_7usYUAxniVTamoZsApY-3FvHO_r3QwEqUN30njZPWEJAempowDgfoHGyoyBkw8/exec";
+      const scriptURL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbxZmYo6_ze8qOUqgMU-tAneDXYamvPkb2uNcuDzvTBU7-CmZiFssQOPKVgICkro-rjCOg/exec";
 
       const response = await fetch(scriptURL, {
         method: "POST",

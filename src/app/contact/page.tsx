@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         title: "Contact Us | The Padival Grand Hotel Puttur",
         description:
             "Get in touch with The Padival Grand Hotel. Visit us at Bondel, Mangaluru or call us for reservations and inquiries.",
-        url: "https://padivals-megamind.vercel.app//contact",
+        url: "https://www.thepadivalgrand.com/contact",
     },
 };
 

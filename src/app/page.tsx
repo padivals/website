@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Hotel in Puttur, Karnataka",
     description:
       "Welcome to The Padival Grand Hotel - Puttur's premier luxury hotel. Experience world-class hospitality with elegant rooms, fine dining, and exceptional service.",
-    url: "https://padivals-megamind.vercel.app/",
+    url: "https://www.thepadivalgrand.com",
     images: [
       {
-        url: "https://padivals-megamind.vercel.app/ogImage.png",
+        url: "https://www.thepadivalgrand.com/ogImage.png",
         width: 1200,
         height: 630,
         alt: "The Padival Grand Hotel Puttur - Luxury Accommodation",
