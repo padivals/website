@@ -5,6 +5,7 @@ import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import { BookingModalProvider } from "@/components/providers/BookingModalContext";
 import BookingModal from "@/components/modals/BookingModal";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -81,6 +82,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="G-3R4LJCB4G5" />
       <body
         className={`${cormorantGaramond.variable} ${manrope.variable} antialiased font-sans`}
       >
