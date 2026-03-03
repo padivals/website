@@ -36,7 +36,7 @@ export default function RoomsPage() {
     return (
         <main className="min-h-screen flex flex-col relative  ">
             <Header />
-            <Hero videoSrc="https://res.cloudinary.com/dqhzf4lsg/video/upload/v1769776483/ROOMS_1_noiwpx.mp4" />
+            <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FROOMS%20(1).mp4?alt=media&token=95052066-e5a7-4ebb-a482-d622b4257ac2" />
 
             <style>{`
         @media (min-width: 2100px) {

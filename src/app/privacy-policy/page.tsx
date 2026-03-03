@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
       <HalfHeroSection title="Privacy Policy" />
 
       {/* Content Section */}
-      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4  md:py-20  md:pl-32">
+      <section className="bg-[#F9F2E8] py-16 md:px-16 px-4  md:py-20  ">
         <div className="w-full max-w-8xl mx-auto space-y-10 sm:space-y-12 ">
 
           {/* Intro */}
