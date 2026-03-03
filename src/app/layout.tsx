@@ -69,6 +69,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.thepadivalgrand.com",
   },
+  verification: {
+    google: "sH2I4FsirEdc61dILm0CtFm4FLVcv6AmpeN7C7ahxl0",
+  },
 };
 
 export default function RootLayout({
