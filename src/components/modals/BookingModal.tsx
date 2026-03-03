@@ -5,6 +5,7 @@ import { X, ChevronDown, ChevronUp } from "lucide-react";
 import Input from "../ui/Input";
 import Select from "../ui/Select";
 import Button from "../ui/Button";
+import DateRangePicker from "../ui/DateRangePicker";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useBookingModal } from "../providers/BookingModalContext";
@@ -49,8 +50,8 @@ const BookingModal = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const close = () => {
-        setOpenGuests(false);
-        setOpenDate(false);
+      setOpenGuests(false);
+      setOpenDate(false);
     }
     if (openGuests || openDate) {
       window.addEventListener("click", close);
@@ -59,117 +60,32 @@ const BookingModal = () => {
   }, [openGuests, openDate]);
 
   useEffect(() => {
-      if(dates.length > 0 && dates[0]){
-          setPreferredFrom(format(dates[0], "dd / MM / yyyy"));
-      }
-      if(dates.length > 1 && dates[1]){
-           setPreferredTo(format(dates[1], "dd / MM / yyyy"));
-      }
+    if (dates.length > 0 && dates[0]) {
+      setPreferredFrom(format(dates[0], "dd / MM / yyyy"));
+    }
+    if (dates.length > 1 && dates[1]) {
+      setPreferredTo(format(dates[1], "dd / MM / yyyy"));
+    }
   }, [dates])
 
   // Prevent background scroll when modal is open
-    useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "unset";
-        }
-        return () => {
-            document.body.style.overflow = "unset";
-        };
-    }, [isOpen]);
-
-  const formatDateDigits = (digits: string) => {
-    // Keep numbers only and limit to 8 digits (DDMMYYYY)
-    const nums = digits.replace(/\D/g, "").slice(0, 8);
-    const parts = [];
-    if (nums.length >= 2) {
-      parts.push(nums.slice(0, 2));
-      if (nums.length >= 4) {
-        parts.push(nums.slice(2, 4));
-        if (nums.length > 4) parts.push(nums.slice(4));
-      } else if (nums.length > 2) {
-        parts.push(nums.slice(2));
-      }
-    } else if (nums.length > 0) {
-      parts.push(nums);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
     }
-
-    // Join with separators
-    if (parts.length === 0) return "";
-    if (parts.length === 1) return parts[0];
-    if (parts.length === 2) return `${parts[0]} / ${parts[1]}`;
-    return `${parts[0]} / ${parts[1]} / ${parts[2]}`;
-  };
-
-   const parseAndValidateDate = (value: string) => {
-    // Extract only digits from the formatted value
-    const nums = value.replace(/\D/g, "");
-
-    // Only run validation when we have full DDMMYYYY (8 digits)
-    if (nums.length !== 8) {
-      return { date: null as Date | null, error: null as string | null };
-    }
-
-    const day = parseInt(nums.slice(0, 2), 10);
-    const month = parseInt(nums.slice(2, 4), 10);
-    const year = parseInt(nums.slice(4), 10);
-
-    const today = new Date();
-    const currentYear = today.getFullYear();
-
-    if (month < 1 || month > 12) {
-      return { date: null, error: "Please enter a valid month (01–12)." };
-    }
-
-    // Basic year validation: current year or later, 4 digits
-    if (year < currentYear || year < 1000 || year > 9999) {
-      return { date: null, error: "Please enter a valid year (current or future)." };
-    }
-
-    const candidate = new Date(year, month - 1, day);
-
-    // Check that JS date didn't overflow (e.g. 31/02)
-    if (
-      candidate.getFullYear() !== year ||
-      candidate.getMonth() !== month - 1 ||
-      candidate.getDate() !== day
-    ) {
-      return { date: null, error: "Please enter a valid calendar date." };
-    }
-
-    // Disallow dates before today
-    const todayMidnight = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate()
-    );
-    const candidateMidnight = new Date(year, month - 1, day);
-
-    if (candidateMidnight < todayMidnight) {
-      return { date: null, error: "Date cannot be earlier than today." };
-    }
-
-    return { date: candidate, error: null };
-  };
-
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   const handlePreferredFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPreferredFrom(formatDateDigits(e.target.value));
+    setPreferredFrom(e.target.value);
   };
 
   const handlePreferredToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPreferredTo(formatDateDigits(e.target.value));
-  };
-
-    const handlePreferredFromBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    const { error } = parseAndValidateDate(e.target.value);
-    setDateError(error);
-  };
-
-  const handlePreferredToBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    const { error } = parseAndValidateDate(e.target.value);
-    setDateError(error);
+    setPreferredTo(e.target.value);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -180,9 +96,13 @@ const BookingModal = () => {
     setSubmitMessage(null);
 
     try {
-      const response = await fetch("/api/google-sheets", {
+      // NOTE: Replace this string or definition with your actual published Google Apps Script Web App URL
+      // If you are setting this in your .env file, make sure NEXT_PUBLIC_GOOGLE_SCRIPT_URL points to the /exec Web App deployment URL.
+      const scriptURL = "https://script.google.com/macros/s/AKfycbx2r_7usYUAxniVTamoZsApY-3FvHO_r3QwEqUN30njZPWEJAempowDgfoHGyoyBkw8/exec";
+
+      const response = await fetch(scriptURL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        // Notice we are omitting {"Content-Type": "application/json"} to bypass Google's CORS preflight limitation.
         body: JSON.stringify({
           name,
           email,
@@ -214,6 +134,7 @@ const BookingModal = () => {
           closeModal();
           setSubmitMessage(null);
         }, 3000);
+        window.location.href = "/thank-you";
       } else {
         throw new Error(data.error || "Failed to submit booking request.");
       }
@@ -259,14 +180,14 @@ const BookingModal = () => {
               onClick={(e) => {
                 e.stopPropagation();
                 setOpenGuests(!openGuests);
-                setOpenDate(false); 
+                setOpenDate(false);
               }}
             >
               <span>
                 {adults < 10 ? `0${adults}` : adults} Adult, {children} Children
               </span>
               <button type="button" className="text-[#165F41]">
-                 <ChevronDown size={20} className={`transform transition-transform ${openGuests ? "rotate-180" : ""}`} />
+                <ChevronDown size={20} className={`transform transition-transform ${openGuests ? "rotate-180" : ""}`} />
               </button>
             </div>
 
@@ -324,53 +245,53 @@ const BookingModal = () => {
           </div>
 
           {/* Phone */}
-           <div className="flex flex-col">
-                <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2">
-                  PHONE
-                </label>
-                <PhoneInput
-                  defaultCountry="in"
-                  value={phone}
-                  onChange={setPhone}
-                  className="w-full"
-                  inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg"
-                  inputStyle={{
-                    width: "100%",
-                    background: "transparent",
-                    border: "1px solid #165F41",
+          <div className="flex flex-col">
+            <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2">
+              PHONE
+            </label>
+            <PhoneInput
+              defaultCountry="in"
+              value={phone}
+              onChange={setPhone}
+              className="w-full"
+              inputClassName="w-full placeholder:text-[#165F41B2] placeholder:text-lg"
+              inputStyle={{
+                width: "100%",
+                background: "transparent",
+                border: "1px solid #165F41",
 
-                    borderRadius: "0px",            // no rounded corners
-                    padding: "28px",
-                    fontSize: "16px",
-                    color: "#165F41B2",
-                  }}
-                  countrySelectorStyleProps={{
-                    buttonStyle: {
-                      background: "transparent",
-                      border: "1px solid #165F41",
-                      borderRight: "0px",
-                      borderRadius: "0px",          // no rounded corners
-                      padding: "28px",
-                      width: "80px",
-                      color: "#165F41",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    },
-                    dropdownStyleProps: {
-                      style: {
-                        maxHeight: "220px",         // enables scroll
-                        overflowY: "auto",          // scrollable dropdown
-                        borderRadius: "0px",
-                        border: "1px solid #165F41",
-                        background: "white",
-                        zIndex: 9999,
-                        overscrollBehavior: "contain",
-                      },
-                    },
-                  }}
-                />
-              </div>
+                borderRadius: "0px",            // no rounded corners
+                padding: "28px",
+                fontSize: "16px",
+                color: "#165F41B2",
+              }}
+              countrySelectorStyleProps={{
+                buttonStyle: {
+                  background: "transparent",
+                  border: "1px solid #165F41",
+                  borderRight: "0px",
+                  borderRadius: "0px",          // no rounded corners
+                  padding: "28px",
+                  width: "80px",
+                  color: "#165F41",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                },
+                dropdownStyleProps: {
+                  style: {
+                    maxHeight: "220px",         // enables scroll
+                    overflowY: "auto",          // scrollable dropdown
+                    borderRadius: "0px",
+                    border: "1px solid #165F41",
+                    background: "white",
+                    zIndex: 9999,
+                    overscrollBehavior: "contain",
+                  },
+                },
+              }}
+            />
+          </div>
 
           {/* Email */}
           <Input
@@ -415,46 +336,51 @@ const BookingModal = () => {
           </div>
 
           {/* Preferred Dates */}
-           <div className="flex flex-col relative"
-             onClick={(e) => {
-                 e.stopPropagation();
-                 setOpenDate(!openDate);
-                 setOpenGuests(false);
-             }}
-           >
-                <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2">
-                  PREFERRED DATES
-                </label>
-                 <div className="flex gap-2">
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    placeholder="--  /  --  /  ---- "
-                    value={preferredFrom}
-                    onChange={handlePreferredFromChange}
-                    onBlur={handlePreferredFromBlur}
-                    className="w-1/2 bg-transparent border border-[#165F41] p-4 placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
-                  />
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    placeholder="--  /  --  /  ----"
-                    value={preferredTo}
-                    onChange={handlePreferredToChange}
-                    onBlur={handlePreferredToBlur}
-                    className="w-1/2 bg-transparent border border-[#165F41] p-4  placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
-                  />
-                </div>
-                {dateError && (
-                  <p className="mt-2 text-sm text-red-600">
-                    {dateError}
-                  </p>
-                )}
+          <div className="flex flex-col relative"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenDate(!openDate);
+              setOpenGuests(false);
+            }}
+          >
+            <label className="text-[#165F41] text-sm md:text-base font-medium uppercase tracking-wider mb-2">
+              PREFERRED DATES
+            </label>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                placeholder="--  /  --  /  ---- "
+                value={preferredFrom}
+                onChange={handlePreferredFromChange}
+                className="w-1/2 bg-transparent border border-[#165F41] p-4 placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
+              />
+              <input
+                type="text"
+                placeholder="--  /  --  /  ----"
+                value={preferredTo}
+                onChange={handlePreferredToChange}
+                className="w-1/2 bg-transparent border border-[#165F41] p-4  placeholder:text-[#165F41B2] text-[#165F41B2] text-center focus:outline-none focus:border-[#1B4D3E]"
+              />
+            </div>
 
-            
+            {/* Datepicker Dropdown */}
+            {openDate && (
+              <div
+                className="absolute top-0 left-0 w-full bg-[#F9F5EC] z-50 shadow-lg p-6 flex justify-center"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <DateRangePicker value={dates} onChange={setDates} />
               </div>
+            )}
+
+            {dateError && (
+              <p className="mt-2 text-sm text-red-600">
+                {dateError}
+              </p>
+            )}
+
+
+          </div>
 
           {/* Description */}
           <div className="flex flex-col md:col-span-2">
@@ -494,11 +420,10 @@ const BookingModal = () => {
             <Button
               type="submit"
               disabled={!consentChecked || isSubmitting}
-              className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${
-                consentChecked && !isSubmitting
-                  ? 'hover:bg-[#124b33] cursor-pointer opacity-100' 
-                  : 'cursor-not-allowed opacity-80'
-              }`}
+              className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${consentChecked && !isSubmitting
+                ? 'hover:bg-[#124b33] cursor-pointer opacity-100'
+                : 'cursor-not-allowed opacity-80'
+                }`}
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </Button>

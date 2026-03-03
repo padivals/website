@@ -53,9 +53,10 @@ const ContactSection = () => {
     setSubmitMessage(null);
 
     try {
-      const response = await fetch("/api/google-sheets", {
+      const scriptURL = "https://script.google.com/macros/s/AKfycbx2r_7usYUAxniVTamoZsApY-3FvHO_r3QwEqUN30njZPWEJAempowDgfoHGyoyBkw8/exec";
+
+      const response = await fetch(scriptURL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name,
           email,
@@ -81,6 +82,7 @@ const ContactSection = () => {
         setDescription("");
         setDates([]);
         setConsentChecked(false);
+        window.location.href = "/thank-you";
       } else {
         throw new Error(data.error || "Failed to send message.");
       }
