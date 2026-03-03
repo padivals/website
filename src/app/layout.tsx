@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import { BookingModalProvider } from "@/components/providers/BookingModalContext";
 import BookingModal from "@/components/modals/BookingModal";
+import { Analytics } from "@vercel/analytics/react";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://padivals-megamind.vercel.app/"),
+  metadataBase: new URL("https://www.thepadivalgrand.com"),
   title: "The Padival Grand Hotel | Luxury Stay in Puttur",
   description:
     "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
@@ -34,11 +35,11 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
       "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    url: "https://padivals-megamind.vercel.app/",
+    url: "https://www.thepadivalgrand.com",
     siteName: "The Padival Grand Hotel",
     images: [
       {
-        url: "https://padivals-megamind.vercel.app/ogImage.png",
+        url: "https://www.thepadivalgrand.com/ogImage.png",
         width: 1200,
         height: 630,
         alt: "The Padival Grand Hotel - Luxury Accommodation in Puttur",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
       "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    images: ["https://padivals-megamind.vercel.app/ogImage.png"],
+    images: ["https://www.thepadivalgrand.com/ogImage.png"],
   },
   robots: {
     index: true,
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://padivals-megamind.vercel.app/",
+    canonical: "https://www.thepadivalgrand.com",
   },
 };
 
@@ -86,6 +87,7 @@ export default function RootLayout({
             <BookingModal />
           </BookingModalProvider>
         </SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );

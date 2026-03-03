@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         openGraph: {
             title: `${room.title} | The Padival Grand Hotel Puttur`,
             description: room.pagedescription,
-            url: `https://padivals-megamind.vercel.app//rooms/${slug}`,
+            url: `https://www.thepadivalgrand.com/rooms/${slug}`,
             images: [
                 {
                     url: room.heroImage,

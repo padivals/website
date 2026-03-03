@@ -98,7 +98,7 @@ const BookingModal = () => {
     try {
       // NOTE: Replace this string or definition with your actual published Google Apps Script Web App URL
       // If you are setting this in your .env file, make sure NEXT_PUBLIC_GOOGLE_SCRIPT_URL points to the /exec Web App deployment URL.
-      const scriptURL = "https://script.google.com/macros/s/AKfycbx2r_7usYUAxniVTamoZsApY-3FvHO_r3QwEqUN30njZPWEJAempowDgfoHGyoyBkw8/exec";
+      const scriptURL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbxZmYo6_ze8qOUqgMU-tAneDXYamvPkb2uNcuDzvTBU7-CmZiFssQOPKVgICkro-rjCOg/exec";
 
       const response = await fetch(scriptURL, {
         method: "POST",

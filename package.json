@@ -12,6 +12,7 @@
     "@headlessui/react": "^2.2.9",
     "@react-google-maps/api": "^2.20.7",
     "@studio-freight/lenis": "^1.0.42",
+    "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "flatpickr": "^4.6.13",

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
         description:
             "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats.",
-        url: "https://padivals-megamind.vercel.app//rooms",
+        url: "https://www.thepadivalgrand.com/rooms",
     },
 };
 
