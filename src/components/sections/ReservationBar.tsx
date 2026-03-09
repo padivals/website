@@ -203,16 +203,16 @@ const ReservationBar = ({
 
         {/* CTA BUTTON */}
         <button
-          onClick={() => {
-            // Save reservation data to context before opening modal
-            setReservationData({
-              from: dates[0],
-              to: dates[1],
-              adults,
-              children,
-            });
-            openModal();
-          }}
+          // onClick={() => {
+          //   // Save reservation data to context before opening modal
+          //   setReservationData({
+          //     from: dates[0],
+          //     to: dates[1],
+          //     adults,
+          //     children,
+          //   });
+          //   openModal();
+          // }}
           className={`   bg-white text-[#012219] px-6 py-3 font-extrabold md:text-lg  hover:bg-[#c1c1c1] transition-all`}
         >
           {buttonLabel}
