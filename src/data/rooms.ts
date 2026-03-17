@@ -1,7 +1,7 @@
 export const rooms = [
     {
         id: 1,
-        slug: "Standard-Room",
+        slug: "standard-room",
         title: "The Standard Room (Non-A/C)",
         description:
             "A comfortable and well-maintained room designed for guests seeking a simple, peaceful stay. Ideal for short visits and budget-friendly travel, with all essential conveniences thoughtfully provided.",
