@@ -32,7 +32,7 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
 
                     <div className="mb-12">
                         <Button variant="primary" className=" z-999999999999 text-white py-4 px-6 uppercase tracking-widest text-sm transition-colors" 
-                        // onClick={openModal}
+                        onClick={openModal}
                         >
                             Book Now
                         </Button>
