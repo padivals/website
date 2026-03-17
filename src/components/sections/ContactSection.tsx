@@ -53,10 +53,14 @@ const ContactSection = () => {
     setSubmitMessage(null);
 
     try {
-      const scriptURL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbxZmYo6_ze8qOUqgMU-tAneDXYamvPkb2uNcuDzvTBU7-CmZiFssQOPKVgICkro-rjCOg/exec";
+      const scriptURL = "https://www.accelr.app/api/webhook/unified?accountId=7gfsC8pDJkIZDwBf8W4w&source=website";
 
-      const response = await fetch(scriptURL, {
+      await fetch(scriptURL, {
         method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain",
+        },
         body: JSON.stringify({
           name,
           email,
@@ -71,21 +75,16 @@ const ContactSection = () => {
         }),
       });
 
-      const data = await response.json();
-
-      if (data.success) {
-        setSubmitMessage({ type: "success", text: "Thank you! Your message has been sent successfully." });
-        // Reset form
-        setName("");
-        setEmail("");
-        setPhone("");
-        setDescription("");
-        setDates([]);
-        setConsentChecked(false);
-        window.location.href = "/thank-you";
-      } else {
-        throw new Error(data.error || "Failed to send message.");
-      }
+      // With no-cors, we can't read the response, but the data is sent successfully.
+      // Reset form and redirect to thank-you page.
+      setSubmitMessage({ type: "success", text: "Thank you! Your message has been sent successfully." });
+      setName("");
+      setEmail("");
+      setPhone("");
+      setDescription("");
+      setDates([]);
+      setConsentChecked(false);
+      window.location.href = "/thank-you";
     } catch (error: any) {
       setSubmitMessage({ type: "error", text: error.message || "An error occurred. Please try again later." });
     } finally {

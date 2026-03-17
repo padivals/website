@@ -96,9 +96,8 @@ const BookingModal = () => {
     setSubmitMessage(null);
 
     try {
-      // NOTE: Replace this string or definition with your actual published Google Apps Script Web App URL
-      // If you are setting this in your .env file, make sure NEXT_PUBLIC_GOOGLE_SCRIPT_URL points to the /exec Web App deployment URL.
-      const scriptURL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbxZmYo6_ze8qOUqgMU-tAneDXYamvPkb2uNcuDzvTBU7-CmZiFssQOPKVgICkro-rjCOg/exec";
+      // NOTE: Updated to use Accelr webhook API
+      const scriptURL = "https://www.accelr.app/api/webhook/unified?accountId=7gfsC8pDJkIZDwBf8W4w&source=website";
 
       const response = await fetch(scriptURL, {
         method: "POST",
