@@ -21,7 +21,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.thepadivalgrand.com"),
+  metadataBase: new URL("https://thepadivalgrand.com"),
   title: "The Padival Grand Hotel | Luxury Stay in Puttur",
   description:
     "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
