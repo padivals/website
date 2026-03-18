@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  alternates: {
+    canonical: "/terms-conditions",
+  },
 };
 
 export default function TermsConditionsPage() {

@@ -24,6 +24,9 @@ export const metadata: Metadata = {
             "Discover the story of The Padival Grand Hotel, established by Mahaveer Ventures. Learn about our heritage, values, and commitment to exceptional hospitality.",
         url: "https://www.thepadivalgrand.com/about",
     },
+    alternates: {
+        canonical: "https://www.thepadivalgrand.com/about",
+    },
 };
 
 export default function AboutPage() {

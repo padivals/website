@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     title: "Event Spaces at Padival Grand | Banquet Halls in Puttur",
     description: "Host your weddings, corporate events, and celebrations at The Padival Grand. Our elegant banquet halls and event spaces in Puttur offer the perfect setting for memorable occasions.",
     keywords: ["Banquet Halls Puttur", "Wedding Venues Puttur", "Conference Halls Puttur", "Event Spaces Padival Grand"],
+    alternates: {
+        canonical: "/events",
+    },
 };
 
 export default function EventsPage() {
