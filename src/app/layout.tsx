@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://thepadivalgrand.com",
+    canonical: "/",
   },
   verification: {
     google: "sH2I4FsirEdc61dILm0CtFm4FLVcv6AmpeN7C7ahxl0",

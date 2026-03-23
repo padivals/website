@@ -27,6 +27,9 @@ export const metadata: Metadata = {
             "Get in touch with The Padival Grand Hotel. Visit us at Bondel, Mangaluru or call us for reservations and inquiries.",
         url: "https://thepadivalgrand.com/contact",
     },
+    alternates: {
+        canonical: "/contact",
+    },
 };
 
 export default function ContactPage() {

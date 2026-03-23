@@ -51,6 +51,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
                 },
             ],
         },
+        alternates: {
+            canonical: `/rooms/${slug}`,
+        },
     };
 }
 

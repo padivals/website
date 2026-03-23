@@ -30,6 +30,9 @@ export const metadata: Metadata = {
             "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats.",
         url: "https://thepadivalgrand.com/rooms",
     },
+    alternates: {
+        canonical: "/rooms",
+    },
 };
 
 export default function RoomsPage() {

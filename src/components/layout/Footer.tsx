@@ -73,6 +73,12 @@ const Footer = () => {
                 <Link href="https://www.instagram.com/thepadivalgrand" target="_blank" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
                   Instagram
                 </Link>
+                 <Link href="https://www.facebook.com/profile.php?id=61583295038368" target="_blank" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
+                  Facebook
+                </Link>
+                 <Link href="https://www.linkedin.com/company/mahaveer-ventures/" target="_blank" className="border-b hover:text-[#aa8616] transition-all duration-200 w-fit">
+                  Linkedin
+                </Link>
               </div>
             </div>
             {/* Address */}

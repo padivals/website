@@ -1,5 +1,3 @@
-'use client'
-
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -13,7 +11,14 @@ import Hero from "@/components/sections/Hero";
 import ImageCarousel from "@/components/sections/MomentsSection";
 import VideoCarousel from "@/components/sections/MomentSectionTest";
 
-
+export const metadata: Metadata = {
+    title: "Dining | Padivals Palara Pure Veg Restaurant Puttur",
+    description: "Enjoy authentic, pure vegetarian flavours at Padivals Palara. Our restaurant in Puttur serves homely, comforting dishes made with fresh ingredients and traditional recipes.",
+    keywords: ["Veg Restaurant Puttur", "Pure Veg Dining", "Padivals Palara", "Best Restaurant in Puttur"],
+    alternates: {
+        canonical: "/dining",
+    },
+};
 
 export default function DiningPage() {
     return (

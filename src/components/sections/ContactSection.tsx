@@ -410,7 +410,7 @@ const ContactSection = () => {
                   type="submit"
                   disabled={!consentChecked || isSubmitting}
                   className={`w-full md:w-auto px-10 py-4 bg-[#165F41] text-white uppercase tracking-widest text-sm font-bold transition-all ${consentChecked && !isSubmitting
-                    ? 'hover:bg-[#124b33] cursor-pointer opacity-100'
+                    ? ' cursor-not-allowed opacity-80'
                     : 'cursor-not-allowed opacity-80'
                     }`}
                 >
