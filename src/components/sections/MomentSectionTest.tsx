@@ -243,6 +243,7 @@ export default function VideoCarousel({
         >
           {/* Play/Pause Button */}
           <button
+          aria-label={isPlaying ? "Pause" : "Play"}
             onClick={togglePlay}
             className="absolute bottom-6 right-5 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all z-30"
           >

@@ -66,7 +66,7 @@ const Header = () => {
 
           {/* CENTER LOGO */}
           <div className="col-span-5 md:col-span-1 text-center">
-            <Link href="/">
+            <Link href="/" rel="preload" as="image" >
               <Image
                 src="/svgs/mainLogo.svg"
                 alt="The Padival Grand Hotel"
@@ -74,7 +74,7 @@ const Header = () => {
                 height={90}
                 className={`h-auto mx-auto drop-shadow-lg transition-all duration-300 ${isTop ? "w-48 md:w-80" : "w-40 md:w-64"
                   }`} // Logo gets slightly smaller on scroll
-                priority
+                priority={true}
               />
             </Link>
           </div>
@@ -135,7 +135,7 @@ const Header = () => {
             />
           </Link>
 
-          <button onClick={() => setMobileOpen(false)} className="text-white">
+          <button aria-label="mobile-tab" onClick={() => setMobileOpen(false)} className="text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
