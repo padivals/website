@@ -96,8 +96,23 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "vqgg3ms8f4");
           `}
         </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3R4LJCB4G5"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3R4LJCB4G5');
+          `}
+        </Script>
       </head>
-      <GoogleTagManager gtmId="G-3R4LJCB4G5" />
+      
       <body
         className={`${cormorantGaramond.variable} ${manrope.variable} antialiased font-sans`}
       >

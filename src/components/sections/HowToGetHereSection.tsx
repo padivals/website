@@ -40,6 +40,7 @@ export default function HowToGetHereSection() {
     className="w-full h-full border-0"
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
+    title="Padival Grand Hotel Location Map"
   />
 </div>
                 </div>

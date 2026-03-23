@@ -28,6 +28,8 @@ const Footer = () => {
                 width={280}
                 height={100}
                 className="mb-6 mx-auto md:mx-0"
+                priority={true}
+
               />
               <p className="text-[#F9F2E8CC] text-sm md:text-base md:text-start text-center leading-relaxed font-sans max-w-sm mx-auto md:mx-0">
                 The Padival Grand Hotel offers warm, reliable and refined

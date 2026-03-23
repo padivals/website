@@ -131,7 +131,7 @@ const ContactSection = () => {
             <div className="w-full h-92 relative overflow-hidden  ">
               {/* The StyledMap now handles everything (Styles + Marker) */}
               {/* <StyledMap /> */}
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.193579366762!2d75.19388537587785!3d12.765937219352285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd11b23b38bf%3A0x29973ec88814e99b!2sMahaveer%20Ventures%20Hotel%20and%20Resort%20-%20The%20Padival%20Grand!5e0!3m2!1sen!2sin!4v1766124232524!5m2!1sen!2sin" width="600" height="450" style={{ border: "0" }} loading="lazy" ></iframe>
+              <iframe title="Padival Grand Hotel Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.193579366762!2d75.19388537587785!3d12.765937219352285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd11b23b38bf%3A0x29973ec88814e99b!2sMahaveer%20Ventures%20Hotel%20and%20Resort%20-%20The%20Padival%20Grand!5e0!3m2!1sen!2sin!4v1766124232524!5m2!1sen!2sin" width="600" height="450" style={{ border: "0" }} loading="lazy" ></iframe>
             </div>
 
             {/* DELETED THE EXTRA FLOATING IMAGES FROM HERE */}
@@ -239,6 +239,7 @@ const ContactSection = () => {
                   Phone
                 </label>
                 <PhoneInput
+                aria-label="Phone number input field"
                   defaultCountry="in"
                   value={phone}
                   onChange={setPhone}
@@ -298,6 +299,7 @@ const ContactSection = () => {
               {/* Reservation Type */}
               <div className="flex flex-col gap-6">
                 <Select
+                    aria-label="reservation type"
                   label="Reservation Type"
                   options={["Room Booking", "Event Hosting", "Dining Reservation"]}
                   value={reservationType}
@@ -313,6 +315,7 @@ const ContactSection = () => {
 
                 {reservationType === "Room Booking" && (
                   <Select
+                  aria-label="reservation type"
                     label="Room Type"
                     options={["The Deluxe A/C Room", "The Standard Room", "Premium Room", "The Family Quad Room", "The Triple Bedroom"]}
                     value={roomType}
