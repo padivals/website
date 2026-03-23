@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         title: "Luxury Rooms & Suites | The Padival Grand Hotel Puttur",
         description:
             "Discover elegant accommodations at The Padival Grand Hotel. Choose from Comfort Rooms, Premium Stay Rooms, Family Suites, and Executive Retreats.",
-        url: "https://www.thepadivalgrand.com/rooms",
+        url: "https://thepadivalgrand.com/rooms",
     },
 };
 
@@ -85,9 +85,9 @@ export default function RoomsPage() {
             <CommonAmenities />
             <FoodAndDining />
             <div className="lg:pb-30 pb-12 bg-[white] ">
-                 <FAQSection />
+                <FAQSection />
             </div>
-           
+
             <section className="">
                 <ReservationBar />
             </section>

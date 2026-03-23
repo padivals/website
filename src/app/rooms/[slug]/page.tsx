@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         openGraph: {
             title: `${room.title} | The Padival Grand Hotel Puttur`,
             description: room.pagedescription,
-            url: `https://www.thepadivalgrand.com/rooms/${slug}`,
+            url: `https://thepadivalgrand.com/rooms/${slug}`,
             images: [
                 {
                     url: room.heroImage,
@@ -87,7 +87,7 @@ export default async function RoomPage({ params }: { params: Promise<{ slug: str
             <div className="bg-[#F9F2E8]">
                 <ContactSection />
             </div>
-            
+
             <OtherRoomsSection rooms={rooms} currentSlug={slug} />
 
             <Footer />

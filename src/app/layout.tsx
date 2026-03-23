@@ -21,7 +21,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.thepadivalgrand.com"),
+  metadataBase: new URL("https://thepadivalgrand.com"),
   title: "The Padival Grand Hotel | Luxury Stay in Puttur",
   description:
     "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
@@ -37,11 +37,11 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
       "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    url: "https://www.thepadivalgrand.com",
+    url: "https://thepadivalgrand.com",
     siteName: "The Padival Grand Hotel",
     images: [
       {
-        url: "https://www.thepadivalgrand.com/ogImage.png",
+        url: "https://thepadivalgrand.com/ogImage.png",
         width: 1200,
         height: 630,
         alt: "The Padival Grand Hotel - Luxury Accommodation in Puttur",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
       "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    images: ["https://www.thepadivalgrand.com/ogImage.png"],
+    images: ["https://thepadivalgrand.com/ogImage.png"],
   },
   robots: {
     index: true,
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.thepadivalgrand.com",
+    canonical: "https://thepadivalgrand.com",
   },
   verification: {
     google: "sH2I4FsirEdc61dILm0CtFm4FLVcv6AmpeN7C7ahxl0",

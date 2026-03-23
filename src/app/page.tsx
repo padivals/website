@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     title: "The Padival Grand Hotel | Luxury Hotel in Puttur, Karnataka",
     description:
       "Welcome to The Padival Grand Hotel - Puttur's premier luxury hotel. Experience world-class hospitality with elegant rooms, fine dining, and exceptional service.",
-    url: "https://www.thepadivalgrand.com",
+    url: "https://thepadivalgrand.com",
     images: [
       {
-        url: "https://www.thepadivalgrand.com/ogImage.png",
+        url: "https://thepadivalgrand.com/ogImage.png",
         width: 1200,
         height: 630,
         alt: "The Padival Grand Hotel Puttur - Luxury Accommodation",
@@ -51,7 +51,7 @@ export default function Home() {
       <HospitalitySection />
       <NearbyAttractions />
       <RoomsSection />
-      
+
       <div className="bg-[#F9F5EC] ">
 
         <VideoCarousel
@@ -69,9 +69,9 @@ export default function Home() {
 
       {/* <MomentsSection /> */}
       <div className="md:py-12 py-12 bg-[#F9F2E8]">
-         <TestimonialsSection />
+        <TestimonialsSection />
       </div>
-     
+
       <div className="pt-6 bg-white">
 
         <FAQSection />
@@ -84,11 +84,11 @@ export default function Home() {
       <div className="md:py-0 py-16 md:pb-16 mb-0 bg-[#F9F5EC]">
         <ContactSection />
       </div>
-      
+
       <section className="hidden lg:block">
         <ReservationBar />
       </section>
-      
+
       <Footer />
     </main>
   );
