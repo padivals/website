@@ -48,7 +48,7 @@ export default function ContactPage() {
 
 
 
-            <ReservationBar />
+            {/* <ReservationBar /> */}
             <Footer />
         </main>
     );

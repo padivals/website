@@ -92,7 +92,7 @@ export default function RoomsPage() {
             </div>
 
             <section className="">
-                <ReservationBar />
+                {/* <ReservationBar /> */}
             </section>
 
             <Footer />

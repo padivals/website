@@ -87,9 +87,9 @@ export default async function RoomPage({ params }: { params: Promise<{ slug: str
             {/* Additional Sections */}
             {room.images && <RoomImagesSection image={room.images} />}
             <TestimonialsSection />
-            <div className="bg-[#F9F2E8]">
+            {/* <div className="bg-[#F9F2E8]">
                 <ContactSection />
-            </div>
+            </div> */}
 
             <OtherRoomsSection rooms={rooms} currentSlug={slug} />
 

@@ -78,13 +78,13 @@ const RoomsSection = () => {
 
             {/* Book Now Button */}
             <div className="flex-shrink-0">
-              <Button
+              {/* <Button
                 variant="primary"
                 className=" z-999999999999999999 bg-[#165F41] hover:bg-[#143a2f] text-[#F9F2E8] px-[31px] py-[18px] rounded-none uppercase text-sm lg:text-sm tracking-wider"
                 // onClick={openModal}
               >
                 Book Now
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
