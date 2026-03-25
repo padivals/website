@@ -111,7 +111,7 @@ const Footer = () => {
         <div className="px-0c md:px-12 lg:px-38 mb-10">
           <div className="flex flex-col md:flex-row justify-center md:justify-between gap-4 md:gap-6 text-[#F9F2E8] text-base md:text-lg font-sans font-medium">
             <Link href="/dining" className="hover:text-[#EAB361]">Dine with us</Link>
-            <Link href="/events" className="hover:text-[#EAB361]">Celeberate with us</Link>
+            <Link href="/events" className="hover:text-[#EAB361]">Celebrate with us</Link>
             <Link href="/rooms" className="hover:text-[#EAB361]">Stay with us</Link>
             <Link href="/contact" className="hover:text-[#EAB361]">Contact Us</Link>
           </div>
