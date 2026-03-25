@@ -36,9 +36,9 @@ export default function EventsPage() {
             {/* <MomentSectionTest backgroundColor="bg-white" heading="What Awaits You in Our Event Venues" videos={["/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4", "/momentsImg/video2.mp4", "/momentsImg/vid1.mp4"]} /> */}
 
             <EventSpaces />
-               <div className="pb-10 bg-[#F9F5EC] ">
+               {/* <div className="pb-10 bg-[#F9F5EC] ">
             <ContactSection />
-            </div>
+            </div> */}
          
                 {/* <ReservationBar /> */}
             

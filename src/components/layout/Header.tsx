@@ -66,7 +66,7 @@ const Header = () => {
 
           {/* CENTER LOGO */}
           <div className="col-span-5 md:col-span-1 text-center">
-            <Link href="/" rel="preload" as="image" >
+            <Link href="/" rel="preload"  >
               <Image
                 src="/svgs/mainLogo.svg"
                 alt="The Padival Grand Hotel"
