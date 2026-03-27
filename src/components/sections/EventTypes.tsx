@@ -19,7 +19,7 @@ const EventTypes = () => {
     alt: "Naming Ceremonies",
     heading: "Naming Ceremonies",
     content:
-      "A peaceful space for families to celebrate their special milestone in a calm and supportive setting.",
+      "A serene and well-organized setting ideal for traditional naming ceremonies, allowing families to gather comfortably and celebrate this special milestone in a peaceful and respectful ambience.",
   },
   {
     src: "/evnts/img4.png",
@@ -30,10 +30,10 @@ const EventTypes = () => {
   },
   {
     src: "/evnts/img5.png",
-    alt: "Naming Ceremony",
+    alt: "Social & Community Gatherings",
     heading: "Social & Community Gatherings",
     content:
-      "A serene and well-organized setting ideal for traditional naming ceremonies, allowing families to gather comfortably and celebrate this special milestone in a peaceful and respectful ambience.",
+      "A peaceful space for families to celebrate their special milestone in a calm and supportive setting.",
   },
 
 ];

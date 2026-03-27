@@ -32,9 +32,10 @@ const Footer = () => {
 
               />
               <p className="text-[#F9F2E8CC] text-sm md:text-base md:text-start text-center leading-relaxed font-sans max-w-sm mx-auto md:mx-0">
-                The Padival Grand Hotel offers warm, reliable and refined
-                hospitality, creating meaningful spaces for celebrations, stays
-                and memorable moments.
+                The Padival Grand offers comfortable stays, pure veg dining, and 
+                thoughtful hospitality in Puttur, Karnataka. Designed for travelers,
+                 families, and celebrations, every experience feels simple, reliable,
+                  and well cared for.
               </p>
             </div>
             <div className="w-full h-px bg-[#165F41] opacity-70 md:hidden"></div>
@@ -122,18 +123,18 @@ const Footer = () => {
 
         {/* === BOTTOM SECTION === */}
         <div className="px-0 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-4 text-[#165F41] font-sans text-sm md:text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-4 text-[#F9F2E8CC] font-sans text-sm md:text-sm">
 
-            <p>A Company of unit</p>
+            <p>A Unit of Mahaveer Ventures Hotel and Resort</p>
 
             <div className="flex justify-center gap-3">
-              <a href="/privacy-policy" className="hover:text-[#aa8616] transition-all duration-200">Privacy Policy</a>
+              <a href="/privacy-policy" className="hover:text-[#aa8616] text-[#F9F2E8CC] transition-all duration-200">Privacy Policy</a>
               <span>|</span>
-              <a href="/terms-conditions" className="hover:text-[#aa8616] transition-all duration-200">Terms of Service</a>
+              <a href="/terms-conditions" className="hover:text-[#aa8616] text-[#F9F2E8CC] transition-all duration-200">Terms of Service</a>
             </div>
 
-            <p className="text-center md:text-right whitespace-nowrap">
-              All Rights Reserved. The Grand Padival Hotel {new Date().getFullYear()}
+            <p className="text-center text-[#F9F2E8CC] md:text-right whitespace-nowrap">
+              All Rights Reserved. The Padival Grand Hotel {new Date().getFullYear()}
             </p>
           </div>
         </div>

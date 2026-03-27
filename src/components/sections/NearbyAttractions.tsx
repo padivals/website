@@ -37,7 +37,8 @@ const NearbyAttractions = () => {
   return (
     <>
     <div className=" bg-[#FFFFFF]">
-           <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+
+           <div className=" w-full z-20 pt-20 md:pt-10 lg:pt-0 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
 
         <div className="container mx-auto  md:block hidden  ">
           {/* Top Divider */}
@@ -54,7 +55,7 @@ const NearbyAttractions = () => {
     <ImageShowcaseSwiper
       classname="py-16 bg-[white] md:pr-16 xl-faq-padding 16  "
       variant="split"
-      heading="You can book rooms, event halls and restaurant tables, each supported by attentive service and well-prepared spaces."
+      heading="Explore popular places near our hotel in Puttur, including temples, scenic hills, and cultural spots. Stay close to top attractions while enjoying comfortable rooms, dining, and event spaces at The Padival Grand."
       leftLabel="WHAT'S NEARBY"
       images={attractionsData}
     />

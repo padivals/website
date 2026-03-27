@@ -17,7 +17,8 @@ interface ScrollRevealProps {
   textClassName?: string;
   rotationEnd?: string;
   wordAnimationEnd?: string;
-  splitbr?:string
+  splitbr?: string;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div" | "span";
 }
 
 const ScrollReveal = ({
@@ -32,6 +33,7 @@ const ScrollReveal = ({
   textClassName = "",
   rotationEnd = "bottom bottom",
   wordAnimationEnd = "bottom bottom",
+  as: Tag = "h2",
 }: ScrollRevealProps) => {
   const containerRef = useRef<HTMLHeadingElement>(null);
 
@@ -128,13 +130,11 @@ const ScrollReveal = ({
   ]);
 
   return (
-    <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
-      <span
-        className={` leading-[1.5] text-[#012219]  ${textClassName} `}
-      >
+    <Tag ref={containerRef as any} className={`my-5 ${containerClassName}`}>
+      <span className={` leading-[1.5] text-[#012219]  ${textClassName} `}>
         {splitText} <br /> {splitbr}
       </span>
-    </h2>
+    </Tag>
   );
 };
 

@@ -22,17 +22,9 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thepadivalgrand.com"),
-  title: "The Padival Grand Hotel | Luxury Stay in Puttur",
+  title: "Best Hotel in Puttur, Karnataka | The Padival Grand Stay",
   description:
-    "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-  keywords: [
-    "Padival Grand Hotel",
-    "Hotel in Puttur",
-    "Luxury Hotel Puttur",
-    "Accommodation Puttur",
-    "Event Hall Puttur",
-    "Best Hotel in Puttur",
-  ],
+    "Hotel rooms in Puttur, Karnataka with AC, WiFi, parking & pure veg dining. The Padival Grand ensures a clean, comfortable stay in Puttur for family & travelers.",
   openGraph: {
     title: "The Padival Grand Hotel | Luxury Stay in Puttur",
     description:
@@ -111,8 +103,10 @@ export default function RootLayout({
             gtag('config', 'G-3R4LJCB4G5');
           `}
         </Script>
+
       </head>
-      
+
+
       <body
         className={`${cormorantGaramond.variable} ${manrope.variable} antialiased font-sans`}
       >

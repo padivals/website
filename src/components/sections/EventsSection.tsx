@@ -43,7 +43,7 @@ const   EventsSection = () => {
             </p>
 
             <a
-              href="/rooms"
+              href="/events"
               className="text-[#1B4D3E] text-lg md:text-md  underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium"
             >
               Discover Our Spaces
@@ -61,7 +61,7 @@ const   EventsSection = () => {
 
            <div className="w-full aspect-[5/3] overflow-hidden relative group">
   <div
-    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
+    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out "
     style={{ backgroundImage: `url(${event.image})` }}
   />
   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>

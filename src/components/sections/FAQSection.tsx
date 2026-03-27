@@ -4,33 +4,18 @@ import React, { useState } from "react";
 import ScrollReveal from "../ui/ScrollReveal";
 import Typography from "../ui/Typography";
 
-const FAQSection = () => {
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface FAQSectionProps {
+  faqs: FAQ[];
+}
+
+const FAQSection = ({ faqs }: FAQSectionProps) => {
    const heading = "Helpful Information for Your Visit"
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const faqs = [
-    {
-      question:
-        "What types of reservations can I make at The Padival Grand Hotel?",
-      answer:
-        "You can book rooms, event halls and restaurant tables, each supported by attentive service and well-prepared spaces.",
-    },
-    {
-      question: "How early should I book an event or celebration?",
-      answer:
-        "We recommend booking at least 2-4 weeks in advance for small events and 3-6 months for weddings or large celebrations to ensure availability.",
-    },
-    {
-      question: "Do you offer on-site parking for guests?",
-      answer:
-        "Yes, we have ample on-site parking available for all our guests, including valet services for events.",
-    },
-    {
-      question: "Can I request special arrangements for my stay or event?",
-      answer:
-        "Absolutely! We pride ourselves on personalized service. Please contact our concierge or event planning team to discuss your specific needs.",
-    },
-  ];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -40,7 +25,7 @@ const FAQSection = () => {
     <section className="bg-white md:py-20 py-6">
       <style>{`
         @media (min-width: 1920px) {
-          .xl-faqq-padding {
+          .xl-faq-padding {
             padding-left: 10vw !important;
             padding-right: 10vw !important;
           }

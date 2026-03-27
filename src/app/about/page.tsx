@@ -5,6 +5,7 @@ import ContentSection from "@/components/sections/ContentSection";
 import ReservationBar from "@/components/sections/ReservationBar";
 import WhatToExpectSection from "@/components/sections/WhatToExpectSection";
 import FAQSection from "@/components/sections/FAQSection";
+import { generalFaqs } from "@/data/faqs";
 import HalfHeroSection from "@/components/sections/HalfHeroSection";
 
 export const metadata: Metadata = {
@@ -29,9 +30,16 @@ export const metadata: Metadata = {
     },
 };
 
+import JsonLd from "@/components/seo/JsonLd";
+
 export default function AboutPage() {
+    const schema = {
+        // Paste your about page schema here
+    };
+
     return (
         <main className="min-h-screen flex flex-col relative  bg-[#F9F5EC]">
+            <JsonLd data={schema} id="about-schema" />
             <Header />
 
             <HalfHeroSection title="Who We Are" />
@@ -79,7 +87,7 @@ export default function AboutPage() {
 
 
             </section>
-            <FAQSection />
+            <FAQSection faqs={generalFaqs} />
 
             {/* <section className="hidden md:block">
                 <ReservationBar />
