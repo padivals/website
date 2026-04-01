@@ -6,29 +6,24 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const TABS_CONTENT = [
     {
-        title: "A Glimpse into Our Hospitality",
-        description: "Most hotel searches start with “just need a place to stay,” but expectations drop fast. At The Padival Grand, we changed that. As one of the best hotels in Puttur Karnataka, we offer thoughtfully designed hotel rooms, warm service, and a calm environment that feels like an upgrade, not a compromise. Located near Padil and well-connected to Puttur Main Road, we ensure every stay in Puttur is smooth, comfortable, and genuinely welcoming for families and travelers.",
-        image: "/hospitalityImg/img1.png"
+        title: "Comfortable Hotel Rooms in Puttur for Every Stay ",
+        description: "Our rooms are designed for comfort, functionality, and consistency in everything you need for a smooth stay in Puttur. Whether you're visiting for a short trip, business travel, or a temple visit, each room offers clean interiors, effective air conditioning, high-speed Wi-Fi, and essential amenities that work without hassle. With a location near Puttur Main Road, getting in and out is easy, making your stay practical from check-in to checkout. ",
+        image: "/bestHotelImg/1.webp"
     },
     {
-        title: "Hotel in Puttur Karnataka That Gets What Travelers Need",
-        description: "Whether you're visiting a temple trip, work, or family travel, your needs are simple - comfort, convenience, and easy access. The Padival Grand delivers exactly that. Located on Puttur Main Road near Padil, our hotel offers seamless connectivity, peaceful surroundings, and reliable service. Among hotels in Puttur Karnataka, we focus on making your stay hassle-free, with everything designed to work smoothly from check-in to checkout.",
-        image: "/hospitalityImg/puttur.jpg"
+        title: "Pure Veg Restaurant in Puttur for Everyday Dining ",
+        description: "At Padival’s Palara, we serve pure vegetarian food that is simple, fresh, and consistent. Our menu focuses on familiar, satisfying meals that work for families, travellers, and daily dining. Whether it’s breakfast, lunch, or dinner, the experience is built around clean preparation, reliable taste, and a comfortable space where you can enjoy your meal without overcomplication. ",
+        image: "/bestHotelImg/2.webp"
     },
     {
-        title: "Hotel Rooms Designed for Comfort & Value",
-        description: "Our hotel rooms in Puttur are built to meet real expectations. From effective AC and high-speed WiFi to clean interiors and daily housekeeping, every detail is handled with consistency. As one of the best hotels in Puttur Karnataka, we ensure each room feels fresh, secure, and easy to settle into. Whether it’s a short visit or a longer stay in Puttur, you get comfort and value without compromise.",
-        image: "/roomsImg/executive.png"
+        title: "Event Spaces for Family Functions & Gatherings ",
+        description: "From small gatherings to family celebrations, our event spaces are designed to keep things simple and well-organised. The setup is clean, flexible, and easy to manage, allowing different types of occasions to run smoothly without unnecessary coordination issues. Whether you're planning a small function or a private event, everything is handled with clarity so you can focus on the moment, not logistics. ",
+        image: "/bestHotelImg/4.webp"
     },
     {
-        title: "Stay in Puttur Without the Usual Hassles",
-        description: "Travel can be unpredictable, but your stay shouldn’t be. At The Padival Grand, we simplify everything - from easy parking to quick check-ins - so you can focus on your trip. Located in a prime area near Padial and Puttur Main Road, you stay connected to key routes and attractions. Whether it’s a short stay in Puttur or an extended visit, we ensure a smooth, stress-free experience every time.",
-        image: "/hospitalityImg/padivalMainImg.webp"
-    },
-    {
-        title: "A Welcoming Space for Stays, Dining & Celebrations",
-        description: "The Padival Grand is more than just a hotel in Puttur - it’s a space designed for comfort and connection. From overnight stays to family gatherings, we provide well-maintained spaces and pure veg dining in a clean, welcoming environment. As one of the best hotels and lodges in Puttur Karnataka, we focus on reliable service and thoughtful details, ensuring every experience feels easy, structured, and truly comfortable.",
-        image: "/roomsImg/foodDining.png"
+        title: "Hotel Amenities Designed for a Comfortable Stay",
+        description: "The Padival Grand focuses on essentials that make your stay reliable and stress-free. Guests have access to high-speed Wi-Fi, air-conditioned rooms, elevator access, ample parking, power backup, and daily housekeeping. Every feature is maintained with consistency to ensure a comfortable environment for both short and extended stays. ",
+        image: "/bestHotelImg/3.webp"
     }
 ];
 
@@ -36,14 +31,21 @@ const BestHotelSection = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <section className="bg-[#F9F2E8] py-16 md:py-24 lg:py-32 overflow-hidden">
+<>
+<div className="">
+ {/* <div className="w-full h-[2px] bg-[#165F41]   mb-8 lg:mb-0"></div> */}
+
+</div>
+  <section className="bg-[white] py-16 md:py-24 lg:py-32 overflow-hidden">
+
+            
             <div className=" mx-auto px-6 md:px-12 lg:px-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                     {/* Left Column */}
                     <div className="flex flex-col space-y-16 lg:space-y-24">
                         {/* Heading */}
                         <h2 className="text-4xl md:text-[44px] font-serif text-[#012219] leading-[1.2] font-semibold max-w-2xl">
-                            What Makes The Padival Grand a Trusted Hotel in Puttur
+                            Why Guests Choose <br className="hidden md:block" /> The Padival Grand 
                         </h2>
 
                         {/* Tabs List */}
@@ -54,20 +56,19 @@ const BestHotelSection = () => {
                                     onClick={() => setActiveTab(index)}
                                     className="relative flex items-center pl-8 text-left group transition-all duration-300 cursor-pointer"
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         className="absolute left-0 w-[2.5px] bg-[#1D8842]"
                                         initial={false}
-                                        animate={{ 
+                                        animate={{
                                             height: activeTab === index ? "100%" : "0%",
                                             opacity: activeTab === index ? 1 : 0
                                         }}
                                         transition={{ duration: 0.3 }}
                                     />
-                                    <span className={`text-xl md:text-2xl font-serif leading-tight transition-all duration-300 ${
-                                        activeTab === index 
-                                        ? "text-[#012219] opacity-100" 
-                                        : "text-[#012219] opacity-50 hover:opacity-80"
-                                    }`}>
+                                    <span className={`text-xl md:text-2xl font-serif leading-tight transition-all duration-300 ${activeTab === index
+                                            ? "text-[#012219] opacity-100"
+                                            : "text-[#012219] opacity-50 hover:opacity-80"
+                                        }`}>
                                         {item.title}
                                     </span>
                                 </button>
@@ -88,8 +89,8 @@ const BestHotelSection = () => {
                             >
                                 {/* Image Container */}
                                 <div className="relative aspect-[16/8] w-full overflow-hidden shadow-sm">
-                                    <Image 
-                                        src={TABS_CONTENT[activeTab].image} 
+                                    <Image
+                                        src={TABS_CONTENT[activeTab].image}
                                         alt={TABS_CONTENT[activeTab].title}
                                         fill
                                         className="object-cover"
@@ -109,6 +110,8 @@ const BestHotelSection = () => {
                 </div>
             </div>
         </section>
+</>
+      
     );
 };
 

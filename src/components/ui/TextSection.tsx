@@ -4,8 +4,8 @@ import Typography from "./Typography";
 
 interface TextSectionProps {
     label?: string;
-    heading: string;
-    description: string;
+    heading: string | React.ReactNode;
+    description: string | React.ReactNode;
     align?: "left" | "center";
     className?: string;
     as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div" | "span";

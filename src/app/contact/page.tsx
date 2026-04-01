@@ -13,15 +13,21 @@ import HalfHeroSection from "@/components/sections/HalfHeroSection";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-    title: " Hotel in Puttur Karnataka | Contact the Padival Grand",
+    title: "Hotel in Puttur - Contact & Directions | The Padival Grand ",
     description:
-        " Contact The Padival Grand, a leading hotel in Puttur Karnataka. Get directions, phone number, address, and location details for easy access and bookings.",
+        "Looking for hotels in Puttur Karnataka? Contact The Padival Grand for room bookings, directions, phone details and easy access near Puttur Main Road.",
 
     openGraph: {
-        title: "Contact Us | The Padival Grand Hotel Puttur",
+        title: " in Puttur Karnataka | Contact The Padival Grand ",
         description:
-            "Get in touch with The Padival Grand Hotel. Visit us at Bondel, Mangaluru or call us for reservations and inquiries.",
+            "Looking for hotels in Puttur Karnataka? Contact The Padival Grand for room bookings, directions, phone details and easy access near Puttur Main Road.",
         url: "https://thepadivalgrand.com/contact",
+      
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contact The Padival Grand | Hotel in Puttur Karnataka",
+        description: "Contact The Padival Grand for bookings, directions, and assistance. Conveniently located near Puttur Main Road",
     },
     alternates: {
         canonical: "/contact",
@@ -30,241 +36,126 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
 
-    const hotelSchema = {
+const hotelSchema = {
 
 
-        "@context": "https://schema.org",
+  "@context": "https://schema.org", 
 
-        "@graph": [
+  "@type": "ContactPage", 
 
-            {
+  "@id": "https://thepadivalgrand.com/contact#webpage", 
 
-                "@type": "WebSite",
+  "url": "https://thepadivalgrand.com/contact", 
 
-                "@id": "https://thepadivalgrand.com/#website",
+  "name": "Contact The Padival Grand", 
 
-                "url": "https://thepadivalgrand.com/",
+  "description": "Contact The Padival Grand for room bookings, directions and stay enquiries in Puttur, Karnataka.", 
 
-                "name": "The Padival Grand"
+  "isPartOf": { 
 
-            },
+    "@id": "https://thepadivalgrand.com/#website" 
 
-            {
+  }, 
 
-                "@type": "Hotel",
+  "about": { 
 
-                "@id": "https://thepadivalgrand.com/#hotel",
+    "@id": "https://thepadivalgrand.com/#hotel" 
 
-                "name": "The Padival Grand",
+  }, 
 
-                "url": "https://thepadivalgrand.com/",
+  "mainEntity": { 
 
-                "address": {
+    "@type": "ContactPoint", 
 
-                    "@type": "PostalAddress",
+    "telephone": "+91-9686804784", 
 
-                    "addressLocality": "Puttur",
+    "contactType": "reservations", 
 
-                    "addressRegion": "Karnataka",
+    "areaServed": "IN", 
 
-                    "addressCountry": "IN"
+    "availableLanguage": [ 
 
-                }
+      "English", 
 
-            },
+      "Kannada" 
 
-            {
+    ] 
 
-                "@type": "CollectionPage",
-
-                "@id": "https://thepadivalgrand.com/rooms#collection",
-
-                "url": "https://thepadivalgrand.com/rooms",
-
-                "name": "Rooms at The Padival Grand",
-
-                "description": "Explore rooms in Puttur at The Padival Grand, including Standard Room, Deluxe Room, Triple Bed Room and Family Quad Room for a comfortable stay.",
-
-                "isPartOf": {
-
-                    "@id": "https://thepadivalgrand.com/#website"
-
-                },
-
-                "mainEntity": {
-
-                    "@type": "ItemList",
-
-                    "name": "Room Types at The Padival Grand",
-
-                    "numberOfItems": 4,
-
-                    "itemListElement": [
-
-                        {
-
-                            "@type": "ListItem",
-
-                            "position": 1,
-
-                            "item": {
-
-                                "@type": "HotelRoom",
-
-                                "@id": "https://thepadivalgrand.com/rooms/standard-room#room",
-
-                                "name": "Standard Room",
-
-                                "url": "https://thepadivalgrand.com/rooms/standard-room",
-
-                                "description": "Comfortable standard room in Puttur with essential amenities for a relaxed stay.",
-
-                                "occupancy": {
-
-                                    "@type": "QuantitativeValue",
-
-                                    "maxValue": 2
-
-                                },
-
-                                "containedInPlace": {
-
-                                    "@id": "https://thepadivalgrand.com/#hotel"
-
-                                }
-
-                            }
-
-                        },
-
-                        {
-
-                            "@type": "ListItem",
-
-                            "position": 2,
-
-                            "item": {
-
-                                "@type": "HotelRoom",
-
-                                "@id": "https://thepadivalgrand.com/rooms/deluxe-room#room",
-
-                                "name": "Deluxe Room",
-
-                                "url": "https://thepadivalgrand.com/rooms/deluxe-room",
-
-                                "description": "Well-designed deluxe room in Puttur with modern comforts for travelers and families.",
-
-                                "occupancy": {
-
-                                    "@type": "QuantitativeValue",
-
-                                    "maxValue": 2
-
-                                },
-
-                                "containedInPlace": {
-
-                                    "@id": "https://thepadivalgrand.com/#hotel"
-
-                                }
-
-                            }
-
-                        },
-
-                        {
-
-                            "@type": "ListItem",
-
-                            "position": 3,
-
-                            "item": {
-
-                                "@type": "HotelRoom",
-
-                                "@id": "https://thepadivalgrand.com/rooms/triple-bed-room#room",
-
-                                "name": "Triple Bedroom",
-
-                                "url": "https://thepadivalgrand.com/rooms/triple-bed-room",
-
-                                "description": "Spacious triple bedroom in Puttur ideal for small groups and family stays.",
-
-                                "occupancy": {
-
-                                    "@type": "QuantitativeValue",
-
-                                    "maxValue": 3
-
-                                },
-
-                                "containedInPlace": {
-
-                                    "@id": "https://thepadivalgrand.com/#hotel"
-
-                                }
-
-                            }
-
-                        },
-
-                        {
-
-                            "@type": "ListItem",
-
-                            "position": 4,
-
-                            "item": {
-
-                                "@type": "HotelRoom",
-
-                                "@id": "https://thepadivalgrand.com/rooms/family-quad-room#room",
-
-                                "name": "Family Quad Room",
-
-                                "url": "https://thepadivalgrand.com/rooms/family-quad-room",
-
-                                "description": "Family quad room in Puttur with ample space and modern amenities for a comfortable group stay.",
-
-                                "occupancy": {
-
-                                    "@type": "QuantitativeValue",
-
-                                    "maxValue": 4
-
-                                },
-
-                                "containedInPlace": {
-
-                                    "@id": "https://thepadivalgrand.com/#hotel"
-
-                                }
-
-                            }
-
-                        }
-
-                    ]
-
-                }
-
-            }
-
-        ]
-    };
+  } 
+};
 
     const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": contactFaqs.map((faq) => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer,
-            },
-        })),
+         "@context": "https://schema.org", 
+
+  "@type": "FAQPage", 
+
+  "mainEntity": [ 
+
+    { 
+
+      "@type": "Question", 
+
+      "name": "Where is The Padival Grand located in Puttur?", 
+
+      "acceptedAnswer": { 
+
+        "@type": "Answer", 
+
+        "text": "The Padival Grand is located near Puttur Main Road in Puttur, Karnataka, with easy access to the town center, market, and transport points." 
+
+      } 
+
+    }, 
+
+    { 
+
+      "@type": "Question", 
+
+      "name": "Which hotel in Puttur offers easy booking and contact support?", 
+
+      "acceptedAnswer": { 
+
+        "@type": "Answer", 
+
+        "text": "The Padival Grand offers quick booking assistance by phone and WhatsApp, making it easy to contact and plan your stay in Puttur." 
+
+      } 
+
+    }, 
+
+    { 
+
+      "@type": "Question", 
+
+      "name": "Does The Padival Grand provide parking for visitors?", 
+
+      "acceptedAnswer": { 
+
+        "@type": "Answer", 
+
+        "text": "Yes, The Padival Grand offers secure parking for guests, making it convenient for those traveling by car." 
+
+      } 
+
+    }, 
+
+    { 
+
+      "@type": "Question", 
+
+      "name": "Are there hotels in Puttur Karnataka with parking facilities?", 
+
+      "acceptedAnswer": { 
+
+        "@type": "Answer", 
+
+        "text": "Yes, The Padival Grand offers secure parking, making it a convenient choice among hotels in Puttur Karnataka for travelers with vehicles." 
+
+      } 
+
+    } 
+
+  ] 
     };
 
 
@@ -282,13 +173,16 @@ export default function ContactPage() {
 
 
 
-            <HalfHeroSection title="Get in Touch" />
+            <HalfHeroSection title="Contact The Padival Grand  " />
 
             <ContactAndLocationSection />
 
             {/* <HowToGetHereSection /> */}
             <div className="md:pb-0 pb-6 py-12 bg-white">
-                <FAQSection faqs={contactFaqs} />
+                <FAQSection 
+                    faqs={contactFaqs} 
+                    heading="Frequently Asked Questions About Your Visit"
+                />
             </div>
 
 

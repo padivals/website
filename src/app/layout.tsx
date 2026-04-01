@@ -22,21 +22,21 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thepadivalgrand.com"),
-  title: "Best Hotel in Puttur, Karnataka | The Padival Grand Stay",
+  title: "Hotel in Puttur | The Padival Grand | Stay, Dining & Events",
   description:
-    "Hotel rooms in Puttur, Karnataka with AC, WiFi, parking & pure veg dining. The Padival Grand ensures a clean, comfortable stay in Puttur for family & travelers.",
+    "Stay at The Padival Grand in Puttur with clean rooms, AC, Wi-Fi, pure-veg dining, and event spaces. Ideal for families and travellers. Book your stay today.",
   openGraph: {
-    title: "The Padival Grand Hotel | Luxury Stay in Puttur",
+    title: "Padival Grand Hotel | Comfortable Stay & Pure Veg Dining in Puttur",
     description:
-      "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
+      "Looking for a comfortable stay in Puttur? The Padival Grand offers clean rooms, pure veg dining, AC, and WiFi for families, travellers, and temple visitors.",
     url: "https://thepadivalgrand.com",
     siteName: "The Padival Grand Hotel",
     images: [
       {
-        url: "https://thepadivalgrand.com/ogImage.png",
+        url: "https://thepadivalgrand.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "The Padival Grand Hotel - Luxury Accommodation in Puttur",
+        alt: "The Padival Grand Hotel - Luxurious Stay & Pure Veg Dining in Puttur",
       },
     ],
     locale: "en_US",
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Padival Grand Hotel | Luxury Stay in Puttur",
+    title: "The Padival Grand | Hotel in Puttur, Karnataka",
     description:
-      "Experience the finest hospitality at The Padival Grand Hotel in Puttur. Luxury rooms, exquisite dining, and grand event spaces for a memorable stay.",
-    images: ["https://thepadivalgrand.com/ogImage.png"],
+      "Enjoy a comfortable stay at The Padival Grand with clean rooms, pure veg dining, and essential amenities for families, travellers, and temple visits.  ",
+    images: ["https://thepadivalgrand.com/og-image.png"],
   },
   robots: {
     index: true,

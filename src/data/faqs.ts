@@ -1,106 +1,165 @@
 export const generalFaqs = [
   {
-    question: "What are the best hotels in Puttur, Karnataka?",
+    question: "What are the best hotels in Puttur, Karnataka?  ",
     answer:
-      "The Padival Grand is one of the best hotels in Puttur, Karnataka, offering comfortable rooms, modern amenities and pure veg dining for families and travelers.",
+      "The Padival Grand is a reliable choice for comfortable stays, offering clean rooms, essential amenities, and pure vegetarian dining suited for families and travellers. ",
   },
   {
-    question: "Are there affordable hotel rooms in Puttur with modern amenities? ",
+    question: "Are the rooms suitable for families or groups? ",
     answer:
-      "Yes, The Padival Grand offers affordable hotel rooms in Puttur with AC, high-speed WiFi, parking and daily housekeeping for a comfortable stay. ",
+      "Yes, the hotel offers multiple room options designed to comfortably accommodate families, small groups, and individual travellers.  ",
   },
   {
-    question: "Which hotel in Puttur is suitable for travelers and pilgrims? ",
+    question: "Is the hotel easy to access from main roads and transport?",
     answer:
-      "Which hotel in Puttur is suitable for travelers and pilgrims? The Padival Grand is ideal for travelers and pilgrims looking for a comfortable stay in Puttur with easy access to nearby temples and key locations. ",
+      "Yes, the property is conveniently located near the main road with easy access to transport, making travel simple and hassle-free. ",
   },
   {
-    question: "Are there hotels in Puttur with dining and stay options? ",
+    question: "Does the hotel allow pets? ",
     answer:
-      "Yes, The Padival Grand offers both stay and pure veg dining, making it a convenient choice among hotels in Puttur for guests.  ",
+      "No, pets aren't allowed. Guests are requested not to bring any pets to the hotel premises.",
   },
   {
-    question: "Does The Padival Grand offer breakfast and dining options?  ",
+    question: "What are the opening hours of the reception?   ",
     answer:
-      "Yes, The Padival Grand offers a pure vegetarian restaurant in Puttur serving breakfast, lunch and dinner, making it ideal for families and travelers. ",
+"The reception is available to assist guests throughout the day, ensuring support for check-in, check-out, and any assistance during your stay. ",  },
+  {
+    question: "What payment methods are accepted at the hotel? ",
+    answer:
+      "The hotel accepts major payment methods including cash, debit cards, credit cards, and digital payment options for convenience. ",
+  },
+];
+
+export const aboutFaqs = [
+  {
+    question: "What is The Padival Grand known for?  ",
+    answer:
+      "What is The Padival Grand known for? ",
   },
   {
-    question: "Does the hotel have a banquet hall in Puttur? ",
+    question: "What types of reservations can I make at The Padival Grand?  ",
     answer:
-      "Yes, The Padival Grand offers a well-designed banquet hall in Puttur suitable for weddings, functions and special events. ",
+      "Yes, the hotel offers multiple room options designed to comfortably accommodate families, small groups, and individual travellers.  ",
+  },
+  {
+    question: "Is the hotel easy to access from main roads and transport?",
+    answer:
+      "You can book hotel rooms for short or extended stays, reserve dining at our pure vegetarian restaurant, or arrange spaces for small events and family gatherings in Puttur. ",
+  },
+  {
+    question: "How early should I book an event or celebration?  ",
+    answer:
+      "It’s best to book your event or celebration in advance to ensure availability, especially during weekends and peak seasons in Puttur. Early booking helps us prepare everything smoothly for your occasion. ",
+  },
+  {
+    question: "Do you offer on-site parking for guests?   ",
+    answer:
+"Yes, The Padival Grand provides on-site parking for guests, making it convenient for travellers and families visiting Puttur for stays, dining or events. ",  },
+  {
+    question: "Can I request special arrangements for my stay or event? ",
+    answer:
+      "Yes, you can request specific arrangements for your stay or event. Our team will do their best to accommodate your needs and ensure a comfortable and well-prepared experience. ",
   },
 ];
 
 export const roomFaqs = [
   {
-    question: "Where can I find hotel rooms in Puttur Karnataka with modern amenities?",
+    question: "Where can I find hotel rooms in Puttur with modern amenities? ",
     answer:
-      "You can find hotel rooms in Puttur Karnataka at The Padival Grand, offering AC rooms, high-speed WiFi, parking, and daily housekeeping for a convenient and relaxing stay.",
+      "You can find well-equipped rooms at The Padival Grand, offering AC, high-speed WiFi, parking and daily housekeeping for a comfortable and convenient stay.",
   },
   {
-    question: "Are there affordable puttur rooms for short stays?",
+    question: "Are there affordable rooms for short stays? ",
     answer:
-      "Yes, there are affordable puttur rooms available for short stays as well as longer visits. The Padival Grand offers budget-friendly hotel rooms in Puttur without compromising comfort or cleanliness.",
+      "Yes, there are budget-friendly options available for short stays as well as longer visits. The Padival Grand offers clean and well-maintained rooms without unnecessary costs. ",
   },
   {
-    question: "Is it easy to find a stay in Puttur near the main road?",
+    question: "Is it easy to find a stay near Puttur Main Road? ?",
     answer:
-      "Yes, staying near Puttur Main Road makes travel more convenient. The Padival Grand is in a prime area, offering easy access to transport, local attractions, and essential services.",
+      "Yes, staying near Puttur Main Road makes travel easier. The Padival Grand is conveniently located with quick access to transport, nearby attractions and essential services. ",
   },
   {
-    question: "What is the average price of hotel rooms in Puttur?",
+    question: "What is the average price of hotel rooms in Puttur? ",
     answer:
-      "Hotel rooms in Puttur vary based on amenities and location, but affordable options like The Padival Grand offer good value with comfort and essential facilities.",
+      "Room prices vary based on location and facilities, but options like The Padival Grand offer good value with essential amenities and reliable service. ",
   },
   {
-    question: "Is parking available with hotel rooms in Puttur?",
+    question: "Which is a good hotel for rooms in Puttur? ",
     answer:
-      "Most hotel rooms in Puttur offer parking facilities. The Padival Grand provides secure and convenient parking for guests.",
+      "The Padival Grand is a reliable choice, offering clean spaces, essential amenities and a convenient location for families and travellers. ",
   },
+];
+export const eventFaqs = [
+  {
+    question: "Where can I find a marriage hall near me in Puttur?  ",
+    answer:
+      "You can find a well-equipped marriage hall at The Padival Grand in Puttur, offering banquet space, rooms, dining and complete support for smooth and comfortable events.  ",
+  },
+  {
+    question: "Which is a good banquet hall in Puttur for events?  ",
+    answer:
+      "The Padival Grand offers a clean and well-managed banquet hall in Puttur, suitable for weddings, parties and family functions with reliable service and essential amenities. ",
+  },
+  {
+    question: "Is there a party hall near me with dining and parking? ",
+    answer:
+      "Yes, The Padival Grand offers a party hall in Puttur with pure veg dining and parking facilities, making it ideal for celebrations and social gatherings. ",
+  },
+  {
+    question: "What is the best place to host events in Puttur?  ",
+    answer:
+      "The Padival Grand is a reliable choice for hosting events in Puttur, offering a combination of banquet space, rooms, dining and a well-managed environment. ",
+  }
 ];
 
 export const contactFaqs = [
   {
     question: "Where is The Padival Grand located in Puttur?",
     answer:
-      "The Padival Grand is located near Puttur Main Road in Puttur, Karnataka, with easy access to the town center, market, and transport points.",
+      "The Padival Grand is located near Puttur Main Road in Puttur, Karnataka, with easy access to the town center, market, and major transport points. ",
   },
   {
-    question: "Which hotel in Puttur offers easy booking and contact support?",
+    question: "Which hotel in Puttur offers easy booking and contact support? ",
     answer:
-      "The Padival Grand offers quick booking assistance via phone and WhatsApp, making it easy to contact and plan your stay in Puttur.",
+      "If you're looking for a hotel in Puttur with quick booking support, The Padival Grand offers easy contact via phone and WhatsApp for fast and convenient reservations. ",
   },
   {
-    question: "Does the Padival Grand provide parking for visitors?",
+    question: "Does The Padival Grand provide parking for guests? ",
     answer:
-      "Yes, the hotel offers secure parking for guests, making it convenient for those traveling by car.",
+      "Yes, The Padival Grand offers secure and convenient parking facilities for guests traveling by car. ",
   },
   {
-    question: "Are there hotels in Puttur Karnataka with parking facilities?",
+    question: "Are there hotels in Puttur Karnataka with parking facilities? ",
     answer:
-      "Yes, The Padival Grand offers secure parking, making it a convenient choice among hotels in Puttur Karnataka for travelers with vehicles.",
+      "Yes, The Padival Grand is among the hotels in Puttur Karnataka that offer secure parking along with easy access and a convenient location. ",
+  },
+    {
+    question: "How can I contact The Padival Grand for room bookings? ",
+    answer:
+      "You can contact The Padival Grand directly via phone or WhatsApp to check availability, get directions, and make quick room bookings in Puttur. ",
   },
 ];
 
 export const diningFaqs = [
   {
-    question: "What makes Padival’s Palara a popular veg restaurant in Puttur?",
+    question: "What type of food is served at Padival’s Palara? ",
     answer:
-      "Padival’s Palara is known for its authentic taste, clean environment and consistent quality, making it a preferred pure veg restaurant in Puttur for locals and travelers.",
+      "Padival’s Palara serves pure vegetarian food, including South Indian breakfast, along with lunch and dinner prepared with a simple, homely taste. ",
   },
   {
-    question: "Does the restaurant offer lunch and dinner in Puttur?",
+    question: "Is Padival’s Palara a good pure veg restaurant in Puttur? ",
     answer:
-      "Yes, Padival’s Palara serves vegetarian lunch and dinner in Puttur with a variety of dishes suitable for families and travelers.",
+      "Yes, Padival’s Palara is a well-known pure veg restaurant in Puttur, offering clean dining, consistent food quality and a comfortable experience for families and visitors. ",
   },
   {
-    question: "Where can I get veg meals in Puttur?",
+    question: "Do you serve vegetarian breakfast in Puttur? ",
     answer:
-      "Padival’s Palara offers wholesome veg meals in Puttur for lunch and dinner, prepared with authentic taste and quality ingredients.",
+      "Yes, Padival’s Palara offers fresh vegetarian breakfast options, making it a convenient choice for starting your day with hygienic and timely service. ",
   },
   {
-    question: "Do you offer dining for both locals and hotel guests?",
+    question: "Is the restaurant open for lunch and dinner? ",
     answer:
-      "Yes, Padival’s Palara welcomes both local visitors and hotel guests for breakfast, lunch, and dinner in Puttur.",
+      "Yes, the restaurant serves both lunch and dinner with a variety of vegetarian dishes suitable for everyday dining and family meals. ",
   },
+
 ];

@@ -5,7 +5,7 @@ import ScrollReveal from "../ui/ScrollReveal";
 import Typography from "../ui/Typography";
 
 const FoodAndDining = () => {
-    const title = "Food and Dining";
+    const title = "Dining at Padival’s Palara ";
     return (
         <section className="bg-[#F9F5EC] md:py-20 py-10 ">
             <div className="container xl-faq-padding mx-auto px-6 md:px-16">
@@ -79,7 +79,7 @@ const FoodAndDining = () => {
                         </div>
 
                         <Typography variant="description" className="text-[#012219CC] text-lg font-medium leading-relaxed">
-                            At The Padival Grand, every meal is thoughtfully served through Padival&apos;s Palara, our pure vegetarian sister brand located within the same building. Guests enjoy familiar, homely flavours prepared with care, offering a calm, satisfying dining experience that feels dependable whether you choose a light snack or a complete meal.
+                            At The Padival Grand, dining is served through Padival’s Palara, our in-house pure veg restaurant. Located within the same building, it offers simple, homely meals including South Indian breakfast, along with lunch and dinner. Whether you’re staying with us or visiting for a meal, it’s a convenient and reliable option for clean, vegetarian food. 
                         </Typography>
                     </div>
                 </div>

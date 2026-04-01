@@ -11,10 +11,13 @@ interface FAQ {
 
 interface FAQSectionProps {
   faqs: FAQ[];
+  heading?: string;
 }
 
-const FAQSection = ({ faqs }: FAQSectionProps) => {
-   const heading = "Helpful Information for Your Visit"
+const FAQSection = ({
+  faqs,
+  heading = "Common Questions About Your Stay with Us ",
+}: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
@@ -37,11 +40,11 @@ const FAQSection = ({ faqs }: FAQSectionProps) => {
 
         <div className="flex flex-col lg:flex-row gap-0 lg:gap-24">
           {/* Left Side - Static Content */}
-          <div className="lg:w-1/3 lg:pr-8">
+          <div className="lg:w-[30%] lg:pr-8">
             <div className="flex flex-col items-start text-left md:mt-6 mt-0">
-               <span className="block text-[#165F41CC] uppercase text-lg md:text-lg font-semibold md:mb-4">
+               <h2 className="block text-[#165F41CC] uppercase text-lg md:text-lg font-semibold md:mb-4">
                 FREQUENTLY ASKED QUESTIONS
-              </span>
+              </h2>
               {/* <h2 className="text-3xl md:text-5xl font-serif text-[#012219] leading-tight font-semibold max-w-3xl">
                 Helpful Information
                 <br />
@@ -56,7 +59,7 @@ const FAQSection = ({ faqs }: FAQSectionProps) => {
           baseRotation={0}
           rotationEnd="top center"
           wordAnimationEnd="top 40%"
-          containerClassName="text-start max-w-lg"
+          containerClassName="text-start max-w-2xl"
           textClassName="text-4xl md:text-5xl lg2:text-7xl  font-serif leading-tight text-[#0F2A1D] font-semibold " 
           blurStrength={10}
         >
@@ -79,9 +82,9 @@ const FAQSection = ({ faqs }: FAQSectionProps) => {
                     onClick={() => toggleFAQ(index)}
                     className="w-full py-6 flex items-center justify-between text-left group"
                   >
-                    <span className="text-[#012219CC] font-bold text-lg pr-4">
+                    <h3 className="text-[#012219CC] font-bold text-lg pr-4">
                       {faq.question}
-                    </span>
+                    </h3>
                     <span
                       className={`text-2xl font-light transition-transform duration-500 shrink-0  ${
                         openIndex === index

@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
 
     return {
-        title: `${room.title} | The Padival Grand Hotel Puttur`,
-        description: room.description,
+        title: room.seo.metaTitle || `${room.title} | The Padival Grand Hotel Puttur`,
+        description: room.seo.metaDescription || room.description,
         keywords: [
             room.title,
             `${room.title} Puttur`,
@@ -39,9 +39,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             "Padival Grand Hotel",
         ],
         openGraph: {
-            title: `${room.title} | The Padival Grand Hotel Puttur`,
-            description: room.pagedescription,
+            title: room.seo.openGraphTitle || `${room.title} | The Padival Grand Hotel Puttur`,
+            description: room.seo.openGraphDescription || room.pagedescription,
             url: `https://thepadivalgrand.com/rooms/${slug}`,
+            type: "website",
             images: [
                 {
                     url: room.heroImage,
@@ -50,6 +51,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
                     alt: room.title,
                 },
             ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: room.seo.twitterTitle || `${room.title} | The Padival Grand Hotel Puttur`,
+            description: room.seo.twitterDescription || room.description,
+            images: [room.heroImage],
         },
         alternates: {
             canonical: `/rooms/${slug}`,
@@ -70,6 +77,12 @@ export default async function RoomPage({ params }: { params: Promise<{ slug: str
 
     return (
         <main className="min-h-screen flex flex-col relative  bg-white">
+            {room.schema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(room.schema) }}
+                />
+            )}
             <Header />
             <PageHero
                 title={room.title}
@@ -78,7 +91,8 @@ export default async function RoomPage({ params }: { params: Promise<{ slug: str
             />
 
             <RoomDetailsSection
-                title={room.title}
+                title={room.subtitle}
+                // subtitle={room.subtitle}
                 description={room.pagedescription}
                 features={features}
                 image={room.heroImage}

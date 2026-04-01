@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 interface SectionHeaderProps {
   label?: string;
-  heading: string;
+  heading: string | React.ReactNode;
   className?: string;
   align?: "left" | "center";
   textColor?: string;

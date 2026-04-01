@@ -40,7 +40,7 @@ const OtherRoomsSection = ({ rooms, currentSlug }: OtherRoomsSectionProps) => {
                     {/* Left Label */}
                     <div className="lg:w-1/4">
                         <span className="text-[#165F41CC] uppercase  md:text-sm text-md font-medium md:px-0 px-4">
-                            OUR OTHER ROOMS
+                           Other Rooms You br Can <br /> Choose From 
                         </span>
                     </div>
 

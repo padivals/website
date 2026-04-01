@@ -5,7 +5,7 @@ import CarouselSection from "../ui/CarouselSection";
 import Image from "next/image";
 import ImageShowcaseSwiper from "../ui/newCarousel";
 
-const NearbyAttractions = () => {
+const   NearbyAttractions = () => {
   const attractionsData = [
     {
       src: "/hospitalityImg/puttur.jpg",
@@ -42,7 +42,7 @@ const NearbyAttractions = () => {
 
         <div className="container mx-auto  md:block hidden  ">
           {/* Top Divider */}
-          <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-0"></div>
+          {/* <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-0"></div> */}
 
        
         </div>
@@ -53,10 +53,10 @@ const NearbyAttractions = () => {
         
       </div>
     <ImageShowcaseSwiper
-      classname="py-16 bg-[white] md:pr-16 xl-faq-padding 16  "
+      classname="md:pt-30 pt-10 pb-16 bg-[white] md:pr-16 xl-faq-padding 16  "
       variant="split"
-      heading="Explore popular places near our hotel in Puttur, including temples, scenic hills, and cultural spots. Stay close to top attractions while enjoying comfortable rooms, dining, and event spaces at The Padival Grand."
-      leftLabel="WHAT'S NEARBY"
+      heading="From local temples and scenic spots to key travel routes, everything you need is within easy reach when you stay at The Padival Grand. "
+      leftLabel="Discover Nearby Attractions"
       images={attractionsData}
     />
     </div>

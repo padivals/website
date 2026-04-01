@@ -15,3 +15,159 @@
   </video:video> 
 
 </url> 
+
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<urlset  
+
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"> 
+
+  
+
+  <!-- Lobby & Reception Video --> 
+
+  <url> 
+
+    <loc>https://thepadivalgrand.com/</loc> 
+
+    <video:video> 
+
+      <video:thumbnail_loc> 
+
+        https://thepadivalgrand.com/images/lobby-thumb.jpg 
+
+      </video:thumbnail_loc> 
+
+      <video:title>The Padival Grand Lobby and Reception</video:title> 
+
+      <video:description> 
+
+        Watch the lobby and reception area at The Padival Grand in Puttur, showcasing ambience, guest arrival experience and interiors. 
+
+      </video:description> 
+
+      <video:content_loc> 
+
+        https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&amp;token=a66474d4-cc5c-4fd3-90e7-782dac157248 
+
+      </video:content_loc> 
+
+      <video:publication_date>2026-03-26T00:00:00+05:30</video:publication_date> 
+
+    </video:video> 
+
+  </url> 
+
+  
+
+  <!-- Dining Video --> 
+
+  <url> 
+
+    <loc>https://thepadivalgrand.com/dining</loc> 
+
+    <video:video> 
+
+      <video:thumbnail_loc> 
+
+        https://thepadivalgrand.com/ogImage.png 
+
+      </video:thumbnail_loc> 
+
+      <video:title>Padival’s Palara Pure Veg Dining Experience</video:title> 
+
+      <video:description> 
+
+        Watch the dining experience at Padival’s Palara, a pure veg restaurant in Puttur serving breakfast, lunch and dinner. 
+
+      </video:description> 
+
+      <video:content_loc> 
+
+        https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FPalara.mp4?alt=media&amp;token=1061604b-2c1a-4955-8c5e-5f91d8436590 
+
+      </video:content_loc> 
+
+      <video:publication_date>2026-01-01T00:00:00+05:30</video:publication_date> 
+
+    </video:video> 
+
+  </url> 
+
+  
+
+  <!-- Rooms Video --> 
+
+  <url> 
+
+    <loc>https://thepadivalgrand.com/rooms</loc> 
+
+    <video:video> 
+
+      <video:thumbnail_loc> 
+
+        https://thepadivalgrand.com/rooms-thumbnail.jpg 
+
+      </video:thumbnail_loc> 
+
+      <video:title>Rooms at The Padival Grand</video:title> 
+
+      <video:description> 
+
+        Watch Standard, Deluxe, Triple and Family rooms at The Padival Grand in Puttur for families, groups and travellers. 
+
+      </video:description> 
+
+      <video:content_loc> 
+
+        https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FROOMS%20(1).mp4?alt=media&amp;token=95052066-e5a7-4ebb-a482-d622b4257ac2 
+
+      </video:content_loc> 
+
+      <video:publication_date>2026-03-29T00:00:00+05:30</video:publication_date> 
+
+    </video:video> 
+
+  </url> 
+
+  
+
+  <!-- Events Video --> 
+
+  <url> 
+
+    <loc>https://thepadivalgrand.com/events</loc> 
+
+    <video:video> 
+
+      <video:thumbnail_loc> 
+
+        https://thepadivalgrand.com/images/events-video-thumb.jpg 
+
+      </video:thumbnail_loc> 
+
+      <video:title>Events and Banquet Experience at The Padival Grand</video:title> 
+
+      <video:description> 
+
+        Watch wedding setups, family functions and banquet spaces at The Padival Grand with rooms, dining and parking. 
+
+      </video:description> 
+
+      <video:content_loc> 
+
+        https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&amp;token=a73adaea-de2a-46ff-8850-aa56acb7048c 
+
+      </video:content_loc> 
+
+      <video:publication_date>2026-03-30T00:00:00+05:30</video:publication_date> 
+
+    </video:video> 
+
+  </url> 
+
+  
+
+</urlset> 

@@ -21,8 +21,8 @@ interface ImageShowcaseSwiperProps {
     heading?: string;
     content?: string;
   }[];
-  leftLabel: string; // vertical text
-  heading: string;
+  leftLabel: React.ReactNode; // vertical text
+  heading: React.ReactNode;
   classname?: string;
 }
 

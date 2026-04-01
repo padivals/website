@@ -134,14 +134,7 @@ body {
   font-family: var(--font-manrope), sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-cormorant-garamond), serif;
-}
+
 
 /* selected start + end */
 .flatpickr-day.selected,
