@@ -339,6 +339,7 @@ export default function EventsPage() {
       <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&token=a73adaea-de2a-46ff-8850-aa56acb7048c" />
 
       <TextSection
+      as="h1"
         heading="Marriage Hall in Puttur for Weddings, Functions & Events"
         description="Planning an event in Puttur shouldn’t mean juggling multiple vendors. Many venues offer just a hall, leaving you to manage rooms, dining and coordination. At The Padival Grand, we bring everything together. Our marriage hall in Puttur, along with a well-maintained banquet and flexible function hall, offers a complete setup with rooms and pure veg dining. Designed for seamless gatherings, it ensures every celebration feels organised, comfortable and stress-free. "
       />

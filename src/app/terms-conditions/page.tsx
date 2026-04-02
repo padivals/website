@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description:
     "Read The Padival Grand Hotel's Terms and Conditions to understand the policies governing your use of our website.",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   alternates: {
     canonical: "/terms-conditions",

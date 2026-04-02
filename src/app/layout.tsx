@@ -103,6 +103,21 @@ export default function RootLayout({
             gtag('config', 'G-3R4LJCB4G5');
           `}
         </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GT-NCNZL4K3"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-gtag"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GT-NCNZL4K3');
+          `}
+        </Script>
 
       </head>
 

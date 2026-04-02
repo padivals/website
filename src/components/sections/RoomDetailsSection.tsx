@@ -29,9 +29,9 @@ const RoomDetailsSection = ({ title, subtitle, description, features, image }: R
                             {subtitle}
                         </p>
                     )} */}
-                    <h1 className={`text-3xl  font-semibold  text-[#012219CC] mb-6  ${title.length > 12 ? "md:max-w-lg" : "md:max-w-none"}`}>
+                    <h2 className={`text-3xl  font-semibold  text-[#012219CC] mb-6  ${title.length > 12 ? "md:max-w-lg" : "md:max-w-none"}`}>
                         {title}
-                    </h1>
+                    </h2>
                     <p className="text-lg text-[#012219CC] font-medium leading-relaxed mb-8">
                         {description}
                     </p>

@@ -29,7 +29,7 @@ const Typography: React.FC<TypographyProps> = ({
          case "title2":
       variantStyles =
         "text-[18px] sm:text-[24px] md:text-[30px] lg:text-[38px] leading-tight font-serif";
-      DefaultTag = "h1";
+      DefaultTag = "h2";
       break;
 
     case "subtitle":

@@ -295,6 +295,7 @@ export default function DiningPage() {
       <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FPalara.mp4?alt=media&token=1061604b-2c1a-4955-8c5e-5f91d8436590" />
 
       <TextSection
+      as="h1"
         heading="Breakfast in Puttur That Feels Fresh, Simple & Reliable  "
         description="At Padival’s Palara, we serve simple, fresh, and hygienic vegetarian food you can rely on every day. As a pure veg restaurant in Puttur, the focus is on clean preparation, consistent taste, and familiar flavours for both quick meals and family dining. From breakfast to dinner, every meal is served with care and without delay. For those searching for a pure veg restaurant near me in Puttur, it’s a dependable choice for clean food and quick service. 
 "

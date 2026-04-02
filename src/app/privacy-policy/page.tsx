@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description:
     "Read The Padival Grand Hotel's Privacy Policy to understand how we collect, use, and protect your information.",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   alternates: {
     canonical: "/privacy-policy",
