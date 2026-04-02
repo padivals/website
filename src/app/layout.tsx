@@ -76,6 +76,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossOrigin="anonymous" />
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"

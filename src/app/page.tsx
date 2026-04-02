@@ -44,386 +44,386 @@ import BestHotelSection from "@/components/sections/BestHotelSection";
 
 
 export default function Home() {
-  
+
   const hotelSchema = {
-    "@context": "https://schema.org", 
+    "@context": "https://schema.org",
 
-  "@graph": [ 
+    "@graph": [
 
-    { 
+      {
 
-      "@type": "WebSite", 
+        "@type": "WebSite",
 
-      "@id": "https://thepadivalgrand.com/#website", 
+        "@id": "https://thepadivalgrand.com/#website",
 
-      "url": "https://thepadivalgrand.com/", 
+        "url": "https://thepadivalgrand.com/",
 
-      "name": "The Padival Grand", 
+        "name": "The Padival Grand",
 
-      "inLanguage": "en" 
+        "inLanguage": "en"
 
-    }, 
+      },
 
-    { 
+      {
 
-      "@type": "WebPage", 
+        "@type": "WebPage",
 
-      "@id": "https://thepadivalgrand.com/#webpage", 
+        "@id": "https://thepadivalgrand.com/#webpage",
 
-      "url": "https://thepadivalgrand.com/", 
+        "url": "https://thepadivalgrand.com/",
 
-      "name": "The Padival Grand | Hotel in Puttur", 
+        "name": "The Padival Grand | Hotel in Puttur",
 
-      "isPartOf": { 
+        "isPartOf": {
 
-        "@id": "https://thepadivalgrand.com/#website" 
+          "@id": "https://thepadivalgrand.com/#website"
 
-      }, 
+        },
 
-      "about": { 
+        "about": {
 
-        "@id": "https://thepadivalgrand.com/#hotel" 
+          "@id": "https://thepadivalgrand.com/#hotel"
 
-      } 
+        }
 
-    }, 
+      },
 
-    { 
+      {
 
-      "@type": "Hotel", 
+        "@type": "Hotel",
 
-      "@id": "https://thepadivalgrand.com/#hotel", 
+        "@id": "https://thepadivalgrand.com/#hotel",
 
-      "name": "The Padival Grand", 
+        "name": "The Padival Grand",
 
-      "alternateName": "Mahaveer Ventures  - The Padival Grand", 
+        "alternateName": "Mahaveer Ventures  - The Padival Grand",
 
-      "url": "https://thepadivalgrand.com/", 
+        "url": "https://thepadivalgrand.com/",
 
-      "description": "The Padival Grand is a hotel in Puttur, Karnataka offering comfortable rooms, pure vegetarian dining, banquet space and essential amenities for families, travellers and pilgrims.", 
+        "description": "The Padival Grand is a hotel in Puttur, Karnataka offering comfortable rooms, pure vegetarian dining, banquet space and essential amenities for families, travellers and pilgrims.",
 
-      "telephone": "+91-9686804784", 
+        "telephone": "+91-9686804784",
 
-      "image": [ 
+        "image": [
 
-        "https://thepadivalgrand.com/ogImage.png", 
+          "https://thepadivalgrand.com/ogImage.png",
 
-        "https://thepadivalgrand.com/images/hotel-exterior.jpg" 
+          "https://thepadivalgrand.com/images/hotel-exterior.jpg"
 
-      ], 
+        ],
 
-      "address": { 
+        "address": {
 
-        "@type": "PostalAddress", 
+          "@type": "PostalAddress",
 
-        "streetAddress": "Mahaveer Mall, Main Road, Above Reliance Trendz, Bolwar", 
+          "streetAddress": "Mahaveer Mall, Main Road, Above Reliance Trendz, Bolwar",
 
-        "addressLocality": "Puttur", 
+          "addressLocality": "Puttur",
 
-        "addressRegion": "Karnataka", 
+          "addressRegion": "Karnataka",
 
-        "postalCode": "574201", 
+          "postalCode": "574201",
 
-        "addressCountry": "IN" 
+          "addressCountry": "IN"
 
-      }, 
+        },
 
-      "geo": { 
+        "geo": {
 
-        "@type": "GeoCoordinates", 
+          "@type": "GeoCoordinates",
 
-        "latitude": 12.766130796400661, 
+          "latitude": 12.766130796400661,
 
-        "longitude": 75.19643883776936 
+          "longitude": 75.19643883776936
 
-      }, 
+        },
 
-      "checkinTime": "12:00", 
+        "checkinTime": "12:00",
 
-      "checkoutTime": "11:00", 
+        "checkoutTime": "11:00",
 
-      "priceRange": "₹₹", 
+        "priceRange": "₹₹",
 
-      "amenityFeature": [ 
+        "amenityFeature": [
 
-        { 
+          {
 
-          "@type": "LocationFeatureSpecification", 
+            "@type": "LocationFeatureSpecification",
 
-          "name": "High-speed Wi-Fi", 
+            "name": "High-speed Wi-Fi",
 
-          "value": true 
+            "value": true
 
-        }, 
+          },
 
-        { 
+          {
 
-          "@type": "LocationFeatureSpecification", 
+            "@type": "LocationFeatureSpecification",
 
-          "name": "Air conditioning", 
+            "name": "Air conditioning",
 
-          "value": true 
+            "value": true
 
-        }, 
+          },
 
-        { 
+          {
 
-          "@type": "LocationFeatureSpecification", 
+            "@type": "LocationFeatureSpecification",
 
-          "name": "Elevator", 
+            "name": "Elevator",
 
-          "value": true 
+            "value": true
 
-        }, 
+          },
 
-        { 
+          {
 
-          "@type": "LocationFeatureSpecification", 
+            "@type": "LocationFeatureSpecification",
 
-          "name": "Parking", 
+            "name": "Parking",
 
-          "value": true 
+            "value": true
 
-        }, 
+          },
 
-        { 
+          {
 
-          "@type": "LocationFeatureSpecification", 
+            "@type": "LocationFeatureSpecification",
 
-          "name": "Power backup", 
+            "name": "Power backup",
 
-          "value": true 
+            "value": true
 
-        }, 
+          },
 
-        { 
+          {
 
-          "@type": "LocationFeatureSpecification", 
+            "@type": "LocationFeatureSpecification",
 
-          "name": "Daily housekeeping", 
+            "name": "Daily housekeeping",
 
-          "value": true 
+            "value": true
 
-        }, 
+          },
 
-        { 
+          {
 
-          "@type": "LocationFeatureSpecification", 
+            "@type": "LocationFeatureSpecification",
 
-          "name": "CCTV surveillance", 
+            "name": "CCTV surveillance",
 
-          "value": true 
+            "value": true
 
-        } 
+          }
 
-      ], 
+        ],
 
-      "containsPlace": [ 
+        "containsPlace": [
 
-        { 
+          {
 
-          "@type": "Restaurant", 
+            "@type": "Restaurant",
 
-          "@id": "https://thepadivalgrand.com/dining#restaurant", 
+            "@id": "https://thepadivalgrand.com/dining#restaurant",
 
-          "name": "Padival’s Palara" 
+            "name": "Padival’s Palara"
 
-        }, 
+          },
 
-        { 
+          {
 
-          "@type": "EventVenue", 
+            "@type": "EventVenue",
 
-          "@id": "https://thepadivalgrand.com/events#venue", 
+            "@id": "https://thepadivalgrand.com/events#venue",
 
-          "name": "The Padival Grand Event Venue" 
+            "name": "The Padival Grand Event Venue"
 
-        } 
+          }
 
-      ], 
+        ],
 
-      "aggregateRating": { 
+        "aggregateRating": {
 
-        "@type": "AggregateRating", 
+          "@type": "AggregateRating",
 
-        "ratingValue": "4.3", 
+          "ratingValue": "4.3",
 
-        "reviewCount": "189", 
+          "reviewCount": "189",
 
-        "bestRating": "5", 
+          "bestRating": "5",
 
-        "worstRating": "1" 
+          "worstRating": "1"
 
-      }, 
+        },
 
-      "sameAs": [ 
+        "sameAs": [
 
-        "https://www.instagram.com/thepadivalgrand", 
+          "https://www.instagram.com/thepadivalgrand",
 
-        "https://www.facebook.com/people/The-Padival-Grand/61583295038368/" 
+          "https://www.facebook.com/people/The-Padival-Grand/61583295038368/"
 
-      ] 
+        ]
 
-    } 
+      }
 
-  ] 
+    ]
   };
 
   const faqSchema = {
-      "@context": "https://schema.org", 
+    "@context": "https://schema.org",
 
-  "@type": "FAQPage", 
+    "@type": "FAQPage",
 
-  "mainEntity": [ 
+    "mainEntity": [
 
-    { 
+      {
 
-      "@type": "Question", 
+        "@type": "Question",
 
-      "name": "What are the best hotels in Puttur, Karnataka?", 
+        "name": "What are the best hotels in Puttur, Karnataka?",
 
-      "acceptedAnswer": { 
+        "acceptedAnswer": {
 
-        "@type": "Answer", 
+          "@type": "Answer",
 
-        "text": "The Padival Grand is a reliable choice for comfortable stays, offering clean rooms, essential amenities, and pure vegetarian dining suited for families and travellers." 
+          "text": "The Padival Grand is a reliable choice for comfortable stays, offering clean rooms, essential amenities, and pure vegetarian dining suited for families and travellers."
 
-      } 
+        }
 
-    }, 
+      },
 
-    { 
+      {
 
-      "@type": "Question", 
+        "@type": "Question",
 
-      "name": "Are the rooms suitable for families or groups?", 
+        "name": "Are the rooms suitable for families or groups?",
 
-      "acceptedAnswer": { 
+        "acceptedAnswer": {
 
-        "@type": "Answer", 
+          "@type": "Answer",
 
-        "text": "Yes, the hotel offers multiple room options designed to comfortably accommodate families, small groups, and individual travellers." 
+          "text": "Yes, the hotel offers multiple room options designed to comfortably accommodate families, small groups, and individual travellers."
 
-      } 
+        }
 
-    }, 
+      },
 
-    { 
+      {
 
-      "@type": "Question", 
+        "@type": "Question",
 
-      "name": "Is the hotel easy to access from main roads and transport?", 
+        "name": "Is the hotel easy to access from main roads and transport?",
 
-      "acceptedAnswer": { 
+        "acceptedAnswer": {
 
-        "@type": "Answer", 
+          "@type": "Answer",
 
-        "text": "Yes, the property is conveniently located near the main road with easy access to transport, making travel simple and hassle-free." 
+          "text": "Yes, the property is conveniently located near the main road with easy access to transport, making travel simple and hassle-free."
 
-      } 
+        }
 
-    }, 
+      },
 
-    { 
+      {
 
-      "@type": "Question", 
+        "@type": "Question",
 
-      "name": "Does the hotel allow pets?", 
+        "name": "Does the hotel allow pets?",
 
-      "acceptedAnswer": { 
+        "acceptedAnswer": {
 
-        "@type": "Answer", 
+          "@type": "Answer",
 
-        "text": "No, pets are not allowed. Guests are requested not to bring any pets to the hotel premises." 
+          "text": "No, pets are not allowed. Guests are requested not to bring any pets to the hotel premises."
 
-      } 
+        }
 
-    }, 
-    { 
+      },
+      {
 
-      "@type": "Question", 
+        "@type": "Question",
 
-      "name": "What are the opening hours of the reception?", 
+        "name": "What are the opening hours of the reception?",
 
-      "acceptedAnswer": { 
+        "acceptedAnswer": {
 
-        "@type": "Answer", 
+          "@type": "Answer",
 
-        "text": "The reception is available to assist guests throughout the day, ensuring support for check-in, check-out, and any assistance during your stay." 
+          "text": "The reception is available to assist guests throughout the day, ensuring support for check-in, check-out, and any assistance during your stay."
 
-      } 
+        }
 
-    }, 
+      },
 
-    { 
+      {
 
-      "@type": "Question", 
+        "@type": "Question",
 
-      "name": "What payment methods are accepted at the hotel?", 
+        "name": "What payment methods are accepted at the hotel?",
 
-      "acceptedAnswer": { 
+        "acceptedAnswer": {
 
-        "@type": "Answer", 
+          "@type": "Answer",
 
-        "text": "The hotel accepts major payment methods including cash, debit cards, credit cards, and digital payment options for convenience." 
+          "text": "The hotel accepts major payment methods including cash, debit cards, credit cards, and digital payment options for convenience."
 
-      } 
+        }
 
-    } 
+      }
 
-  ] 
+    ]
   };
 
   const videoSchema = {
-    "@context": "https://schema.org", 
+    "@context": "https://schema.org",
 
-  "@type": "VideoObject", 
+    "@type": "VideoObject",
 
-  "@id": "https://thepadivalgrand.com/#video-lobby-reception", 
+    "@id": "https://thepadivalgrand.com/#video-lobby-reception",
 
-  "name": "The Padival Grand Lobby and Reception", 
+    "name": "The Padival Grand Lobby and Reception",
 
-  "description": "Watch the lobby and reception area at The Padival Grand in Puttur, showcasing the hotel ambience, guest arrival experience and clean, comfortable interiors.", 
+    "description": "Watch the lobby and reception area at The Padival Grand in Puttur, showcasing the hotel ambience, guest arrival experience and clean, comfortable interiors.",
 
-  "thumbnailUrl": [ 
+    "thumbnailUrl": [
 
-    "https://thepadivalgrand.com/images/lobby-thumb.jpg" 
+      "https://thepadivalgrand.com/images/lobby-thumb.jpg"
 
-  ], 
+    ],
 
-  "uploadDate": "2026-03-26", 
+    "uploadDate": "2026-03-26",
 
-  "contentUrl": "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&token=a66474d4-cc5c-4fd3-90e7-782dac157248", 
+    "contentUrl": "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&token=a66474d4-cc5c-4fd3-90e7-782dac157248",
 
-  "embedUrl": "https://thepadivalgrand.com/", 
+    "embedUrl": "https://thepadivalgrand.com/",
 
-  "inLanguage": "en", 
+    "inLanguage": "en",
 
-  "isPartOf": { 
+    "isPartOf": {
 
-    "@id": "https://thepadivalgrand.com/#webpage" 
+      "@id": "https://thepadivalgrand.com/#webpage"
 
-  }, 
+    },
 
-  "publisher": { 
+    "publisher": {
 
-    "@type": "Hotel", 
+      "@type": "Hotel",
 
-    "@id": "https://thepadivalgrand.com/#hotel", 
+      "@id": "https://thepadivalgrand.com/#hotel",
 
-    "name": "The Padival Grand", 
+      "name": "The Padival Grand",
 
-    "url": "https://thepadivalgrand.com/", 
+      "url": "https://thepadivalgrand.com/",
 
-    "logo": { 
+      "logo": {
 
-      "@type": "ImageObject", 
+        "@type": "ImageObject",
 
-      "url": "https://thepadivalgrand.com/svgs/mainLogo.svg" 
+        "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
 
-    } 
+      }
 
-  } 
+    }
   };
 
 
@@ -436,7 +436,10 @@ export default function Home() {
 
       <Header />
 
-      <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&token=a66474d4-cc5c-4fd3-90e7-782dac157248" />
+      <Hero 
+        videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&token=a66474d4-cc5c-4fd3-90e7-782dac157248" 
+        bgImg="/images/placeholder.png"
+      />
       <HospitalitySection />
       <div className="">
 
@@ -472,8 +475,8 @@ export default function Home() {
 
       <div className="pt-0 bg-white">
 
-        <FAQSection 
-          faqs={generalFaqs} 
+        <FAQSection
+          faqs={generalFaqs}
           heading="Common Questions About Your Visit in Puttur"
         />
       </div>

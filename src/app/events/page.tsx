@@ -336,7 +336,10 @@ export default function EventsPage() {
 
       <Header />
 
-      <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&token=a73adaea-de2a-46ff-8850-aa56acb7048c" />
+      <Hero 
+        videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&token=a73adaea-de2a-46ff-8850-aa56acb7048c" 
+        bgImg="/evnts/placeholder.png"
+      />
 
       <TextSection
       as="h1"

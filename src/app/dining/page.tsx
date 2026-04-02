@@ -292,7 +292,10 @@ export default function DiningPage() {
       <JsonLd data={videoSchema} id="video-schema" />
       {/* <JsonLd data={reviewSchema} id="review-schema" /> */}
       <Header />
-      <Hero videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FPalara.mp4?alt=media&token=1061604b-2c1a-4955-8c5e-5f91d8436590" />
+      <Hero 
+        videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FPalara.mp4?alt=media&token=1061604b-2c1a-4955-8c5e-5f91d8436590" 
+        bgImg="/diningImg/placeholder.png"
+      />
 
       <TextSection
       as="h1"
