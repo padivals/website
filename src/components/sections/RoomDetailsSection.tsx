@@ -7,12 +7,13 @@ import { useBookingModal } from "../providers/BookingModalContext";
 
 interface RoomDetailsSectionProps {
     title: string;
+    subtitle?: string;
     description: string;
     features: string[];
     image: string;
 }
 
-const RoomDetailsSection = ({ title, description, features, image }: RoomDetailsSectionProps) => {
+const RoomDetailsSection = ({ title, subtitle, description, features, image }: RoomDetailsSectionProps) => {
     const { openModal } = useBookingModal();
     return (
 
@@ -23,9 +24,14 @@ const RoomDetailsSection = ({ title, description, features, image }: RoomDetails
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left: Details */}
                 <div className="flex flex-col">
-                    <p className={`text-3xl  font-semibold  text-[#012219CC] mb-6  md:max-w-none${title.length > 12 ? "md:max-w-xs" : "md:max-w-none"}`}>
+                    {/* {subtitle && (
+                        <p className="text-xl text-[#165F41] font-medium mb-2 uppercase tracking-wide">
+                            {subtitle}
+                        </p>
+                    )} */}
+                    <h1 className={`text-3xl  font-semibold  text-[#012219CC] mb-6  ${title.length > 12 ? "md:max-w-lg" : "md:max-w-none"}`}>
                         {title}
-                    </p>
+                    </h1>
                     <p className="text-lg text-[#012219CC] font-medium leading-relaxed mb-8">
                         {description}
                     </p>

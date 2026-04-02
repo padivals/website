@@ -5,7 +5,7 @@ import CarouselSection from "../ui/CarouselSection";
 import Image from "next/image";
 import ImageShowcaseSwiper from "../ui/newCarousel";
 
-const NearbyAttractions = () => {
+const   NearbyAttractions = () => {
   const attractionsData = [
     {
       src: "/hospitalityImg/puttur.jpg",
@@ -37,11 +37,12 @@ const NearbyAttractions = () => {
   return (
     <>
     <div className=" bg-[#FFFFFF]">
-           <div className=" w-full z-20 pt-20 sm:pt-24 lg:pt-20 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
+
+           <div className=" w-full z-20 pt-20 md:pt-10 lg:pt-0 px-6 md:px-12 lg:px-16 rooms-responsive-padding">
 
         <div className="container mx-auto  md:block hidden  ">
           {/* Top Divider */}
-          <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-0"></div>
+          {/* <div className="w-full h-px bg-[#165F41] mb-8 lg:mb-0"></div> */}
 
        
         </div>
@@ -52,10 +53,10 @@ const NearbyAttractions = () => {
         
       </div>
     <ImageShowcaseSwiper
-      classname="py-16 bg-[white] md:pr-16 xl-faq-padding 16  "
+      classname="md:pt-30 pt-10 pb-16 bg-[white] md:pr-16 xl-faq-padding 16  "
       variant="split"
-      heading="You can book rooms, event halls and restaurant tables, each supported by attentive service and well-prepared spaces."
-      leftLabel="WHAT'S NEARBY"
+      heading="From local temples and scenic spots to key travel routes, everything you need is within easy reach when you stay at The Padival Grand. "
+      leftLabel="Discover Nearby Attractions"
       images={attractionsData}
     />
     </div>

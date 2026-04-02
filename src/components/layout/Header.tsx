@@ -54,14 +54,14 @@ const Header = () => {
             href="/rooms"
             className="hidden md:block text-white text-lg font-medium  font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
           >
-            <span className="nav-underline">LODGING</span>
+            <span className="nav-underline">ROOMS </span>
           </Link>
 
           <Link
             href="/events"
             className="hidden md:block text-white text-lg font-medium  font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
           >
-            <span className="nav-underline">EVENT SPACES</span>
+            <span className="nav-underline">EVENTS</span>
           </Link>
 
           {/* CENTER LOGO */}
@@ -156,10 +156,10 @@ const Header = () => {
         {/* ONLY your 4 header links */}
         <nav className="flex flex-col mt-2 gap-6 p-6 text-lg tracking-wide font-sans text-start">
           <Link href="/rooms" onClick={() => setMobileOpen(false)}>
-            LODGING
+            ROOMS
           </Link>
           <Link href="/events" onClick={() => setMobileOpen(false)}>
-            EVENT SPACES
+            EVENTS
           </Link>
           <Link href="/dining" onClick={() => setMobileOpen(false)}>
             DINING

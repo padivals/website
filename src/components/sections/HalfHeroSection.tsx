@@ -2,15 +2,17 @@ import React from "react";
 import Image from "next/image";
 
 interface HalfHeroSectionProps {
-    title: string;
+    title: string | React.ReactNode;
     subtitle?: string;
     backgroundImage?: string;
+    alt?: string;
 }
 
 export default function HalfHeroSection({
     title,
     subtitle,
     backgroundImage = "/half-hero.png",
+    alt,
 }: HalfHeroSectionProps) {
     return (
         <section className="relative md:h-[70vh] h-[50vh]  flex flex-col justify-end items-start  overflow-hidden">
@@ -18,7 +20,7 @@ export default function HalfHeroSection({
             <div className="absolute inset-0 z-0">
                 <Image
                     src={backgroundImage}
-                    alt={`${title} Background`}
+                    alt={typeof title === "string" ? title : alt || "Hero Background"}
                     fill
                     className="object-cover"
                     priority
@@ -31,7 +33,7 @@ export default function HalfHeroSection({
                 <div className="flex flex-col gap-2 mb-12">
                     {/* Breadcrumb or label if needed */}
                 </div>
-               <h1 className="font-serif font-semibold text-5xl md:text-7xl mb-8 text-[#F9F2E8]">
+                <h1 className="font-serif font-semibold text-5xl md:text-7xl mb-8 text-[#F9F2E8]">
                     {title}
                 </h1>
                 {subtitle && (

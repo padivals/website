@@ -3,12 +3,13 @@ import ScrollReveal from "./ScrollReveal";
 
 interface SectionHeaderProps {
   label?: string;
-  heading: string;
+  heading: string | React.ReactNode;
   className?: string;
   align?: "left" | "center";
   textColor?: string;
   labelColor?: string;
   containerClassName?: string;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div" | "span";
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -19,6 +20,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   textColor = "text-[#012219]",
   labelColor = "text-[#165F41CC]",
   containerClassName = "text-center max-w-3xl",
+  as = "h2",
 }) => {
   const alignmentClasses =
     align === "center" ? "items-center md:text-center text-start " : "items-start text-left";
@@ -49,6 +51,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           containerClassName={containerClassName}
           textClassName="text-4xl md:text-5xl  lg2:text-6xl  font-serif leading-tight text-[#012219] font-semibold " 
           blurStrength={10}
+          as={as}
         >
           {heading}
 

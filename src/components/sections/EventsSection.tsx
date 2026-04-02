@@ -29,21 +29,21 @@ const   EventsSection = () => {
 
           {/* LEFT LABEL fixed width like screenshot (≈ 470px) */}
           <div className="lg:w-[12vw]">
-            <span className="block text-[#165F41CC] uppercase text-lg font-semibold">
-              EVENTS
-            </span>
+            <h2 className="block text-[#165F41CC] font-sans uppercase text-lg font-semibold">
+              Event Spaces for Every Occasion 
+            </h2>
           </div>
 
           {/* RIGHT DESCRIPTION — aligned exactly like screenshot */}
           <div className="lg:flex-1 max-w-[90vw]">
             <p className="text-[#012219CC] text-lg leading-relaxed mb-6 font-medium">
-              Celebrate life&apos;s special moments or host purposeful corporate
-              gatherings with ease and elegance. Our thoughtfully designed
-              spaces adapt seamlessly to your occasion.
+             From intimate gatherings to family celebrations, our spaces
+              are designed to keep planning easy and stress-free without 
+              unnecessary complexity. 
             </p>
 
             <a
-              href="/rooms"
+              href="/events"
               className="text-[#1B4D3E] text-lg md:text-md  underline underline-offset-4 hover:text-[#aa8616] transition-all duration-200 font-medium"
             >
               Discover Our Spaces
@@ -61,7 +61,7 @@ const   EventsSection = () => {
 
            <div className="w-full aspect-[5/3] overflow-hidden relative group">
   <div
-    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
+    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out "
     style={{ backgroundImage: `url(${event.image})` }}
   />
   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>

@@ -34,7 +34,7 @@ const DiningTestimonials = () => {
     return (
         <TestimonialsSection
             label="REVIEWS"
-            title="What Our Diners Often Share"
+            title="What Guests Say About the Dining Experience"
             testimonials={testimonials}
             rating={4.3}
             ratingLabel="Average Rating by Past Guests"

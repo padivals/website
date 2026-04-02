@@ -23,12 +23,12 @@ export default function ContactAndLocationSection() {
           <div className="flex flex-col justify-center">
             <div className="w-full h-0.5 bg-[#165F41] mb-8 md:mb-12" />
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-serif font-semibold text-[#0F2A1D] mb-4 2xl:mb-6">
-              Get in Touch
+            <h2 className="text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-serif font-semibold text-[#0F2A1D] mb-4 2xl:mb-6">
+               Get in Touch - Best Hotel in Puttur, The Padival Grand
             </h2>
 
-            <p className="text-[#4A5568] text-base md:text-xl 2xl:text-2xl font-medium mb-8 md:mb-12">
-              Plan your Padival experience.
+            <p className="text-[#4A5568] text-base md:text-lg 2xl:text-lg font-medium mb-8 md:mb-12">
+              Get in touch with The Padival Grand, a trusted hotel in Puttur Karnataka. Reach out for bookings, directions, or any assistance. We’re here to make your stay smooth and hassle-free. 
             </p>
 
             {/* Contact Grid Info */}
@@ -39,7 +39,7 @@ export default function ContactAndLocationSection() {
               <a
                 target="_blank"
                 href="tel:+919686804784"
-                className="text-[#0F2A1D] text-lg md:text-xl 2xl:text-2xl font-medium underline underline-offset-4 decoration-[#A3B19C] hover:text-[#1B4D3E] transition-colors"
+                className="text-[#0F2A1D] text-md md:text-lg 2xl:text-lg font-medium underline underline-offset-4 decoration-[#A3B19C] hover:text-[#1B4D3E] transition-colors"
               >
                 +91 96868 04784
               </a>
@@ -50,7 +50,7 @@ export default function ContactAndLocationSection() {
               <a
                 target="_blank"
                 href="mailto:info@padival-grand-hotel.com"
-                className="text-[#0F2A1D] text-lg md:text-xl 2xl:text-2xl font-medium underline underline-offset-4 decoration-[#A3B19C] hover:text-[#1B4D3E] transition-colors break-all sm:break-normal"
+                className="text-[#0F2A1D] text-md md:text-lg 2xl:text-lg font-medium underline underline-offset-4 decoration-[#A3B19C] hover:text-[#1B4D3E] transition-colors break-all sm:break-normal"
               >
                 info@padival-grand-hotel.com
               </a>
@@ -88,13 +88,14 @@ export default function ContactAndLocationSection() {
           <div className="flex flex-col justify-center">
             <div className="w-full h-0.5 bg-[#165F41] mb-8 md:mb-12" />
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-serif font-semibold text-[#0F2A1D] mb-4 2xl:mb-6">
-              How to Get Here
+            <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-serif font-semibold text-[#0F2A1D] mb-4 2xl:mb-6">
+              Easy Directions to <br /> The Padival Grand
             </h2>
 
             <p className="text-[#4A5568] text-base md:text-lg 2xl:text-xl font-medium leading-relaxed mb-8 max-w-full lg:max-w-[90%]">
-              The Padival Grand Hotel sits close to Puttur's central routes,
-              only a few minutes from the main market and local transport points.
+              The Padival Grand is conveniently located near Puttur’s main road,
+              just minutes from the central market and key transport points,
+              making your arrival quick and hassle-free. 
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-[90px_1fr] gap-y-4 gap-x-4">

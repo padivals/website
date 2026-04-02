@@ -3,12 +3,13 @@ import Image from "next/image";
 import Typography from "../ui/Typography";
 
 interface ContentSectionProps {
-    title: string;
+    title: string | React.ReactNode;
     description: string | React.ReactNode;
     image: string;
     imagePosition?: "left" | "right";
     bgColor?: string;
     textColor?: string;
+    alt?: string;
 }
 
 const ContentSection = ({
@@ -18,6 +19,7 @@ const ContentSection = ({
     imagePosition = "right",
     bgColor = "bg-[#F9F5EC]",
     textColor = "text-[#012219]",
+    alt,
 }: ContentSectionProps) => {
     return (
         <section className={`${bgColor} py-20`}>
@@ -38,7 +40,7 @@ const ContentSection = ({
                         <div className="relative w-full aspect-[4/4] overflow-hidden  shadow-sm">
                             <Image
                                 src={image}
-                                alt={title}
+                                alt={typeof title === "string" ? title : alt || "Section Image"}
                                 fill
                                 className="object-cover"
                             />

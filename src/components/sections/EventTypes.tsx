@@ -10,30 +10,30 @@ const EventTypes = () => {
   {
     src: "/evnts/img1.png",
     alt: "Engagement Ceremonies",
-    heading: "Engagement Ceremonies",
+    heading: "Engagement Ceremonies ",
     content:
-      "A graceful venue designed to host engagement functions and pre-wedding celebrations, providing a warm and welcoming atmosphere for family and guests to come together. ",
+      "A thoughtfully arranged space for moments that matter, where families gather; conversations flow and celebrations feel effortless creating a warm, welcoming setting for meaningful beginnings. ",
   },
   {
     src: "/evnts/img2.png",
     alt: "Naming Ceremonies",
     heading: "Naming Ceremonies",
     content:
-      "A peaceful space for families to celebrate their special milestone in a calm and supportive setting.",
+      "A calm, welcoming space where families come together to celebrate meaningful milestones, creating moments that feel personal, peaceful and quietly memorable for everyone involved. ",
   },
   {
     src: "/evnts/img4.png",
     alt: "Corporate Meetings",
     heading: "Corporate Meetings",
     content:
-      "A professional and well-maintained environment suitable for corporate meetings, discussions, and small business gatherings, ensuring a focused and comfortable setting.",
+      "A clean, well-organized space where ideas flow and discussions stay focused, offering a calm and professional setting for meetings, collaborations and meaningful business conversations. ",
   },
   {
     src: "/evnts/img5.png",
-    alt: "Naming Ceremony",
+    alt: "Social & Community Gatherings",
     heading: "Social & Community Gatherings",
     content:
-      "A serene and well-organized setting ideal for traditional naming ceremonies, allowing families to gather comfortably and celebrate this special milestone in a peaceful and respectful ambience.",
+      "A calm and well-prepared space where families gather to celebrate new beginnings, creating a warm and respectful atmosphere for meaningful moments shared with loved ones.",
   },
 
 ];
@@ -59,8 +59,8 @@ const EventTypes = () => {
        <ImageShowcaseSwiper
              classname="py-20 bg-[white] md:pr-16"
              variant="split"
-             heading="We offer well-kept event spaces so guests can gather, celebrate, and host meaningful moments in a setting that feels comfortable and thoughtfully managed."
-             leftLabel="Types of events WE CATER TO"
+             heading="We offer thoughtfully designed event venues in Puttur where gatherings feel easy and well-managed. From intimate celebrations to larger functions, our spaces combine clean interiors, practical layouts and reliable support, creating a setting where guests feel comfortable, and every event comes together smoothly. "
+             leftLabel={<>Event Venues in Puttur for <br /> Every Celebration</>}
              images={eventTypes}
            />
       </div>

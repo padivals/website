@@ -1,0 +1,15 @@
+// components/seo/JsonLd.tsx
+interface JsonLdProps {
+  data: object;
+  id?: string;
+}
+
+export default function JsonLd({ data, id }: JsonLdProps) {
+  return (
+    <script
+      id={id}
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}

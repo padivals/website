@@ -21,8 +21,8 @@ interface ImageShowcaseSwiperProps {
     heading?: string;
     content?: string;
   }[];
-  leftLabel: string; // vertical text
-  heading: string;
+  leftLabel: React.ReactNode; // vertical text
+  heading: React.ReactNode;
   classname?: string;
 }
 
@@ -64,7 +64,7 @@ export default function ImageShowcaseSwiper({
             {/* RIGHT CONTENT */}
             <div className="flex-1 w-full min-w-0">
               {/* HEADING */}
-              <Typography variant="description" className="text-[16px] lg:text-[16px] font-medium mb-8 lg:mb-14 text-[#012219CC] max-w-xl leading-tight ">
+              <Typography variant="description" className="text-[16px] lg:text-[16px] font-medium mb-8 lg:mb-14 text-[#012219CC] max-w-2xl leading-tight ">
                 {heading}
               </Typography>
 
