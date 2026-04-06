@@ -1,3 +1,4 @@
+import { m } from "framer-motion";
 import type { MetadataRoute } from "next";
 
 const FALLBACK_SITE_URL = "https://thepadivalgrand.com";
@@ -22,7 +23,12 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin", "/api", "/_next"],
     },
-    sitemap: `${siteUrl.origin}/sitemap.xml`,
+    sitemap: [
+      `${siteUrl.origin}/sitemap.xml`,
+      `${siteUrl.origin}/video-sitemap.xml`,
+    ],
+
+
     host: siteUrl.origin,
   };
 }

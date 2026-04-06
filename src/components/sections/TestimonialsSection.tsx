@@ -200,7 +200,7 @@ const TestimonialsSection = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Side - Header */}
           <div className="lg:col-span-4 flex flex-col">
-            <h2 className="text-[#165F41CC] uppercase tracking-widest text-md font-semibold mb-4">
+            <h2 className="text-[#165F41] uppercase tracking-widest text-md font-semibold mb-4">
               {label}
             </h2>
             {/* <h2 className="text-4xl md:text-5xl font-serif font-semibold text-[#0F2A1D] leading-tight">

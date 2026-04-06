@@ -8,7 +8,7 @@ const TABS_CONTENT = [
     {
         title: "Comfortable Hotel Rooms in Puttur for Every Stay ",
         description: "Our rooms are designed for comfort, functionality, and consistency in everything you need for a smooth stay in Puttur. Whether you're visiting for a short trip, business travel, or a temple visit, each room offers clean interiors, effective air conditioning, high-speed Wi-Fi, and essential amenities that work without hassle. With a location near Puttur Main Road, getting in and out is easy, making your stay practical from check-in to checkout. ",
-        image: "/bestHotelImg/1.webp"
+        image: "/bestHotelImg/11.webp"
     },
     {
         title: "Pure Veg Restaurant in Puttur for Everyday Dining ",
@@ -67,7 +67,7 @@ const BestHotelSection = () => {
                                     />
                                     <span className={`text-xl md:text-2xl font-serif leading-tight transition-all duration-300 ${activeTab === index
                                             ? "text-[#012219] opacity-100"
-                                            : "text-[#012219] opacity-50 hover:opacity-80"
+                                            : "text-[#012219] opacity-70 hover:opacity-100"
                                         }`}>
                                         {item.title}
                                     </span>

@@ -11,7 +11,7 @@ interface PageHeroProps {
 const PageHero = ({
   title,
   subtitle,
-  image = "/roomsImg/bgImg1.png",
+  image = "/roomsImg/bgImg1.webp",
   underlineClass = false,
 }: PageHeroProps) => {
   return (

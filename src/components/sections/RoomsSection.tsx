@@ -188,6 +188,7 @@ const RoomsSection = () => {
           <div className="flex lg:hidden justify-center gap-3 mt-4">
             {rooms.map((_, index) => (
               <button
+              aria-label={`room ${index + 1}`}
                 key={index}
                 onClick={() => handleTabClick(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeIndex === index ? "bg-white" : "bg-white/40"

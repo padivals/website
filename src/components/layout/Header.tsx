@@ -96,6 +96,7 @@ const Header = () => {
 
           {/* MOBILE MENU BUTTON */}
           <button
+          aria-label="mobile-menu-btn"
             className="md:hidden text-white drop-shadow-lg absolute right-6"
             onClick={() => setMobileOpen(true)}
           >

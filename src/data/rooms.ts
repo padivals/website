@@ -8,7 +8,7 @@ export const rooms = [
             "A simple and clean option for budget-friendly stays and short visits. Best suited for solo travellers or couples looking for a comfortable, no-fuss experience.  ",
         pagedescription:"Choosing the right stay in Puttur shouldn’t feel uncertain. Our standard room in Puttur is designed for guests who value a simple, comfortable, and practical stay. Well-maintained and thoughtfully arranged, it offers a calm and reliable space for short stays, families and budget-conscious travelers. Experience a hotel room in Puttur that delivers consistency and comfort. Book your stay at The Padival Grand today.",
         imageColor: "bg-gray-300",
-        heroImage: "/roomsImg/bgImg1.png", // Placeholder, using existing image
+        heroImage: "/roomsImg/bgImg1.webp", // Placeholder, using existing image
         cardImg:"/roomsImg/card1.png",
         details: {
             size: "250 sq ft",
@@ -193,7 +193,7 @@ export const rooms = [
             "A more comfortable option with added space and air-conditioning for a relaxed stay. Ideal for families and business travellers who prefer extra ease. ",
         pagedescription:"Our deluxe room in Puttur at The Padival Grand is designed for guests who value a comfortable and well-managed stay. Thoughtfully planned with a spacious layout and relaxed ambience, it is ideal for travellers and families seeking dependable hotel rooms in Puttur. As a preferred choice for a smooth and reliable stay in Puttur, this deluxe room delivers consistency you can trust. Book your deluxe room in Puttur today for a seamless stay experience.  ",
         imageColor: "bg-gray-400",
-        heroImage: "/roomsImg/bgImg2.png", // Placeholder, using existing image
+        heroImage: "/roomsImg/bgImg2.webp", // Placeholder, using existing image
         cardImg:"/roomsImg/card2.png",
         details: {
             size: "350 sq ft",
@@ -355,7 +355,7 @@ export const rooms = [
             "Designed for three guests, this room offers enough space to stay together comfortably. A practical choice for small families or groups.  ",
         pagedescription:"Our triple bedroom in Puttur is designed for families and groups who value comfort, space and simplicity. With a balanced layout and a well-maintained setting, it offers a practical stay for three guests without feeling crowded. Ideal for small families or friends travelling together, the space is clean, reliable and easy to settle into. Book your triple room in Puttur today for a stay that feels comfortable and effortless.",
         imageColor: "bg-gray-500",
-        heroImage: "/roomsImg/bgImg3.png", // Placeholder, using existing image
+        heroImage: "/roomsImg/bgImg3.webp", // Placeholder, using existing image
         cardImg:"/roomsImg/card3.png",
         details: {
             size: "500 sq ft",
@@ -517,7 +517,7 @@ export const rooms = [
             "Spacious and well-suited for families or group stays. A good fit for longer visits where space and convenience matter. ",
         pagedescription:"Our Family Quad Rooms are spacious and thoughtfully planned to cater to families and larger groups. With ample sleeping space and a comfortable setting, these rooms are ideal for extended stays and shared travel experiences.",
         imageColor: "bg-gray-600",
-        heroImage: "/roomsImg/bgImg4.png", // Placeholder, using existing image
+        heroImage: "/roomsImg/bgImg4.webp", // Placeholder, using existing image
         cardImg:"/roomsImg/card4.png",
         details: {
             size: "450 sq ft",
