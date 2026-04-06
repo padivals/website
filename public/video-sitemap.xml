@@ -5,38 +5,58 @@
  
   <url>
 <loc>https://thepadivalgrand.com/dining</loc>
-<video:video>
+ 
+    <video:video>
 <video:title>Coffee at Padival’s Palara</video:title>
 <video:description>Video featuring coffee served at Padival’s Palara at The Padival Grand in Puttur.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/coffee-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FCOFFEE.mp4?alt=media&token=e93a638b-fc26-4f64-8ac6-11ee4f745e8c</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>30</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
-<video:video>
+ 
+    <video:video>
 <video:title>Fruit Salad at Padival’s Palara</video:title>
 <video:description>Video featuring fruit salad served at Padival’s Palara at The Padival Grand in Puttur.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/fruit-salad-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FFruit%20Salad.mp4?alt=media&token=d2120982-05ff-42b3-a7d3-f4d65bd82c42</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>30</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
-<video:video>
+ 
+    <video:video>
 <video:title>Set Dosa at Padival’s Palara</video:title>
 <video:description>Video featuring set dosa served at Padival’s Palara at The Padival Grand in Puttur.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/set-dosa-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FSet%20Dosa.mp4?alt=media&token=861d56c8-267f-4754-bbc6-c30fbdbfe532</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>30</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
-<video:video>
+ 
+    <video:video>
 <video:title>Padival’s Palara Dining Experience</video:title>
-<video:description>Video showcasing the dining experience at Padival’s Palara, the pure vegetarian restaurant at The Padival Grand in Puttur.</video:description>
+<video:description>Video showcasing the dining experience at Padival’s Palara.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/palara-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FPalara.mp4?alt=media&token=1061604b-2c1a-4955-8c5e-5f91d8436590</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>40</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
-</url>
+ 
+  </url>
  
   <url>
 <loc>https://thepadivalgrand.com/events</loc>
 <video:video>
 <video:title>Events at The Padival Grand</video:title>
-<video:description>Video showcasing event spaces and celebrations at The Padival Grand in Puttur.</video:description>
+<video:description>Video showcasing event spaces and celebrations.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/events-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&token=a73adaea-de2a-46ff-8850-aa56acb7048c</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>45</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
 </url>
@@ -45,18 +65,24 @@
 <loc>https://thepadivalgrand.com/rooms</loc>
 <video:video>
 <video:title>Rooms Overview at The Padival Grand</video:title>
-<video:description>Overview video of rooms at The Padival Grand in Puttur, highlighting comfort, interiors, and stay experience.</video:description>
+<video:description>Overview video of rooms highlighting comfort and interiors.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/rooms-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FROOMS%20(1).mp4?alt=media&token=95052066-e5a7-4ebb-a482-d622b4257ac2</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>40</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
 </url>
  
   <url>
-<loc>https://thepadivalgrand.com/</loc>
+<loc>https://thepadivalgrand.com</loc>
 <video:video>
 <video:title>Lobby and Reception at The Padival Grand</video:title>
-<video:description>Video showcasing the lobby and reception area at The Padival Grand in Puttur.</video:description>
+<video:description>Video showcasing the lobby and reception area.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/lobby-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&token=a66474d4-cc5c-4fd3-90e7-782dac157248</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>35</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
 </url>
@@ -65,8 +91,11 @@
 <loc>https://thepadivalgrand.com/rooms/standard-room</loc>
 <video:video>
 <video:title>Non AC Room at The Padival Grand</video:title>
-<video:description>Video tour of the non AC room at The Padival Grand in Puttur, showcasing the room layout and interiors.</video:description>
+<video:description>Video tour of the non AC room.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/non-ac-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FNON%20AC.mp4?alt=media&token=1dba7ef6-7eac-4c4e-bea2-08ef5fc23877</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>30</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
 </url>
@@ -75,8 +104,11 @@
 <loc>https://thepadivalgrand.com/rooms/deluxe-room</loc>
 <video:video>
 <video:title>Deluxe Room at The Padival Grand</video:title>
-<video:description>Walkthrough video of a deluxe room at The Padival Grand in Puttur, showing interiors, comfort, and room layout.</video:description>
+<video:description>Walkthrough of deluxe room.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/deluxe-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FRooms%202.mp4?alt=media&token=c0489353-8b51-4be2-920a-80e1b7a4c5c1</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>35</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
 </url>
@@ -85,8 +117,11 @@
 <loc>https://thepadivalgrand.com/rooms/triple-bed-room</loc>
 <video:video>
 <video:title>Triple Sharing Room at The Padival Grand</video:title>
-<video:description>Video of the triple sharing room at The Padival Grand in Puttur, featuring room setup, interiors, and guest stay layout.</video:description>
+<video:description>Video of triple sharing room setup.</video:description>
+<video:thumbnail_loc>https://thepadivalgrand.com/images/triple-room-thumb.jpg</video:thumbnail_loc>
 <video:content_loc>https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FTriple%20Sharing%20Room.mp4?alt=media&token=8d19155a-1a93-49f2-b227-29a1b0d4ddd7</video:content_loc>
+<video:upload_date>2026-03-30T08:00:00+05:30</video:upload_date>
+<video:duration>35</video:duration>
 <video:family_friendly>yes</video:family_friendly>
 </video:video>
 </url>
