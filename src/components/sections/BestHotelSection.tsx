@@ -27,6 +27,7 @@ const TABS_CONTENT = [
     }
 ];
 
+
 const BestHotelSection = () => {
     const [activeTab, setActiveTab] = useState(0);
 
