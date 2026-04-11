@@ -85,4 +85,18 @@
     <priority>0.3</priority>
   </url>
 
+    <url>
+    <loc>https://thepadivalgrand.com/blogs</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+    <url>
+    <loc>https://thepadivalgrand.com/blogs/best-hotel-in-puttur-for-family-stay</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

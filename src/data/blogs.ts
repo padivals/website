@@ -7,6 +7,8 @@ export interface BlogPost {
   author: string;
   readTime: string;
   heroImage: string;
+  mobileImage: string;
+  pcImage: string;
   cardImage: string;
   metaTitle?: string;
   metaDescription?: string;  // <-- NEW
@@ -38,15 +40,17 @@ export const blogs: BlogPost[] = [
    * ═══════════════════════════════════════════════════════╝ */
   {
     id: 1,
-    slug: "puttur-temple-tour-guide",
+    slug: "best-hotel-in-puttur-for-family-stay",
     title:
       "Puttur Temple Tour Guide: Darshan, Attractions & Best Hotels in Puttur.",
     excerpt:
       "Planning a temple trip to Puttur? Discover the sacred Shree Mahalingeshwara Temple along with comfortable stays, pure vegetarian dining, and a peaceful experience designed for temple tourists seeking both devotion and convenience.",
     date: "October 27, 2025",
-    author: "Anand Mahesh",
-    readTime: "8 min read",
+    author: "Hashim KM",
+    readTime: "4 min read",
     heroImage: "/blogsImg/1.png",
+    mobileImage: "/blogsImg/mobile1.webp",
+    pcImage: "/blogsImg/desktop1.webp",
     cardImage: "/blogsImg/1.png",
     metaTitle: "Best Hotel in Puttur for Temple Tourists ",
     metaDescription: "Best hotel in Puttur for temple tourists offering clean rooms, pure veg dining, and easy access to Mahalingeshwara Temple for a peaceful stay. ",
@@ -97,7 +101,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Having guided guests through the coastal Karnataka temple circuit for years, the team at Padival Grand has witnessed firsthand how the right stay transforms a temple trip from exhausting to deeply fulfilling. This guide brings together local expertise, firsthand experience, and verified guest insights to help you plan a Puttur trip you will want to return to.",
+        text: "Having guided guests through the coastal Karnataka temple circuit for years, the team at *Padival Grand|https://thepadivalgrand.com/* has witnessed firsthand how the right stay transforms a temple trip from exhausting to deeply fulfilling. This guide brings together local expertise, firsthand experience, and verified guest insights to help you plan a Puttur trip you will want to return to.",
       },
       // ── 2. The Temple ──────────────────────────────────────
       {
@@ -129,7 +133,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Practical note: The temple is centrally located and easily accessible from our hotel in Puttur in under 10 minutes. We recommend the morning session for a calmer, more meditative experience, especially if you're visiting with elderly family members or young children.",
+        text: "Practical note: The temple is centrally located and easily accessible from *our hotel in Puttur|https://thepadivalgrand.com/* in under 10 minutes. We recommend the morning session for a calmer, more meditative experience, especially if you're visiting with elderly family members or young children.",
       },
       // ── 3. Beyond the temple ───────────────────────────────
       {
@@ -170,7 +174,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Puttur is ideally positioned as a base for multi-temple itineraries. The renowned Kukke Subramanya Temple — one of the most visited Subrahmanya shrines in India — is approximately 55 km away through some of Karnataka's most scenic ghat roads. Returning to a comfortable room at Padival Grand after a Kukke day trip eliminates the need for expensive last-minute accommodation in a busier town.",
+        text: "Puttur is ideally positioned as a base for multi-temple itineraries. The renowned Kukke Subramanya Temple — one of the most visited Subrahmanya shrines in India — is approximately 55 km away through some of Karnataka's most scenic ghat roads. Returning to a comfortable *room at Padival Grand|https://thepadivalgrand.com/rooms* after a Kukke day trip eliminates the need for expensive last-minute accommodation in a busier town.",
       },
       // ── 4. Where to stay ───────────────────────────────────
       {
@@ -196,7 +200,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Padival Grand is built around exactly these priorities. Our rooms are clean, well-maintained, and located minutes from the Mahalingeshwara Temple. Our in-house restaurant serves reliable South Indian meals including early morning breakfast for devotees heading to the 5:30 AM temple opening.",
+        text: "*Padival Grand|https://thepadivalgrand.com/* is built around exactly these priorities. Our rooms are clean, well-maintained, and located minutes from the Mahalingeshwara Temple.Our * in-house restaurant|https://thepadivalgrand.com/dining* serves reliable South Indian meals including early morning breakfast for devotees heading to the 5:30 AM temple opening.",
       },
       // ── 5. Guest reviews ───────────────────────────────────
       {
@@ -232,7 +236,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Our restaurant at Padival Grand serves fresh, hygienic South Indian cuisine throughout the day — from early breakfast to a warm evening dinner after your final darshan. The menu is built around the preferences of regional travelers: simple preparations, familiar flavors, and reliable quality. No complicated menus. No waiting.",
+        text: "Our *restaurant at Padival Grand|https://thepadivalgrand.com/dining* serves fresh, hygienic South Indian cuisine throughout the day — from early breakfast to a warm evening dinner after your final darshan. The menu is built around the preferences of regional travelers: simple preparations, familiar flavors, and reliable quality. No complicated menus. No waiting.",
       },
       {
         type: "paragraph",
@@ -264,11 +268,11 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "If you're looking for the right hotel in Puttur, Karnataka that balances cleanliness, comfort, and genuine hospitality without overcomplicating the experience, we'd be glad to host you.",
+        text: "**If you're looking for the right *hotel in Puttur|https://thepadivalgrand.com/dining*, Karnataka that balances cleanliness, comfort, and genuine hospitality without overcomplicating the experience, we'd be glad to host you.**",
       },
       {
         type: "paragraph",
-        text: "For direct bookings and tour package inquiries, reach our team at:\n📞 96868 04784   📧 info@padivalgrandhotel.com",
+        text: "**For direct bookings and tour package inquiries, reach our team at:\n96868 04784   info@padivalgrandhotel.com**",
       },
     ],
     schema:{"@context": "https://schema.org", 
@@ -356,6 +360,8 @@ export const blogs: BlogPost[] = [
   //   author: "Padival Grand",
   //   readTime: "6 min read",
   //   heroImage: "/roomsImg/bgImg2.webp",
+  //   mobileImage: "/roomsImg/bgImg2.webp",
+  //   pcImage: "/roomsImg/bgImg2.webp",
   //   cardImage: "/roomsImg/bgImg2.webp",
   //   category: "Hotel Guide",
   //   tableOfContents: [
@@ -454,6 +460,8 @@ export const blogs: BlogPost[] = [
   //   author: "Padival Grand",
   //   readTime: "5 min read",
   //   heroImage: "/roomsImg/bgImg3.webp",
+  //   mobileImage: "/roomsImg/bgImg3.webp",
+  //   pcImage: "/roomsImg/bgImg3.webp",
   //   cardImage: "/roomsImg/bgImg3.webp",
   //   category: "Dining",
   //   tableOfContents: [

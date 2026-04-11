@@ -56,7 +56,7 @@ export default function BlogsPage() {
     <main className="min-h-screen flex flex-col bg-[#F9F5EC]">
       <JsonLd data={blogSchema} id="blog-listing-schema" />
       <HalfHeroSection
-      title="Blog"
+      title="Blogs"
       />
 
       {/* ── Hero / Page Title ─────────────────────────── */}
@@ -76,12 +76,21 @@ export default function BlogsPage() {
               >
                 {/* Card Image */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  {/* PC Image */}
                   <Image
-                    src={post.cardImage}
+                    src={post.pcImage}
                     alt={post.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="hidden md:block object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 1024px) 50vw, 33vw"
+                  />
+                  {/* Mobile Image */}
+                  <Image
+                    src={post.mobileImage}
+                    alt={post.title}
+                    fill
+                    className="block md:hidden object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="100vw"
                   />
                 </div>
 

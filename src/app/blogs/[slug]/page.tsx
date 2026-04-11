@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Phone, Mail } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { blogs, type BlogSection } from "@/data/blogs";
@@ -116,15 +117,77 @@ function renderSection(section: BlogSection, idx: number) {
           {section.text}
         </h4>
       );
-    case "paragraph":
+    case "paragraph": {
+      if (!section.text) return null;
+
+      // Helper to render links, phone numbers, and emails
+      const renderLinks = (inputText: string) => {
+        const linkParts = inputText.split(/(\d{5}\s\d{5}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}|\*[^*|]+\|[^*]+\*)/g);
+        return linkParts.map((linkPart, j) => {
+          if (!linkPart) return null;
+
+          // Handle *label|url* links
+          if (linkPart.startsWith("*") && linkPart.endsWith("*") && linkPart.includes("|")) {
+            const [label, url] = linkPart.slice(1, -1).split("|");
+            return (
+              <a key={j} href={url} target="_blank" rel="noopener noreferrer" className="text-[#C5A028] font-medium hover:underline">
+                {label}
+              </a>
+            );
+          }
+
+          // Handle phone numbers
+          if (/^\d{5}\s\d{5}$/.test(linkPart)) {
+            return (
+              <span key={j} className="inline-flex items-center gap-1.5 align-middle">
+                <Phone size={13} className="text-[#C5A028]" />
+                <a href={`tel:+91${linkPart.replace(/\s/g, "")}`} className="text-[#C5A028] font-medium hover:underline">
+                  {linkPart}
+                </a>
+              </span>
+            );
+          }
+
+          // Handle emails
+          if (/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}/.test(linkPart)) {
+            return (
+              <span key={j} className="inline-flex items-center gap-1.5 align-middle ml-4 sm:ml-6">
+                <Mail size={13} className="text-[#C5A028]" />
+                <a href={`mailto:${linkPart}`} className="text-[#C5A028] font-medium hover:underline">
+                  {linkPart}
+                </a>
+              </span>
+            );
+          }
+
+          return linkPart;
+        });
+      };
+
+      // First pass: Split by bold text
+      const boldParts = section.text.split(/(\*\*[\s\S]+?\*\*)/g);
+
       return (
         <p
           key={idx}
           className="font-sans text-[0.875rem] text-[#012210] leading-[1.85] mb-4 whitespace-pre-line"
         >
-          {section.text}
+          {boldParts.map((part, i) => {
+            if (!part) return null;
+
+            if (part.startsWith("**") && part.endsWith("**")) {
+              return (
+                <strong key={i} className="font-bold text-[#002117]">
+                  {renderLinks(part.slice(2, -2))}
+                </strong>
+              );
+            }
+
+            return renderLinks(part);
+          })}
         </p>
       );
+    }
     case "list":
       return (
         <ul key={idx} className="space-y-1 mb-4 pl-0">
@@ -193,7 +256,7 @@ function renderSection(section: BlogSection, idx: number) {
       return (
         <blockquote
           key={idx}
-          className="my-5 border-l-2 border-[#C5A028] pl-4 py-1"
+          className="my-5 border-l-2 border-[#C5A028] ml-0 md:ml-12 pl-4 py-1"
         >
           <p className="font-sans text-[0.875rem] text-[#444] italic leading-relaxed mb-1">
             "{section.text}"
@@ -277,15 +340,27 @@ export default async function BlogDetailPage({
 
       {/* ── Full-width Hero Image ─────────────────────────── */}
       <section className="relative w-full overflow-hidden">
-        <div className="relative w-full aspect-[16/7] md:aspect-[16/6]">
+        <div className="relative w-full h-[50vh] md:h-auto md:aspect-[16/6]">
+          {/* PC Image */}
           <Image
-            src={post.heroImage}
+            src={post.pcImage}
             alt={post.title}
             fill
-            className="object-cover"
+            className="hidden md:block object-cover"
             priority
             sizes="100vw"
           />
+          {/* Mobile Image */}
+          <Image
+            src={post.mobileImage}
+            alt={post.title}
+            fill
+            className="block md:hidden object-cover "
+            priority
+            sizes="100vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent pointer-events-none" />
         </div>
       </section>
 
@@ -298,7 +373,7 @@ export default async function BlogDetailPage({
             <aside data-lenis-prevent className="w-full lg:w-[230px] xl:w-[250px] shrink-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto space-y-8 pb-4 pr-4 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#C5A028]/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#C5A028]/60 transition-all duration-300">
 
               {/* Table of Contents box */}
-              <div className="bg-[#F0EBE1] p-5">
+              <div className="bg-[#F0EBE1] p-5  md:block hidden">
                 <p className="font-serif text-[1rem] text-[#1a1a1a] font-semibold mb-4">
                   Table of content
                 </p>
@@ -377,23 +452,23 @@ export default async function BlogDetailPage({
               </nav>
 
               {/* H1 Title */}
-              <h1 className="font-serif text-[1.95rem] md:text-4xl lg:text-[2.5rem] text-[#002117] font-semibold leading-[1.2] mb-5 max-w-[60vw]">
+              <h1 className="font-serif text-[1.95rem] md:text-4xl lg:text-[2.5rem] text-[#002117] font-semibold leading-[1.2] mb-5 lg:max-w-[800px]">
                 {post.title}
               </h1>
 
               {/* Date + Author */}
-              <div className="flex items-center gap-8 font-sans text-[0.8rem] text-[#555] mb-6">
+              <div className="flex items-center gap-8 font-sans text-md text-[#012210] mb-6">
                 <span>{post.date}</span>
                 <span>By : {post.author}</span>
               </div>
 
               {/* Intro / excerpt */}
-              <p className="font-sans text-[0.875rem] text-[#012210] leading-[1.85] mb-8 max-w-[60vw]">
+              <p className="font-sans text-[0.875rem] text-[#012210] leading-[1.85] mb-8 lg:max-w-[750px]">
                 {post.excerpt}
               </p>
 
               {/* Article body */}
-              <div className="max-w-[60vw]">
+              <div className="lg:max-w-[750px]">
                 {post.content.map((section, idx) => renderSection(section, idx))}
               </div>
 
