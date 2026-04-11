@@ -126,6 +126,7 @@ const Footer = () => {
               <Link href="/events" className="hover:text-[#EAB361]">Celebrate with us</Link>
               <Link href="/rooms" className="hover:text-[#EAB361]">Stay with us</Link>
               <Link href="/contact" className="hover:text-[#EAB361]">Contact Us</Link>
+              <Link href="/blogs" className="hover:text-[#EAB361]">Blogs</Link>
             </div>
           </div>
 
@@ -144,7 +145,7 @@ const Footer = () => {
                 <a href="/terms-conditions" className="hover:text-[#aa8616] text-[#F9F2E8CC] transition-all duration-200">Terms of Service</a>
               </div>
 
-              <p className="text-center text-[#F9F2E8CC] md:text-right whitespace-nowrap">
+              <p className="text-center text-[#F9F2E8CC] md:text-right">
                 All Rights Reserved. The Padival Grand Hotel {new Date().getFullYear()}
               </p>
             </div>

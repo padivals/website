@@ -9,6 +9,7 @@ import { generalFaqs } from "@/data/faqs";
 import FAQSection from "@/components/sections/FAQSection";
 import EventsSection from "@/components/sections/EventsSection";
 import ContactSection from "@/components/sections/ContactSection";
+import BlogSection from "@/components/sections/BlogSection";
 import ReservationBar from "@/components/sections/ReservationBar";
 import type { Metadata } from "next";
 import VideoCarousel from "@/components/sections/MomentSectionTest";
@@ -472,6 +473,7 @@ export default function Home() {
 
       <NearbyAttractions />
 
+      
 
       <div className="pt-0 bg-white">
 
@@ -492,7 +494,7 @@ export default function Home() {
       <section className="hidden lg:block">
         {/* <ReservationBar /> */}
       </section>
-
+<BlogSection />
       <Footer />
     </main>
   );
