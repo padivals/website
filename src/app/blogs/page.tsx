@@ -56,7 +56,7 @@ export default function BlogsPage() {
     <main className="min-h-screen flex flex-col bg-[#F9F5EC]">
       <JsonLd data={blogSchema} id="blog-listing-schema" />
       <HalfHeroSection
-      title="Blogs"
+        title="Blogs"
       />
 
       {/* ── Hero / Page Title ─────────────────────────── */}

@@ -50,7 +50,7 @@ export const blogs: BlogPost[] = [
     readTime: "4 min read",
     heroImage: "/blogsImg/1.png",
     mobileImage: "/blogsImg/mobile1.webp",
-    pcImage: "/blogsImg/desktop1.webp",
+    pcImage: "/blogsImg/Desktop1.webp",
     cardImage: "/blogsImg/1.png",
     metaTitle: "Best Hotel in Puttur for Temple Tourists ",
     metaDescription: "Best hotel in Puttur for temple tourists offering clean rooms, pure veg dining, and easy access to Mahalingeshwara Temple for a peaceful stay. ",
@@ -264,7 +264,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "A well-planned Puttur trip — with a central stay, reliable dining, and a knowledgeable local team behind you — turns a routine temple visit into a complete spiritual experience.",
+        text: "A well-planned Puttur trip with a central stay, reliable dining, and a knowledgeable local team behind you turns a routine temple visit into a complete spiritual experience.",
       },
       {
         type: "paragraph",
