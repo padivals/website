@@ -16,6 +16,7 @@ export interface BlogPost {
   category: string;
   tableOfContents: { id: string; label: string }[];
   content: BlogSection[];
+  breadcrumb?: string;
 }
 
 export interface BlogSection {
@@ -41,6 +42,7 @@ export const blogs: BlogPost[] = [
   {
     id: 1,
     slug: "best-hotel-in-puttur-for-family-stay",
+    breadcrumb: "Best Hotel in Puttur for Family Stay",
     title:
       "Puttur Temple Tour Guide: Darshan, Attractions & Best Hotels in Puttur.",
     excerpt:
@@ -48,10 +50,10 @@ export const blogs: BlogPost[] = [
     date: "October 27, 2025",
     author: "Hashim KM",
     readTime: "4 min read",
-    heroImage: "/blogsImg/1.png",
+    heroImage: "/blogsImg/Desktop1.webp",
     mobileImage: "/blogsImg/mobile1.webp",
     pcImage: "/blogsImg/Desktop1.webp",
-    cardImage: "/blogsImg/1.png",
+    cardImage: "/blogsImg/Desktop1.webp",
     metaTitle: "Best Hotel in Puttur for Temple Tourists ",
     metaDescription: "Best hotel in Puttur for temple tourists offering clean rooms, pure veg dining, and easy access to Mahalingeshwara Temple for a peaceful stay. ",
     category: "Travel Guide",

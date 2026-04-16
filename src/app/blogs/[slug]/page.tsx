@@ -445,9 +445,7 @@ export default async function BlogDetailPage({
                 </Link>
                 <span className="text-[#888]">›</span>
                 <span className="text-[#333] truncate max-w-[260px] md:max-w-[420px]">
-                  {post.title.length > 45
-                    ? post.title.slice(0, 45) + ".."
-                    : post.title}
+                  {post.breadcrumb}
                 </span>
               </nav>
 
