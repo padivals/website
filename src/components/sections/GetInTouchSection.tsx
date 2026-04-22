@@ -76,12 +76,12 @@ export default function ContactAndLocationSection() {
           <div className="w-full h-[300px] md:h-[400px] lg:h-full min-h-[300px] overflow-hidden rounded-sm shadow-sm relative">
              {/* Note: Ensure you use the real Google Maps Embed link in production */}
             <iframe
-              src="https://maps.google.com/maps?q=Mahaveer+Mall,+Main+Road,+Bolwar,+Puttur,+Karnataka+574201&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1945.5954406281046!2d75.19544434381521!3d12.766112565209873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd76d5b945e7%3A0x958f1a6d4734c9ce!2sMahaveer%20Medical%20Centre!5e0!3m2!1sen!2sin!4v1776843395472!5m2!1sen!2sin"
               className="w-full h-full border-0 absolute inset-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Padival Grand Hotel Location Map"
-            />
+            />a
           </div>
 
           {/* ───────────── BOTTOM RIGHT : HOW TO GET HERE ───────────── */}
