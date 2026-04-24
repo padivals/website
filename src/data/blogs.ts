@@ -44,7 +44,7 @@ export const blogs: BlogPost[] = [
     slug: "best-hotel-in-puttur-for-family-stay",
     breadcrumb: "Best Hotel in Puttur for Family Stay",
     title:
-      "Puttur Temple Tour Guide: Darshan, Attractions & Best Hotels in Puttur.",
+      "Temple Tour Guide: Darshan, Attractions & Best Hotels in Puttur",
     excerpt:
       "Planning a temple trip to Puttur? Discover the sacred Shree Mahalingeshwara Temple along with comfortable stays, pure vegetarian dining, and a peaceful experience designed for temple tourists seeking both devotion and convenience.",
     date: "October 27, 2025",

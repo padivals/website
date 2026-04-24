@@ -102,7 +102,7 @@ export default function BlogsPage() {
                   </span> */}
 
                   {/* Title */}
-                  <h2 className="font-serif text-[1.2rem] md:text-3xl leading-snug text-[#012219] font-semibold mb-3 group-hover:text-[#1D8842] transition-colors duration-200">
+                  <h2 className="font-serif text-[1.2rem] md:text-3xl leading-snug text-[#012219] font-semibold mb-3 group-hover:text-[#052216]/80 transition-colors duration-200">
                     {post.title}
                   </h2>
 
