@@ -497,7 +497,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "rating",
-        ratingValue: "3.9 / 5",
+        ratingValue: "4.0 / 5",
         ratingStars: "★★★★☆",
         ratingSubtitle: "*Based on verified google reviews*"
       },
@@ -511,8 +511,8 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "rating",
-        ratingValue: "3.3 / 5",
-        ratingStars: "★★★☆☆",
+        ratingValue: "4.2 / 5",
+        ratingStars: "★★★★☆",
         ratingSubtitle: "*Based on verified google reviews*"
       },
       {
@@ -573,42 +573,237 @@ export const blogs: BlogPost[] = [
       }
     ],
     schema: {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://thepadivalgrand.com/blog/best-hotel-in-puttur-near-mahalingeshwara-temple"
-      },
-      "headline": "The Best Hotels in Puttur Near Mahalingeshwara Temple",
-      "description": "Planning a visit to Mahalingeshwara Temple? Find comfortable and safe hotels in Puttur, close to the temple, along with essential travel tips for a smooth stay.",
-      "image": [
-        "https://thepadivalgrand.com/ogImage.png"
-      ],
-      "author": {
-        "@type": "Organization",
-        "name": "The Padival Grand"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Padival Grand",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://thepadivalgrand.com/logo.png"
-        }
-      },
-      "datePublished": "2026-04-28",
-      "dateModified": "2026-04-28",
-      "inLanguage": "en-IN",
-      "articleSection": "Temple Tourism",
-      "keywords": [
-        "stay in puttur",
-        "best hotel in puttur",
-        "hotels in puttur karnataka",
-        "hotel rooms in puttur",
-        "temple tourists",
-        "Shree Mahalingeshwara Temple",
-        "hotel near mahalingeshwara temple"
-      ]
+        "@context": "https://schema.org", 
+
+  "@graph": [ 
+
+    { 
+
+      "@type": "BlogPosting", 
+
+      "@id": "https://thepadivalgrand.com/blogs/best-hotel-in-puttur#blog", 
+
+      "headline": "The Best Hotels in Puttur Near Mahalingeshwara Temple", 
+
+      "description": "Find the best hotels in Puttur near Shree Mahalingeshwara Temple. Explore comfortable stays, travel tips, and nearby temples for a peaceful visit.", 
+
+      "image": "https://thepadivalgrand.com/ogImage.png", 
+
+      "datePublished": "2026-04-29", 
+
+      "dateModified": "2026-04-29", 
+
+      "author": { 
+
+        "@type": "Organization", 
+
+        "name": "The Padival Grand" 
+
+      }, 
+
+      "publisher": { 
+
+        "@type": "Organization", 
+
+        "name": "The Padival Grand", 
+
+        "logo": { 
+
+          "@type": "ImageObject", 
+
+          "url": "https://thepadivalgrand.com/logo.png" 
+
+        } 
+
+      }, 
+
+      "mainEntityOfPage": { 
+
+        "@type": "WebPage", 
+
+        "@id": "https://thepadivalgrand.com/blogs/best-hotel-in-puttur" 
+
+      }, 
+
+      "articleSection": "Best Hotels in Puttur", 
+
+      "keywords": [ 
+
+        "stay in puttur", 
+
+        "best hotel in puttur", 
+
+        "hotels in puttur karnataka", 
+
+        "hotel rooms in puttur", 
+
+        "temple tourists", 
+
+        "Shree Mahalingeshwara Temple" 
+
+      ], 
+
+      "about": [ 
+
+        { 
+
+          "@type": "Place", 
+
+          "name": "Puttur, Karnataka" 
+
+        }, 
+
+        { 
+
+          "@type": "Place", 
+
+          "name": "Shree Mahalingeshwara Temple" 
+
+        } 
+
+      ], 
+
+      "mentions": [ 
+
+        { 
+
+          "@type": "Hotel", 
+
+          "name": "The Padival Grand" 
+
+        }, 
+
+        { 
+
+          "@type": "Hotel", 
+
+          "name": "Hotel Rama" 
+
+        }, 
+
+        { 
+
+          "@type": "Hotel", 
+
+          "name": "Hotel Keerthana" 
+
+        } 
+
+      ] 
+
+    }, 
+
+    { 
+
+      "@type": "ItemList", 
+
+      "@id": "https://thepadivalgrand.com/blogs/best-hotel-in-puttur#itemlist", 
+
+      "name": "Top Hotels in Puttur Near Mahalingeshwara Temple", 
+
+      "description": "A curated list of the best hotels in Puttur, Karnataka, offering comfortable stays near Shree Mahalingeshwara Temple.", 
+
+      "itemListOrder": "http://schema.org/ItemListOrderDescending", 
+
+      "numberOfItems": 3, 
+
+      "itemListElement": [ 
+
+        { 
+
+          "@type": "ListItem", 
+
+          "position": 1, 
+
+          "item": { 
+
+            "@type": "Hotel", 
+
+            "name": "The Padival Grand", 
+
+            "description": "A premium hotel in The Padival Grand Puttur offering clean rooms, modern amenities, a pure vegetarian restaurant, and easy access to Mahalingeshwara Temple.", 
+
+            "address": { 
+
+              "@type": "PostalAddress", 
+
+              "addressLocality": "Puttur", 
+
+              "addressRegion": "Karnataka", 
+
+              "addressCountry": "India" 
+
+            } 
+
+          } 
+
+        }, 
+
+        { 
+
+          "@type": "ListItem", 
+
+          "position": 2, 
+
+          "item": { 
+
+            "@type": "Hotel", 
+
+            "name": "Hotel Rama", 
+
+            "description": "A budget-friendly hotel near Puttur bus stand offering non-AC rooms along with an in-house restaurant.", 
+
+            "address": { 
+
+              "@type": "PostalAddress", 
+
+              "addressLocality": "Puttur", 
+
+              "addressRegion": "Karnataka", 
+
+              "addressCountry": "India" 
+
+            } 
+
+          } 
+
+        }, 
+
+        { 
+
+          "@type": "ListItem", 
+
+          "position": 3, 
+
+          "item": { 
+
+            "@type": "Hotel", 
+
+            "name": "Hotel Keerthana", 
+
+            "description": "A quiet and comfortable stay option located slightly away from the main town, suitable for families.", 
+
+            "address": { 
+
+              "@type": "PostalAddress", 
+
+              "addressLocality": "Puttur", 
+
+              "addressRegion": "Karnataka", 
+
+              "addressCountry": "India" 
+
+            } 
+
+          } 
+
+        } 
+
+      ] 
+
+    } 
+
+  ]
     }
   },
 
