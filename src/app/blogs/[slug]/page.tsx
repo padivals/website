@@ -268,6 +268,25 @@ function renderSection(section: BlogSection, idx: number) {
           )}
         </blockquote>
       );
+    case "rating":
+      return (
+        <div
+          key={idx}
+          className="my-8 p-4 border border-[#002117]/20 rounded-lg flex flex-col sm:flex-row items-center gap-5 max-w-lg bg-transparent"
+        >
+          <div className="flex flex-col items-center justify-center shrink-0 bg-[#002117]/80 w-32 py-4 rounded-md text-white">
+            <span className="font-sans text-2xl font-semibold leading-none mb-1.5">{section.ratingValue}</span>
+            <span className="text-sm tracking-[0.2em] opacity-90">{section.ratingStars}</span>
+          </div>
+          <div className="w-px h-12 bg-[#002117]/20 hidden sm:block"></div>
+          <div className="w-full h-px bg-[#002117]/20 block sm:hidden my-1"></div>
+          <div className="text-center sm:text-left pr-2">
+            <p className="font-sans text-[0.875rem] text-[#444] leading-relaxed italic">
+              {section.ratingSubtitle}
+            </p>
+          </div>
+        </div>
+      );
     default:
       return null;
   }

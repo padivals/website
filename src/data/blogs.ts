@@ -28,11 +28,15 @@ export interface BlogSection {
   | "list"
   | "bulletList"
   | "table"
-  | "quote";
+  | "quote"
+  | "rating";
   text?: string;
   items?: string[];
   tableData?: { headers: string[]; rows: string[][] };
   quoteAuthor?: string;
+  ratingValue?: string;
+  ratingStars?: string;
+  ratingSubtitle?: string;
 }
 
 export const blogs: BlogPost[] = [
@@ -351,191 +355,261 @@ export const blogs: BlogPost[] = [
   /* ═══════════════════════════════════════════════════════╗
    *  BLOG 2                                               ║
    * ═══════════════════════════════════════════════════════╝ */
-  // {
-  //   id: 2,
-  //   slug: "best-hotel-puttur-temple-tourists",
-  //   title:
-  //     "Best Hotel in Puttur for Temple Tourists: A Complete Stay Guide",
-  //   excerpt:
-  //     "Best hotel in Puttur for temple tourists offering clean rooms, pure veg dining, and easy access to Mahalingeshwara Temple for a peaceful stay.",
-  //   date: "November 10, 2025",
-  //   author: "Padival Grand",
-  //   readTime: "6 min read",
-  //   heroImage: "/roomsImg/bgImg2.webp",
-  //   mobileImage: "/roomsImg/bgImg2.webp",
-  //   pcImage: "/roomsImg/bgImg2.webp",
-  //   cardImage: "/roomsImg/bgImg2.webp",
-  //   category: "Hotel Guide",
-  //   tableOfContents: [
-  //     { id: "why-location-matters", label: "Why Location Matters for Temple Stays" },
-  //     { id: "pure-veg-dining", label: "Pure Veg Dining at The Padival Grand" },
-  //     { id: "room-options", label: "Room Options for Every Group" },
-  //     { id: "amenities", label: "Amenities That Support Temple Visits" },
-  //     { id: "booking-tips", label: "Booking Tips for Festival Season" },
-  //     { id: "conclusion", label: "Conclusion" },
-  //   ],
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       text: "When visiting Puttur for temple darshan, where you stay makes a significant difference to the quality of your overall experience. A hotel that's not aligned with the needs of temple tourists — whether in terms of food, location, or schedule flexibility — can add unnecessary friction to what should be a peaceful and meaningful visit.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Why Location Matters for Temple Stays",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The Shree Mahalingeshwara Temple is the primary reason most visitors come to Puttur. Staying close to the town centre means you can walk or reach the temple in minutes, which is particularly useful for early morning puja and unexpected additional visits throughout the day.",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The Padival Grand is situated in Bolwar, Puttur, on Mahaveer Mall, which puts guests in a central position relative to the town's key landmarks. This makes movement simple and stress-free.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Pure Veg Dining at The Padival Grand",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "One of the most consistent requirements for temple-going guests is access to pure vegetarian food. Our in-house restaurant, Padival's Palara, serves only vegetarian meals — no meat, no seafood, no eggs. The menu is designed for comfort: familiar South Indian dishes, light breakfast options, and wholesome meals suited to devotees who maintain dietary practices around temple visits.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Room Options for Every Group",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "We accommodate solo pilgrims, couples, families, and small groups. Our room types include Standard Rooms, Deluxe Rooms, Triple Bed Rooms, and Family Quad Rooms — each offering AC, Wi-Fi, and daily housekeeping.",
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         "Standard Room – Ideal for solo visitors or couples",
-  //         "Deluxe Room – Extra space and comfort for a relaxed stay",
-  //         "Triple Bed Room – Great for small families or groups of three",
-  //         "Family Quad Room – Designed for larger families visiting together",
-  //       ],
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Amenities That Support Temple Visits",
-  //     },
-  //     {
-  //       type: "bulletList",
-  //       items: [
-  //         "24/7 front desk for early departures and late check-ins",
-  //         "Lift / elevator access for elderly guests and families",
-  //         "Ample parking for those arriving by car from out of town",
-  //         "Power backup so there are no disruptions to your stay",
-  //         "Wi-Fi for communication and navigation needs",
-  //       ],
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Booking Tips for Festival Season",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "During major temple festivals — particularly Shivratri and other significant Shaivite occasions — Puttur sees a significant increase in visitors. Rooms at well-located hotels fill up well in advance. We recommend booking at least two to three weeks ahead during festival periods to secure your preferred room type.",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "You can contact us directly to check availability and confirm a booking. We're also happy to assist with any specific requirements related to your visit.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Conclusion",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "For temple tourists visiting Puttur, The Padival Grand offers the combination of location, food, and facilities that makes a spiritual journey straightforward and comfortable. We understand why you're visiting, and our service reflects that understanding.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 3,
-  //   slug: "pure-veg-dining-puttur",
-  //   title: "Pure Veg Dining in Puttur: What to Expect at Padival's Palara",
-  //   excerpt:
-  //     "Best hotel in Puttur for temple tourists offering clean rooms, pure veg dining, and easy access to Mahalingeshwara Temple for a peaceful stay.",
-  //   date: "December 5, 2025",
-  //   author: "Padival Grand",
-  //   readTime: "5 min read",
-  //   heroImage: "/roomsImg/bgImg3.webp",
-  //   mobileImage: "/roomsImg/bgImg3.webp",
-  //   pcImage: "/roomsImg/bgImg3.webp",
-  //   cardImage: "/roomsImg/bgImg3.webp",
-  //   category: "Dining",
-  //   tableOfContents: [
-  //     { id: "about-palara", label: "About Padival's Palara" },
-  //     { id: "menu-overview", label: "Menu Overview" },
-  //     { id: "dietary-practices", label: "Catering to Dietary Practices" },
-  //     { id: "dining-hours", label: "Dining Hours" },
-  //     { id: "visit-us", label: "Visit Us" },
-  //   ],
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       text: "Pure vegetarian dining is not just a preference for many visitors to Puttur — it's a practice, particularly for those visiting for religious and temple-related purposes. Finding a restaurant that genuinely maintains a pure veg kitchen, without compromise, is important for these guests.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "About Padival's Palara",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Padival's Palara is The Padival Grand's in-house vegetarian restaurant. It operates as a fully pure veg kitchen — no meat, seafood, or eggs are prepared or served on the premises. The emphasis is on quality, consistency, and meals that feel familiar and nourishing.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Menu Overview",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The menu at Padival's Palara is built around South Indian cooking traditions with some North Indian options for variety. Guests can expect breakfast items like idli, dosa, upma, and vada, along with rice meals, rotis, and seasonal vegetable preparations for lunch and dinner.",
-  //     },
-  //     {
-  //       type: "bulletList",
-  //       items: [
-  //         "South Indian breakfast staples served fresh every morning",
-  //         "Rice meals and thali options at lunch",
-  //         "Rotis, sabzi, and dal for dinner",
-  //         "Seasonal specials based on festivals and availability",
-  //         "Light snacks and beverages available through the day",
-  //       ],
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Catering to Dietary Practices",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Many guests visiting for temple purposes follow specific dietary practices — avoiding onion and garlic, eating only before or after certain rituals, or requiring sattvic meals. We can accommodate these requirements with prior notice. Please inform our team at the time of reservation or at check-in if you have specific dietary needs.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Dining Hours",
-  //     },
-  //     {
-  //       type: "list",
-  //       items: [
-  //         "Breakfast: 7:00 AM – 10:30 AM",
-  //         "Lunch: 12:00 PM – 3:00 PM",
-  //         "Dinner: 7:00 PM – 10:00 PM",
-  //       ],
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Early breakfast options can be arranged for guests who need to leave for temple before 7 AM. Please inform the front desk the evening prior.",
-  //     },
-  //     {
-  //       type: "heading",
-  //       text: "Visit Us",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Whether you're staying at The Padival Grand or visiting Puttur for a day trip, Padival's Palara is open to all guests. The restaurant is designed for a comfortable and quiet dining experience — a fitting end or beginning to a day of temple visits.",
-  //     },
-  //   ],
-  // },
+  
+  {
+    id: 2,
+    slug: "best-hotel-in-puttur",
+    breadcrumb: "Best Hotels Near Mahalingeshwara Temple",
+    title: "The Best Hotels in Puttur Near Mahalingeshwara Temple",
+    excerpt: "If you are planning a visit to the Mahalingeshwara Temple, finding the right hotels in Puttur, Karnataka can feel like a challenge. Clean, well-located, and comfortable stays are not always easy to come by in a smaller town.",
+    date: "April 28, 2026",
+    author: "Narmada H N",
+    readTime: "5 min read",
+    heroImage: "/blogsImg/Desktop2.webp",
+    mobileImage: "/blogsImg/mobile2.webp",
+    pcImage: "/blogsImg/Desktop2.webp",
+    cardImage: "/blogsImg/Desktop2.webp",
+    metaTitle: "Hotel Near Mahalingeshwara Temple | Book Your Stay in Puttur",
+    metaDescription: "If you are planning a visit to the Mahalingeshwara Temple, finding the right hotels in Puttur, Karnataka can feel like a challenge. Clean, well-located, and comfortable stays are not always easy to come by in a smaller town.",
+    category: "Travel Guide",
+    tableOfContents: [
+      { id: "how-to-reach", label: "How to Reach Puttur" },
+      { id: "about-temple", label: "About Shree Mahalingeshwara Temple" },
+      { id: "where-to-stay", label: "Where to Stay in Puttur" },
+      { id: "top-hotels", label: "Top Hotels in Puttur" },
+      { id: "nearby-temples", label: "Nearby Temples to Visit" },
+      { id: "book-your-stay", label: "Book Your Stay" },
+    ],
+    content: [
+     
+      {
+        type: "paragraph",
+        text: "Here's everything you need to know to make your trip to Mahalingeshwara Temple a comfortable, spiritual, and memorable one."
+      },
+      {
+        type: "subheading",
+        text: "How to Reach Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is well connected by road, rail, and air, making it accessible from across Karnataka and nearby states."
+      },
+      {
+        type: "h4",
+        text: "By Road"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur lies along NH-275 and is well connected to cities like Mangaluru (55 km), Bengaluru (330 km), and Udupi (90 km). The drive through the Western Ghats foothills is scenic and pleasant.\nBoth KSRTC and private buses run frequently to Puttur, making road travel convenient and reliable."
+      },
+      {
+        type: "h4",
+        text: "By Train"
+      },
+      {
+        type: "paragraph",
+        text: "The nearest railway station is Subrahmanya Road (about 30 km away), with connections to Mysuru and Bengaluru.\nFor broader connectivity, Mangaluru Central and Mangaluru Junction (around 55–60 km away) connect to major cities across India. From there, taxis and buses are easily available to Puttur."
+      },
+      {
+        type: "h4",
+        text: "By Air"
+      },
+      {
+        type: "paragraph",
+        text: "Mangaluru International Airport (IXE), located about 65 km away, is the nearest airport. It connects to major cities like Bengaluru, Mumbai, Chennai, and Hyderabad.\nFrom the airport, a cab ride to Puttur takes approximately 1.5 to 2 hours."
+      },
+      {
+        type: "subheading",
+        text: "About Shree Mahalingeshwara Temple, Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "Located in the heart of town, the Shree Mahalingeshwara Temple is one of the most revered Shaivite temples in coastal Karnataka.\nThe temple is known for its Swayambhu Linga, believed to have naturally emerged from the earth. This makes it deeply significant for devotees visiting across generations.\nThe temple follows the Shaiva Agama tradition and is managed by the Dharmasthala Dharmadhikari's office, ensuring rituals are performed with discipline and care.\nDuring festivals like Maha Shivaratri and Karthika Deepotsava, the town sees a large influx of pilgrims, creating a vibrant yet unforgettable spiritual atmosphere."
+      },
+      {
+        type: "h4",
+        text: "Puttur Shree Mahalingeshwara Temple Darshan Timings"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Morning: 6:00 AM to 1:00 PM",
+          "Evening: 4:00 PM to 8:30 PM",
+          "Best Time to Visit: October to February",
+          "Special Occasion: Maha Shivaratri"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Note: Darshan timings may vary on festival days and special occasions. It is always advisable to confirm before your visit."
+      },
+      {
+        type: "subheading",
+        text: "Where to Stay in Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "Once your temple visit is planned, choosing the right stay becomes important. While there are several lodges in Puttur, not all offer the same level of comfort or convenience.\nHere are a few things to consider before booking hotel rooms in Puttur:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Distance from the temple: Look for places that are close to the main road and temple, so you can attend early morning darshan comfortably",
+          "Parking availability: If you are travelling by car or a larger vehicle, you would need to find a hotel with adequate parking space",
+          "Dining options: A good vegetarian restaurant on the premises or nearby is a real comfort, especially for families and devotees",
+          "Cleanliness and upkeep: Basic but non-negotiable, always check amenities and reviews for how well the property is maintained",
+          "Staff and check-in: Warm, helpful staff and a smooth check-in process go a long way after a long journey"
+        ]
+      },
+      {
+        type: "subheading",
+        text: "Top Hotels in Puttur, Karnataka"
+      },
+      {
+        type: "h4",
+        text: "The Padival Grand"
+      },
+      {
+        type: "paragraph",
+        text: "Among the best hotels in Puttur, The Padival Grand stands out for its comfort and thoughtful hospitality. Located near Puttur Main Road, it offers easy access to the temple and key areas in town.\nThe hotel offers a range of options, including non-AC rooms, AC deluxe rooms, and spacious family rooms, making it suitable for both small families and larger groups.\nAll rooms are well-maintained, clean, and equipped with essential amenities like Wi-Fi, air conditioning, power-backup, daily housekeeping, etc."
+      },
+      {
+        type: "paragraph",
+        text: "**Dining** - The in-house pure vegetarian restaurant, Padival's Palara, serves a variety of breakfast, lunch, and dinner options, making it convenient for guests.\n**Additional facilities** - Ample parking space, event and function spaces, 24/7 front desk support, etc."
+      },
+      {
+        type: "rating",
+        ratingValue: "4.3 / 5",
+        ratingStars: "★★★★☆",
+        ratingSubtitle: "*Based on verified google reviews*"
+      },
+      {
+        type: "paragraph",
+        text: "For those looking for the highly recommended hotel room in Puttur that balances comfort and convenience, this is a good choice."
+      },
+      {
+        type: "h4",
+        text: "Hotel Rama, Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "As a well-known option among budget travellers, Hotel Rama has been serving visitors since 1989. Located close to the bus stand, it is a practical choice for short stays.\nThe hotel offers AC and non-AC rooms with decent amenities for a comfortable stay. It also has an attached restaurant serving North and South Indian cuisine. If you are looking for simple and affordable lodging, this one seems like a good option to consider."
+      },
+      {
+        type: "rating",
+        ratingValue: "3.9 / 5",
+        ratingStars: "★★★★☆",
+        ratingSubtitle: "*Based on verified google reviews*"
+      },
+      {
+        type: "h4",
+        text: "Hotel Keerthana, Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "Located about 3 km from the temple, Hotel Keerthana offers a quiet and comfortable environment. It is suitable for families who prefer a slightly relaxed setting away from the main town area.\nThe hotel provides standard amenities, AC rooms, and a 24-hour front desk to assist guests. With well-maintained rooms, child-friendly amenities, and dedicated staff, it can be considered as one of the available stay options in the area"
+      },
+      {
+        type: "rating",
+        ratingValue: "3.3 / 5",
+        ratingStars: "★★★☆☆",
+        ratingSubtitle: "*Based on verified google reviews*"
+      },
+      {
+        type: "subheading",
+        text: "Nearby Temples Worth Visiting"
+      },
+      {
+        type: "paragraph",
+        text: "If you have extra time, you can extend your stay in Puttur to explore nearby spiritual destinations:"
+      },
+      {
+        type: "h4",
+        text: "Dharmasthala Shree Manjunatha Temple"
+      },
+      {
+        type: "paragraph",
+        text: "~35 km | 45–50 minutes from Puttur\nOne of the most visited shrines in coastal Karnataka, Dharmasthala is dedicated to Sri Manjunatha Swamy. Uniquely, the temple has been managed with deep devotion by a Jain family for generations. Thousands of devotees visit the temple daily. The temple also offers free annadanam, serving simple and wholesome meals to every visitor."
+      },
+      {
+        type: "h4",
+        text: "Kukke Subramanya Temple"
+      },
+      {
+        type: "paragraph",
+        text: "~50 km | approximately 1 hour from Puttur\nSet at the foothills of the Kumara Parvatha range, Kukke Subramanya is considered one of the most powerful Subramanya temples in India. It is well-known for the Sarpa Samskara rituals performed for devotees seeking relief from serpent-related doshas. The natural surroundings are stunning, and the spiritual atmosphere here is unlike anywhere else in the region."
+      },
+      {
+        type: "h4",
+        text: "Kollur Mookambika Temple"
+      },
+      {
+        type: "paragraph",
+        text: "~100 km | approximately 2 hours from Puttur\nLocated on the banks of the Sauparnika River, by the foothills of the Western Ghats, Kollur Mookambika is a Shakti shrine of great significance. The goddess here is venerated as a combined form of Lakshmi, Saraswati, and Parvati. The scenic drive through the Ghats, combined with the river setting, makes this a truly memorable pilgrimage."
+      },
+      {
+        type: "h4",
+        text: "Kateel Durgaparameshwari Temple"
+      },
+      {
+        type: "paragraph",
+        text: "~65 km | approximately 1 hour 15 minutes from Puttur\nSituated on a small island on the Nandini River near Mangaluru, the Kateel temple is one of Karnataka's most celebrated Shakti shrines. Dedicated to Goddess Durgaparameshwari, the island setting and the small boat crossing to reach the temple add a unique and lasting quality to the visit."
+      },
+      {
+        type: "subheading",
+        text: "Book Your Stay in Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "Unlike larger pilgrimage destinations, Puttur is calm and less commercialized. Knowing the darshan timings, top hotels, and the best nearby temples to visit can make your experience more peaceful, spiritual, and memorable.\nIf you are looking for a comfortable and well-maintained place to stay in Puttur, with easy access to the temple and reliable service, choosing the right hotel like Padival Grand, can truly elevate your experience."
+      },
+      {
+        type: "subheading",
+        text: "Get in Touch"
+      },
+      {
+        type: "paragraph",
+        text: "For direct bookings and tour package inquiries,\nReach our team at: *96868 04784|tel:+919686804784*\nMail us at *info@padivalgrandhotel.com|mailto:info@padivalgrandhotel.com*"
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thepadivalgrand.com/blog/best-hotel-in-puttur-near-mahalingeshwara-temple"
+      },
+      "headline": "The Best Hotels in Puttur Near Mahalingeshwara Temple",
+      "description": "Planning a visit to Mahalingeshwara Temple? Find comfortable and safe hotels in Puttur, close to the temple, along with essential travel tips for a smooth stay.",
+      "image": [
+        "https://thepadivalgrand.com/ogImage.png"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "The Padival Grand"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Padival Grand",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thepadivalgrand.com/logo.png"
+        }
+      },
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-04-28",
+      "inLanguage": "en-IN",
+      "articleSection": "Temple Tourism",
+      "keywords": [
+        "stay in puttur",
+        "best hotel in puttur",
+        "hotels in puttur karnataka",
+        "hotel rooms in puttur",
+        "temple tourists",
+        "Shree Mahalingeshwara Temple",
+        "hotel near mahalingeshwara temple"
+      ]
+    }
+  },
+
 ];
