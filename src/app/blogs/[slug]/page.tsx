@@ -6,7 +6,9 @@ import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { blogs, type BlogSection } from "@/data/blogs";
+import MobileRecentBlogs from "@/components/blog/MobileRecentBlogs";
+import MobileToC from "@/components/blog/MobileToC";
+import { blogs, type BlogSection, type BlogPost } from "@/data/blogs";
 
 /* ─── Static paths ─────────────────────────────────────── */
 export async function generateStaticParams() {
@@ -81,15 +83,19 @@ export async function generateMetadata({
 
 /* ─── Content renderer ──────────────────────────────────── */
 function renderSection(section: BlogSection, idx: number) {
+  const generatedId = section.text
+    ?.toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, "-");
+
+  const sectionId = section.id || generatedId;
+
   switch (section.type) {
     case "heading":
       return (
         <h2
           key={idx}
-          id={section.text
-            ?.toLowerCase()
-            .replace(/[^a-z0-9\s]/g, "")
-            .replace(/\s+/g, "-")}
+          id={sectionId}
           className="font-sans text-2xl md:text-[1.7rem] text-[#002117] font-semibold mt-10 mb-3 leading-snug"
         >
           {section.text}
@@ -99,23 +105,21 @@ function renderSection(section: BlogSection, idx: number) {
       return (
         <h2
           key={idx}
-          id={section.text
-            ?.toLowerCase()
-            .replace(/[^a-z0-9\s]/g, "")
-            .replace(/\s+/g, "-")}
+          id={sectionId}
           className="font-sans text-xl md:text-2xl text-[#002117] font-semibold mt-10 mb-3 leading-snug"
         >
           {section.text}
         </h2>
       );
-    case "h4":
+    case "h3":
       return (
-        <h4
+        <h3
           key={idx}
+          id={sectionId}
           className="font-sans text-base md:text-[1.05rem] text-[#002117] font-semibold mt-6 mb-2 leading-snug"
         >
           {section.text}
-        </h4>
+        </h3>
       );
     case "paragraph": {
       if (!section.text) return null;
@@ -386,7 +390,7 @@ export default async function BlogDetailPage({
       {/* ── Body: Sidebar + Article ───────────────────────── */}
       <section className="flex-1 py-10 md:py-14">
         <div className="w-full px-4 lg:px-20">
-          <div className="flex flex-col lg:flex-row gap-10 xl:gap-14 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 xl:gap-14 items-stretch lg:items-start">
 
             {/* ══════════ LEFT SIDEBAR ══════════ */}
             <aside data-lenis-prevent className="w-full lg:w-[230px] xl:w-[250px] shrink-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto space-y-8 pb-4 pr-4 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#C5A028]/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#C5A028]/60 transition-all duration-300">
@@ -402,20 +406,22 @@ export default async function BlogDetailPage({
                       <span className="font-sans text-[0.78rem] text-[#444] shrink-0">
                         {i + 1}.
                       </span>
-                      <a
-
-                        className="font-sans text-[0.78rem] text-[#222] transition-colors leading-snug"
-                      >
-                        {item.label}
-                      </a>
+                      <h2 className="-mt-1">
+                        <a
+                          href={`#${item.id}`}
+                          className="font-sans text-[0.78rem] text-[#222] hover:text-[#C5A028] transition-colors leading-snug cursor-pointer"
+                        >
+                          {item.label}
+                        </a>
+                      </h2>
                     </li>
                   ))}
                 </ol>
               </div>
 
-              {/* Recent Blogs */}
+              {/* Recent Blogs - Desktop Only */}
               {relatedPosts.length > 0 && (
-                <div className="bg-[#F0EBE1] p-5">
+                <div className="bg-[#F0EBE1] p-5 hidden lg:block">
                   <p className="font-serif text-[1rem] text-[#1a1a1a] font-semibold mb-4">
                     Recent Blogs
                   </p>
@@ -451,7 +457,7 @@ export default async function BlogDetailPage({
             </aside>
 
             {/* ══════════ MAIN ARTICLE ══════════ */}
-            <article className="flex-1 min-w-0">
+            <article className="flex-1 min-w-0 w-full">
 
               {/* Breadcrumb — inside article, above title */}
               <nav className="flex items-center gap-2 font-sans text-sm text-[#555] mb-5 flex-wrap">
@@ -483,6 +489,9 @@ export default async function BlogDetailPage({
               <p className="font-sans text-[0.875rem] text-[#012210] leading-[1.85] mb-8 lg:max-w-[750px]">
                 {post.excerpt}
               </p>
+
+              {/* Table of Contents - Mobile Only */}
+              <MobileToC items={post.tableOfContents} />
 
               {/* Article body */}
               <div className="lg:max-w-[750px]">
@@ -528,6 +537,8 @@ export default async function BlogDetailPage({
               </div>
             </article>
 
+            {/* Recent Blogs - Mobile Swiper (full-width, below article, mobile only) */}
+            <MobileRecentBlogs relatedPosts={relatedPosts as BlogPost[]} />
           </div>
         </div>
       </section>

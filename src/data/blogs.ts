@@ -24,12 +24,13 @@ export interface BlogSection {
   | "paragraph"
   | "heading"
   | "subheading"
-  | "h4"
+  | "h3"
   | "list"
   | "bulletList"
   | "table"
   | "quote"
   | "rating";
+  id?: string;
   text?: string;
   items?: string[];
   tableData?: { headers: string[]; rows: string[][] };
@@ -98,6 +99,7 @@ export const blogs: BlogPost[] = [
     content: [
       // ── 1. Opening section ─────────────────────────────────
       {
+        id: "peaceful-destination",
         type: "heading",
         text: "Puttur: Karnataka's Most Peaceful Temple Destination for Devotees",
       },
@@ -111,6 +113,7 @@ export const blogs: BlogPost[] = [
       },
       // ── 2. The Temple ──────────────────────────────────────
       {
+        id: "mahalingeshwara-temple",
         type: "subheading",
         text: "The Shree Mahalingeshwara Temple – Puttur's Sacred Heart",
       },
@@ -143,6 +146,7 @@ export const blogs: BlogPost[] = [
       },
       // ── 3. Beyond the temple ───────────────────────────────
       {
+        id: "beyond-temple",
         type: "subheading",
         text: "Beyond the Temple: What to Experience in and Around Puttur",
       },
@@ -151,7 +155,7 @@ export const blogs: BlogPost[] = [
         text: "Puttur rewards slow travel. The town and its surrounding landscape hold several experiences that complement the spiritual itinerary without overwhelming it.",
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Bendru Theertha – The Healing Hot Spring",
       },
       {
@@ -159,7 +163,7 @@ export const blogs: BlogPost[] = [
         text: "A natural sulphur spring revered locally for its therapeutic properties, Bendru Theertha is an ideal stop after a morning darshan. The warm, mineral-rich waters have a genuinely calming effect — the kind that makes the silence feel productive rather than empty.",
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Shivarama Karantha Balavana",
       },
       {
@@ -167,7 +171,7 @@ export const blogs: BlogPost[] = [
         text: "Named after the Jnanpith Award-winning Kannada writer Shivarama Karantha, this recreational park near Puttur offers a peaceful green space to rest between temple visits. Suitable for families traveling with children.",
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Beeramale Hill",
       },
       {
@@ -175,7 +179,7 @@ export const blogs: BlogPost[] = [
         text: "For those willing to start early, the trek to Beeramale Hill rewards panoramic views of the Western Ghats and one of the quietest sunrise experiences in the region. It pairs well with an evening arrival in Puttur, giving you a dawn start before the temple opens.",
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Day Trip: Kukke Subramanya Temple",
       },
       {
@@ -184,6 +188,7 @@ export const blogs: BlogPost[] = [
       },
       // ── 4. Where to stay ───────────────────────────────────
       {
+        id: "where-to-stay",
         type: "subheading",
         text: "Where to Stay in Puttur: What Temple Tourists Actually Need",
       },
@@ -210,6 +215,7 @@ export const blogs: BlogPost[] = [
       },
       // ── 5. Guest reviews ───────────────────────────────────
       {
+        id: "guest-reviews",
         type: "subheading",
         text: "What Our Guests Say – Real Reviews, Honest Perspectives",
       },
@@ -233,6 +239,7 @@ export const blogs: BlogPost[] = [
       },
       // ── 6. Dining ──────────────────────────────────────────
       {
+        id: "dining",
         type: "subheading",
         text: "Dining at Padival Grand: Fuel for a Full Day of Darshan",
       },
@@ -250,6 +257,7 @@ export const blogs: BlogPost[] = [
       },
       // ── 7. Practical guide ─────────────────────────────────
       {
+        id: "practical-travel-guide",
         type: "subheading",
         text: "Practical Travel Guide for Puttur Temple Visitors",
       },
@@ -265,6 +273,7 @@ export const blogs: BlogPost[] = [
       },
       // ── 8. Plan your stay ──────────────────────────────────
       {
+        id: "plan-stay",
         type: "subheading",
         text: "Plan Your Stay at Padival Grand, Puttur",
       },
@@ -387,6 +396,7 @@ export const blogs: BlogPost[] = [
         text: "Here's everything you need to know to make your trip to Mahalingeshwara Temple a comfortable, spiritual, and memorable one."
       },
       {
+        id: "how-to-reach",
         type: "subheading",
         text: "How to Reach Puttur"
       },
@@ -395,7 +405,7 @@ export const blogs: BlogPost[] = [
         text: "Puttur is well connected by road, rail, and air, making it accessible from across Karnataka and nearby states."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "By Road"
       },
       {
@@ -403,7 +413,7 @@ export const blogs: BlogPost[] = [
         text: "Puttur lies along NH-275 and is well connected to cities like Mangaluru (55 km), Bengaluru (330 km), and Udupi (90 km). The drive through the Western Ghats foothills is scenic and pleasant.\nBoth KSRTC and private buses run frequently to Puttur, making road travel convenient and reliable."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "By Train"
       },
       {
@@ -411,7 +421,7 @@ export const blogs: BlogPost[] = [
         text: "The nearest railway station is Subrahmanya Road (about 30 km away), with connections to Mysuru and Bengaluru.\nFor broader connectivity, Mangaluru Central and Mangaluru Junction (around 55–60 km away) connect to major cities across India. From there, taxis and buses are easily available to Puttur."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "By Air"
       },
       {
@@ -419,6 +429,7 @@ export const blogs: BlogPost[] = [
         text: "Mangaluru International Airport (IXE), located about 65 km away, is the nearest airport. It connects to major cities like Bengaluru, Mumbai, Chennai, and Hyderabad.\nFrom the airport, a cab ride to Puttur takes approximately 1.5 to 2 hours."
       },
       {
+        id: "about-temple",
         type: "subheading",
         text: "About Shree Mahalingeshwara Temple, Puttur"
       },
@@ -427,7 +438,7 @@ export const blogs: BlogPost[] = [
         text: "Located in the heart of town, the Shree Mahalingeshwara Temple is one of the most revered Shaivite temples in coastal Karnataka.\nThe temple is known for its Swayambhu Linga, believed to have naturally emerged from the earth. This makes it deeply significant for devotees visiting across generations.\nThe temple follows the Shaiva Agama tradition and is managed by the Dharmasthala Dharmadhikari's office, ensuring rituals are performed with discipline and care.\nDuring festivals like Maha Shivaratri and Karthika Deepotsava, the town sees a large influx of pilgrims, creating a vibrant yet unforgettable spiritual atmosphere."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Puttur Shree Mahalingeshwara Temple Darshan Timings"
       },
       {
@@ -444,6 +455,7 @@ export const blogs: BlogPost[] = [
         text: "Note: Darshan timings may vary on festival days and special occasions. It is always advisable to confirm before your visit."
       },
       {
+        id: "where-to-stay",
         type: "subheading",
         text: "Where to Stay in Puttur"
       },
@@ -462,11 +474,12 @@ export const blogs: BlogPost[] = [
         ]
       },
       {
+        id: "top-hotels",
         type: "subheading",
         text: "Top Hotels in Puttur, Karnataka"
       },
       {
-        type: "h4",
+        type: "h3",
         text: "The Padival Grand"
       },
       {
@@ -488,7 +501,7 @@ export const blogs: BlogPost[] = [
         text: "For those looking for the highly recommended hotel room in Puttur that balances comfort and convenience, this is a good choice."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Hotel Rama, Puttur"
       },
       {
@@ -502,7 +515,7 @@ export const blogs: BlogPost[] = [
         ratingSubtitle: "*Based on verified google reviews*"
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Hotel Keerthana, Puttur"
       },
       {
@@ -516,6 +529,7 @@ export const blogs: BlogPost[] = [
         ratingSubtitle: "*Based on verified google reviews*"
       },
       {
+        id: "nearby-temples",
         type: "subheading",
         text: "Nearby Temples Worth Visiting"
       },
@@ -524,7 +538,7 @@ export const blogs: BlogPost[] = [
         text: "If you have extra time, you can extend your stay in Puttur to explore nearby spiritual destinations:"
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Dharmasthala Shree Manjunatha Temple"
       },
       {
@@ -532,7 +546,7 @@ export const blogs: BlogPost[] = [
         text: "~35 km | 45–50 minutes from Puttur\nOne of the most visited shrines in coastal Karnataka, Dharmasthala is dedicated to Sri Manjunatha Swamy. Uniquely, the temple has been managed with deep devotion by a Jain family for generations. Thousands of devotees visit the temple daily. The temple also offers free annadanam, serving simple and wholesome meals to every visitor."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Kukke Subramanya Temple"
       },
       {
@@ -540,7 +554,7 @@ export const blogs: BlogPost[] = [
         text: "~50 km | approximately 1 hour from Puttur\nSet at the foothills of the Kumara Parvatha range, Kukke Subramanya is considered one of the most powerful Subramanya temples in India. It is well-known for the Sarpa Samskara rituals performed for devotees seeking relief from serpent-related doshas. The natural surroundings are stunning, and the spiritual atmosphere here is unlike anywhere else in the region."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Kollur Mookambika Temple"
       },
       {
@@ -548,7 +562,7 @@ export const blogs: BlogPost[] = [
         text: "~100 km | approximately 2 hours from Puttur\nLocated on the banks of the Sauparnika River, by the foothills of the Western Ghats, Kollur Mookambika is a Shakti shrine of great significance. The goddess here is venerated as a combined form of Lakshmi, Saraswati, and Parvati. The scenic drive through the Ghats, combined with the river setting, makes this a truly memorable pilgrimage."
       },
       {
-        type: "h4",
+        type: "h3",
         text: "Kateel Durgaparameshwari Temple"
       },
       {
@@ -556,6 +570,7 @@ export const blogs: BlogPost[] = [
         text: "~65 km | approximately 1 hour 15 minutes from Puttur\nSituated on a small island on the Nandini River near Mangaluru, the Kateel temple is one of Karnataka's most celebrated Shakti shrines. Dedicated to Goddess Durgaparameshwari, the island setting and the small boat crossing to reach the temple add a unique and lasting quality to the visit."
       },
       {
+        id: "book-your-stay",
         type: "subheading",
         text: "Book Your Stay in Puttur"
       },
@@ -694,117 +709,443 @@ export const blogs: BlogPost[] = [
     }, 
 
     { 
-
       "@type": "ItemList", 
-
-      "@id": "https://thepadivalgrand.com/blogs/best-hotel-in-puttur#itemlist", 
-
-      "name": "Top Hotels in Puttur Near Mahalingeshwara Temple", 
-
-      "description": "A curated list of the best hotels in Puttur, Karnataka, offering comfortable stays near Shree Mahalingeshwara Temple.", 
-
-      "itemListOrder": "http://schema.org/ItemListOrderDescending", 
-
-      "numberOfItems": 3, 
-
-      "itemListElement": [ 
-
-        { 
-
-          "@type": "ListItem", 
-
-          "position": 1, 
-
-          "item": { 
-
-            "@type": "Hotel", 
-
-            "name": "The Padival Grand", 
-
-            "description": "A premium hotel in The Padival Grand Puttur offering clean rooms, modern amenities, a pure vegetarian restaurant, and easy access to Mahalingeshwara Temple.", 
-
-            "address": { 
-
-              "@type": "PostalAddress", 
-
-              "addressLocality": "Puttur", 
-
-              "addressRegion": "Karnataka", 
-
-              "addressCountry": "India" 
-
-            } 
-
-          } 
-
-        }, 
-
-        { 
-
-          "@type": "ListItem", 
-
-          "position": 2, 
-
-          "item": { 
-
-            "@type": "Hotel", 
-
-            "name": "Hotel Rama", 
-
-            "description": "A budget-friendly hotel near Puttur bus stand offering non-AC rooms along with an in-house restaurant.", 
-
-            "address": { 
-
-              "@type": "PostalAddress", 
-
-              "addressLocality": "Puttur", 
-
-              "addressRegion": "Karnataka", 
-
-              "addressCountry": "India" 
-
-            } 
-
-          } 
-
-        }, 
-
-        { 
-
-          "@type": "ListItem", 
-
-          "position": 3, 
-
-          "item": { 
-
-            "@type": "Hotel", 
-
-            "name": "Hotel Keerthana", 
-
-            "description": "A quiet and comfortable stay option located slightly away from the main town, suitable for families.", 
-
-            "address": { 
-
-              "@type": "PostalAddress", 
-
-              "addressLocality": "Puttur", 
-
-              "addressRegion": "Karnataka", 
-
-              "addressCountry": "India" 
-
-            } 
-
-          } 
-
-        } 
-
-      ] 
-
-    } 
-
-  ]
+      "@id": "https://thepadivalgrand.com/blogs/best-hotel-in-puttur#itemlist",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Hotel",
+            "name": "The Padival Grand",
+            "description": "A premium hotel in Puttur offering comfortable rooms and pure vegetarian dining.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Puttur",
+              "addressRegion": "Karnataka",
+              "addressCountry": "India"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Hotel",
+            "name": "Hotel Rama",
+            "description": "A budget-friendly hotel near Puttur bus stand offering non-AC rooms along with an in-house restaurant.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Puttur",
+              "addressRegion": "Karnataka",
+              "addressCountry": "India"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Hotel",
+            "name": "Hotel Keerthana",
+            "description": "A quiet and comfortable stay option located slightly away from the main town, suitable for families.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Puttur",
+              "addressRegion": "Karnataka",
+              "addressCountry": "India"
+            }
+          }
+        }
+      ]
     }
-  },
+  ]
+}
+},
 
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 3                                               ║
+   * ═══════════════════════════════════════════════════════╝ */
+
+  {
+    id: 3,
+    slug: "best-wedding-hall-in-puttur",
+    breadcrumb: "Wedding Hall in Puttur",
+    title: "How to Choose the Best Wedding Hall in Puttur for Weddings, Receptions & Family Events",
+    excerpt: "Planning a wedding or family celebration involves more than simply booking a venue. The right space influences guest comfort, event flow, dining experience and the overall atmosphere of your special occasion. Whether you are planning a wedding, reception, engagement, naming ceremony or corporate gathering, choosing the right wedding hall in Puttur helps create a smooth and memorable experience for everyone involved.",
+    date: "May 14, 2026",
+    author: "Maruti Khapare",
+    readTime: "6 min read",
+    heroImage: "/blogsImg/Desktop3.png",
+    mobileImage: "/blogsImg/mobile3.png",
+    pcImage: "/blogsImg/Desktop3.png",
+    cardImage: "/blogsImg/Desktop3.png",
+    metaTitle: "Best Wedding Hall in Puttur | Padival Grand Banquet Hall",
+    metaDescription: "Discover Padival Grand, a premium wedding hall in Puttur with banquet spaces, rooftop venue, rooms, pure veg dining, parking, and event facilities.",
+    category: "Event Planning",
+    tableOfContents: [
+      { id: "marriage-hall-matters", label: "Why Choosing the Right Marriage Hall Matters" },
+      { id: "guest-capacity", label: "Guest Capacity Planning for Weddings & Events" },
+      { id: "parking-accessibility", label: "Parking & Accessibility Make Events Easier" },
+      { id: "indoor-vs-outdoor", label: "Indoor vs Outdoor Event Setup" },
+      { id: "stage-decor", label: "Stage Décor & Event Customisation" },
+      { id: "amenities-comfort", label: "Importance of Amenities & Guest Comfort" },
+      { id: "budget-planning", label: "Budget Planning Tips Before Booking" },
+      { id: "questions-to-ask", label: "Questions to Ask Before Booking" },
+      { id: "thoughtfully-designed", label: "A Thoughtfully Designed Wedding Venue" },
+      { id: "reserve-dates", label: "Reserve Your Dates at Padival Grand" },
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Planning a wedding or family celebration involves more than simply booking a venue. The right space influences guest comfort, event flow, dining experience and the overall atmosphere of your special occasion. Whether you are planning a wedding, reception, engagement, naming ceremony or corporate gathering, choosing the right wedding hall in Puttur helps create a smooth and memorable experience for everyone involved.",
+      },
+      {
+        type: "paragraph",
+        text: "Located at Mahaveer Mall, Main Road, Bolwar, above Reliance Trends near Mahalingeshwara Temple, Padival Grand Wedding & Banquet Hall offers thoughtfully designed event spaces, family stay options and pure vegetarian dining for celebrations that feel organised, comfortable and welcoming.",
+      },
+      {
+        id: "marriage-hall-matters",
+        type: "subheading",
+        text: "Why Choosing the Right Marriage Hall in Puttur Matters",
+      },
+      {
+        type: "paragraph",
+        text: "A well-planned venue does more than provide space for guests. It helps reduce coordination challenges, improves convenience for families and creates a better overall experience during important celebrations.",
+      },
+      {
+        type: "paragraph",
+        text: "Many families today prefer a marriage hall in Puttur that offers multiple facilities under one roof, including dining, rooms, parking and event support. This simplifies planning and allows families to focus more on the celebration rather than managing separate vendors and logistics.",
+      },
+      {
+        type: "paragraph",
+        text: "At Padival Grand, the venue is designed for medium-sized weddings, receptions and functions where comfort, accessibility and seamless arrangements matter most.",
+      },
+      {
+        id: "guest-capacity",
+        type: "subheading",
+        text: "Guest Capacity Planning for Weddings & Events",
+      },
+      {
+        type: "paragraph",
+        text: "One of the first factors to consider while selecting a banquet hall in Puttur is guest capacity. A venue that feels overcrowded can become uncomfortable, while a space that is too large may reduce the warmth and atmosphere of the gathering.",
+      },
+      {
+        type: "paragraph",
+        text: "Padival Grand offers flexible event spaces suitable for different event formats:",
+      },
+      {
+        type: "h3",
+        text: "Conference Hall",
+      },
+      {
+        type: "paragraph",
+        text: "Ideal for indoor gatherings, receptions, engagement ceremonies, corporate meetings and community events with a comfortable capacity for approximately 70–120 guests.",
+      },
+      {
+        type: "h3",
+        text: "Rooftop Terrace Space",
+      },
+      {
+        type: "paragraph",
+        text: "A relaxed open-air venue suited for intimate functions, evening celebrations, haldi ceremonies and smaller gatherings with a capacity of around 60–80 guests.",
+      },
+      {
+        type: "paragraph",
+        text: "These flexible layouts help families plan events according to guest count, event type and preferred atmosphere.",
+      },
+      {
+        id: "parking-accessibility",
+        type: "subheading",
+        text: "Parking & Accessibility Make Events Easier",
+      },
+      {
+        type: "paragraph",
+        text: "Convenience plays a major role in guest experience. A centrally located wedding venue in Puttur with accessible roads and parking helps guests arrive comfortably without unnecessary stress.",
+      },
+      {
+        type: "paragraph",
+        text: "Padival Grand is centrally located on Main Road, Bolwar, with easy access from different parts of the city. The venue is:",
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Above Reliance Trends",
+          "Near Mahalingeshwara Temple",
+          "Approximately 950 metres from Kabakaputtur Railway Station",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The venue also offers ample parking space, helping guests attend functions comfortably during weddings and busy event days.",
+      },
+      {
+        id: "indoor-vs-outdoor",
+        type: "subheading",
+        text: "Indoor vs Outdoor Event Setup",
+      },
+      {
+        type: "paragraph",
+        text: "Different celebrations require different atmospheres. Some families prefer indoor elegance, while others enjoy open-air celebrations and relaxed evening gatherings.",
+      },
+      {
+        type: "h3",
+        text: "Indoor Conference Hall",
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Air-conditioned comfort",
+          "Professional event setup",
+          "Calm and focused atmosphere",
+          "Suitable arrangements for receptions, naming ceremonies and meetings",
+        ],
+      },
+      {
+        type: "h3",
+        text: "Rooftop Terrace Venue",
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Open-air ambience",
+          "Relaxed evening environment",
+          "Ideal setup for haldi, mehendi and intimate celebrations",
+          "Comfortable social interaction for guests",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Choosing between indoor and outdoor spaces allows families to create the right experience for their specific celebration.",
+      },
+      {
+        id: "stage-decor",
+        type: "subheading",
+        text: "Stage Décor & Event Customisation",
+      },
+      {
+        type: "paragraph",
+        text: "Every celebration has its own style and personality. Modern families often look for a banquet hall in Puttur that allows customised decorations and flexible event arrangements.",
+      },
+      {
+        type: "paragraph",
+        text: "At Padival Grand:",
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Custom décor themes are allowed",
+          "Stage arrangements can be adapted for different functions",
+          "The venue supports weddings, receptions, engagements, birthdays and community gatherings",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This flexibility allows families to personalise events according to tradition, style preferences and event requirements.",
+      },
+      {
+        id: "amenities-comfort",
+        type: "subheading",
+        text: "Importance of Amenities & Guest Comfort",
+      },
+      {
+        type: "paragraph",
+        text: "Guest comfort often determines how memorable an event feels. Choosing the best wedding hall in Puttur means selecting a venue that supports both convenience and functionality.",
+      },
+      {
+        type: "paragraph",
+        text: "Padival Grand offers essential event amenities including:",
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Air-conditioned spaces",
+          "Lift and elevator access",
+          "Power backup",
+          "WiFi connectivity",
+          "Event support facilities",
+          "Family stay options with AC and non-AC rooms",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "These amenities help events run smoothly while ensuring guests remain comfortable throughout the celebration.",
+      },
+      {
+        id: "budget-planning",
+        type: "subheading",
+        text: "Budget Planning Tips Before Booking a Wedding Venue",
+      },
+      {
+        type: "paragraph",
+        text: "Choosing a venue involves balancing comfort, guest experience and budget expectations. A mid-premium venue often provides the right balance between quality and affordability for medium-sized celebrations.",
+      },
+      {
+        type: "paragraph",
+        text: "Before booking a marriage hall in Puttur, families should consider:",
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Guest count",
+          "Dining requirements",
+          "Parking availability",
+          "Accommodation needs",
+          "Decoration flexibility",
+          "Accessibility for elderly guests",
+          "Indoor and outdoor event preferences",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Planning these details early helps avoid last-minute challenges and creates a more organised event experience.",
+      },
+      {
+        id: "questions-to-ask",
+        type: "subheading",
+        text: "Questions to Ask Before Booking a Wedding Hall",
+      },
+      {
+        type: "paragraph",
+        text: "Before finalising any wedding venue in Puttur, it is important to ask:",
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Does the venue support your guest count comfortably?",
+          "Is parking available for guests?",
+          "Are rooms available for family stay?",
+          "Does the venue provide dining support?",
+          "Are custom decorations allowed?",
+          "Is the location easily accessible?",
+          "Does the venue have power backup and lift access?",
+          "Are indoor and outdoor setups available?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "These questions help families compare venues more effectively and make better decisions based on event requirements.",
+      },
+      {
+        id: "thoughtfully-designed",
+        type: "subheading",
+        text: "A Thoughtfully Designed Wedding Venue in Puttur",
+      },
+      {
+        type: "paragraph",
+        text: "From weddings and receptions to naming ceremonies, birthday parties and corporate events, Padival Grand brings together practical event spaces, pure vegetarian dining, family stay options and convenient accessibility in one location.",
+      },
+      {
+        type: "paragraph",
+        text: "Its combination of indoor and rooftop venues, central location, guest-friendly amenities and flexible event arrangements makes it a preferred choice for families looking for a well-managed wedding hall in Puttur.",
+      },
+      {
+        id: "reserve-dates",
+        type: "subheading",
+        text: "Reserve Your Dates at Padival Grand",
+      },
+      {
+        type: "paragraph",
+        text: "If you are planning a wedding, reception, engagement or family gathering in Puttur, Padival Grand offers a comfortable and organised venue experience designed for memorable celebrations.",
+      },
+      {
+        type: "paragraph",
+        text: "Contact: *+91 96868 04784|tel:+919686804784*",
+      },
+      {
+        type: "paragraph",
+        text: "Location: Mahaveer Mall, Main Road, Bolwar, Puttur Above Reliance Trends, Near Mahalingeshwara Temple",
+      },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Choose the Best Wedding Hall in Puttur for Weddings, Receptions & Family Events",
+      "description": "Discover how to choose the best wedding hall in Puttur for weddings, receptions, engagements and family events with venue planning tips, amenities and event considerations.",
+      "author": {
+        "@type": "Person",
+        "name": "Maruti Khapare"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Padival Grand Wedding & Banquet Hall"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thepadivalgrand.com/blogs/best-wedding-hall-in-puttur"
+      },
+      "image": [
+        "https://thepadivalgrand.com/ogImage.png"
+      ],
+      "datePublished": "2026-05-14",
+      "dateModified": "2026-05-14",
+      "articleSection": [
+        "Wedding Planning",
+        "Banquet Halls",
+        "Marriage Halls",
+        "Event Venues"
+      ],
+      "keywords": [
+        "wedding hall in puttur",
+        "banquet hall in puttur",
+        "best wedding hall in puttur",
+        "marriage hall in puttur",
+        "wedding venue in puttur",
+        "luxury wedding hall in puttur"
+      ],
+      "about": {
+        "@type": "EventVenue",
+        "name": "Padival Grand Wedding & Banquet Hall",
+        "description": "Mid-premium wedding and banquet venue in Puttur for weddings, receptions, engagements, corporate meetings and family events.",
+        "telephone": "+91 96868 04784",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+          "addressLocality": "Puttur",
+          "addressRegion": "Karnataka",
+          "postalCode": "574201",
+          "addressCountry": "IN"
+        },
+        "landmark": "Above Reliance Trends, Near Mahalingeshwara Temple",
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Air Conditioning",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Lift Access",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Power Backup",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "WiFi",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Parking Facility",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Family Rooms",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Pure Vegetarian Dining",
+            "value": true
+          }
+        ]
+      }
+    }
+  }
 ];
