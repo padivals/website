@@ -81,10 +81,10 @@ const Header = () => {
 
           {/* RIGHT NAV — Desktop only */}
           <Link
-            href="/dining"
+            href="/blogs"
             className="hidden md:block text-white text-lg font-medium  font-sans hover:text-[#D4AF37] transition-colors text-center drop-shadow-md"
           >
-            <span className="nav-underline">DINING</span>
+            <span className="nav-underline">BLOGS</span>
           </Link>
 
           <Link
@@ -162,8 +162,11 @@ const Header = () => {
           <Link href="/events" onClick={() => setMobileOpen(false)}>
             EVENTS
           </Link>
-          <Link href="/dining" onClick={() => setMobileOpen(false)}>
+          {/* <Link href="/dining" onClick={() => setMobileOpen(false)}>
             DINING
+          </Link> */}
+            <Link href="/blogs" onClick={() => setMobileOpen(false)}>
+            BLOGS
           </Link>
           <Link href="/about" onClick={() => setMobileOpen(false)}>
             ABOUT US
