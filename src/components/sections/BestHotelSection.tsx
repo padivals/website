@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { title } from 'process';
 
 const TABS_CONTENT = [
     {
@@ -10,10 +11,15 @@ const TABS_CONTENT = [
         description: "Our rooms are designed for comfort, functionality, and consistency in everything you need for a smooth stay in Puttur. Whether you're visiting for a short trip, business travel, or a temple visit, each room offers clean interiors, effective air conditioning, high-speed Wi-Fi, and essential amenities that work without hassle. With a location near Puttur Main Road, getting in and out is easy, making your stay practical from check-in to checkout. ",
         image: "/bestHotelImg/11.webp"
     },
+    // {
+    //     title: "Pure Veg Restaurant in Puttur for Everyday Dining ",
+    //     description: "At Padival’s Palara, we serve pure vegetarian food that is simple, fresh, and consistent. Our menu focuses on familiar, satisfying meals that work for families, travellers, and daily dining. Whether it’s breakfast, lunch, or dinner, the experience is built around clean preparation, reliable taste, and a comfortable space where you can enjoy your meal without overcomplication. ",
+    //     image: "/bestHotelImg/2.webp"
+    // },
     {
-        title: "Pure Veg Restaurant in Puttur for Everyday Dining ",
-        description: "At Padival’s Palara, we serve pure vegetarian food that is simple, fresh, and consistent. Our menu focuses on familiar, satisfying meals that work for families, travellers, and daily dining. Whether it’s breakfast, lunch, or dinner, the experience is built around clean preparation, reliable taste, and a comfortable space where you can enjoy your meal without overcomplication. ",
-        image: "/bestHotelImg/2.webp"
+        title:"Explore Puttur Beyond Your Stay",
+        description: "At The Padival Grand, you’re surrounded by places that reflect the culture, nature, and everyday charm of Puttur. From historic temples and peaceful parks to scenic hill views and natural springs, each attraction offers a different side of the region. Whether you’re travelling with family, visiting for a short getaway, or simply exploring at your own pace, these nearby destinations make your stay more connected, relaxed, and memorable.",
+        image: "/bestHotelImg/2.webp"   
     },
     {
         title: "Event Spaces for Family Functions & Gatherings ",
