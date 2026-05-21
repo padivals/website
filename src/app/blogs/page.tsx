@@ -24,6 +24,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogsPage() {
+  const sortedBlogs = [...blogs].sort((a, b) => b.id - a.id);
+
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -39,7 +41,7 @@ export default function BlogsPage() {
         "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
       }
     },
-    "blogPost": blogs.map((post) => ({
+    "blogPost": sortedBlogs.map((post) => ({
       "@type": "BlogPosting",
       "headline": post.metaTitle || post.title,
       "url": `https://thepadivalgrand.com/blogs/${post.slug}`,
@@ -55,6 +57,7 @@ export default function BlogsPage() {
   return (
     <main className="min-h-screen flex flex-col bg-[#F9F5EC]">
       <JsonLd data={blogSchema} id="blog-listing-schema" />
+      <Header/>
       <HalfHeroSection
         title="Blogs"
       />
@@ -68,7 +71,7 @@ export default function BlogsPage() {
       <section className="py-20 md:py-32 bg-[#F9F5EC]">
         <div className="container mx-auto px-6 md:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {blogs.map((post) => (
+            {sortedBlogs.map((post) => (
               <Link
                 key={post.id}
                 href={`/blogs/${post.slug}`}

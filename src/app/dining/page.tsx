@@ -295,6 +295,7 @@ export default function DiningPage() {
       <Hero 
         videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FPalara.mp4?alt=media&token=1061604b-2c1a-4955-8c5e-5f91d8436590" 
         bgImg="/diningImg/placeholder.png"
+        mobileBgImg="/heroImg/dining.jpg"
       />
 
       <TextSection

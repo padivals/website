@@ -440,6 +440,7 @@ export default function Home() {
       <Hero 
         videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FLOBBY%2C%20RECEPTION.mp4?alt=media&token=a66474d4-cc5c-4fd3-90e7-782dac157248" 
         bgImg="/images/placeholder.png"
+        mobileBgImg="/heroImg/home.jpg"
       />
       <HospitalitySection />
       <div className="">

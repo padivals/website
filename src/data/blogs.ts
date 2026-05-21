@@ -29,7 +29,8 @@ export interface BlogSection {
   | "bulletList"
   | "table"
   | "quote"
-  | "rating";
+  | "rating"
+  | "image";
   id?: string;
   text?: string;
   items?: string[];
@@ -1146,6 +1147,509 @@ export const blogs: BlogPost[] = [
           }
         ]
       }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 4                                               ║
+   * ═══════════════════════════════════════════════════════╝ */
+  {
+    id: 4,
+    slug: "best-places-to-visit-in-puttur",
+    breadcrumb: "Best Places to Visit in Puttur",
+    title: "Best Places to Visit in Puttur for Culture, Nature & Spiritual Travel",
+    excerpt: "Explore the best places to visit in Puttur, from ancient temples and scenic hills to cultural parks, wildlife spots, and local heritage attractions.",
+    date: "May 19, 2026",
+    author: "Maruti Khapare",
+    readTime: "6 min read",
+    heroImage: "/blogsImg/Desktop4.webp",
+    mobileImage: "/blogsImg/mobile4.webp",
+    pcImage: "/blogsImg/Desktop4.webp",
+    cardImage: "/blogsImg/Desktop4.webp",
+    metaTitle: "Best Places to Visit in Puttur, Karnataka",
+    metaDescription: "Explore the best places to visit in Puttur, from ancient temples and scenic hills to cultural parks, wildlife spots, and local heritage attractions.",
+    category: "Travel Guide",
+    tableOfContents: [
+      { id: "why-puttur", label: "Why Puttur Deserves a Place on Your Travel List" },
+      { id: "mahalingeshwara-temple", label: "1. Shri Mahathobara Mahalingeshwara Temple" },
+      { id: "beeramale-hill", label: "2. Beeramale Hill" },
+      { id: "balavana", label: "3. Dr K. Shivaram Karanth’s Balavana" },
+      { id: "sowthadka-temple", label: "4. Sowthadka Shri Mahaganapati Temple" },
+      { id: "shishileshwara-temple", label: "5. Shree Shishileshwara Temple Gudi" },
+      { id: "hanumagiri-temple", label: "6. Shree Panchamukhi Anjaneya Temple, Hanumagiri" },
+      { id: "mai-de-deus-church", label: "7. Mai De Deus Church" },
+      { id: "bendru-teertha", label: "8. Bendru Teertha" },
+      { id: "best-time", label: "Best Time to Visit Puttur" },
+      { id: "itinerary", label: "One-Day Puttur Itinerary" },
+      { id: "conclusion", label: "Conclusion" }
+    ],
+    content: [
+      {
+        id: "why-puttur",
+        type: "heading",
+        text: "Best Places to Visit in Puttur: Temples, Hills, Culture & Hidden Heritage"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is not the kind of destination that tries too hard to impress you. It does not overwhelm you with tourist crowds or commercial noise. Instead, it slowly reveals itself through ancient temples, green hill views, cultural landmarks, sacred stories, and quiet places that still feel rooted in local life."
+      },
+      {
+        type: "paragraph",
+        text: "Located in the Dakshina Kannada district of Karnataka, Puttur is known for its spiritual depth, lush landscapes, and cultural history. For travellers looking beyond the usual coastal Karnataka routes, the town offers a meaningful mix of devotion, nature, heritage, and local experiences."
+      },
+      {
+        type: "paragraph",
+        text: "Whether you are planning a family trip, a temple visit, a cultural tour, or a peaceful weekend away, these are some of the best places to visit in Puttur."
+      },
+      {
+        type: "subheading",
+        text: "Why Puttur Deserves a Place on Your Travel List"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur has a very different charm compared to larger tourist towns. It is calm, deeply traditional, and surrounded by natural beauty. The town is especially known for temples, cultural institutions, scenic viewpoints, and unique local attractions."
+      },
+      {
+        type: "paragraph",
+        text: "What makes Puttur interesting is the variety it offers within a short travel radius. One moment you can be standing inside an ancient Shiva temple, and soon after, you can be watching the town from Beeramale Hill or learning about conservation at a snake park."
+      },
+      {
+        type: "paragraph",
+        text: "For spiritual travellers, Puttur offers temples with strong local faith and long histories. For nature lovers, there are hills, springs, and green spaces. For families, there are cultural parks, educational attractions, and relaxed sightseeing spots."
+      },
+
+      // 1. Shri Mahathobara Mahalingeshwara Temple
+      {
+        id: "mahalingeshwara-temple",
+        type: "subheading",
+        text: "1. Shri Mahathobara Mahalingeshwara Temple"
+      },
+      {
+        type: "image",
+        id: "shri-mahathobara-mahalingeshwara-temple-image",
+        text: "/blogsImg/Mahalingeshawa.webp"
+      },
+      {
+        type: "paragraph",
+        text: "Shri Mahathobara Mahalingeshwara Temple is one of the most important spiritual landmarks in Puttur. Dedicated to Lord Shiva, this ancient temple is believed to date back to the 11th - 12th century and holds immense religious and historical value."
+      },
+      {
+        type: "paragraph",
+        text: "The temple is also known as Puttur Mahalingeshwara Temple and is famous for its annual fair, commonly known as Puttur Jathre. The temple pond, traditional architecture, and devotional atmosphere make it a major attraction for devotees and heritage travellers."
+      },
+      {
+        type: "paragraph",
+        text: "Recognized for its historical and spiritual significance, the temple is maintained by the Directorate of Archaeology and Museums under the Government of Karnataka and is easily accessible from nearby areas such as Kodikad and Sorake."
+      },
+      {
+        type: "paragraph",
+        text: "For travellers who want to experience the temple at its most vibrant, April is considered a good time to visit, especially around the annual celebrations."
+      },
+      {
+        type: "paragraph",
+        text: "Located just a short drive from *Padival Grand|https://thepadivalgrand.com/*, the temple can be conveniently reached in approximately 10 - 15 minutes, making it an ideal spiritual attraction for guests staying in Puttur."
+      },
+
+      // 2. Beeramale Hill
+      {
+        id: "beeramale-hill",
+        type: "subheading",
+        text: "2. Beeramale Hill"
+      },
+      {
+        type: "image",
+        id: "beeramale-hill-image",
+        text: "/blogsImg/birmala.webp"
+      },
+      {
+        type: "paragraph",
+        text: "Beeramale Hill is one of the most scenic places to visit in Puttur. Rising around 1,000 feet above sea level, the hill offers panoramic views of the town, surrounding valleys, and green landscapes."
+      },
+      {
+        type: "paragraph",
+        text: "This is the kind of place where you do not need a packed itinerary. You visit Beeramale Hill to slow down, breathe better, and watch the landscape open up around you. It is especially suitable for nature lovers, photographers, and travellers looking for a peaceful viewpoint."
+      },
+      {
+        type: "paragraph",
+        text: "The hill is also known for the historic Doordarshan TV Relay Tower, making it a recognizable landmark in the region. If you are visiting Puttur for a short trip, Beeramale Hill can be reached in approximately 25 - 35 minutes from *Padival Grand|https://thepadivalgrand.com/*, offering an easy scenic getaway for nature lovers and travellers."
+      },
+
+      // 3. Dr K. Shivaram Karanth’s Balavana
+      {
+        id: "balavana",
+        type: "subheading",
+        text: "3. Dr K. Shivaram Karanth’s Balavana"
+      },
+      {
+        type: "image",
+        id: "balavana-image",
+        text: "/blogsImg/shivarama.webp"
+      },
+      {
+        type: "paragraph",
+        text: "Balavana is one of Puttur’s most meaningful cultural spaces. It is associated with Dr K. Shivaram Karanth, the celebrated Kannada writer, thinker, artist, and Jnanpith awardee."
+      },
+      {
+        type: "paragraph",
+        text: "Today, Balavana functions as a cultural and recreational space. The destination also includes a library, recreational spaces, swimming facilities, and dedicated areas that promote Yakshagana and local cultural learning experiences. For children, art lovers, and those interested in Karnataka’s literary and performing arts heritage, this place carries strong educational value."
+      },
+      {
+        type: "paragraph",
+        text: "Balavana is not just a tourist spot. It represents the intellectual and artistic spirit of the region. A visit here gives travellers a deeper understanding of Puttur beyond temples and landscapes."
+      },
+      {
+        type: "paragraph",
+        text: "Dr K. Shivaram Karanth’s Balavana is located just 10 - 20 minutes from *Padival Grand|https://thepadivalgrand.com/*, making it a convenient cultural and family-friendly attraction for guests exploring Puttur."
+      },
+
+      // 4. Sowthadka Shri Mahaganapati Temple
+      {
+        id: "sowthadka-temple",
+        type: "subheading",
+        text: "4. Sowthadka Shri Mahaganapati Temple"
+      },
+      {
+        type: "paragraph",
+        text: "Sowthadka Shri Mahaganapati Temple is one of the most peaceful spiritual places near Puttur. Dedicated to Lord Ganesha, the temple is known for its open-air setting, which makes it very different from conventional temple architecture."
+      },
+      {
+        type: "paragraph",
+        text: "Surrounded by greenery and fields, the temple has a calm devotional atmosphere. It is located around 15 km from Puttur and is often visited by devotees seeking blessings before major life events, travel, studies, or new beginnings."
+      },
+      {
+        type: "paragraph",
+        text: "The simplicity of the temple is its greatest strength. There is no excessive grandeur, but the spiritual energy and natural surroundings make it deeply memorable."
+      },
+      {
+        type: "paragraph",
+        text: "Sowthadka Shri Mahaganapati Temple is located approximately 20 - 30 minutes from *Padival Grand|https://thepadivalgrand.com/*, making it a peaceful spiritual destination easily accessible for guests staying in Puttur."
+      },
+
+      // 5. Shree Shishileshwara Temple Gudi
+      {
+        id: "shishileshwara-temple",
+        type: "subheading",
+        text: "5. Shree Shishileshwara Temple Gudi"
+      },
+      {
+        type: "image",
+        id: "shishileshwara-temple-image",
+        text: "/blogsImg/shishila.webp"
+      },
+      {
+        type: "paragraph",
+        text: "Shree Shishileshwara Temple Gudi is another sacred place with strong local importance. The temple is associated with the Kapila River, where Mahashir fish are considered sacred and worshiped through daily rituals."
+      },
+      {
+        type: "paragraph",
+        text: "The travel notes mention that the temple has a history of around 700 years and that devotees believe worshipping here and feeding the fish can bring relief from skin ailments."
+      },
+      {
+        type: "paragraph",
+        text: "For visitors, this temple offers a combination of faith, folklore, river ecology, and ritual practice. It is ideal for those who want to experience local belief systems in a more intimate and rooted way."
+      },
+      {
+        type: "paragraph",
+        text: "Shree Shishileshwara Temple Gudi is located approximately 35 - 45 minutes from *Padival Grand|https://thepadivalgrand.com/*, making it a serene spiritual and cultural excursion for guests exploring the outskirts of Puttur."
+      },
+
+      // 6. Shree Panchamukhi Anjaneya Temple, Hanumagiri
+      {
+        id: "hanumagiri-temple",
+        type: "subheading",
+        text: "6. Shree Panchamukhi Anjaneya Temple, Hanumagiri"
+      },
+      {
+        type: "image",
+        id: "hanumagiri-temple-image",
+        text: "/blogsImg/hanumagiri.webp"
+      },
+      {
+        type: "paragraph",
+        text: "Hanumagiri is a spiritually significant place connected with Lord Hanuman. According to local folklore, Hanumagiri is believed to be a fragment of the Sanjeevini Mountain. The legend says Lord Hanuman dropped this hill while carrying the mountain to save Lord Ram and Lakshman during the Ramayana."
+      },
+      {
+        type: "paragraph",
+        text: "This story gives Hanumagiri deep mythological importance. For devotees of Lord Hanuman, the place is not just another temple stop but a symbol of strength, healing, devotion, and divine intervention."
+      },
+      {
+        type: "paragraph",
+        text: "The peaceful setting also makes it suitable for travellers seeking spiritual reflection."
+      },
+      {
+        type: "paragraph",
+        text: "Shree Panchamukhi Anjaneya Temple, Hanumagiri is located approximately 25 - 35 minutes from *Padival Grand|https://thepadivalgrand.com/*, making it a spiritually significant and easily accessible destination for guests visiting Puttur."
+      },
+
+      // 7. Mai De Deus Church
+      {
+        id: "mai-de-deus-church",
+        type: "subheading",
+        text: "7. Mai De Deus Church"
+      },
+      {
+        type: "image",
+        id: "mai-de-deus-church-image",
+        text: "/blogsImg/church.webp"
+      },
+      {
+        type: "paragraph",
+        text: "Mai De Deus Church adds another layer to Puttur’s spiritual and architectural diversity. Established in 1838, the church is known for its Gothic-style architecture and historic presence in the region."
+      },
+      {
+        type: "paragraph",
+        text: "For travellers interested in religious architecture, this church is worth visiting. It reflects the Christian heritage of the area and adds balance to a Puttur itinerary that is otherwise strongly temple-focused."
+      },
+      {
+        type: "paragraph",
+        text: "Its design, history, and quiet atmosphere make it a meaningful stop for heritage lovers."
+      },
+      {
+        type: "paragraph",
+        text: "Mai De Deus Church is located approximately 10 - 15 minutes from *Padival Grand|https://thepadivalgrand.com/*, making it a convenient heritage and architectural landmark for guests exploring Puttur."
+      },
+
+      // 8. Bendru Teertha
+      {
+        id: "bendru-teertha",
+        type: "subheading",
+        text: "8. Bendru Teertha"
+      },
+      {
+        type: "image",
+        id: "bendru-teertha-image",
+        text: "/blogsImg/Bendru.webp"
+      },
+      {
+        type: "paragraph",
+        text: "Bendru Teertha is one of the region’s most interesting natural attractions. It is known as Karnataka’s only natural hot water spring and is located around 15 km from Puttur."
+      },
+      {
+        type: "paragraph",
+        text: "The spring is believed by many locals to have medicinal properties. Whether approached from a faith-based, cultural, or natural perspective, Bendru Teertha is a unique place to include in your travel plan."
+      },
+      {
+        type: "paragraph",
+        text: "It is best suited for travellers who enjoy lesser-known natural attractions and want to explore something beyond standard sightseeing."
+      },
+      {
+        type: "paragraph",
+        text: "Bendru Teertha is located approximately 30 - 40 minutes from *Padival Grand|https://thepadivalgrand.com/*, making it a refreshing natural getaway for guests looking to explore one of Karnataka’s unique hot water spring attractions."
+      },
+
+      // Best Time to Visit Puttur
+      {
+        id: "best-time",
+        type: "subheading",
+        text: "Best Time to Visit Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "The best time to visit Puttur is generally during the cooler months, especially from October to February. The weather is more comfortable for temple visits, sightseeing, and outdoor places like Beeramale Hill."
+      },
+      {
+        type: "paragraph",
+        text: "However, if you want to experience the cultural and devotional energy of Mahalingeshwara Temple, April is considered one of the best times to visit because of the annual festivities."
+      },
+
+      // One-Day Puttur Itinerary
+      {
+        id: "itinerary",
+        type: "subheading",
+        text: "One-Day Puttur Itinerary"
+      },
+      {
+        type: "paragraph",
+        text: "If you have only one day in Puttur, you can plan your route like this:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Start your morning with a visit to Shri Mahathobara Mahalingeshwara Temple for a spiritual and heritage experience.",
+          "Explore Dr K. Shivaram Karanth’s Balavana to experience local culture, art, and recreational spaces.",
+          "Around midday, visit the Campco Chocolate Factory and discover the fascinating chocolate-making process.",
+          "End your day at Beeramale Hill, where you can enjoy panoramic scenic views and a peaceful sunset atmosphere."
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "If you have more time, add Sowthadka Shri Mahaganapati Temple, Shishileshwara Temple, Hanumagiri, and Bendru Teertha to your extended itinerary."
+      },
+
+      // Conclusion
+      {
+        id: "conclusion",
+        type: "subheading",
+        text: "Conclusion"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is not just a stopover town. It is a destination with layered experiences - spiritual, cultural, natural, and educational. From the historic Shri Mahathobara Mahalingeshwara Temple to the panoramic Beeramale Hill, from Balavana’s cultural legacy to the quiet devotion of Sowthadka Temple, every place adds a different dimension to the journey."
+      },
+      {
+        type: "paragraph",
+        text: "For travellers who value authenticity over commercial tourism, Puttur offers something rare: a chance to experience Karnataka’s heritage at a slower, more meaningful pace."
+      },
+      {
+        type: "paragraph",
+        text: "If you are planning a journey through coastal or southern Karnataka, Puttur is a destination worth experiencing for its spiritual heritage, scenic beauty, and authentic cultural charm. It may not be loud, but it will stay with you."
+      },
+      {
+        type: "paragraph",
+        text: "**📍 Address: Padival Grand, Puttur, Dakshina Kannada, Karnataka\n📞 Phone: 96868 04784\n✉️ Email: info@padival-grand-hotel.com**"
+      },
+      {
+        type: "paragraph",
+        text: "**Experience comfort, hospitality, and the charm of Puttur - all in one stay.**"
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/best-places-to-visit-in-puttur#blogposting",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/best-places-to-visit-in-puttur"
+          },
+          "headline": "Best Places to Visit in Puttur: Temples, Hills, Culture & Hidden Heritage",
+          "description": "Explore the best places to visit in Puttur, including ancient temples, scenic hills, cultural attractions, wildlife spots, and spiritual destinations in Dakshina Kannada.",
+          "image": "https://thepadivalgrand.com/_next/image?url=%2FblogsImg%2FDesktop2.webp&w=1920&q=75",
+          "author": {
+            "@type": "Person",
+            "name": "Maruti Khapare"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
+            }
+          },
+          "datePublished": "2026-05-19",
+          "dateModified": "2026-05-19",
+          "keywords": [
+            "Best Places to Visit in Puttur",
+            "Puttur Tourism",
+            "Puttur Temples",
+            "Places to Visit in Dakshina Kannada",
+            "Beeramale Hill",
+            "Mahalingeshwara Temple",
+            "Tourist Places in Puttur"
+          ]
+        },
+        {
+          "@type": "Hotel",
+          "@id": "https://thepadivalgrand.com/#hotel",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/",
+          "image": "https://thepadivalgrand.com/_next/image?url=%2FblogsImg%2FDesktop2.webp&w=1920&q=75",
+          "logo": "https://thepadivalgrand.com/svgs/mainLogo.svg",
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Padival Grand",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "postalCode": "574201",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://api.whatsapp.com/send/?phone=919686804784&text&type=phone_number&app_absent=0",
+            "https://www.instagram.com/thepadivalgrand",
+            "https://www.facebook.com/profile.php?id=61583295038368",
+            "https://www.linkedin.com/company/mahaveer-ventures/"
+          ]
+        },
+        {
+          "@type": "TouristDestination",
+          "@id": "https://thepadivalgrand.com/blogs/best-places-to-visit-in-puttur#touristdestination",
+          "name": "Puttur",
+          "description": "Puttur is a serene town in Dakshina Kannada, Karnataka, known for temples, scenic hills, cultural heritage, nature attractions, and spiritual destinations.",
+          "touristType": [
+            "Spiritual Travellers",
+            "Nature Lovers",
+            "Cultural Travellers",
+            "Family Travellers",
+            "Heritage Travellers"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          },
+          "includesAttraction": [
+            {
+              "@type": "TouristAttraction",
+              "name": "Shri Mahathobara Mahalingeshwara Temple"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Beeramale Hill"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Campco Chocolate Factory"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Dr K. Shivaram Karanth’s Balavana"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Dr Ravindranatha Aithal Snake Park"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Sowthadka Shri Mahaganapati Temple"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Shree Shishileshwara Temple Gudi"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Shree Panchamukhi Anjaneya Temple, Hanumagiri"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Mai De Deus Church"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Bendru Teertha"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://thepadivalgrand.com/blogs/best-places-to-visit-in-puttur#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://thepadivalgrand.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blogs",
+              "item": "https://thepadivalgrand.com/blogs"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Best Places to Visit in Puttur",
+              "item": "https://thepadivalgrand.com/blogs/best-places-to-visit-in-puttur"
+            }
+          ]
+        }
+      ]
     }
   }
 ];

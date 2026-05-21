@@ -11,6 +11,8 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 
 export default function BlogSection() {
+  const sortedBlogs = [...blogs].sort((a, b) => b.id - a.id);
+
   return (
     <section className="bg-[#FDFBF7] py-16 px-6 md:px-12 lg:px-18 w-full font-sans">
       <div className=" mx-auto">
@@ -52,7 +54,7 @@ export default function BlogSection() {
           }}
           className="w-full cursor-grab active:cursor-grabbing"
         >
-          {blogs.map((post) => (
+          {sortedBlogs.map((post) => (
             <SwiperSlide key={post.id} className="h-auto">
               <Link href={`/blogs/${post.slug}`} className="flex flex-col gap-5 group">
                 {/* Image Container */}

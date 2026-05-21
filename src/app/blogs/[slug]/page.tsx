@@ -291,6 +291,30 @@ function renderSection(section: BlogSection, idx: number) {
           </div>
         </div>
       );
+    case "image":
+      return (
+        <div key={idx} className="my-8 w-full overflow-hidden bg-[#F0EBE1]/60 border border-[#002117]/10 aspect-[16/9] relative rounded-none flex items-center justify-center shadow-sm">
+          {section.text ? (
+            <Image
+              src={section.text}
+              alt={section.id || "Blog Image"}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 750px"
+            />
+          ) : (
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#F0EBE1] to-[#E5DEC9]/40 select-none">
+              <div className="w-12 h-12 rounded-full bg-[#002117]/5 flex items-center justify-center mb-3">
+                <svg className="w-6 h-6 text-[#C5A028]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <span className="text-[#002117] font-serif text-sm font-semibold tracking-wide mb-1 uppercase">{section.id || "Image Placehoder"}</span>
+              <span className="text-xs text-[#012210]/60 font-sans max-w-sm">Replace this manually by updating the "text" property for this section in blogs.ts</span>
+            </div>
+          )}
+        </div>
+      );
     default:
       return null;
   }
@@ -307,7 +331,10 @@ export default async function BlogDetailPage({
   const post = blogs.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const relatedPosts = blogs.filter((p) => p.id !== post.id).slice(0, 3);
+  const relatedPosts = [...blogs]
+    .sort((a, b) => b.id - a.id)
+    .filter((p) => p.id !== post.id)
+    .slice(0, 3);
 
   const baseUrl = "https://thepadivalgrand.com";
   const pageUrl = `${baseUrl}/blogs/${post.slug}`;

@@ -406,6 +406,7 @@ export default function RoomsPage() {
       <Hero 
         videoSrc="https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FROOMS%20(1).mp4?alt=media&token=95052066-e5a7-4ebb-a482-d622b4257ac2" 
         bgImg="/roomsImg/placeholder.png"
+        mobileBgImg="/heroImg/rooms.jpg"
       />
 
       <style>{`

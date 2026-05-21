@@ -6,12 +6,13 @@ import Image from "next/image";
 
 interface HeroProps {
   bgImg?: string;
+  mobileBgImg?: string;
   videoSrc?: string;
   posterImg?: string;
   children?: React.ReactNode;
 }
 
-const Hero = ({ bgImg = "/hero-bg.png", videoSrc, posterImg, children }: HeroProps) => {
+const Hero = ({ bgImg = "/hero-bg.png", mobileBgImg, videoSrc, posterImg, children }: HeroProps) => {
   const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -41,20 +42,32 @@ const Hero = ({ bgImg = "/hero-bg.png", videoSrc, posterImg, children }: HeroPro
     >
       {/* Background Image — always visible as fallback/poster */}
       <div className="absolute inset-0">
+        {/* Desktop Image */}
         <Image
           src={posterImg || bgImg}
           alt="Hero Background"
           fill
           priority
-          className="object-cover object-center"
+          className={`object-cover object-center ${mobileBgImg ? "hidden md:block" : ""}`}
           quality={85}
         />
+        {/* Mobile Image */}
+        {mobileBgImg && (
+          <Image
+            src={mobileBgImg}
+            alt="Hero Background Mobile"
+            fill
+            priority
+            className="block md:hidden object-cover object-center"
+            quality={85}
+          />
+        )}
       </div>
 
-      {/* Video overlay — fades in once ready */}
+      {/* Video overlay — fades in once ready (hidden on mobile) */}
       {videoSrc && (
         <div
-          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out hidden md:block"
           style={{ opacity: isVideoReady ? 1 : 0 }}
         >
           <video
@@ -79,27 +92,6 @@ const Hero = ({ bgImg = "/hero-bg.png", videoSrc, posterImg, children }: HeroPro
             {children}
         </div>
       </div>
-      {/* Content Container */}
-      {/* <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">
-          The Padival Grand
-        </h1>
-        <p className="text-lg md:text-2xl font-light tracking-widest uppercase drop-shadow-md">
-          Luxury Redefined in Puttur
-        </p>
-      </div> */}
-
-      {/* Reservation Bar - Positioned at bottom of hero */}
-      {/* <div
-        className="absolute bottom-0 left-0 right-0 z-20 transition-all duration-300 ease-out hidden lg:block"
-        style={{
-          opacity: reservationBarOpacity,
-          transform: `translateY(${(1 - reservationBarOpacity) * 20}px)`,
-          visibility: reservationBarOpacity > 0 ? "visible" : "hidden",
-        }}
-      >
-        <ReservationBar />
-      </div> */}
     </div>
   );
 };
