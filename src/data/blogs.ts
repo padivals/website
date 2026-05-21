@@ -585,7 +585,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "For direct bookings and tour package inquiries,\nReach our team at: *96868 04784|tel:+919686804784*\nMail us at *info@padivalgrandhotel.com|mailto:info@padivalgrandhotel.com*"
+        text: "For direct bookings and tour package inquiries,\nReach our team at: *96868 04784|tel:+919686804784*\nMail us at: *info@padivalgrandhotel.com|mailto:info@padivalgrandhotel.com*"
       }
     ],
     schema: {
@@ -1162,10 +1162,10 @@ export const blogs: BlogPost[] = [
     date: "May 19, 2026",
     author: "Maruti Khapare",
     readTime: "6 min read",
-    heroImage: "/blogsImg/Desktop4.webp",
+    heroImage: "/blogsImg/desktop4.webp",
     mobileImage: "/blogsImg/mobile4.webp",
-    pcImage: "/blogsImg/Desktop4.webp",
-    cardImage: "/blogsImg/Desktop4.webp",
+    pcImage: "/blogsImg/desktop4.webp",
+    cardImage: "/blogsImg/desktop4.webp",
     metaTitle: "Best Places to Visit in Puttur, Karnataka",
     metaDescription: "Explore the best places to visit in Puttur, from ancient temples and scenic hills to cultural parks, wildlife spots, and local heritage attractions.",
     category: "Travel Guide",
@@ -1283,7 +1283,7 @@ export const blogs: BlogPost[] = [
       {
         type: "image",
         id: "balavana-image",
-        text: "/blogsImg/shivarama.webp"
+        text: "/blogsImg/Shivarama.webp"
       },
       {
         type: "paragraph",

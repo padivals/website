@@ -155,7 +155,7 @@ function renderSection(section: BlogSection, idx: number) {
           // Handle emails
           if (/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}/.test(linkPart)) {
             return (
-              <span key={j} className="inline-flex items-center gap-1.5 align-middle ml-4 sm:ml-6">
+              <span key={j} className="inline-flex items-center gap-1.5 align-middle ">
                 <Mail size={13} className="text-[#C5A028]" />
                 <a href={`mailto:${linkPart}`} className="text-[#C5A028] font-medium hover:underline">
                   {linkPart}
