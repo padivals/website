@@ -459,7 +459,7 @@ export default function RoomsPage() {
       </section>
 
       <CommonAmenities />
-      <FoodAndDining />
+      {/* <FoodAndDining /> */}
       <div className="lg:pb-30 pb-12 bg-[white] ">
         <FAQSection
           faqs={roomFaqs}
