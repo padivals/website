@@ -17,9 +17,9 @@ import HospitalitySection from "@/components/sections/HospitalitySection";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Best Hotel in Puttur, Karnataka | The Padival Grand Stay",
+  title: "Hotel in Puttur with AC Rooms, WiFi & Parking | The Padival Grand",
   description:
-    "Hotel rooms in Puttur, Karnataka with AC, WiFi, parking & pure veg dining. The Padival Grand ensures a clean, comfortable stay in Puttur for family & travelers.",
+    "Book a comfortable hotel in Puttur with clean AC rooms, WiFi and parking. The Padival Grand is ideal for families, business travellers and visitors to town.",
 
   openGraph: {
     title: "Padival Grand Hotel | Comfortable Stay & Pure Veg Dining in Puttur",

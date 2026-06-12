@@ -43,103 +43,169 @@ export default function EventsPage() {
 
 
 
-  const hotelSchema = {
+  const schema = {
     "@context": "https://schema.org",
-    "@type": "EventVenue",
-    "@id": "https://thepadivalgrand.com/events#eventvenue",
-    "name": "The Padival Grand Event Venue",
-    "url": "https://thepadivalgrand.com/events",
-    "description": "The Padival Grand offers a marriage hall, banquet hall and function hall in Puttur for weddings, family functions, parties and events, with rooms, pure vegetarian dining and parking.",
-    "image": "https://thepadivalgrand.com/og-image.png",
-    "telephone": "+91-9686804784",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Mahaveer Mall, Main Road, Above Reliance Trendz, Bolwar",
-      "addressLocality": "Puttur",
-      "addressRegion": "Karnataka",
-      "postalCode": "574201",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 12.766130796400661,
-      "longitude": 75.19643883776936
-    },
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "Marriage Hall", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Banquet Hall", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Function Hall", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Rooms Available", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Pure Vegetarian Dining", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.3",
-      "reviewCount": "190",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
-  };
-
-  const videoSchema = {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "@id": "https://thepadivalgrand.com/events#video",
-    "name": "Events and Banquet Experience at The Padival Grand",
-    "description": "Watch the event and banquet experience at The Padival Grand in Puttur, featuring wedding setups, family functions and event spaces with dining, rooms and parking facilities.",
-    "thumbnailUrl": [
-      "https://thepadivalgrand.com/og-image.png"
-    ],
-    "uploadDate": "2026-03-30",
-    "contentUrl": "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&token=a73adaea-de2a-46ff-8850-aa56acb7048c",
-    "embedUrl": "https://thepadivalgrand.com/events",
-    "inLanguage": "en",
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Padival Grand",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
-      }
-    }
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://thepadivalgrand.com/events#faq",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Where can I find a marriage hall near me in Puttur?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can find a well-equipped marriage hall at The Padival Grand in Puttur, offering banquet space, rooms, dining and complete support for smooth and comfortable events."
+        "@type": "Hotel",
+        "@id": "https://thepadivalgrand.com/events#hotel",
+        "additionalType": "https://schema.org/EventVenue",
+        "name": "The Padival Grand",
+        "url": "https://thepadivalgrand.com/events",
+        "description": "The Padival Grand offers a marriage hall, banquet hall and function hall in Puttur for weddings, family functions, parties and events, with rooms, pure vegetarian dining and parking.",
+        "image": "https://thepadivalgrand.com/og-image.png",
+        "telephone": "+91-9686804784",
+        "email": "info@padival-grand-hotel.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mahaveer Mall, Main Road, Above Reliance Trendz, Bolwar",
+          "addressLocality": "Puttur",
+          "addressRegion": "Karnataka",
+          "postalCode": "574201",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 12.766130796400661,
+          "longitude": 75.19643883776936
+        },
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Marriage Hall",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Banquet Hall",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Function Hall",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Rooms Available",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Parking",
+            "value": true
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.3,
+          "reviewCount": 190,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "sameAs": [
+          "https://www.instagram.com/thepadivalgrand",
+          "https://www.facebook.com/profile.php?id=61583295038368",
+          "https://www.linkedin.com/company/mahaveer-ventures/"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://thepadivalgrand.com/events#webpage",
+        "url": "https://thepadivalgrand.com/events",
+        "name": "Marriage Hall in Puttur with Rooms, Dining & Event Space",
+        "description": "Book your marriage hall in Puttur, Karnataka with banquet space, rooms and pure veg dining. Ideal for weddings, parties, and events. Call now to book your date.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://thepadivalgrand.com/#website",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/"
+        },
+        "about": {
+          "@id": "https://thepadivalgrand.com/events#hotel"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://thepadivalgrand.com/og-image.png"
+        },
+        "breadcrumb": {
+          "@id": "https://thepadivalgrand.com/events#breadcrumb"
         }
       },
       {
-        "@type": "Question",
-        "name": "Which is a good banquet hall in Puttur for events?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Padival Grand offers a clean and well-managed banquet hall in Puttur, suitable for weddings, parties and family functions with reliable service and essential amenities."
-        }
+        "@type": "BreadcrumbList",
+        "@id": "https://thepadivalgrand.com/events#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://thepadivalgrand.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Event Spaces",
+            "item": "https://thepadivalgrand.com/events"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Is there a party hall near me with dining and parking?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, The Padival Grand offers a party hall in Puttur with pure veg dining and parking facilities, making it ideal for celebrations and social gatherings."
-        }
+        "@type": "FAQPage",
+        "@id": "https://thepadivalgrand.com/events#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where can I find a marriage hall near me in Puttur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can find a well-equipped marriage hall at The Padival Grand in Puttur, offering banquet space, rooms, dining and complete support for smooth and comfortable events."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is a good banquet hall in Puttur for events?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Padival Grand offers a clean and well-managed banquet hall in Puttur, suitable for weddings, parties and family functions with reliable service and essential amenities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a party hall near me with dining and parking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, The Padival Grand offers a party hall in Puttur with pure veg dining and parking facilities, making it ideal for celebrations and social gatherings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best place to host events in Puttur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Padival Grand is a reliable choice for hosting events in Puttur, offering a combination of banquet space, rooms, dining and a well-managed environment."
+            }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "What is the best place to host events in Puttur?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Padival Grand is a reliable choice for hosting events in Puttur, offering a combination of banquet space, rooms, dining and a well-managed environment."
+        "@type": "VideoObject",
+        "@id": "https://thepadivalgrand.com/events#video",
+        "name": "Events and Banquet Experience at The Padival Grand",
+        "description": "Watch the event and banquet experience at The Padival Grand in Puttur, featuring wedding setups, family functions and event spaces with dining, rooms and parking facilities.",
+        "thumbnailUrl": [
+          "https://thepadivalgrand.com/og-image.png"
+        ],
+        "uploadDate": "2026-03-30T00:00:00+05:30",
+        "contentUrl": "https://firebasestorage.googleapis.com/v0/b/megamind-carrers.firebasestorage.app/o/padivals%2FEVENTS.mp4?alt=media&token=a73adaea-de2a-46ff-8850-aa56acb7048c",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Padival Grand",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
+          }
         }
       }
     ]
@@ -149,9 +215,7 @@ export default function EventsPage() {
 
 
     <main className="min-h-screen flex flex-col relative  ">
-      <JsonLd data={hotelSchema} id="hotel-schema" />
-      <JsonLd data={faqSchema} id="faq-schema" />
-      <JsonLd data={videoSchema} id="video-schema" />
+      <JsonLd data={schema} id="events-schema" />
 
       <Header />
 
