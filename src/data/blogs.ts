@@ -1651,5 +1651,269 @@ export const blogs: BlogPost[] = [
         }
       ]
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 5                                               ║
+   * ═══════════════════════════════════════════════════════╝ */
+
+  {
+    id: 5,
+    slug: "waterfalls-forest-trails-near-puttur",
+    breadcrumb: "Waterfalls & Forest Trails Near Puttur",
+    title: "Waterfalls & Trails Near Puttur - Best Places + Where to Stay",
+    excerpt: "Discover the most scenic waterfalls and forest trails near Puttur, Karnataka. Plan your visit and find out where to stay for a comfortable experience.",
+    date: "June 15, 2026",
+    author: "Admin",
+    readTime: "5 min read",
+    heroImage: "/blogsImg/desktop5.jpg",
+    mobileImage: "/blogsImg/desktop5.jpg",
+    pcImage: "/blogsImg/desktop5.jpg",
+    cardImage: "/blogsImg/desktop5.jpg",
+    metaTitle: "Waterfalls & Trails Near Puttur - Best Places + Where to Stay",
+    metaDescription: "Discover the most scenic waterfalls and forest trails near Puttur, Karnataka. Plan your visit and find out where to stay for a comfortable experience.",
+    category: "Travel Guide",
+    tableOfContents: [
+      { id: "intro", label: "Waterfalls & Forest Trails Near Puttur" },
+      { id: "why-discover-puttur", label: "Why Nature Lovers Are Discovering Puttur" },
+      { id: "top-waterfalls", label: "Top Waterfall Near Puttur Worth Visiting" },
+      { id: "forest-trails", label: "Forest Trails and Trekking Spots Near Puttur" },
+      { id: "best-time", label: "Best Time to Visit Waterfalls Near Puttur" },
+      { id: "practical-tips", label: "Practical Tips Before You Go" },
+      { id: "where-to-stay", label: "Where to Stay After Your Outdoor Adventure in Puttur" },
+      { id: "conclusion", label: "Conclusion" }
+    ],
+    content: [
+      {
+        id: "intro",
+        type: "heading",
+        text: "Waterfalls & Forest Trails Near Puttur - And the Best Place to Stay After Your Adventure"
+      },
+      {
+        type: "paragraph",
+        text: "There is something special about arriving in Puttur just as the monsoon clouds begin to roll over the Western Ghats. The air is cool, the hills turn a deep green, and somewhere not far from town, water is rushing down rocky slopes into quiet forest pools."
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is not just a temple town. It sits right at the foot of the Ghats, which means waterfalls, forest trails, and nature walks are all within easy reach. Many travellers pass through on their way to Kukke Subramanya or Dharmasthala and do not realise what they are missing."
+      },
+      {
+        type: "paragraph",
+        text: "In this guide, we will cover the best waterfalls near Puttur, the most rewarding forest trails, the right time to visit, and where to stay so you can rest well before or after your outdoor adventure."
+      },
+      {
+        id: "why-discover-puttur",
+        type: "subheading",
+        text: "Why Nature Lovers Are Discovering Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur sits in Dakshina Kannada, wedged between the coast and the Western Ghats. This location gives it something rare - you can be at a waterfall or deep inside a forest trail within 20 to 40 minutes from the town centre."
+      },
+      {
+        type: "paragraph",
+        text: "Unlike busier destinations such as Coorg or Chikmagalur, Puttur sees far fewer tourists. Trails are quieter, waterfalls are less crowded, and the experience feels more personal. That is exactly why travellers who value peace over popularity are beginning to take notice."
+      },
+      {
+        type: "paragraph",
+        text: "Add to that the spiritual draw of the Mahalingeshwara Temple and the connectivity to places like Kukke Subramanya and Dharmasthala, and Puttur becomes a natural hub for a 1 or 2 day trip that covers both nature and devotion."
+      },
+      {
+        id: "top-waterfalls",
+        type: "subheading",
+        text: "Top Waterfall Near Puttur Worth Visiting"
+      },
+      {
+        type: "image",
+        id: "waterfall-image",
+        text: "/blogsImg/5waterfall.jpg"
+      },
+      {
+        type: "h3",
+        text: "Ermayi Falls Near Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "Located around 45 km from Puttur, Ermayi Falls is a beautiful nature spot for travellers who enjoy waterfalls, greenery, and peaceful surroundings. For guests staying at The Padival Grand in Puttur, this waterfall can be a refreshing short getaway, especially during or just after the monsoon season."
+      },
+      {
+        type: "paragraph",
+        text: "The route to Ermayi Falls takes visitors through scenic village roads, forest patches, and calm natural landscapes, making the journey as enjoyable as the destination. The waterfall is known for its fresh flow, rocky surroundings, and quiet atmosphere, making it ideal for nature lovers, photographers, and weekend explorers."
+      },
+      {
+        type: "paragraph",
+        text: "Since the area can become slippery during the rainy season, travellers should wear proper footwear and be careful near the rocks. It is best visited during daylight hours with basic safety precautions."
+      },
+      {
+        id: "forest-trails",
+        type: "subheading",
+        text: "Forest Trails and Trekking Spots Near Puttur"
+      },
+      {
+        type: "image",
+        id: "forest-image",
+        text: "/blogsImg/5forest.jpg"
+      },
+      {
+        type: "h3",
+        text: "Gundya - Hosakere via Ombattu Gudda (Forest Trekking)"
+      },
+      {
+        type: "paragraph",
+        text: "The Gundya to Hosakere route via Ombattu Gudda is one of the most adventurous trekking trails accessible from the Puttur region. The trail usually begins near Gundya, located around 50–55 km from Puttur, and passes through dense forests, streams, hill paths, and rich Western Ghats terrain before ending near Hosakere."
+      },
+      {
+        type: "paragraph",
+        text: "For guests staying at The Padival Grand in Puttur, this trek can be planned as a challenging outdoor experience for serious trekkers and nature lovers. Ombattu Gudda, meaning “nine hills,” is known for its scenic hill views, forest cover, and biodiversity. Since this is a point-to-point trail, travellers should arrange transport, check weather conditions, and plan safety essentials in advance. It is best suited for experienced trekkers rather than casual sightseeing visitors."
+      },
+      {
+        type: "image",
+        id: "pushpagiri-image",
+        text: "/blogsImg/5hill.jpg"
+      },
+      {
+        type: "h3",
+        text: "Pushpagiri Trekking Near Puttur Hill Trekking"
+      },
+      {
+        type: "paragraph",
+        text: "Located around 55–60 km from Puttur via Kukke Subramanya, Pushpagiri Trekking is a great option for travellers who enjoy challenging trails, forest routes, and Western Ghats landscapes. For guests staying at The Padival Grand in Puttur, this trek can be planned as a full-day adventure with an early start."
+      },
+      {
+        type: "paragraph",
+        text: "The trail is known for its dense greenery, steep climbs, misty views, and peaceful natural surroundings. Pushpagiri is also part of an ecologically rich region, making it popular among trekkers, nature lovers, and photography enthusiasts. Since the trek can be physically demanding, it is best suited for experienced or moderately fit travellers."
+      },
+      {
+        type: "paragraph",
+        text: "Visitors should check local permissions, weather conditions, and forest entry rules before planning the trek. Proper shoes, water, snacks, and safety preparation are strongly recommended."
+      },
+      {
+        id: "best-time",
+        type: "subheading",
+        text: "Best Time to Visit Waterfalls Near Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "The monsoon season from June to September is the best time to see waterfalls near Puttur in full force. Rainfall in this region can be heavy and consistent, which means even smaller falls come alive during this period."
+      },
+      {
+        type: "paragraph",
+        text: "If you prefer drier conditions and easier trails, October and November are ideal. The landscape is still green, the water levels are manageable, and temperatures are comfortable. December to February is quieter and pleasant for forest walks."
+      },
+      {
+        type: "paragraph",
+        text: "Avoid visiting waterfalls immediately after very heavy rain. Water levels can rise quickly and some trails become unsafe."
+      },
+      {
+        id: "practical-tips",
+        type: "subheading",
+        text: "Practical Tips Before You Go"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Carry enough drinking water, especially on forest trails",
+          "Wear closed shoes or trekking footwear - not sandals",
+          "Monsoon visitors should pack a light raincoat or poncho",
+          "Keep your phone charged and download an offline map before you leave",
+          "Respect local forest guidelines - do not litter or disturb wildlife",
+          "If visiting the Kumara Parvatha trek, arrange permits in advance",
+          "Start early to make the most of daylight and cooler temperatures",
+          "Check local weather before heading out during heavy monsoon weeks"
+        ]
+      },
+      {
+        id: "where-to-stay",
+        type: "subheading",
+        text: "Where to Stay After Your Outdoor Adventure in Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "After your day out, you can relax in one of our well-maintained rooms in Puttur, designed for a clean and comfortable stay. What you need most is a clean, comfortable room, a hot meal, and a good night of rest. That is exactly what The Padival Grand in Puttur is designed to offer."
+      },
+      {
+        type: "paragraph",
+        text: "Located in the heart of Puttur town, The Padival Grand provides well-maintained AC and non-AC rooms with all basic amenities. Whether you are a solo traveller returning from a trail, a family on a short nature break, or a pilgrim combining temple and nature visits, the property offers a calm and comfortable stay."
+      },
+      {
+        type: "paragraph",
+        text: "Guests appreciate the central location, which makes it easy to head out early in the morning or return late without worrying about distance from town facilities."
+      },
+      {
+        type: "paragraph",
+        text: "From AC rooms to family-friendly stay options, The Padival Grand rooms offer the right comfort for travellers exploring Puttur and nearby nature spots."
+      },
+      {
+        type: "paragraph",
+        text: "The hotel is also close to the Mahalingeshwara Temple, making it a practical choice for travellers combining a spiritual visit with an outdoor itinerary."
+      },
+      {
+        id: "conclusion",
+        type: "subheading",
+        text: "Conclusion"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is more than a stopover on the way to a temple. The waterfalls, forest trails, and river walks in and around the town offer a genuine outdoor experience that many travellers have yet to discover."
+      },
+      {
+        type: "paragraph",
+        text: "Whether you are visiting for a day or planning a longer stay, Puttur rewards those who take the time to explore beyond the main road. Pack light, start early, and let the Western Ghats do the rest."
+      },
+      {
+        type: "paragraph",
+        text: "After a day spent exploring nature, The Padival Grand gives you a comfortable place to rest, refresh, and wake up ready for the next part of your journey. Located close to the heart of Puttur, it offers easy access to nearby nature spots, local landmarks, and town conveniences."
+      },
+      {
+        type: "paragraph",
+        text: "Address: The Padival Grand, Puttur, Dakshina Kannada, Karnataka"
+      },
+      {
+        type: "paragraph",
+        text: "Phone: 96868 04784"
+      },
+      {
+        type: "paragraph",
+        text: "Email: info@padival-grand-hotel.com"
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur#blogposting",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur"
+          },
+          "headline": "Waterfalls & Trails Near Puttur - Best Places + Where to Stay",
+          "description": "Discover the most scenic waterfalls and forest trails near Puttur, Karnataka. Plan your visit and find out where to stay for a comfortable experience.",
+          "image": "https://thepadivalgrand.com/blogsImg/waterfall-placeholder.webp",
+          "author": {
+            "@type": "Organization",
+            "name": "The Padival Grand"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
+            }
+          },
+          "datePublished": "2026-06-15",
+          "dateModified": "2026-06-15",
+          "keywords": [
+            "Waterfalls Near Puttur",
+            "Forest Trails Puttur",
+            "Trekking Near Puttur",
+            "Puttur Tourism",
+            "Ermayi Falls",
+            "Pushpagiri Trekking"
+          ]
+        }
+      ]
+    }
   }
 ];
