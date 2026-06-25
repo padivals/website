@@ -1664,7 +1664,7 @@ export const blogs: BlogPost[] = [
     title: "Waterfalls & Trails Near Puttur - Best Places + Where to Stay",
     excerpt: "Discover the most scenic waterfalls and forest trails near Puttur, Karnataka. Plan your visit and find out where to stay for a comfortable experience.",
     date: "June 15, 2026",
-    author: "Admin",
+    author: "Maruti Khapare",
     readTime: "5 min read",
     heroImage: "/blogsImg/desktop5.jpg",
     mobileImage: "/blogsImg/desktop5.jpg",
@@ -1881,36 +1881,731 @@ export const blogs: BlogPost[] = [
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "BlogPosting",
-          "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur#blogposting",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur"
+          "@type": "Organization",
+          "@id": "https://thepadivalgrand.com/#organization",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
           },
-          "headline": "Waterfalls & Trails Near Puttur - Best Places + Where to Stay",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "The Padival Grand",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://thepadivalgrand.com/#author-maruti-khapare",
+          "name": "Maruti Khapare"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur/#webpage",
+          "url": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur",
+          "name": "Waterfalls & Trails Near Puttur - Best Places + Where to Stay",
           "description": "Discover the most scenic waterfalls and forest trails near Puttur, Karnataka. Plan your visit and find out where to stay for a comfortable experience.",
-          "image": "https://thepadivalgrand.com/blogsImg/waterfall-placeholder.webp",
+          "isPartOf": {
+            "@id": "https://thepadivalgrand.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thepadivalgrand.com/_next/image?url=%2FblogsImg%2FDesktop2.webp&w=1920&q=75"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur/#blogposting",
+          "mainEntityOfPage": {
+            "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur/#webpage"
+          },
+          "headline": "Waterfalls & Forest Trails Near Puttur - And the Best Place to Stay After Your Adventure",
+          "alternativeHeadline": "Waterfalls & Trails Near Puttur - Best Places + Where to Stay",
+          "description": "Discover the most scenic waterfalls and forest trails near Puttur, Karnataka. Plan your visit and find out where to stay for a comfortable experience.",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://thepadivalgrand.com/_next/image?url=%2FblogsImg%2FDesktop2.webp&w=1920&q=75"
+          },
           "author": {
-            "@type": "Organization",
-            "name": "The Padival Grand"
+            "@id": "https://thepadivalgrand.com/#author-maruti-khapare"
           },
           "publisher": {
-            "@type": "Organization",
-            "name": "The Padival Grand",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
-            }
+            "@id": "https://thepadivalgrand.com/#organization"
           },
           "datePublished": "2026-06-15",
           "dateModified": "2026-06-15",
+          "inLanguage": "en-IN",
+          "articleSection": "Travel",
           "keywords": [
-            "Waterfalls Near Puttur",
-            "Forest Trails Puttur",
-            "Trekking Near Puttur",
-            "Puttur Tourism",
-            "Ermayi Falls",
-            "Pushpagiri Trekking"
+            "Ermayi Falls near Puttur",
+            "Gundya Hosakere Ombattu Gudda trek",
+            "Pushpagiri Trekking near Puttur",
+            "waterfalls near Puttur",
+            "forest trails near Puttur",
+            "trekking near Puttur",
+            "places to visit near Puttur",
+            "where to stay in Puttur",
+            "The Padival Grand"
+          ],
+          "about": [
+            {
+              "@type": "Place",
+              "name": "Puttur",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Puttur",
+                "addressRegion": "Karnataka",
+                "addressCountry": "IN"
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Ermayi Falls"
+            },
+            {
+              "@type": "Place",
+              "name": "Gundya - Hosakere via Ombattu Gudda"
+            },
+            {
+              "@type": "Place",
+              "name": "Pushpagiri Trekking"
+            }
+          ],
+          "mentions": [
+            {
+              "@type": "TouristAttraction",
+              "name": "Ermayi Falls"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Gundya - Hosakere via Ombattu Gudda"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Pushpagiri Trekking"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://thepadivalgrand.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blogs",
+              "item": "https://thepadivalgrand.com/blogs"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Waterfalls & Forest Trails Near Puttur",
+              "item": "https://thepadivalgrand.com/blogs/waterfalls-forest-trails-near-puttur"
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 6                                               ║
+   * ═══════════════════════════════════════════════════════╝ */
+
+  {
+    id: 6,
+    slug: "mangalore-to-puttur-travel-guide",
+    breadcrumb: "Mangalore to Puttur Travel Guide",
+    title: "Mangalore to Puttur Travel Guide: Distance, Route, Bus, Train & Stay Options",
+    excerpt: "Planning a trip from Mangalore to Puttur? Find distance, best route, bus & train options, and comfortable lodging rooms at The Padival Grand in central Puttur.",
+    date: "June 25, 2026",
+    author: "Maruti Khapare",
+    readTime: "5 min read",
+    heroImage: "/blogsImg/desktop6.webp",
+    mobileImage: "/blogsImg/desktop6.webp",
+    pcImage: "/blogsImg/desktop6.webp",
+    cardImage: "/blogsImg/desktop6.webp",
+    metaTitle: "Mangalore to Puttur Travel Guide: Route, Bus, Train & Stay",
+    metaDescription: "Planning a trip from Mangalore to Puttur? Find distance, best route, bus & train options, and comfortable lodging rooms at The Padival Grand in central Puttur.",
+    category: "Travel",
+    tableOfContents: [
+      { id: "distance", label: "How Far Is Mangalore from Puttur?" },
+      { id: "time-by-road", label: "How Long Does It Take by Road?" },
+      { id: "best-route", label: "Best Route from Mangalore to Puttur" },
+      { id: "by-bus", label: "Mangalore to Puttur by Bus" },
+      { id: "by-train", label: "Mangalore to Puttur by Train" },
+      { id: "kabaka-puttur-station", label: "Kabaka Puttur Railway Station" },
+      { id: "airport-to-puttur", label: "Mangalore Airport to Puttur" },
+      { id: "comparison", label: "Bus vs Train vs Taxi: Which Is Better?" },
+      { id: "where-to-stay", label: "Where to Stay After Reaching Puttur" },
+      { id: "main-road-vs-outside", label: "Main Road Stay vs Outside Town" },
+      { id: "late-arrival", label: "What If You Arrive Late at Night?" },
+      { id: "room-type", label: "Best Room Type for Your Travel Style" },
+      { id: "why-padival-grand", label: "Why The Padival Grand Is a Practical Stay" },
+      { id: "travel-checklist", label: "Quick Travel Checklist" },
+      { id: "conclusion", label: "Ready to Travel from Mangalore to Puttur?" },
+      { id: "contact", label: "Plan Your Stay at The Padival Grand, Puttur" }
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Whether you are planning a temple visit, attending a family function, or heading to Puttur for work, the journey from Mangalore to Puttur is one that many people make regularly. But if you are making this trip for the first time-or helping someone plan it-you probably have a few questions. How far is Puttur from Mangalore? Which route is best? Is bus or train better? And once you reach, where should you stay?"
+      },
+      {
+        type: "paragraph",
+        text: "This Mangalore to Puttur travel guide covers everything you need to know-distance, road route, bus options, train options, and the best places to stay in Puttur. Whether you are coming by car, KSRTC bus, or train to Kabaka Puttur station, this guide will help you plan your trip clearly and confidently."
+      },
+      {
+        id: "distance",
+        type: "subheading",
+        text: "How Far Is Mangalore from Puttur?"
+      },
+      {
+        type: "paragraph",
+        text: "The distance from Mangalore to Puttur is approximately 55 to 60 km by road, depending on your exact starting point in Mangalore and the route you take. This is a relatively short journey, which makes Puttur one of the more accessible destinations in Dakshina Kannada."
+      },
+      {
+        type: "paragraph",
+        text: "Note: The actual distance may vary slightly based on your starting point in Mangalore city, the route taken (via NH 75 or an alternate road), and live traffic or diversion conditions. Always check Google Maps or a reliable navigation app before you start your trip."
+      },
+      {
+        id: "time-by-road",
+        type: "subheading",
+        text: "How Long Does It Take from Mangalore to Puttur by Road?"
+      },
+      {
+        type: "paragraph",
+        text: "Under normal conditions, the drive from Mangalore to Puttur takes approximately 1.5 to 2 hours by road. However, this can vary depending on several factors:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Traffic within Mangalore city, especially during morning and evening peak hours",
+          "Road work or seasonal diversions along NH 75",
+          "Heavy rain during the monsoon months (June to September), which can slow travel considerably",
+          "Time of day-early morning or post-evening hours tend to be faster"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "If you are travelling with a family, carrying luggage, or need to be at a specific time for a temple darshan or event, it is best to add 30 extra minutes as a buffer."
+      },
+      {
+        id: "best-route",
+        type: "subheading",
+        text: "Best Route from Mangalore to Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "The most commonly used road route from Mangalore to Puttur is via NH 75, the national highway that connects Mangalore to Bangalore. Here is a simple breakdown of the route:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Start from Mangalore city (Bejai, Hampankatta, or your specific location)",
+          "Head towards Pumpwell / Padil and get on to NH 75",
+          "Continue along NH 75 passing through Bantwal",
+          "Continue towards Puttur-the highway leads directly into the town"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "This route is well-maintained, clearly signposted, and familiar to most drivers in the region. It works well for cars, taxis, bikes, and buses."
+      },
+      {
+        type: "paragraph",
+        text: "Practical tip for families: If you are travelling with children or elderly members, plan for a short break at Bantwal or a petrol station along the way. The drive is comfortable, but a 10-minute stop can make the journey easier for everyone."
+      },
+      {
+        type: "paragraph",
+        text: "For monsoon travel: NH 75 is generally reliable even in heavy rain, but visibility can reduce significantly. Drive carefully and avoid travelling in very heavy downpour if possible."
+      },
+      {
+        id: "by-bus",
+        type: "subheading",
+        text: "Mangalore to Puttur by Bus"
+      },
+      {
+        type: "h3",
+        text: "Who Should Choose the Bus?"
+      },
+      {
+        type: "paragraph",
+        text: "Bus travel is a practical and affordable option for solo travellers, students, and anyone without personal transport. KSRTC and several private operators run regular bus services between Mangalore and Puttur throughout the day."
+      },
+      {
+        type: "paragraph",
+        text: "Key points to know:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Buses are available from Mangalore Central Bus Stand (KSRTC Stand)",
+          "The journey takes approximately 1.5 to 2 hours depending on the type of bus (express or local)",
+          "Express buses tend to be faster with fewer stops",
+          "Seats fill up quickly during festival seasons and temple visit periods-consider booking in advance or reaching the stand early"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Bus timings verification: Bus schedules can change based on season, holidays, and operator decisions. Before your trip, verify the latest timings directly with KSRTC or check the *official KSRTC Karnataka website|https://www.ksrtc.in/*. You can also ask at the Mangalore Central Bus Stand for the most current schedule."
+      },
+      {
+        id: "by-train",
+        type: "subheading",
+        text: "Mangalore to Puttur by Train"
+      },
+      {
+        type: "paragraph",
+        text: "If you prefer travelling by train, Puttur is accessible via Kabaka Puttur Railway Station, the nearest railhead serving the town. The station lies on the Mangalore–Hassan railway line and connects Puttur with nearby major destinations."
+      },
+      {
+        type: "paragraph",
+        text: "Train travel is a good option if:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "You want a relaxed journey without dealing with road traffic",
+          "You have booked a long-distance train that stops at Kabaka Puttur",
+          "You are travelling during peak monsoon and prefer not to drive"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Train timings and booking: Train schedules, seat availability, and fares change regularly. Always check *IRCTC|https://www.irctc.co.in/nget/train-search* or *NTES|https://enquiry.indianrail.gov.in/mntes/* for the most current and accurate train timings before you book or travel."
+      },
+      {
+        id: "kabaka-puttur-station",
+        type: "subheading",
+        text: "Kabaka Puttur Railway Station"
+      },
+      {
+        type: "paragraph",
+        text: "Kabaka Puttur (station code: KBPR) is the railway station that serves Puttur town. It is located on the Hassan–Mangalore railway line, which connects several important towns in Karnataka and Kerala."
+      },
+      {
+        type: "paragraph",
+        text: "Distance from station to town: Kabaka Puttur railway station is approximately 1 km from Puttur town centre. Once you arrive at the station, you can reach Puttur town by:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Auto-rickshaw (most convenient option, available outside the station)",
+          "Pre-booked taxi or cab",
+          "Two-wheeler if you have a local contact picking you up"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "If you are arriving at an odd hour or with heavy luggage, it is advisable to pre-arrange transport from the station. You can contact your hotel in Puttur to ask if they can recommend a local transport service or help you arrange a pickup."
+      },
+      {
+        type: "paragraph",
+        text: "Note on search query 'kabaka puttur to mangalore train timings': Many travellers search for this return trip information as well. The same Kabaka Puttur station serves trains in both directions."
+      },
+      {
+        id: "airport-to-puttur",
+        type: "subheading",
+        text: "Mangalore Airport to Puttur: How to Reach"
+      },
+      {
+        type: "paragraph",
+        text: "Mangalore International Airport (IATA: IXE) is located at Bajpe, approximately 15 km from Mangalore city. If you are flying into Mangalore and then heading to Puttur, the most practical option is to hire a taxi or private cab directly from the airport to Puttur."
+      },
+      {
+        type: "paragraph",
+        text: "Options from Mangalore Airport to Puttur:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Pre-booked taxi or cab-most convenient, especially for families with luggage",
+          "App-based cabs (Ola, Uber, or local taxi services available from the airport)",
+          "Shared transport to Mangalore city and then a bus-less convenient with heavy luggage"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Travel time from Mangalore Airport to Puttur: Approximately 2 to 2.5 hours by road, depending on traffic and route."
+      },
+      {
+        type: "paragraph",
+        text: "Recommendation for families: If you are arriving by flight with children, luggage, or elderly members, a direct taxi from *Mangalore Airport|https://mangaluru.adaniairports.com/en* to Puttur is the most comfortable and stress-free option. It avoids city traffic layovers and gets you directly to your hotel in Puttur."
+      },
+      {
+        id: "comparison",
+        type: "subheading",
+        text: "Bus vs Train vs Taxi: Which Is Better?"
+      },
+      {
+        type: "paragraph",
+        text: "Here is a simple comparison to help you choose the right option for your trip:"
+      },
+      {
+        type: "table",
+        tableData: {
+          headers: ["Travel Mode", "Best For", "Comfort", "Cost", "Flexibility", "Luggage", "Who Should Choose"],
+          rows: [
+            ["By Bus", "Solo, students, budget travellers", "Moderate", "Lowest option (varies by operator)", "Fixed schedule", "Manageable for light luggage", "Budget-conscious travellers, frequent route users"],
+            ["By Train", "Relaxed travel, scenic route lovers", "Good (depends on class)", "Varies by class and availability", "Fixed schedule", "Good for moderate luggage", "Those who prefer rail, long-distance combo trips"],
+            ["By Taxi / Car", "Families, groups, airport arrivals", "Highest", "Varies based on operator and distance", "Very flexible", "Best for heavy or multiple bags", "Families, medical visits, group trips, late arrivals"],
+            ["Self-Drive (bike/car)", "Young travellers, locals", "Personal", "Fuel only", "Maximum", "Limited for bags", "Those familiar with the route"]
+          ]
+        }
+      },
+      {
+        type: "paragraph",
+        text: "Cost note: Fares and rates vary based on operator, time of travel, fuel prices, and availability. Always confirm current rates directly with the transport provider before booking."
+      },
+      {
+        id: "where-to-stay",
+        type: "subheading",
+        text: "Where to Stay After Reaching Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "After a journey of 1.5 to 2 hours or more-especially if you are arriving with family or after a long flight-the location of your hotel in Puttur matters more than you might think."
+      },
+      {
+        type: "paragraph",
+        text: "If you are in Puttur for a temple visit, family function, or short stay, staying near the town centre saves both time and effort. The Puttur Mahalingeshwara Temple, main market, bus stand, and local transport are all within easy reach, making your stay more convenient."
+      },
+      {
+        type: "paragraph",
+        text: "*The Padival Grand|https://thepadivalgrand.com/* is a lodging hotel located in central Puttur, convenient for travellers reaching by road, bus, or from Kabaka Puttur railway station. It offers comfortable rooms suitable for families, solo travellers, groups, and business travellers looking for a practical stay in Puttur."
+      },
+      {
+        id: "main-road-vs-outside",
+        type: "subheading",
+        text: "Main Road Stay vs Outside Town: What Works Better?"
+      },
+      {
+        type: "table",
+        tableData: {
+          headers: ["Factor", "Central Puttur / Main Road Stay", "Outside Town Stay"],
+          rows: [
+            ["Access to temple", "Closer to Puttur Mahalingeshwara Temple", "May need extra vehicle/auto"],
+            ["Bus stand access", "Within easy reach", "Further away, less convenient"],
+            ["Local market", "Walking distance or very close", "Requires planning"],
+            ["Auto/taxi availability", "Readily available", "Limited at odd hours"],
+            ["Late night arrival", "Easier-town is accessible", "Can be inconvenient in the dark"],
+            ["Parking", "Check with hotel in advance", "Usually more space"],
+            ["Noise level", "Mild town activity (morning hours)", "Quieter if fully outside town"],
+            ["Best for", "Families, temple visitors, short stays, business travellers", "Longer leisure stays, personal preference"]
+          ]
+        }
+      },
+      {
+        type: "paragraph",
+        text: "For most travellers coming from Mangalore, especially those visiting for temple trips, family functions, or short stays, choosing a centrally located hotel in Puttur near the main road is a more practical and convenient option."
+      },
+      {
+        id: "late-arrival",
+        type: "subheading",
+        text: "What If You Arrive Late at Night?"
+      },
+      {
+        type: "paragraph",
+        text: "If you are arriving in Puttur late in the evening or at night, a little preparation goes a long way. Here is what to do:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Call the hotel in advance-let them know your expected arrival time",
+          "Confirm whether late check-in is possible and if any staff will be available",
+          "Save the hotel phone number in your mobile before you leave Mangalore",
+          "Check if the hotel has parking available if you are driving",
+          "If arriving by train at Kabaka Puttur, pre-arrange an auto or contact someone to pick you up",
+          "Carry your ID proof (Aadhaar card or any government ID)-it is needed at hotel check-in"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Note: Not all hotels in Puttur offer 24-hour check-in. It is always best to confirm check-in timings with the specific hotel before your journey."
+      },
+      {
+        type: "paragraph",
+        text: "For The Padival Grand, contact the hotel directly to confirm current check-in hours and late arrival arrangements."
+      },
+      {
+        id: "room-type",
+        type: "subheading",
+        text: "Best Room Type for Your Travel Style"
+      },
+      {
+        type: "table",
+        tableData: {
+          headers: ["Traveller Type", "Recommended Room Type", "What to Ask the Hotel"],
+          rows: [
+            ["Solo traveller", "*Standard single or double room|https://thepadivalgrand.com/rooms/standard-room*", "Wi-Fi, early check-in if needed"],
+            ["Couple", "*Double room / deluxe room|https://thepadivalgrand.com/rooms/deluxe-room*", "Room size, privacy, quiet floor"],
+            ["Family (2 adults + children)", "*Family room or larger double|https://thepadivalgrand.com/rooms/triple-bed-room*", "Extra bed, family room availability"],
+            ["Group of 4–6", "*Multiple rooms or triple/quad option|https://thepadivalgrand.com/rooms/family-quad-room*", "Adjacent rooms, group rate"],
+            ["Business traveller", "AC room with desk or work space", "Wi-Fi, early check-out flexibility"],
+            ["Temple tourist (short stay)", "*Standard room, any available|https://thepadivalgrand.com/rooms/standard-room*", "Check-out time, luggage storage if needed"],
+            ["Event/function guest", "Room with easy town access", "Parking, early check-in if possible"]
+          ]
+        }
+      },
+      {
+        type: "paragraph",
+        text: "Before booking, always confirm room availability, inclusions, and any special requirements directly with the hotel. Room types and availability can vary."
+      },
+      {
+        id: "why-padival-grand",
+        type: "subheading",
+        text: "Why The Padival Grand Is a Practical Stay Option in Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "The Padival Grand is a hotel in Puttur offering lodging rooms for individuals, families, groups, and business travellers. Located conveniently in central Puttur near the main road, it is accessible whether you are arriving by bus, car, or from Kabaka Puttur railway station."
+      },
+      {
+        type: "paragraph",
+        text: "What makes it a practical choice:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Comfortable lodging rooms suitable for short stays and overnight stays",
+          "Convenient location in Puttur-close to the town centre, local transport, and Puttur Mahalingeshwara Temple",
+          "Suitable for a range of travellers-solo, families, groups, and business visitors",
+          "Accessible from Mangalore by road, bus, and train (via Kabaka Puttur station)",
+          "Parking available-confirm with the hotel at the time of booking"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "The Padival Grand is designed for travellers who value comfort, convenience, and a hassle-free stay in Puttur. With clean rooms, a central location, and easy access to key places in town, it offers a practical stay for guests who want to rest, refresh, and continue with their visit comfortably."
+      },
+      {
+        type: "paragraph",
+        text: "For current room availability, room types, and any questions about your stay, *contact The Padival Grand directly|https://thepadivalgrand.com/contact*."
+      },
+      {
+        id: "travel-checklist",
+        type: "subheading",
+        text: "Quick Travel Checklist Before You Leave Mangalore"
+      },
+      {
+        type: "paragraph",
+        text: "Use this checklist before starting your trip from Mangalore to Puttur:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Check the road route on Google Maps or a reliable navigation app",
+          "Verify bus or train timings from official sources",
+          "Save the hotel phone number and address before leaving",
+          "Call the hotel to confirm your room booking and check-in time",
+          "Ask about parking if you are driving",
+          "Carry your ID proof (Aadhaar, driving licence, or any government photo ID)",
+          "Pack a light raincoat or umbrella if travelling during monsoon season (June–September)",
+          "If visiting Puttur Mahalingeshwara Temple, check the darshan timings in advance",
+          "Add extra travel time if you are driving in heavy rain or during a festival season",
+          "Charge your phone and keep the hotel contact number easily accessible"
+        ]
+      },
+      {
+        id: "conclusion",
+        type: "subheading",
+        text: "Ready to Travel from Mangalore to Puttur?"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is well connected from Mangalore by road, bus, and train. The journey is manageable for all types of travellers-families, solo visitors, business travellers, and pilgrims. With a little planning-knowing your route, confirming your transport, and booking your stay in advance-your trip from Mangalore to Puttur can be smooth and stress-free."
+      },
+      {
+        type: "paragraph",
+        text: "If you are looking for comfortable lodging rooms in central Puttur, The Padival Grand offers a practical option for families, groups, temple visitors, and business travellers. Located near Puttur Main Road, it is accessible from all major points of arrival in the town."
+      },
+      {
+        id: "contact",
+        type: "subheading",
+        text: "Plan Your Stay at The Padival Grand, Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "A well-planned trip to Puttur, combined with a central stay and helpful local guidance, can turn a routine temple visit into a complete spiritual experience."
+      },
+      {
+        type: "paragraph",
+        text: "If you're looking for the right hotel in Puttur, Karnataka that balances cleanliness, comfort, and genuine hospitality without overcomplicating the experience, we'd be glad to host you."
+      },
+      {
+        type: "paragraph",
+        text: "For direct bookings and tour package inquiries, reach our team at:\n96868 04784\ninfo@padivalgrandhotel.com"
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://thepadivalgrand.com/#organization",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://thepadivalgrand.com/svgs/mainLogo.svg"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "The Padival Grand",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padivalgrandhotel.com"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://thepadivalgrand.com/#author-maruti-khapare",
+          "name": "Maruti Khapare"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://thepadivalgrand.com/mangalore-to-puttur-travel-guide/#webpage",
+          "url": "https://thepadivalgrand.com/mangalore-to-puttur-travel-guide",
+          "name": "Mangalore to Puttur Travel Guide: Route, Bus, Train & Stay",
+          "description": "Planning a trip from Mangalore to Puttur? Find distance, best route, bus & train options, and comfortable lodging rooms at The Padival Grand in central Puttur.",
+          "isPartOf": {
+            "@id": "https://thepadivalgrand.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thepadivalgrand.com/blogsImg/desktop5.jpg"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/mangalore-to-puttur-travel-guide/#blogposting",
+          "mainEntityOfPage": {
+            "@id": "https://thepadivalgrand.com/mangalore-to-puttur-travel-guide/#webpage"
+          },
+          "headline": "Mangalore to Puttur Travel Guide: Distance, Route, Bus, Train & Stay Options",
+          "alternativeHeadline": "Mangalore to Puttur Travel Guide: Route, Bus, Train & Stay",
+          "description": "Planning a trip from Mangalore to Puttur? Find distance, best route, bus & train options, and comfortable lodging rooms at The Padival Grand in central Puttur.",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://thepadivalgrand.com/blogsImg/desktop5.jpg"
+          },
+          "author": {
+            "@id": "https://thepadivalgrand.com/#author-maruti-khapare"
+          },
+          "publisher": {
+            "@id": "https://thepadivalgrand.com/#organization"
+          },
+          "datePublished": "2025-06-25",
+          "dateModified": "2025-06-25",
+          "inLanguage": "en-IN",
+          "articleSection": "Travel",
+          "keywords": [
+            "Mangalore to Puttur",
+            "Mangalore to Puttur travel guide",
+            "Mangalore to Puttur distance",
+            "Mangalore to Puttur route",
+            "Mangalore to Puttur bus",
+            "Mangalore to Puttur train",
+            "Kabaka Puttur Railway Station",
+            "Mangalore Airport to Puttur",
+            "hotel in Puttur",
+            "lodging rooms in Puttur",
+            "The Padival Grand"
+          ],
+          "about": [
+            {
+              "@type": "Place",
+              "name": "Mangalore",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Karnataka",
+                "addressCountry": "IN"
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Puttur",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Puttur",
+                "addressRegion": "Karnataka",
+                "addressCountry": "IN"
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Kabaka Puttur Railway Station"
+            },
+            {
+              "@type": "Place",
+              "name": "Mangalore International Airport"
+            },
+            {
+              "@type": "Place",
+              "name": "The Padival Grand"
+            }
+          ],
+          "mentions": [
+            {
+              "@type": "Place",
+              "name": "Kabaka Puttur Railway Station"
+            },
+            {
+              "@type": "Airport",
+              "name": "Mangalore International Airport",
+              "iataCode": "IXE"
+            },
+            {
+              "@type": "Place",
+              "name": "NH 75"
+            },
+            {
+              "@type": "TouristAttraction",
+              "name": "Puttur Mahalingeshwara Temple"
+            },
+            {
+              "@type": "LodgingBusiness",
+              "name": "The Padival Grand",
+              "url": "https://thepadivalgrand.com/"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://thepadivalgrand.com/mangalore-to-puttur-travel-guide/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://thepadivalgrand.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blogs",
+              "item": "https://thepadivalgrand.com/blogs"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Mangalore to Puttur Travel Guide",
+              "item": "https://thepadivalgrand.com/mangalore-to-puttur-travel-guide"
+            }
           ]
         }
       ]
