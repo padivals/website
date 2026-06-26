@@ -2032,8 +2032,8 @@ export const blogs: BlogPost[] = [
     date: "June 25, 2026",
     author: "Maruti Khapare",
     readTime: "5 min read",
-    heroImage: "/blogsImg/desktop6.webp",
-    mobileImage: "/blogsImg/desktop6.webp",
+    heroImage: "/blogsImg/Desktop6.webp",
+    mobileImage: "/blogsImg/Desktop6.webp",
     pcImage: "/blogsImg/desktop6.webp",
     cardImage: "/blogsImg/desktop6.webp",
     metaTitle: "Mangalore to Puttur Travel Guide: Route, Bus, Train & Stay",
@@ -2043,11 +2043,6 @@ export const blogs: BlogPost[] = [
       { id: "distance", label: "How Far Is Mangalore from Puttur?" },
       { id: "time-by-road", label: "How Long Does It Take by Road?" },
       { id: "best-route", label: "Best Route from Mangalore to Puttur" },
-      { id: "by-bus", label: "Mangalore to Puttur by Bus" },
-      { id: "by-train", label: "Mangalore to Puttur by Train" },
-      { id: "kabaka-puttur-station", label: "Kabaka Puttur Railway Station" },
-      { id: "airport-to-puttur", label: "Mangalore Airport to Puttur" },
-      { id: "comparison", label: "Bus vs Train vs Taxi: Which Is Better?" },
       { id: "where-to-stay", label: "Where to Stay After Reaching Puttur" },
       { id: "main-road-vs-outside", label: "Main Road Stay vs Outside Town" },
       { id: "late-arrival", label: "What If You Arrive Late at Night?" },
@@ -2132,7 +2127,6 @@ export const blogs: BlogPost[] = [
         text: "For monsoon travel: NH 75 is generally reliable even in heavy rain, but visibility can reduce significantly. Drive carefully and avoid travelling in very heavy downpour if possible."
       },
       {
-        id: "by-bus",
         type: "subheading",
         text: "Mangalore to Puttur by Bus"
       },
@@ -2162,7 +2156,6 @@ export const blogs: BlogPost[] = [
         text: "Bus timings verification: Bus schedules can change based on season, holidays, and operator decisions. Before your trip, verify the latest timings directly with KSRTC or check the *official KSRTC Karnataka website|https://www.ksrtc.in/*. You can also ask at the Mangalore Central Bus Stand for the most current schedule."
       },
       {
-        id: "by-train",
         type: "subheading",
         text: "Mangalore to Puttur by Train"
       },
@@ -2187,7 +2180,6 @@ export const blogs: BlogPost[] = [
         text: "Train timings and booking: Train schedules, seat availability, and fares change regularly. Always check *IRCTC|https://www.irctc.co.in/nget/train-search* or *NTES|https://enquiry.indianrail.gov.in/mntes/* for the most current and accurate train timings before you book or travel."
       },
       {
-        id: "kabaka-puttur-station",
         type: "subheading",
         text: "Kabaka Puttur Railway Station"
       },
@@ -2216,7 +2208,6 @@ export const blogs: BlogPost[] = [
         text: "Note on search query 'kabaka puttur to mangalore train timings': Many travellers search for this return trip information as well. The same Kabaka Puttur station serves trains in both directions."
       },
       {
-        id: "airport-to-puttur",
         type: "subheading",
         text: "Mangalore Airport to Puttur: How to Reach"
       },
@@ -2245,7 +2236,6 @@ export const blogs: BlogPost[] = [
         text: "Recommendation for families: If you are arriving by flight with children, luggage, or elderly members, a direct taxi from *Mangalore Airport|https://mangaluru.adaniairports.com/en* to Puttur is the most comfortable and stress-free option. It avoids city traffic layovers and gets you directly to your hotel in Puttur."
       },
       {
-        id: "comparison",
         type: "subheading",
         text: "Bus vs Train vs Taxi: Which Is Better?"
       },
