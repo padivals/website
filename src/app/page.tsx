@@ -493,7 +493,7 @@ export default function Home() {
       </div> */}
 
       <section className="hidden lg:block">
-        {/* <ReservationBar /> */}
+        <ReservationBar />
       </section>
 <BlogSection />
       <Footer />
