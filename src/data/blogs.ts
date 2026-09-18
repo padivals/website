@@ -250,7 +250,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Our *restaurant at Padival Grand|https://thepadivalgrand.com/dining* serves fresh, hygienic South Indian cuisine throughout the day — from early breakfast to a warm evening dinner after your final darshan. The menu is built around the preferences of regional travelers: simple preparations, familiar flavors, and reliable quality. No complicated menus. No waiting.",
+        text: "Our *restaurant at Padival Grand|https://thepadivalgrand.com/dining* serves fresh, hygienic South Indian cuisine throughout the day — from early breakfast to a warm evening dinner after your final darshan. For a complete dining overview, read our guide on *pure veg dining in Puttur|/blogs/pure-veg-dining-in-puttur*. The menu is built around the preferences of regional travelers: simple preparations, familiar flavors, and reliable quality. No complicated menus. No waiting.",
       },
       {
         type: "paragraph",
@@ -2637,7 +2637,7 @@ export const blogs: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "Planning a trip to Puttur - for a temple visit, a family function, business work, or a stopover on the way to Mangaluru - usually brings up the same question early on: should you book a hotel or a lodge?"
+        text: "Planning a trip to Puttur - for a temple visit, a family function, *business travel|/blogs/puttur-for-business-travellers*, or a stopover on the way to Mangaluru - usually brings up the same question early on: should you book a hotel or a lodge?"
       },
       {
         type: "paragraph",
@@ -2889,6 +2889,444 @@ export const blogs: BlogPost[] = [
             "accommodation in puttur",
             "The Padival Grand"
           ]
+        }
+      ]
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 8                                               ║
+   * ═══════════════════════════════════════════════════════╝ */
+  {
+    id: 8,
+    slug: "puttur-for-business-travellers",
+    breadcrumb: "Puttur for Business Travellers",
+    title: "Puttur for Business Travellers: A Practical Stay Guide",
+    excerpt: "Most of what gets written about Puttur is written for pilgrims and weekend travellers, and for good reason, that is who visits most often. But we host a steady number of guests who are here for none of that: a supplier meeting, a site visit, a day of work at one of the local businesses around Main Road. Their priorities look nothing like a temple traveller's, and most hotel content in this town does not speak to them at all. This guide is for that traveller. Not a checklist of attractions, but a practical look at what actually matters on a short work trip to Puttur, and how we have tried to build a stay that works for it.",
+    date: "September 18, 2026",
+    author: "The Padival Grand",
+    readTime: "4 min read",
+    heroImage: "/blogsImg/Desktop8.jpg",
+    mobileImage: "/blogsImg/Desktop8.jpg",
+    pcImage: "/blogsImg/Desktop8.jpg",
+    cardImage: "/blogsImg/Desktop8.jpg",
+    metaTitle: "Puttur for Business Travellers: A Practical Stay Guide",
+    metaDescription: "Travelling to Puttur for work? Here is what business travellers actually need, from a reliable Wi-Fi connection to a central location near Main Road.",
+    category: "Business Travel",
+    tableOfContents: [
+      { id: "puttur-not-just-temple-town", label: "Puttur Is Not Just a Temple Town" },
+      { id: "what-business-traveller-needs", label: "What a Business Traveller Actually Needs From a Hotel" },
+      { id: "staying-central-location", label: "Staying Central: Why Location Near Main Road Matters" },
+      { id: "working-from-the-room", label: "Working From the Room: Wi-Fi, Quiet, and Basics That Should Just Work" },
+      { id: "meals-schedule", label: "Meals That Do Not Eat Into Your Schedule" },
+      { id: "practical-guide-work-trip", label: "Practical Guide for a Short Work Trip to Puttur" },
+      { id: "plan-stay-padival-grand", label: "Plan Your Stay at Padival Grand" }
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Most of what gets written about Puttur is written for pilgrims and weekend travellers, and for good reason, that is who visits most often. But we host a steady number of guests who are here for none of that: a supplier meeting, a site visit, a day of work at one of the local businesses around Main Road. Their priorities look nothing like a temple traveller's, and most hotel content in this town does not speak to them at all."
+      },
+      {
+        type: "paragraph",
+        text: "This guide is for that traveller. Not a checklist of attractions, but a practical look at what actually matters on a short work trip to Puttur, and how we have tried to build a stay that works for it."
+      },
+      {
+        id: "puttur-not-just-temple-town",
+        type: "heading",
+        text: "Puttur Is Not Just a Temple Town"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur sits at the centre of a genuinely active local economy, small manufacturing, trading businesses, agricultural commerce, and a steady flow of people moving through for work rather than worship. It is easy to miss this if all you read is temple guides and waterfall itineraries, but a fair share of the people walking through our lobby on any given weekday are here for a meeting, not a darshan."
+      },
+      {
+        type: "paragraph",
+        text: "What that traveller wants from a night's stay is simple and specific: a reliable place to rest, work if needed, and get back out the next morning without friction."
+      },
+      {
+        id: "what-business-traveller-needs",
+        type: "subheading",
+        text: "What a Business Traveller Actually Needs From a Hotel"
+      },
+      {
+        type: "paragraph",
+        text: "Having hosted a good number of these guests over the years, the pattern in what they ask for is fairly consistent:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "A room that is quiet enough to take a call or finish work in the evening",
+          "Wi-Fi that actually holds up, not just a password that gets handed over at check-in",
+          "A location close enough to town that a short meeting does not turn into a half day of travel",
+          "A quick, no-fuss check-in and check-out, since most of these trips run on a tight schedule",
+          "A place to eat without needing to plan around it, since work trips rarely leave room for a long search for dinner"
+        ]
+      },
+      {
+        id: "staying-central-location",
+        type: "subheading",
+        text: "Staying Central: Why Location Near Main Road Matters"
+      },
+      {
+        type: "paragraph",
+        text: "We are located near Puttur Main Road, inside Mahaveer Mall, which turns out to matter more for a business guest than it does for a leisure traveller. Meetings, local offices, and commercial addresses in Puttur tend to cluster around this stretch of town, and a hotel a few kilometres out can turn a short meeting into a longer outing than it needs to be. For a guest with two or three stops to make in a single day, a central base removes a lot of that friction before it starts."
+      },
+      {
+        id: "working-from-the-room",
+        type: "subheading",
+        text: "Working From the Room: Wi-Fi, Quiet, and Basics That Should Just Work"
+      },
+      {
+        type: "paragraph",
+        text: "Our *Deluxe A/C rooms|/rooms/deluxe-room* are built around exactly this kind of stay, clean interiors, effective air conditioning, and high-speed Wi-Fi that is meant to work without having to ask twice. For a guest catching up on email at the end of a work day, or joining a call from the room, these are not extras, they are the baseline expectation, and we try to treat them that way rather than as an afterthought behind the room's decor."
+      },
+      {
+        id: "meals-schedule",
+        type: "subheading",
+        text: "Meals That Do Not Eat Into Your Schedule"
+      },
+      {
+        type: "paragraph",
+        text: "A work trip rarely leaves room to go looking for dinner in an unfamiliar part of town, particularly after a late meeting. Our in house *restaurant|/dining* serves pure vegetarian South Indian food through the day, which for a solo business traveller usually means one less thing to plan around, order, sit down, and get back to the room without losing an evening to it."
+      },
+      {
+        id: "practical-guide-work-trip",
+        type: "subheading",
+        text: "Practical Guide for a Short Work Trip to Puttur"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Check-in and check-out are handled quickly at the front desk, useful when a trip is scheduled tightly around meetings",
+          "Ample parking is available on site, which matters for guests arriving by car for local business visits",
+          "Payment is accepted by cash, card, and digital methods, so there is no need to plan that in advance",
+          "For anyone extending a short trip into an overnight or two, our restaurant covers breakfast through dinner without needing a separate outing",
+          "The property is easily reached from Main Road, which helps when a day involves multiple stops around town"
+        ]
+      },
+      {
+        id: "plan-stay-padival-grand",
+        type: "subheading",
+        text: "Plan Your Stay at Padival Grand"
+      },
+      {
+        type: "paragraph",
+        text: "A work trip does not need much from a hotel, a quiet room, a Wi-Fi connection that holds up, a central location, and a meal that does not require extra planning. That is a shorter list than most hotel marketing accounts for, but it is the one that actually matters when you are in town for a day or two of work rather than a holiday."
+      },
+      {
+        type: "paragraph",
+        text: "If your next trip to Puttur is for work rather than a temple visit, we would be glad to host you."
+      },
+      {
+        type: "paragraph",
+        text: "For direct bookings, reach our team at 96868 04784 or info@padival-grand-hotel.com"
+      },
+      {
+        type: "h3",
+        text: "Book Your Stay"
+      },
+      {
+        type: "paragraph",
+        text: "Contact The Padival Grand at 96868 04784 or info@padival-grand-hotel.com to plan your next work trip to Puttur."
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/puttur-for-business-travellers#blog",
+          "headline": "Puttur for Business Travellers: A Practical Stay Guide",
+          "description": "Travelling to Puttur for work? Here is what business travellers actually need, from a reliable Wi-Fi connection to a central location near Main Road.",
+          "image": "https://thepadivalgrand.com/blogsImg/Desktop8.jpg",
+          "datePublished": "2026-09-18",
+          "dateModified": "2026-09-18",
+          "author": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "url": "https://thepadivalgrand.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/puttur-for-business-travellers"
+          },
+          "articleSection": "Business Travel",
+          "keywords": [
+            "hotels in Puttur for business travel",
+            "business stay in Puttur",
+            "Puttur corporate stay",
+            "hotel near Main Road Puttur",
+            "work trip Puttur",
+            "The Padival Grand"
+          ]
+        },
+        {
+          "@type": "Hotel",
+          "@id": "https://thepadivalgrand.com/#hotel",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "postalCode": "574201",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "High-Speed Wi-Fi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Air Conditioning",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "On-Site Parking",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Pure Vegetarian In-House Restaurant",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 9                                               ║
+   * ═══════════════════════════════════════════════════════╝ */
+  {
+    id: 9,
+    slug: "pure-veg-dining-in-puttur",
+    breadcrumb: "Pure Veg Dining in Puttur",
+    title: "Pure Veg Dining in Puttur: What to Eat Near Mahalingeshwara Temple",
+    excerpt: "Most people planning a trip to Puttur think about darshan timings, travel routes, and where to stay. Food tends to get an afterthought, something to sort out once you arrive. But for anyone who has stood outside a temple town at eight in the evening looking for a decent, reliable meal, food stops being an afterthought fairly quickly. We have watched this play out with guests for years now, families arriving tired after an evening darshan, groups returning from a long day trip to Kukke Subramanya, solo travellers who simply want something familiar and clean after a long journey. This guide is about what pure vegetarian dining in Puttur actually looks like, what to expect, and how we have built dining at Padival Grand around the rhythm of a temple trip rather than around a generic restaurant menu.",
+    date: "September 18, 2026",
+    author: "The Padival Grand",
+    readTime: "4 min read",
+    heroImage: "/blogsImg/Desktop9.jpg",
+    mobileImage: "/blogsImg/Desktop9.jpg",
+    pcImage: "/blogsImg/Desktop9.jpg",
+    cardImage: "/blogsImg/Desktop9.jpg",
+    metaTitle: "Pure Veg Dining in Puttur: Where to Eat Near Mahalingeshwara Temple",
+    metaDescription: "Looking for pure vegetarian food in Puttur? Here is what to eat near Mahalingeshwara Temple, including South Indian dining at The Padival Grand.",
+    category: "Dining Guide",
+    tableOfContents: [
+      { id: "why-food-matters", label: "Why Food Matters as Much as Darshan in Puttur" },
+      { id: "what-pure-veg-means", label: "What Pure Vegetarian Dining Means Here" },
+      { id: "dining-at-padival-grand", label: "Dining at Padival Grand: Built Around a Full Day of Temple Visits" },
+      { id: "traditional-dishes", label: "Traditional South Indian and Coastal Karnataka Dishes to Look For" },
+      { id: "guest-reviews", label: "What Our Guests Say About the Food" },
+      { id: "practical-dining-guide", label: "Practical Dining Guide for Temple Visitors" },
+      { id: "plan-stay-and-meals", label: "Plan Your Stay and Your Meals at Padival Grand" }
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Most people planning a trip to Puttur think about darshan timings, travel routes, and where to stay. Food tends to get an afterthought, something to sort out once you arrive. But for anyone who has stood outside a temple town at eight in the evening looking for a decent, reliable meal, food stops being an afterthought fairly quickly."
+      },
+      {
+        type: "paragraph",
+        text: "We have watched this play out with guests for years now, families arriving tired after an evening darshan, groups returning from a long day trip to Kukke Subramanya, solo travellers who simply want something familiar and clean after a long journey. This guide is about what pure vegetarian dining in Puttur actually looks like, what to expect, and how we have built dining at Padival Grand around the rhythm of a temple trip rather than around a generic restaurant menu."
+      },
+      {
+        id: "why-food-matters",
+        type: "heading",
+        text: "Why Food Matters as Much as Darshan in Puttur"
+      },
+      {
+        type: "paragraph",
+        text: "A temple trip is physically demanding in ways that are easy to underestimate. Early mornings, long queues, a fair amount of walking, and often a day trip layered on top if Kukke Subramanya or another nearby shrine is on the itinerary. By the time evening darshan ends, most visitors are not looking for an adventurous meal. They want something warm, familiar, and available without another round of searching in an unfamiliar town."
+      },
+      {
+        type: "paragraph",
+        text: "This is where a lot of temple town dining falls short. Options thin out after dark, menus can be inconsistent, and pure vegetarian requirements, which many pilgrims hold strictly, are not always taken seriously outside a handful of trusted places."
+      },
+      {
+        id: "what-pure-veg-means",
+        type: "subheading",
+        text: "What Pure Vegetarian Dining Means Here"
+      },
+      {
+        type: "paragraph",
+        text: "For a large number of visitors to Puttur, particularly those travelling specifically for temple darshan, pure vegetarian is not a preference, it is a requirement tied to the visit itself. That usually means no onion or garlic in the kitchen, no shared cooking surfaces with non vegetarian food, and ingredients that are kept simple and traditional rather than experimental."
+      },
+      {
+        type: "paragraph",
+        text: "It is a stricter standard than \"vegetarian\" alone, and it is worth confirming directly with any restaurant before you sit down, rather than assuming from the menu."
+      },
+      {
+        id: "dining-at-padival-grand",
+        type: "subheading",
+        text: "Dining at Padival Grand: Built Around a Full Day of Temple Visits"
+      },
+      {
+        type: "paragraph",
+        text: "Our *in house restaurant|/dining* serves pure vegetarian South Indian food through the day, starting early enough for guests heading to the 5:30 AM temple opening and running through to a proper evening meal after the final darshan. The idea behind the menu is simple: familiar preparations, consistent quality, and no complicated ordering process at the end of a long day."
+      },
+      {
+        type: "paragraph",
+        text: "For guests planning a full day out, whether that is Beeramale Hill at sunrise or a day trip to Kukke Subramanya, our front desk can arrange packed meals on request, so a long day away from *the hotel|/rooms* does not mean going without a proper meal."
+      },
+      {
+        id: "traditional-dishes",
+        type: "subheading",
+        text: "Traditional South Indian and Coastal Karnataka Dishes to Look For"
+      },
+      {
+        type: "paragraph",
+        text: "Dakshina Kannada's vegetarian food draws on a distinct regional style, and a few dishes are worth specifically seeking out during your stay:"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Neer dosa, a thin, delicate rice crepe typically served with coconut chutney or a light vegetable curry",
+          "Kori rotti style vegetarian thalis, built around rice, sambar, and regional vegetable preparations",
+          "Coconut based sambar and rasam, milder and more coconut forward than the versions found further inland",
+          "Filter coffee, served strong and traditionally, usually the right way to end a meal here"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Most of these are staples on a typical South Indian thali menu in this region, including the one served at *The Padival Grand|/dining*, so there is rarely a need to go looking elsewhere for an authentic meal."
+      },
+      {
+        id: "guest-reviews",
+        type: "subheading",
+        text: "What Our Guests Say About the Food"
+      },
+      {
+        type: "paragraph",
+        text: "We would rather guests hear this from other travellers than only from us. Feedback we receive most consistently points to the same things: the food is simple, it is reliably good, and having a proper restaurant on site removes the stress of finding somewhere to eat after a late evening darshan. Guests travelling with elderly family members in particular tell us that not having to step out again after dark makes a real difference to how the whole trip feels."
+      },
+      {
+        type: "quote",
+        text: "Very good hotel with its own restaurant. Stayed for two nights. Smooth check-in and checkout. Restaurant is very good with good South options. Service is good.",
+        quoteAuthor: "G. T. Joshi, Verified Guest"
+      },
+      {
+        type: "quote",
+        text: "The pure veg food at the in-house restaurant was very comforting after our evening darshan at Mahalingeshwara Temple. Hot rasam, fresh dosas, and great filter coffee.",
+        quoteAuthor: "Suresh Rao, Temple Visitor"
+      },
+      {
+        type: "paragraph",
+        text: "We take this kind of feedback seriously, including the occasional note about wait times during peak breakfast hours before the morning temple rush, which is something our kitchen team continues to work on during the busiest weeks of the year."
+      },
+      {
+        id: "practical-dining-guide",
+        type: "subheading",
+        text: "Practical Dining Guide for Temple Visitors"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Breakfast service starts early enough to cover the 5:30 AM temple opening, so guests do not need to leave on an empty stomach",
+          "Evening dining runs late enough to accommodate the 4:00 PM to 8:00 PM darshan session, without needing to rush a meal beforehand",
+          "Packed meals for day trips can be arranged in advance through the front desk, particularly useful for a Kukke Subramanya excursion",
+          "If pure vegetarian standards matter to you, it is worth confirming directly with any restaurant, including ours, rather than assuming from a menu alone",
+          "Filter coffee and light snacks are usually available outside full meal hours for guests arriving or departing at odd times"
+        ]
+      },
+      {
+        id: "plan-stay-and-meals",
+        type: "subheading",
+        text: "Plan Your Stay and Your Meals at Padival Grand"
+      },
+      {
+        type: "paragraph",
+        text: "Food is easy to underplan for on a temple trip, right up until you are standing outside a closed kitchen at eight in the evening. Staying somewhere that treats dining as part of the stay, rather than an afterthought, tends to make the whole trip feel less tiring and considerably more comfortable."
+      },
+      {
+        type: "paragraph",
+        text: "If a reliable, pure vegetarian meal at the end of a long day of darshan matters to your trip, we would be glad to host you at *The Padival Grand|/rooms*."
+      },
+      {
+        type: "paragraph",
+        text: "For direct bookings or to ask about packed meal arrangements, reach our team at 96868 04784 or info@padival-grand-hotel.com"
+      },
+      {
+        type: "h3",
+        text: "Dine With Us"
+      },
+      {
+        type: "paragraph",
+        text: "Contact The Padival Grand at 96868 04784 or info@padival-grand-hotel.com to plan your meals around your temple visit."
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/pure-veg-dining-in-puttur#blog",
+          "headline": "Pure Veg Dining in Puttur: Where to Eat Near Mahalingeshwara Temple",
+          "description": "Looking for pure vegetarian food in Puttur? Here is what to eat near Mahalingeshwara Temple, including South Indian dining at The Padival Grand.",
+          "image": "https://thepadivalgrand.com/blogsImg/Desktop9.jpg",
+          "datePublished": "2026-09-18",
+          "dateModified": "2026-09-18",
+          "author": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "url": "https://thepadivalgrand.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/pure-veg-dining-in-puttur"
+          },
+          "articleSection": "Dining Guide",
+          "keywords": [
+            "pure veg restaurants in Puttur",
+            "where to eat near Mahalingeshwara Temple",
+            "vegetarian food Puttur",
+            "South Indian dining Puttur",
+            "temple food Puttur",
+            "The Padival Grand"
+          ]
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "https://thepadivalgrand.com/dining#restaurant",
+          "name": "The Padival Grand Pure Veg Restaurant",
+          "url": "https://thepadivalgrand.com/dining",
+          "servesCuisine": ["South Indian", "Pure Vegetarian", "Coastal Karnataka"],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "postalCode": "574201",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com"
         }
       ]
     }
