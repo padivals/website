@@ -3330,5 +3330,952 @@ export const blogs: BlogPost[] = [
         }
       ]
     }
-  }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 10                                              ║
+   * ═══════════════════════════════════════════════════════╝ */
+  {
+    id: 10,
+    slug: "tulu-traditions-every-visitor-to-puttur-should-know",
+    breadcrumb: "Tulu Traditions in Puttur",
+    title: "Tulu Traditions Every Visitor to Puttur Should Know",
+    excerpt:
+      "Most visitors come to Puttur for the temple, but the town sits in the heart of Tulu Nadu. Understand the sacred traditions—from Bhuta Kola and Nagaradhane to Yakshagana, Kambala, and local customs—to make your visit richer.",
+    date: "October 5, 2026",
+    author: "The Padival Grand",
+    readTime: "5 min read",
+    heroImage: "/blogsImg/tulu-tradition.jpeg",
+    mobileImage: "/blogsImg/tulu-tradition.jpeg",
+    pcImage: "/blogsImg/tulu-tradition.jpeg",
+    cardImage: "/blogsImg/tulu-tradition.jpeg",
+    metaTitle: "Tulu Traditions Every Visitor to Puttur Should Know",
+    metaDescription:
+      "Learn essential Tulu traditions before visiting Puttur: Daiva worship, Bhuta Kola, Yakshagana, Kambala, Tulu cuisine, and etiquette for respectful visitors.",
+    category: "Culture & Heritage",
+    tableOfContents: [
+      { id: "a-region-with-its-own-language", label: "A Region with Its Own Language" },
+      { id: "daiva-worship-and-bhuta-kola", label: "Daiva Worship and Bhuta Kola" },
+      { id: "serpent-worship", label: "Serpent Worship" },
+      { id: "yakshagana", label: "Yakshagana" },
+      { id: "kambala-and-farming-calendar", label: "Kambala and the Farming Calendar" },
+      { id: "tulu-year-and-festivals", label: "The Tulu Year and Its Festivals" },
+      { id: "food-that-tells-a-story", label: "Food that Tells a Story" },
+      { id: "family-and-community", label: "Family and Community" },
+      { id: "how-to-be-a-respectful-visitor", label: "How to Be a Respectful Visitor" },
+      { id: "plan-your-visit-around-culture", label: "Plan Your Visit Around the Culture" }
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Most visitors come to Puttur for the temple, and they leave with a good darshan and a few photographs. But the town sits in the heart of Tulu Nadu, a region with its own language, its own spirit worship, its own festivals and its own way of doing things. If you only see the temple, you see one part of Puttur. If you also understand a little of the culture around it, the visit becomes much richer."
+      },
+      {
+        type: "paragraph",
+        text: "We have lived here for years, and we hear the same question from guests all the time: what should we know about local traditions before we go out and explore? This guide is a simple introduction to the Tulu traditions you are most likely to notice during a visit to Puttur, with a few thoughts on how to be a respectful guest."
+      },
+      {
+        id: "a-region-with-its-own-language",
+        type: "heading",
+        text: "A Region with Its Own Language"
+      },
+      {
+        type: "paragraph",
+        text: "Tulu Nadu is the coastal belt of Karnataka, mainly the Dakshina Kannada and Udupi districts, along with a part of northern Kerala. Tulu is the mother tongue of many families here, and it is spoken alongside Kannada, Konkani, Beary and other languages. You will hear it in homes, on the street and at family functions. Most people you meet will also speak Kannada or English, so you will not struggle, but a friendly smile and a little curiosity always go a long way."
+      },
+      {
+        id: "daiva-worship-and-bhuta-kola",
+        type: "heading",
+        text: "Daiva Worship and Bhuta Kola"
+      },
+      {
+        type: "paragraph",
+        text: "One of the most distinctive traditions of Tulu Nadu is the worship of daivas, local guardian spirits, which exists alongside temple worship. The best known ritual is Bhuta Kola, also called Daiva Kola, in which a ritual performer takes on the form of the spirit, with elaborate costume, face paint, music and dance, and speaks to the community. It is usually held at night, in village shrines and family compounds, often between winter and the onset of summer."
+      },
+      {
+        type: "paragraph",
+        text: "For the families involved, this is a sacred event, not a show. If you are invited to attend, or come across one, treat it with the same respect you would give to a temple. Dress modestly, stay quiet, keep a respectful distance and ask before taking photographs or videos. Never touch the costumes or the offerings, and follow the directions of the family or the organisers."
+      },
+      {
+        id: "serpent-worship",
+        type: "heading",
+        text: "Serpent Worship"
+      },
+      {
+        type: "paragraph",
+        text: "Nagaradhane, or the worship of serpents, is another important tradition. Many Tulu families keep a sacred grove or a small shrine for the serpent deity, and the festival of Naga Panchami is observed with prayers and offerings. You may notice carved stones under old trees across the countryside. These are places of devotion, so please do not climb on them, litter near them or disturb them."
+      },
+      {
+        id: "yakshagana",
+        type: "heading",
+        text: "Yakshagana"
+      },
+      {
+        type: "paragraph",
+        text: "Yakshagana is a night-long dance-drama of coastal Karnataka, with vivid costumes, loud music and stories drawn from the epics. Performances are often held in the cooler months, usually beginning in the evening and continuing into the early hours. If you get a chance to watch one, even for an hour, it is a memorable experience. The sound of the drums, the headgear and the energy of the performers give you a glimpse of the region's artistic life that no museum can match."
+      },
+      {
+        id: "kambala-and-farming-calendar",
+        type: "heading",
+        text: "Kambala and the Farming Calendar"
+      },
+      {
+        type: "paragraph",
+        text: "Farming has shaped Tulu life for centuries, and many traditions follow the agricultural year. Kambala, the traditional buffalo race held in slushy paddy fields, is one of the best known. Races are generally held in the cooler months, after the harvest, and draw large crowds across the coastal districts. It is part sport, part festival and part celebration of the farmer's bond with his animals."
+      },
+      {
+        id: "tulu-year-and-festivals",
+        type: "heading",
+        text: "The Tulu Year and Its Festivals"
+      },
+      {
+        type: "paragraph",
+        text: "The Tulu New Year, Bisu Parba, falls in spring, at around the same time as Vishu. Families clean their homes, prepare a special arrangement of fruits, grains and symbols of prosperity, and begin the year with prayer and a festive meal. Puttur's temple festival also takes place in spring, so a visit around this time lets you see both the temple and the family traditions at their liveliest."
+      },
+      {
+        type: "paragraph",
+        text: "During the monsoon month of Aati, the region has its own customs, including Aati Amavasya, when many families drink a bitter herbal drink made from fenugreek, believed to be good for the body during the rains. You may also hear about Aati Kalenja, a ritual performer who visits homes in this month to ward off illness and misfortune."
+      },
+      {
+        type: "paragraph",
+        text: "Deepavali, Navaratri and Krishna Janmashtami are celebrated here too, often with local flavour, and in nearby cities you may see performers in tiger costumes dance in the streets during festivals."
+      },
+      {
+        id: "food-that-tells-a-story",
+        type: "heading",
+        text: "Food that Tells a Story"
+      },
+      {
+        type: "paragraph",
+        text: "Tulu cuisine is an important part of the culture. Rice, coconut and local vegetables are at the centre, and the food is simple, fresh and full of flavour. Some dishes you may come across are neer dosa, a thin and soft rice crepe, kadubu, steamed rice dumplings often made with jackfruit leaves, patrode, a savoury dish made from colocasia leaves, and goli baje, a soft fried snack that goes well with chutney and tea."
+      },
+      {
+        type: "paragraph",
+        text: "For visitors who prefer vegetarian food, there is plenty to enjoy, and many traditional dishes are naturally vegetarian. Ask for local specialities at restaurants, and try one new dish at each meal."
+      },
+      {
+        id: "family-and-community",
+        type: "heading",
+        text: "Family and Community"
+      },
+      {
+        type: "paragraph",
+        text: "Family bonds are strong in Tulu society, and traditions such as the extended family home and the family deity are important. Some communities historically followed a system of inheritance through the mother's line, and you may still hear it mentioned. Weddings, naming ceremonies and festivals bring entire families together, and hospitality to guests is taken seriously. If you are invited to a meal, accept with a smile, and it will be remembered."
+      },
+      {
+        id: "how-to-be-a-respectful-visitor",
+        type: "heading",
+        text: "How to Be a Respectful Visitor"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Dress modestly in temples and at traditional events.",
+          "Ask before taking photographs, especially at rituals.",
+          "Remove your footwear where it is the custom.",
+          "Do not touch offerings, costumes or shrines.",
+          "Keep your voice low and your manner calm.",
+          "Avoid interrupting prayers or ceremonies.",
+          "Be curious, and ask questions politely."
+        ]
+      },
+      {
+        id: "plan-your-visit-around-culture",
+        type: "heading",
+        text: "Plan Your Visit Around the Culture"
+      },
+      {
+        type: "paragraph",
+        text: "If you want to see traditions at their best, time your visit with a festival. Navaratri and Deepavali fall in the autumn, and the temple festival and Bisu Parba come in spring. The cooler months are also the season for Yakshagana and Kambala. If you are unsure when something is happening, ask our front desk, who can tell you what is on in town."
+      },
+      {
+        type: "paragraph",
+        text: "Staying at *The Padival Grand|/rooms* puts you in the middle of Puttur, close to the temple and the market. Our rooms are clean, our dining is *pure vegetarian|/dining* and our team is always happy to tell you about local customs, festivals and places worth visiting."
+      },
+      {
+        type: "paragraph",
+        text: "To plan your stay, call or WhatsApp us on 96868 04784. You will find us at Mahaveer Mall, Main Road, Above Reliance Trendz, Bolwar, Puttur."
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/tulu-traditions-every-visitor-to-puttur-should-know#blog",
+          "headline": "Tulu Traditions Every Visitor to Puttur Should Know",
+          "description": "Learn essential Tulu traditions before visiting Puttur: Daiva worship, Bhuta Kola, Yakshagana, Kambala, Tulu cuisine, and etiquette for respectful visitors.",
+          "image": "https://thepadivalgrand.com/blogsImg/tulu-tradition.jpeg",
+          "datePublished": "2026-10-05",
+          "dateModified": "2026-10-05",
+          "author": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "url": "https://thepadivalgrand.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/tulu-traditions-every-visitor-to-puttur-should-know"
+          },
+          "articleSection": "Culture & Heritage",
+          "keywords": [
+            "Tulu traditions Puttur",
+            "Bhuta Kola Puttur",
+            "Daiva worship Dakshina Kannada",
+            "Yakshagana Puttur",
+            "Kambala festival",
+            "Tulu Nadu culture",
+            "The Padival Grand"
+          ]
+        },
+        {
+          "@type": "Hotel",
+          "@id": "https://thepadivalgrand.com/#hotel",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "postalCode": "574201",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com"
+        }
+      ]
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 11                                              ║
+   * ═══════════════════════════════════════════════════════╝ */
+  {
+    id: 11,
+    slug: "how-to-spend-deepavali-in-puttur",
+    breadcrumb: "Deepavali in Puttur",
+    title: "How to Spend Deepavali in Puttur: A Family Stay and Temple Visit Plan",
+    excerpt:
+      "Deepavali is the one festival when almost everyone wants to be with family. Make travelling simple with this guide to celebrating Deepavali in Puttur—serene Mahalingeshwara Temple darshan, pure vegetarian meals, and a peaceful stay.",
+    date: "October 10, 2026",
+    author: "The Padival Grand",
+    readTime: "4 min read",
+    heroImage: "/blogsImg/diwali.jpeg",
+    mobileImage: "/blogsImg/diwali.jpeg",
+    pcImage: "/blogsImg/diwali.jpeg",
+    cardImage: "/blogsImg/diwali.jpeg",
+    metaTitle: "How to Spend Deepavali in Puttur: Family Stay & Temple Plan",
+    metaDescription:
+      "Planning Deepavali in Puttur? Here is a simple guide for families—from Shree Mahalingeshwara Temple darshan and festival meals to peaceful stays at The Padival Grand.",
+    category: "Festival Guide",
+    tableOfContents: [
+      { id: "why-puttur-works-for-deepavali", label: "Why Puttur Works for Deepavali" },
+      { id: "a-simple-plan-for-the-day", label: "A Simple Plan for the Day" },
+      { id: "food-on-a-festival-day", label: "Food on a Festival Day" },
+      { id: "planning-ahead-for-a-festival-stay", label: "Planning Ahead for a Festival Stay" },
+      { id: "celebrate-with-a-little-care", label: "Celebrate with a Little Care" },
+      { id: "where-to-stay", label: "Where to Stay" }
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Deepavali is the one festival when almost everyone wants to be with family. For many, that means travelling, and for travelling families, it often means a temple visit is part of the celebration. Some people go home to their villages, some gather at a relative's house, and a growing number choose to spend the festival away, somewhere calm, where nobody has to host."
+      },
+      {
+        type: "paragraph",
+        text: "But festivals are also the hardest time to travel. Roads are busy, rooms are scarce and the food you want is often the first thing to run out. We have seen guests spend half of a festive holiday looking for a clean room and a proper vegetarian meal. This guide is about making Deepavali in Puttur simple. Deepavali falls on November 8 this year, and a little planning now makes a big difference."
+      },
+      {
+        id: "why-puttur-works-for-deepavali",
+        type: "heading",
+        text: "Why Puttur Works for Deepavali"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is a temple town, so the festival feels meaningful here without being overwhelming. It is easy to move around, and it suits all ages, from grandparents who want a quiet darshan to children who want to light a few diyas. Everything you need is close, and you do not have to plan every hour."
+      },
+      {
+        type: "paragraph",
+        text: "It also suits families who do not want a big city festival. There is no rush from one event to the next, and you can let the day unfold. The *Shree Mahalingeshwara Temple|/blogs/shree-mahalingeshwara-temple-puttur* observes Deepavali as one of its festivals, and the days around it often bring families from across the region, so the town has a warm, festive feel without losing its calm."
+      },
+      {
+        id: "a-simple-plan-for-the-day",
+        type: "heading",
+        text: "A Simple Plan for the Day"
+      },
+      {
+        type: "paragraph",
+        text: "Start slowly. Many families begin the day with an oil bath and new clothes, so give yourselves time, and do not schedule anything too early. Have a relaxed breakfast together."
+      },
+      {
+        type: "paragraph",
+        text: "Visit the temple in the late morning, once the first rush has passed. Take your time, and do not worry if you only manage one visit. After darshan, come back for a festive family meal and a proper rest. In the evening, light diyas and spend time together, and let the day end quietly. If you want to step out, a short walk through the town after dinner is a pleasant way to see the lights."
+      },
+      {
+        id: "food-on-a-festival-day",
+        type: "heading",
+        text: "Food on a Festival Day"
+      },
+      {
+        type: "paragraph",
+        text: "Deepavali is about sweets and shared meals, and families want food everyone can eat. Dining at *The Padival Grand|/dining* is pure vegetarian, so children, parents and grandparents can all sit down at the same table without worrying about it. If you are travelling with elders who have dietary needs, or with children who are fussy, tell us when you book. A simple conversation in advance makes the day much smoother."
+      },
+      {
+        id: "planning-ahead-for-a-festival-stay",
+        type: "heading",
+        text: "Planning Ahead for a Festival Stay"
+      },
+      {
+        type: "paragraph",
+        text: "Festival dates fill up quickly, and rooms for large families are the first to go. Book early, and tell us how many people are travelling, so that we can help you with rooms that suit the group. If you are arriving from far away, plan to reach the day before the festival, so that you are rested and not rushing on the day itself."
+      },
+      {
+        type: "paragraph",
+        text: "Roads around festival time can be crowded, so allow extra travel time. If you are coming by bus or train, check the schedules in advance, because services can be fuller than usual."
+      },
+      {
+        id: "celebrate-with-a-little-care",
+        type: "heading",
+        text: "Celebrate with a Little Care"
+      },
+      {
+        type: "paragraph",
+        text: "We love lights and colour, but please remember a few things. Follow the hotel's and the local authorities' rules on fireworks, choose diyas and rangoli over loud crackers where you can, and keep children and elders safe around lamps. A quiet Deepavali is often the one people remember most fondly."
+      },
+      {
+        id: "where-to-stay",
+        type: "heading",
+        text: "Where to Stay"
+      },
+      {
+        type: "paragraph",
+        text: "The Padival Grand is in central Puttur, on Main Road in Bolwar, with clean air-conditioned *rooms|/rooms* and a simple, comfortable atmosphere. It suits families who want an easy base for a festival visit, without any fuss. If you are travelling with a large family, tell us in advance and we will help you arrange rooms together."
+      },
+      {
+        type: "paragraph",
+        text: "To plan your Deepavali stay, call or WhatsApp us on 96868 04784. We will be glad to help you plan your day."
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/how-to-spend-deepavali-in-puttur#blog",
+          "headline": "How to Spend Deepavali in Puttur: A Family Stay and Temple Visit Plan",
+          "description": "Planning Deepavali in Puttur? Here is a simple guide for families—from Shree Mahalingeshwara Temple darshan and festival meals to peaceful stays at The Padival Grand.",
+          "image": "https://thepadivalgrand.com/blogsImg/Desktop10.jpg",
+          "datePublished": "2026-10-10",
+          "dateModified": "2026-10-10",
+          "author": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "url": "https://thepadivalgrand.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/how-to-spend-deepavali-in-puttur"
+          },
+          "articleSection": "Festival Guide",
+          "keywords": [
+            "Deepavali in Puttur",
+            "Diwali temple visit Puttur",
+            "Mahalingeshwara Temple Deepavali",
+            "family hotel Puttur",
+            "pure veg restaurant Puttur",
+            "The Padival Grand"
+          ]
+        },
+        {
+          "@type": "Hotel",
+          "@id": "https://thepadivalgrand.com/#hotel",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "postalCode": "574201",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com"
+        }
+      ]
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 12                                              ║
+   * ═══════════════════════════════════════════════════════╝ */
+  // {
+  //   id: 12,
+  //   slug: "when-to-visit-puttur-season-guide",
+  //   breadcrumb: "When to Visit Puttur",
+  //   title: "When Should You Visit Puttur? A Season-by-Season Guide",
+  //   excerpt:
+  //     "The best time to visit Puttur depends on what you want from the trip—cool weather and calm darshan, colourful temple festivals, or lush green hills and waterfalls in the monsoon. Here is what to expect in each season.",
+  //   date: "November 5, 2026",
+  //   author: "The Padival Grand",
+  //   readTime: "4 min read",
+  //   heroImage: "/blogsImg/visit-puttur.jpeg",
+  //   mobileImage: "/blogsImg/visit-puttur.jpeg",
+  //   pcImage: "/blogsImg/visit-puttur.jpeg",
+  //   cardImage: "/blogsImg/visit-puttur.jpeg",
+  //   metaTitle: "When Should You Visit Puttur? A Season-by-Season Guide",
+  //   metaDescription:
+  //     "Find the best time to visit Puttur with our season-by-season guide covering weather, temple festivals, monsoon travel, and tips for family visits.",
+  //   category: "Travel Guide",
+  //   tableOfContents: [
+  //     { id: "the-short-answer", label: "The Short Answer" },
+  //     { id: "october-to-february", label: "October to February: The Best Season" },
+  //     { id: "march-to-may", label: "March to May: Warm and Festive" },
+  //     { id: "june-to-september", label: "June to September: The Monsoon" },
+  //     { id: "which-season-right-for-you", label: "Which Season Is Right for You?" },
+  //     { id: "planning-around-weddings-and-events", label: "Planning Around Weddings and Events" },
+  //     { id: "tips-for-any-season", label: "A Few Tips for Any Season" }
+  //   ],
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       text: "The best time to visit Puttur depends on what you want from the trip. Some travellers want cool weather and a calm darshan. Others want to see the town during a festival, and a few want green hills and waterfalls in the rain. Each season offers something different, and each has a catch."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "We get asked about this often, usually by guests who have already booked and are wondering whether they chose the right month. So here is a simple guide to each season, and what to expect from it, with a few tips on how to get the most out of your visit."
+  //     },
+  //     {
+  //       id: "the-short-answer",
+  //       type: "heading",
+  //       text: "The Short Answer"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "For most visitors, October to February is the best time. The weather is comfortable, the roads are easy and the festivals fall in this window. But it is also the busiest time, so if you want fewer crowds, you may prefer the shoulder months, or a weekday visit."
+  //     },
+  //     {
+  //       id: "october-to-february",
+  //       type: "heading",
+  //       text: "October to February: The Best Season"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The monsoon is over, the air is fresher and the days are pleasant, which makes this the most comfortable time for temple visits, sightseeing and day trips. The festivals of Navaratri, Dussehra and Deepavali all fall in this window, and the temple also holds Lakshadeepotsava, a festival of lamps, in the cooler months. If you want to see Puttur at its most devotional and atmospheric, this is the time."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The catch is that this is also the busiest period. Weekends and festival days bring larger crowds and longer queues, and rooms are harder to find. Book early, and if you can, plan a weekday visit."
+  //     },
+  //     {
+  //       id: "march-to-may",
+  //       type: "heading",
+  //       text: "March to May: Warm and Festive"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The days get hot, especially in the afternoon, so plan your outings for the early morning and evening, and keep the middle of the day for rest. This is also when the town is at its liveliest, because the temple's main annual festival, Puttur Bedi, is usually held in spring and draws large crowds from the region."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "If you want to see Puttur in full festival mood, this is the time, as long as you are comfortable with the heat and the crowds. Carry water, wear light cotton clothes and avoid long walks at noon."
+  //     },
+  //     {
+  //       id: "june-to-september",
+  //       type: "heading",
+  //       text: "June to September: The Monsoon"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The rain turns the hills green and brings the waterfalls to life, which makes the monsoon a good time for nature lovers and for travellers who want a quieter trip. Crowds are lighter, the pace is slower and the town has a fresh, washed look."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The catch is the weather itself. Heavy rain can disrupt travel and make trails slippery, so check road conditions before you travel, carry rain protection and avoid trekking on wet trails. If you plan to visit waterfalls, go only when conditions are safe, and follow local advice."
+  //     },
+  //     {
+  //       id: "which-season-right-for-you",
+  //       type: "heading",
+  //       text: "Which Season Is Right for You?"
+  //     },
+  //     {
+  //       type: "bulletList",
+  //       items: [
+  //         "For a calm darshan: October to February, on a weekday.",
+  //         "For the festival atmosphere: Navaratri, Deepavali, Lakshadeepotsava or the spring festival.",
+  //         "For waterfalls and greenery: the monsoon, with care.",
+  //         "For a quiet weekend: any time outside festival dates.",
+  //         "For travelling with elders: the cooler months, when the weather is gentle."
+  //       ]
+  //     },
+  //     {
+  //       id: "planning-around-weddings-and-events",
+  //       type: "heading",
+  //       text: "Planning Around Weddings and Events"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Puttur is also a town where families gather for weddings, receptions and other celebrations, and the busy periods for these often overlap with the cooler months. If you are travelling for an event, book your room as soon as the date is fixed, and tell us how many guests are coming. Rooms in the centre of town go quickly during wedding season."
+  //     },
+  //     {
+  //       id: "tips-for-any-season",
+  //       type: "heading",
+  //       text: "A Few Tips for Any Season"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Book your rooms early for festivals and long weekends. Carry rain protection between June and September. Wear comfortable footwear, since temple visits involve a fair amount of walking. And keep one buffer day in your plan, because temple queues are never predictable."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Whatever the season, *The Padival Grand|/rooms* in central Puttur is open for families, travellers and groups, with clean air-conditioned rooms and *pure vegetarian dining|/dining*. Call or WhatsApp us on 96868 04784 to plan your trip, and we will help you pick the dates that suit you best."
+  //     }
+  //   ],
+  //   schema: {
+  //     "@context": "https://schema.org",
+  //     "@graph": [
+  //       {
+  //         "@type": "BlogPosting",
+  //         "@id": "https://thepadivalgrand.com/blogs/when-to-visit-puttur-season-guide#blog",
+  //         "headline": "When Should You Visit Puttur? A Season-by-Season Guide",
+  //         "description": "Find the best time to visit Puttur with our season-by-season guide covering weather, temple festivals, monsoon travel, and tips for family visits.",
+  //         "image": "https://thepadivalgrand.com/blogsImg/visit-puttur.jpeg",
+  //         "datePublished": "2026-10-15",
+  //         "dateModified": "2026-10-15",
+  //         "author": {
+  //           "@type": "Organization",
+  //           "name": "The Padival Grand",
+  //           "url": "https://thepadivalgrand.com/"
+  //         },
+  //         "publisher": {
+  //           "@type": "Organization",
+  //           "name": "The Padival Grand",
+  //           "logo": {
+  //             "@type": "ImageObject",
+  //             "url": "https://thepadivalgrand.com/logo.png"
+  //           }
+  //         },
+  //         "mainEntityOfPage": {
+  //           "@type": "WebPage",
+  //           "@id": "https://thepadivalgrand.com/blogs/when-to-visit-puttur-season-guide"
+  //         },
+  //         "articleSection": "Travel Guide",
+  //         "keywords": [
+  //           "best time to visit Puttur",
+  //           "Puttur seasons guide",
+  //           "Puttur Bedi festival",
+  //           "Lakshadeepotsava Puttur",
+  //           "Puttur monsoon travel",
+  //           "The Padival Grand"
+  //         ]
+  //       },
+  //       {
+  //         "@type": "Hotel",
+  //         "@id": "https://thepadivalgrand.com/#hotel",
+  //         "name": "The Padival Grand",
+  //         "url": "https://thepadivalgrand.com/",
+  //         "address": {
+  //           "@type": "PostalAddress",
+  //           "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+  //           "addressLocality": "Puttur",
+  //           "addressRegion": "Karnataka",
+  //           "postalCode": "574201",
+  //           "addressCountry": "IN"
+  //         },
+  //         "telephone": "+91 96868 04784",
+  //         "email": "info@padival-grand-hotel.com"
+  //       }
+  //     ]
+  //   }
+  // },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 13                                              ║
+   * ═══════════════════════════════════════════════════════╝ */
+  // {
+  //   id: 13,
+  //   slug: "weekend-in-puttur-with-family-2-day-plan",
+  //   breadcrumb: "Weekend in Puttur with Family",
+  //   title: "A Weekend in Puttur with Family: A Simple 2-Day Plan",
+  //   excerpt:
+  //     "A weekend in Puttur does not have to be a rush. Here is a simple, family-friendly 2-day plan balancing temple visits, nature spots, relaxed vegetarian dining, and time to rest.",
+  //   date: "November 15, 2026",
+  //   author: "The Padival Grand",
+  //   readTime: "4 min read",
+  //   heroImage: "/blogsImg/weekend.png",
+  //   mobileImage: "/blogsImg/weekend.png",
+  //   pcImage: "/blogsImg/weekend.png",
+  //   cardImage: "/blogsImg/weekend.png",
+  //   metaTitle: "A Weekend in Puttur with Family: A Simple 2-Day Plan",
+  //   metaDescription:
+  //     "Make your family weekend in Puttur easy with this simple 2-day itinerary. Tips on temple timings, nature spots, dining, and stress-free travel with kids and elders.",
+  //   category: "Travel Guide",
+  //   tableOfContents: [
+  //     { id: "before-you-start", label: "Before You Start" },
+  //     { id: "day-1-temple-and-town", label: "Day 1: Temple and Town" },
+  //     { id: "day-2-nature-and-a-slow-morning", label: "Day 2: Nature and a Slow Morning" },
+  //     { id: "if-the-weather-turns", label: "If the Weather Turns" },
+  //     { id: "travelling-with-children", label: "Travelling with Children" },
+  //     { id: "tips-for-travelling-with-family", label: "A Few Tips for Travelling with Family" },
+  //     { id: "where-to-stay", label: "Where to Stay" }
+  //   ],
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       text: "A weekend in Puttur does not have to be a rush. Most families try to fit in too much, and end up tired by the second afternoon, with the children cranky and the elders waiting in the car. The result is a holiday you need a holiday from."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "We have seen enough weekends to know that the trips that go well are the slow ones. Two days is enough to see the temple, enjoy a nature stop and still have time to rest. This is a simple, family-friendly plan that you can follow as it is, or change to suit your group."
+  //     },
+  //     {
+  //       id: "before-you-start",
+  //       type: "heading",
+  //       text: "Before You Start"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "A few decisions make the weekend easier. First, decide the pace. If you are travelling with young children or elders, plan no more than two main stops a day. Second, decide where to base yourselves. Staying in central Puttur means that rest, food and the town are always close. Third, check the weather and temple timings before you leave, and keep a little flexibility in the plan."
+  //     },
+  //     {
+  //       id: "day-1-temple-and-town",
+  //       type: "heading",
+  //       text: "Day 1: Temple and Town"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Start the morning with breakfast and a visit to the *Shree Mahalingeshwara Temple|/blogs/shree-mahalingeshwara-temple-puttur*. Go early, since the morning is cooler and the queues are shorter, especially on a weekend. Take your time at the temple, and do not rush the darshan. After you finish, come back for lunch and a proper rest, because the afternoon is best spent doing nothing."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "In the evening, take a slow walk through the town and see the market and the main road. Have an early dinner, and if the children still have energy, find one of Puttur's parks for a short stop before bed. If not, call it a day. A good first day leaves you rested, and ready for the second."
+  //     },
+  //     {
+  //       id: "day-2-nature-and-a-slow-morning",
+  //       type: "heading",
+  //       text: "Day 2: Nature and a Slow Morning"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Have a relaxed breakfast, then head out for a nature stop. Puttur sits close to green hills and forest, and our *guide to waterfalls and forest trails near Puttur|/blogs/waterfalls-near-puttur* lists the best options. Our *one-day guide to Puttur|/blogs/one-day-trip-to-puttur* covers the other places worth a visit. Check the weather and the trail conditions before you leave, carry water and snacks, and keep the outing short if you are travelling with children or elders."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Come back for lunch and some rest before check-out. If you have time, pick up a few local products to take home, and leave without rushing. The best way to end a weekend is with a little time to spare."
+  //     },
+  //     {
+  //       id: "if-the-weather-turns",
+  //       type: "heading",
+  //       text: "If the Weather Turns"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "In the monsoon, or if the weather is poor, swap the outdoor stop for something gentler. Spend the second morning at the temple, then enjoy a slow meal and a walk through the market when the rain eases. A rainy day in a quiet town can be a pleasure if you are not trying to do too much."
+  //     },
+  //     {
+  //       id: "travelling-with-children",
+  //       type: "heading",
+  //       text: "Travelling with Children"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Keep the stops short, and build in play time. Children do better with a clear, simple plan and frequent breaks. Carry snacks, water and a change of clothes. Let them choose one small thing each day, such as an ice cream stop or a walk in a park, and they will remember the weekend fondly."
+  //     },
+  //     {
+  //       id: "tips-for-travelling-with-family",
+  //       type: "heading",
+  //       text: "A Few Tips for Travelling with Family"
+  //     },
+  //     {
+  //       type: "bulletList",
+  //       items: [
+  //         "Do less. Two main stops a day is plenty with children and elders.",
+  //         "Start early, because mornings are cooler and calmer.",
+  //         "Carry water, snacks and basic medicines.",
+  //         "Check temple timings before you go.",
+  //         "Stay somewhere central, so that rest is never far away.",
+  //         "Keep one slow hour in every day."
+  //       ]
+  //     },
+  //     {
+  //       id: "where-to-stay",
+  //       type: "heading",
+  //       text: "Where to Stay"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The Padival Grand is in central Puttur, with clean air-conditioned *rooms|/rooms* and *pure vegetarian dining|/dining*. It is a comfortable base for a family weekend, and it keeps everything in this itinerary close. If you are travelling with a larger family, or with elders, let us know in advance and we will help you with the rooms."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "To plan your weekend, call or WhatsApp us on 96868 04784. We are happy to suggest timings and help you make the most of two days."
+  //     }
+  //   ],
+  //   schema: {
+  //     "@context": "https://schema.org",
+  //     "@graph": [
+  //       {
+  //         "@type": "BlogPosting",
+  //         "@id": "https://thepadivalgrand.com/blogs/weekend-in-puttur-with-family-2-day-plan#blog",
+  //         "headline": "A Weekend in Puttur with Family: A Simple 2-Day Plan",
+  //         "description": "Make your family weekend in Puttur easy with this simple 2-day itinerary. Tips on temple timings, nature spots, dining, and stress-free travel with kids and elders.",
+  //         "image": "https://thepadivalgrand.com/blogsImg/Desktop11.jpg",
+  //         "datePublished": "2026-10-20",
+  //         "dateModified": "2026-10-20",
+  //         "author": {
+  //           "@type": "Organization",
+  //           "name": "The Padival Grand",
+  //           "url": "https://thepadivalgrand.com/"
+  //         },
+  //         "publisher": {
+  //           "@type": "Organization",
+  //           "name": "The Padival Grand",
+  //           "logo": {
+  //             "@type": "ImageObject",
+  //             "url": "https://thepadivalgrand.com/logo.png"
+  //           }
+  //         },
+  //         "mainEntityOfPage": {
+  //           "@type": "WebPage",
+  //           "@id": "https://thepadivalgrand.com/blogs/weekend-in-puttur-with-family-2-day-plan"
+  //         },
+  //         "articleSection": "Travel Guide",
+  //         "keywords": [
+  //           "weekend in Puttur with family",
+  //           "2 day Puttur itinerary",
+  //           "Puttur family trip",
+  //           "Mahalingeshwara Temple itinerary",
+  //           "family hotel Puttur",
+  //           "The Padival Grand"
+  //         ]
+  //       },
+  //       {
+  //         "@type": "Hotel",
+  //         "@id": "https://thepadivalgrand.com/#hotel",
+  //         "name": "The Padival Grand",
+  //         "url": "https://thepadivalgrand.com/",
+  //         "address": {
+  //           "@type": "PostalAddress",
+  //           "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+  //           "addressLocality": "Puttur",
+  //           "addressRegion": "Karnataka",
+  //           "postalCode": "574201",
+  //           "addressCountry": "IN"
+  //         },
+  //         "telephone": "+91 96868 04784",
+  //         "email": "info@padival-grand-hotel.com"
+  //       }
+  //     ]
+  //   }
+  // },
+
+  /* ═══════════════════════════════════════════════════════╗
+   *  BLOG 14                                              ║
+   * ═══════════════════════════════════════════════════════╝ */
+  // {
+  //   id: 14,
+  //   slug: "booking-a-hotel-in-puttur-7-things-to-check",
+  //   breadcrumb: "Booking a Hotel in Puttur",
+  //   title: "Booking a Hotel in Puttur? 7 Things to Check First",
+  //   excerpt:
+  //     "A good hotel makes a trip easy, and a poor one can spoil it. Here are seven things worth checking before you book a hotel in Puttur, from temple distance and hygiene to dining and family comfort.",
+  //   date: "December 5, 2026",
+  //   author: "The Padival Grand",
+  //   readTime: "4 min read",
+  //   heroImage: "/blogsImg/booking-hotel.jpeg",
+  //   mobileImage: "/blogsImg/booking-hotel.jpeg",
+  //   pcImage: "/blogsImg/booking-hotel.jpeg",
+  //   cardImage: "/blogsImg/booking-hotel.jpeg",
+  //   metaTitle: "Booking a Hotel in Puttur? 7 Things to Check First",
+  //   metaDescription:
+  //     "Planning a stay in Puttur? Check these 7 essential factors before you book—location, cleanliness, AC comfort, pure vegetarian food, parking, and family amenities.",
+  //   category: "Travel Guide",
+  //   tableOfContents: [
+  //     { id: "location", label: "1. Location" },
+  //     { id: "cleanliness", label: "2. Cleanliness" },
+  //     { id: "ac-and-room-comfort", label: "3. AC and Room Comfort" },
+  //     { id: "food", label: "4. Food" },
+  //     { id: "parking-and-access", label: "5. Parking and Access" },
+  //     { id: "check-in-and-check-out-rules", label: "6. Check-in and Check-out Rules" },
+  //     { id: "family-and-group-comfort", label: "7. Family and Group Comfort" },
+  //     { id: "a-quick-checklist", label: "A Quick Checklist" },
+  //     { id: "a-few-questions-worth-asking", label: "A Few Questions Worth Asking on the Phone" }
+  //   ],
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       text: "A good hotel makes a trip easy, and a poor one can spoil it. In a smaller town like Puttur, the choices are not always obvious, and photos online do not tell you everything. We have spoken to many guests who booked in a hurry and wished they had asked a few questions first. Some arrived to find the room far from the temple, others found that the food did not suit their needs, and a few discovered the cancellation rules only when their plans changed."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "None of these problems is hard to avoid. It comes down to asking the right questions before you pay. Here are seven things worth checking before you book, and why each one matters."
+  //     },
+  //     {
+  //       id: "location",
+  //       type: "heading",
+  //       text: "1. Location"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Is the hotel close to the places you need, such as the temple, the bus stand and the main market? A central stay saves time and tiredness, especially with children or elders. On festival days, when roads are busy and parking is difficult, a hotel in the centre of town can make the difference between a smooth day and a stressful one."
+  //     },
+  //     {
+  //       id: "cleanliness",
+  //       type: "heading",
+  //       text: "2. Cleanliness"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "This matters more than anything. Read recent reviews rather than old ones, and look for comments on the bedding, the bathrooms and the daily cleaning. Do not hesitate to ask the hotel directly how often rooms are cleaned, and how linen is changed. A hotel that is proud of its hygiene will be happy to tell you."
+  //     },
+  //     {
+  //       id: "ac-and-room-comfort",
+  //       type: "heading",
+  //       text: "3. AC and Room Comfort"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Check that the air-conditioning works well and that the room has a clean bed, hot water and decent lighting. After a long day of darshan or travel, comfort is not a luxury. If you are a light sleeper, ask whether the room is on a quiet side of the building, because a central location should not mean a sleepless night."
+  //     },
+  //     {
+  //       id: "food",
+  //       type: "heading",
+  //       text: "4. Food"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "If you or your family eat only vegetarian food, ask whether the hotel's dining is pure vegetarian, or whether it also serves non-vegetarian dishes. At *The Padival Grand|/dining*, it is pure vegetarian, and we have built our dining around the rhythm of a temple trip, with meals that suit families arriving after darshan. Also ask about meal timings, because a temple day often means early mornings and late evenings."
+  //     },
+  //     {
+  //       id: "parking-and-access",
+  //       type: "heading",
+  //       text: "5. Parking and Access"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Ask about parking, and about how easy it is to reach the rooms, particularly for elders and for families with luggage. If someone in your group finds stairs difficult, tell the hotel in advance, so that they can suggest the right room."
+  //     },
+  //     {
+  //       id: "check-in-and-check-out-rules",
+  //       type: "heading",
+  //       text: "6. Check-in and Check-out Rules"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Find out the check-in and check-out times, the ID requirements and the cancellation policy before you book. Surprises at the front desk are never pleasant. If you are arriving early or leaving late, ask whether the hotel can help, because many travellers arrive off a night bus and need a place to freshen up."
+  //     },
+  //     {
+  //       id: "family-and-group-comfort",
+  //       type: "heading",
+  //       text: "7. Family and Group Comfort"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Ask about family rooms, extra beds and group bookings. If you are planning a family event, such as a wedding, an engagement or a naming ceremony, check that the hotel can help with that too, including rooms for guests who are travelling in. A hotel that understands families will make the whole stay easier."
+  //     },
+  //     {
+  //       id: "a-quick-checklist",
+  //       type: "heading",
+  //       text: "A Quick Checklist"
+  //     },
+  //     {
+  //       type: "bulletList",
+  //       items: [
+  //         "Clean rooms, and recent positive reviews",
+  //         "A central location",
+  //         "Working AC and hot water",
+  //         "Pure vegetarian dining, if you need it",
+  //         "Parking",
+  //         "Clear check-in and cancellation rules",
+  //         "Options for families and groups"
+  //       ]
+  //     },
+  //     {
+  //       id: "a-few-questions-worth-asking",
+  //       type: "heading",
+  //       text: "A Few Questions Worth Asking on the Phone"
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "A short call can tell you a lot about a hotel. Ask how far it is from the temple. Ask whether the food is pure vegetarian. Ask what happens if your plans change. And listen to how the person answers, because a clear, friendly reply usually means a clear, friendly stay."
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "We built The Padival Grand for travellers, families and celebrations, with clean air-conditioned *rooms|/rooms*, *pure vegetarian dining|/dining* and thoughtful hospitality in the centre of Puttur. You will find us at Mahaveer Mall, Main Road, Above Reliance Trendz, Bolwar, Puttur. To book, call or WhatsApp us on 96868 04784, and we will be glad to answer any of these questions before you decide."
+  //     }
+  //   ],
+  //   schema: {
+  //     "@context": "https://schema.org",
+  //     "@graph": [
+  //       {
+  //         "@type": "BlogPosting",
+  //         "@id": "https://thepadivalgrand.com/blogs/booking-a-hotel-in-puttur-7-things-to-check#blog",
+  //         "headline": "Booking a Hotel in Puttur? 7 Things to Check First",
+  //         "description": "Planning a stay in Puttur? Check these 7 essential factors before you book—location, cleanliness, AC comfort, pure vegetarian food, parking, and family amenities.",
+  //         "image": "https://thepadivalgrand.com/blogsImg/Desktop7.jpg",
+  //         "datePublished": "2026-10-25",
+  //         "dateModified": "2026-10-25",
+  //         "author": {
+  //           "@type": "Organization",
+  //           "name": "The Padival Grand",
+  //           "url": "https://thepadivalgrand.com/"
+  //         },
+  //         "publisher": {
+  //           "@type": "Organization",
+  //           "name": "The Padival Grand",
+  //           "logo": {
+  //             "@type": "ImageObject",
+  //             "url": "https://thepadivalgrand.com/logo.png"
+  //           }
+  //         },
+  //         "mainEntityOfPage": {
+  //           "@type": "WebPage",
+  //           "@id": "https://thepadivalgrand.com/blogs/booking-a-hotel-in-puttur-7-things-to-check"
+  //         },
+  //         "articleSection": "Travel Guide",
+  //         "keywords": [
+  //           "booking a hotel in Puttur",
+  //           "hotels in Puttur checklist",
+  //           "best hotel in Puttur",
+  //           "hotels near Mahalingeshwara Temple",
+  //           "AC rooms Puttur",
+  //           "The Padival Grand"
+  //         ]
+  //       },
+  //       {
+  //         "@type": "Hotel",
+  //         "@id": "https://thepadivalgrand.com/#hotel",
+  //         "name": "The Padival Grand",
+  //         "url": "https://thepadivalgrand.com/",
+  //         "address": {
+  //           "@type": "PostalAddress",
+  //           "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+  //           "addressLocality": "Puttur",
+  //           "addressRegion": "Karnataka",
+  //           "postalCode": "574201",
+  //           "addressCountry": "IN"
+  //         },
+  //         "telephone": "+91 96868 04784",
+  //         "email": "info@padival-grand-hotel.com"
+  //       }
+  //     ]
+  //   }
+  // }
 ];
