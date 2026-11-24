@@ -3726,365 +3726,365 @@ export const blogs: BlogPost[] = [
   /* ═══════════════════════════════════════════════════════╗
    *  BLOG 12                                              ║
    * ═══════════════════════════════════════════════════════╝ */
-  // {
-  //   id: 12,
-  //   slug: "when-to-visit-puttur-season-guide",
-  //   breadcrumb: "When to Visit Puttur",
-  //   title: "When Should You Visit Puttur? A Season-by-Season Guide",
-  //   excerpt:
-  //     "The best time to visit Puttur depends on what you want from the trip—cool weather and calm darshan, colourful temple festivals, or lush green hills and waterfalls in the monsoon. Here is what to expect in each season.",
-  //   date: "November 5, 2026",
-  //   author: "The Padival Grand",
-  //   readTime: "4 min read",
-  //   heroImage: "/blogsImg/visit-puttur.jpeg",
-  //   mobileImage: "/blogsImg/visit-puttur.jpeg",
-  //   pcImage: "/blogsImg/visit-puttur.jpeg",
-  //   cardImage: "/blogsImg/visit-puttur.jpeg",
-  //   metaTitle: "When Should You Visit Puttur? A Season-by-Season Guide",
-  //   metaDescription:
-  //     "Find the best time to visit Puttur with our season-by-season guide covering weather, temple festivals, monsoon travel, and tips for family visits.",
-  //   category: "Travel Guide",
-  //   tableOfContents: [
-  //     { id: "the-short-answer", label: "The Short Answer" },
-  //     { id: "october-to-february", label: "October to February: The Best Season" },
-  //     { id: "march-to-may", label: "March to May: Warm and Festive" },
-  //     { id: "june-to-september", label: "June to September: The Monsoon" },
-  //     { id: "which-season-right-for-you", label: "Which Season Is Right for You?" },
-  //     { id: "planning-around-weddings-and-events", label: "Planning Around Weddings and Events" },
-  //     { id: "tips-for-any-season", label: "A Few Tips for Any Season" }
-  //   ],
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       text: "The best time to visit Puttur depends on what you want from the trip. Some travellers want cool weather and a calm darshan. Others want to see the town during a festival, and a few want green hills and waterfalls in the rain. Each season offers something different, and each has a catch."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "We get asked about this often, usually by guests who have already booked and are wondering whether they chose the right month. So here is a simple guide to each season, and what to expect from it, with a few tips on how to get the most out of your visit."
-  //     },
-  //     {
-  //       id: "the-short-answer",
-  //       type: "heading",
-  //       text: "The Short Answer"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "For most visitors, October to February is the best time. The weather is comfortable, the roads are easy and the festivals fall in this window. But it is also the busiest time, so if you want fewer crowds, you may prefer the shoulder months, or a weekday visit."
-  //     },
-  //     {
-  //       id: "october-to-february",
-  //       type: "heading",
-  //       text: "October to February: The Best Season"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The monsoon is over, the air is fresher and the days are pleasant, which makes this the most comfortable time for temple visits, sightseeing and day trips. The festivals of Navaratri, Dussehra and Deepavali all fall in this window, and the temple also holds Lakshadeepotsava, a festival of lamps, in the cooler months. If you want to see Puttur at its most devotional and atmospheric, this is the time."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The catch is that this is also the busiest period. Weekends and festival days bring larger crowds and longer queues, and rooms are harder to find. Book early, and if you can, plan a weekday visit."
-  //     },
-  //     {
-  //       id: "march-to-may",
-  //       type: "heading",
-  //       text: "March to May: Warm and Festive"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The days get hot, especially in the afternoon, so plan your outings for the early morning and evening, and keep the middle of the day for rest. This is also when the town is at its liveliest, because the temple's main annual festival, Puttur Bedi, is usually held in spring and draws large crowds from the region."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "If you want to see Puttur in full festival mood, this is the time, as long as you are comfortable with the heat and the crowds. Carry water, wear light cotton clothes and avoid long walks at noon."
-  //     },
-  //     {
-  //       id: "june-to-september",
-  //       type: "heading",
-  //       text: "June to September: The Monsoon"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The rain turns the hills green and brings the waterfalls to life, which makes the monsoon a good time for nature lovers and for travellers who want a quieter trip. Crowds are lighter, the pace is slower and the town has a fresh, washed look."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The catch is the weather itself. Heavy rain can disrupt travel and make trails slippery, so check road conditions before you travel, carry rain protection and avoid trekking on wet trails. If you plan to visit waterfalls, go only when conditions are safe, and follow local advice."
-  //     },
-  //     {
-  //       id: "which-season-right-for-you",
-  //       type: "heading",
-  //       text: "Which Season Is Right for You?"
-  //     },
-  //     {
-  //       type: "bulletList",
-  //       items: [
-  //         "For a calm darshan: October to February, on a weekday.",
-  //         "For the festival atmosphere: Navaratri, Deepavali, Lakshadeepotsava or the spring festival.",
-  //         "For waterfalls and greenery: the monsoon, with care.",
-  //         "For a quiet weekend: any time outside festival dates.",
-  //         "For travelling with elders: the cooler months, when the weather is gentle."
-  //       ]
-  //     },
-  //     {
-  //       id: "planning-around-weddings-and-events",
-  //       type: "heading",
-  //       text: "Planning Around Weddings and Events"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Puttur is also a town where families gather for weddings, receptions and other celebrations, and the busy periods for these often overlap with the cooler months. If you are travelling for an event, book your room as soon as the date is fixed, and tell us how many guests are coming. Rooms in the centre of town go quickly during wedding season."
-  //     },
-  //     {
-  //       id: "tips-for-any-season",
-  //       type: "heading",
-  //       text: "A Few Tips for Any Season"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Book your rooms early for festivals and long weekends. Carry rain protection between June and September. Wear comfortable footwear, since temple visits involve a fair amount of walking. And keep one buffer day in your plan, because temple queues are never predictable."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Whatever the season, *The Padival Grand|/rooms* in central Puttur is open for families, travellers and groups, with clean air-conditioned rooms and *pure vegetarian dining|/dining*. Call or WhatsApp us on 96868 04784 to plan your trip, and we will help you pick the dates that suit you best."
-  //     }
-  //   ],
-  //   schema: {
-  //     "@context": "https://schema.org",
-  //     "@graph": [
-  //       {
-  //         "@type": "BlogPosting",
-  //         "@id": "https://thepadivalgrand.com/blogs/when-to-visit-puttur-season-guide#blog",
-  //         "headline": "When Should You Visit Puttur? A Season-by-Season Guide",
-  //         "description": "Find the best time to visit Puttur with our season-by-season guide covering weather, temple festivals, monsoon travel, and tips for family visits.",
-  //         "image": "https://thepadivalgrand.com/blogsImg/visit-puttur.jpeg",
-  //         "datePublished": "2026-10-15",
-  //         "dateModified": "2026-10-15",
-  //         "author": {
-  //           "@type": "Organization",
-  //           "name": "The Padival Grand",
-  //           "url": "https://thepadivalgrand.com/"
-  //         },
-  //         "publisher": {
-  //           "@type": "Organization",
-  //           "name": "The Padival Grand",
-  //           "logo": {
-  //             "@type": "ImageObject",
-  //             "url": "https://thepadivalgrand.com/logo.png"
-  //           }
-  //         },
-  //         "mainEntityOfPage": {
-  //           "@type": "WebPage",
-  //           "@id": "https://thepadivalgrand.com/blogs/when-to-visit-puttur-season-guide"
-  //         },
-  //         "articleSection": "Travel Guide",
-  //         "keywords": [
-  //           "best time to visit Puttur",
-  //           "Puttur seasons guide",
-  //           "Puttur Bedi festival",
-  //           "Lakshadeepotsava Puttur",
-  //           "Puttur monsoon travel",
-  //           "The Padival Grand"
-  //         ]
-  //       },
-  //       {
-  //         "@type": "Hotel",
-  //         "@id": "https://thepadivalgrand.com/#hotel",
-  //         "name": "The Padival Grand",
-  //         "url": "https://thepadivalgrand.com/",
-  //         "address": {
-  //           "@type": "PostalAddress",
-  //           "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
-  //           "addressLocality": "Puttur",
-  //           "addressRegion": "Karnataka",
-  //           "postalCode": "574201",
-  //           "addressCountry": "IN"
-  //         },
-  //         "telephone": "+91 96868 04784",
-  //         "email": "info@padival-grand-hotel.com"
-  //       }
-  //     ]
-  //   }
-  // },
+  {
+    id: 12,
+    slug: "when-to-visit-puttur-season-guide",
+    breadcrumb: "When to Visit Puttur",
+    title: "When Should You Visit Puttur? A Season-by-Season Guide",
+    excerpt:
+      "The best time to visit Puttur depends on what you want from the trip—cool weather and calm darshan, colourful temple festivals, or lush green hills and waterfalls in the monsoon. Here is what to expect in each season.",
+    date: "November 8, 2026",
+    author: "The Padival Grand",
+    readTime: "4 min read",
+    heroImage: "/blogsImg/visit-puttur.jpeg",
+    mobileImage: "/blogsImg/visit-puttur.jpeg",
+    pcImage: "/blogsImg/visit-puttur.jpeg",
+    cardImage: "/blogsImg/visit-puttur.jpeg",
+    metaTitle: "When Should You Visit Puttur? A Season-by-Season Guide",
+    metaDescription:
+      "Find the best time to visit Puttur with our season-by-season guide covering weather, temple festivals, monsoon travel, and tips for family visits.",
+    category: "Travel Guide",
+    tableOfContents: [
+      { id: "the-short-answer", label: "The Short Answer" },
+      { id: "october-to-february", label: "October to February: The Best Season" },
+      { id: "march-to-may", label: "March to May: Warm and Festive" },
+      { id: "june-to-september", label: "June to September: The Monsoon" },
+      { id: "which-season-right-for-you", label: "Which Season Is Right for You?" },
+      { id: "planning-around-weddings-and-events", label: "Planning Around Weddings and Events" },
+      { id: "tips-for-any-season", label: "A Few Tips for Any Season" }
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "The best time to visit Puttur depends on what you want from the trip. Some travellers want cool weather and a calm darshan. Others want to see the town during a festival, and a few want green hills and waterfalls in the rain. Each season offers something different, and each has a catch."
+      },
+      {
+        type: "paragraph",
+        text: "We get asked about this often, usually by guests who have already booked and are wondering whether they chose the right month. So here is a simple guide to each season, and what to expect from it, with a few tips on how to get the most out of your visit."
+      },
+      {
+        id: "the-short-answer",
+        type: "heading",
+        text: "The Short Answer"
+      },
+      {
+        type: "paragraph",
+        text: "For most visitors, October to February is the best time. The weather is comfortable, the roads are easy and the festivals fall in this window. But it is also the busiest time, so if you want fewer crowds, you may prefer the shoulder months, or a weekday visit."
+      },
+      {
+        id: "october-to-february",
+        type: "heading",
+        text: "October to February: The Best Season"
+      },
+      {
+        type: "paragraph",
+        text: "The monsoon is over, the air is fresher and the days are pleasant, which makes this the most comfortable time for temple visits, sightseeing and day trips. The festivals of Navaratri, Dussehra and Deepavali all fall in this window, and the temple also holds Lakshadeepotsava, a festival of lamps, in the cooler months. If you want to see Puttur at its most devotional and atmospheric, this is the time."
+      },
+      {
+        type: "paragraph",
+        text: "The catch is that this is also the busiest period. Weekends and festival days bring larger crowds and longer queues, and rooms are harder to find. Book early, and if you can, plan a weekday visit."
+      },
+      {
+        id: "march-to-may",
+        type: "heading",
+        text: "March to May: Warm and Festive"
+      },
+      {
+        type: "paragraph",
+        text: "The days get hot, especially in the afternoon, so plan your outings for the early morning and evening, and keep the middle of the day for rest. This is also when the town is at its liveliest, because the temple's main annual festival, Puttur Bedi, is usually held in spring and draws large crowds from the region."
+      },
+      {
+        type: "paragraph",
+        text: "If you want to see Puttur in full festival mood, this is the time, as long as you are comfortable with the heat and the crowds. Carry water, wear light cotton clothes and avoid long walks at noon."
+      },
+      {
+        id: "june-to-september",
+        type: "heading",
+        text: "June to September: The Monsoon"
+      },
+      {
+        type: "paragraph",
+        text: "The rain turns the hills green and brings the waterfalls to life, which makes the monsoon a good time for nature lovers and for travellers who want a quieter trip. Crowds are lighter, the pace is slower and the town has a fresh, washed look."
+      },
+      {
+        type: "paragraph",
+        text: "The catch is the weather itself. Heavy rain can disrupt travel and make trails slippery, so check road conditions before you travel, carry rain protection and avoid trekking on wet trails. If you plan to visit waterfalls, go only when conditions are safe, and follow local advice."
+      },
+      {
+        id: "which-season-right-for-you",
+        type: "heading",
+        text: "Which Season Is Right for You?"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "For a calm darshan: October to February, on a weekday.",
+          "For the festival atmosphere: Navaratri, Deepavali, Lakshadeepotsava or the spring festival.",
+          "For waterfalls and greenery: the monsoon, with care.",
+          "For a quiet weekend: any time outside festival dates.",
+          "For travelling with elders: the cooler months, when the weather is gentle."
+        ]
+      },
+      {
+        id: "planning-around-weddings-and-events",
+        type: "heading",
+        text: "Planning Around Weddings and Events"
+      },
+      {
+        type: "paragraph",
+        text: "Puttur is also a town where families gather for weddings, receptions and other celebrations, and the busy periods for these often overlap with the cooler months. If you are travelling for an event, book your room as soon as the date is fixed, and tell us how many guests are coming. Rooms in the centre of town go quickly during wedding season."
+      },
+      {
+        id: "tips-for-any-season",
+        type: "heading",
+        text: "A Few Tips for Any Season"
+      },
+      {
+        type: "paragraph",
+        text: "Book your rooms early for festivals and long weekends. Carry rain protection between June and September. Wear comfortable footwear, since temple visits involve a fair amount of walking. And keep one buffer day in your plan, because temple queues are never predictable."
+      },
+      {
+        type: "paragraph",
+        text: "Whatever the season, *The Padival Grand|/rooms* in central Puttur is open for families, travellers and groups, with clean air-conditioned rooms and *pure vegetarian dining|/dining*. Call or WhatsApp us on 96868 04784 to plan your trip, and we will help you pick the dates that suit you best."
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/when-to-visit-puttur-season-guide#blog",
+          "headline": "When Should You Visit Puttur? A Season-by-Season Guide",
+          "description": "Find the best time to visit Puttur with our season-by-season guide covering weather, temple festivals, monsoon travel, and tips for family visits.",
+          "image": "https://thepadivalgrand.com/blogsImg/visit-puttur.jpeg",
+          "datePublished": "2026-10-15",
+          "dateModified": "2026-10-15",
+          "author": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "url": "https://thepadivalgrand.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/when-to-visit-puttur-season-guide"
+          },
+          "articleSection": "Travel Guide",
+          "keywords": [
+            "best time to visit Puttur",
+            "Puttur seasons guide",
+            "Puttur Bedi festival",
+            "Lakshadeepotsava Puttur",
+            "Puttur monsoon travel",
+            "The Padival Grand"
+          ]
+        },
+        {
+          "@type": "Hotel",
+          "@id": "https://thepadivalgrand.com/#hotel",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "postalCode": "574201",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com"
+        }
+      ]
+    }
+  },
 
   /* ═══════════════════════════════════════════════════════╗
    *  BLOG 13                                              ║
    * ═══════════════════════════════════════════════════════╝ */
-  // {
-  //   id: 13,
-  //   slug: "weekend-in-puttur-with-family-2-day-plan",
-  //   breadcrumb: "Weekend in Puttur with Family",
-  //   title: "A Weekend in Puttur with Family: A Simple 2-Day Plan",
-  //   excerpt:
-  //     "A weekend in Puttur does not have to be a rush. Here is a simple, family-friendly 2-day plan balancing temple visits, nature spots, relaxed vegetarian dining, and time to rest.",
-  //   date: "November 15, 2026",
-  //   author: "The Padival Grand",
-  //   readTime: "4 min read",
-  //   heroImage: "/blogsImg/weekend.png",
-  //   mobileImage: "/blogsImg/weekend.png",
-  //   pcImage: "/blogsImg/weekend.png",
-  //   cardImage: "/blogsImg/weekend.png",
-  //   metaTitle: "A Weekend in Puttur with Family: A Simple 2-Day Plan",
-  //   metaDescription:
-  //     "Make your family weekend in Puttur easy with this simple 2-day itinerary. Tips on temple timings, nature spots, dining, and stress-free travel with kids and elders.",
-  //   category: "Travel Guide",
-  //   tableOfContents: [
-  //     { id: "before-you-start", label: "Before You Start" },
-  //     { id: "day-1-temple-and-town", label: "Day 1: Temple and Town" },
-  //     { id: "day-2-nature-and-a-slow-morning", label: "Day 2: Nature and a Slow Morning" },
-  //     { id: "if-the-weather-turns", label: "If the Weather Turns" },
-  //     { id: "travelling-with-children", label: "Travelling with Children" },
-  //     { id: "tips-for-travelling-with-family", label: "A Few Tips for Travelling with Family" },
-  //     { id: "where-to-stay", label: "Where to Stay" }
-  //   ],
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       text: "A weekend in Puttur does not have to be a rush. Most families try to fit in too much, and end up tired by the second afternoon, with the children cranky and the elders waiting in the car. The result is a holiday you need a holiday from."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "We have seen enough weekends to know that the trips that go well are the slow ones. Two days is enough to see the temple, enjoy a nature stop and still have time to rest. This is a simple, family-friendly plan that you can follow as it is, or change to suit your group."
-  //     },
-  //     {
-  //       id: "before-you-start",
-  //       type: "heading",
-  //       text: "Before You Start"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "A few decisions make the weekend easier. First, decide the pace. If you are travelling with young children or elders, plan no more than two main stops a day. Second, decide where to base yourselves. Staying in central Puttur means that rest, food and the town are always close. Third, check the weather and temple timings before you leave, and keep a little flexibility in the plan."
-  //     },
-  //     {
-  //       id: "day-1-temple-and-town",
-  //       type: "heading",
-  //       text: "Day 1: Temple and Town"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Start the morning with breakfast and a visit to the *Shree Mahalingeshwara Temple|/blogs/shree-mahalingeshwara-temple-puttur*. Go early, since the morning is cooler and the queues are shorter, especially on a weekend. Take your time at the temple, and do not rush the darshan. After you finish, come back for lunch and a proper rest, because the afternoon is best spent doing nothing."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "In the evening, take a slow walk through the town and see the market and the main road. Have an early dinner, and if the children still have energy, find one of Puttur's parks for a short stop before bed. If not, call it a day. A good first day leaves you rested, and ready for the second."
-  //     },
-  //     {
-  //       id: "day-2-nature-and-a-slow-morning",
-  //       type: "heading",
-  //       text: "Day 2: Nature and a Slow Morning"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Have a relaxed breakfast, then head out for a nature stop. Puttur sits close to green hills and forest, and our *guide to waterfalls and forest trails near Puttur|/blogs/waterfalls-near-puttur* lists the best options. Our *one-day guide to Puttur|/blogs/one-day-trip-to-puttur* covers the other places worth a visit. Check the weather and the trail conditions before you leave, carry water and snacks, and keep the outing short if you are travelling with children or elders."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Come back for lunch and some rest before check-out. If you have time, pick up a few local products to take home, and leave without rushing. The best way to end a weekend is with a little time to spare."
-  //     },
-  //     {
-  //       id: "if-the-weather-turns",
-  //       type: "heading",
-  //       text: "If the Weather Turns"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "In the monsoon, or if the weather is poor, swap the outdoor stop for something gentler. Spend the second morning at the temple, then enjoy a slow meal and a walk through the market when the rain eases. A rainy day in a quiet town can be a pleasure if you are not trying to do too much."
-  //     },
-  //     {
-  //       id: "travelling-with-children",
-  //       type: "heading",
-  //       text: "Travelling with Children"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "Keep the stops short, and build in play time. Children do better with a clear, simple plan and frequent breaks. Carry snacks, water and a change of clothes. Let them choose one small thing each day, such as an ice cream stop or a walk in a park, and they will remember the weekend fondly."
-  //     },
-  //     {
-  //       id: "tips-for-travelling-with-family",
-  //       type: "heading",
-  //       text: "A Few Tips for Travelling with Family"
-  //     },
-  //     {
-  //       type: "bulletList",
-  //       items: [
-  //         "Do less. Two main stops a day is plenty with children and elders.",
-  //         "Start early, because mornings are cooler and calmer.",
-  //         "Carry water, snacks and basic medicines.",
-  //         "Check temple timings before you go.",
-  //         "Stay somewhere central, so that rest is never far away.",
-  //         "Keep one slow hour in every day."
-  //       ]
-  //     },
-  //     {
-  //       id: "where-to-stay",
-  //       type: "heading",
-  //       text: "Where to Stay"
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "The Padival Grand is in central Puttur, with clean air-conditioned *rooms|/rooms* and *pure vegetarian dining|/dining*. It is a comfortable base for a family weekend, and it keeps everything in this itinerary close. If you are travelling with a larger family, or with elders, let us know in advance and we will help you with the rooms."
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "To plan your weekend, call or WhatsApp us on 96868 04784. We are happy to suggest timings and help you make the most of two days."
-  //     }
-  //   ],
-  //   schema: {
-  //     "@context": "https://schema.org",
-  //     "@graph": [
-  //       {
-  //         "@type": "BlogPosting",
-  //         "@id": "https://thepadivalgrand.com/blogs/weekend-in-puttur-with-family-2-day-plan#blog",
-  //         "headline": "A Weekend in Puttur with Family: A Simple 2-Day Plan",
-  //         "description": "Make your family weekend in Puttur easy with this simple 2-day itinerary. Tips on temple timings, nature spots, dining, and stress-free travel with kids and elders.",
-  //         "image": "https://thepadivalgrand.com/blogsImg/Desktop11.jpg",
-  //         "datePublished": "2026-10-20",
-  //         "dateModified": "2026-10-20",
-  //         "author": {
-  //           "@type": "Organization",
-  //           "name": "The Padival Grand",
-  //           "url": "https://thepadivalgrand.com/"
-  //         },
-  //         "publisher": {
-  //           "@type": "Organization",
-  //           "name": "The Padival Grand",
-  //           "logo": {
-  //             "@type": "ImageObject",
-  //             "url": "https://thepadivalgrand.com/logo.png"
-  //           }
-  //         },
-  //         "mainEntityOfPage": {
-  //           "@type": "WebPage",
-  //           "@id": "https://thepadivalgrand.com/blogs/weekend-in-puttur-with-family-2-day-plan"
-  //         },
-  //         "articleSection": "Travel Guide",
-  //         "keywords": [
-  //           "weekend in Puttur with family",
-  //           "2 day Puttur itinerary",
-  //           "Puttur family trip",
-  //           "Mahalingeshwara Temple itinerary",
-  //           "family hotel Puttur",
-  //           "The Padival Grand"
-  //         ]
-  //       },
-  //       {
-  //         "@type": "Hotel",
-  //         "@id": "https://thepadivalgrand.com/#hotel",
-  //         "name": "The Padival Grand",
-  //         "url": "https://thepadivalgrand.com/",
-  //         "address": {
-  //           "@type": "PostalAddress",
-  //           "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
-  //           "addressLocality": "Puttur",
-  //           "addressRegion": "Karnataka",
-  //           "postalCode": "574201",
-  //           "addressCountry": "IN"
-  //         },
-  //         "telephone": "+91 96868 04784",
-  //         "email": "info@padival-grand-hotel.com"
-  //       }
-  //     ]
-  //   }
-  // },
+  {
+    id: 13,
+    slug: "weekend-in-puttur-with-family-2-day-plan",
+    breadcrumb: "Weekend in Puttur with Family",
+    title: "A Weekend in Puttur with Family: A Simple 2-Day Plan",
+    excerpt:
+      "A weekend in Puttur does not have to be a rush. Here is a simple, family-friendly 2-day plan balancing temple visits, nature spots, relaxed vegetarian dining, and time to rest.",
+    date: "November 18, 2026",
+    author: "The Padival Grand",
+    readTime: "4 min read",
+    heroImage: "/blogsImg/weekend.png",
+    mobileImage: "/blogsImg/weekend.png",
+    pcImage: "/blogsImg/weekend.png",
+    cardImage: "/blogsImg/weekend.png",
+    metaTitle: "A Weekend in Puttur with Family: A Simple 2-Day Plan",
+    metaDescription:
+      "Make your family weekend in Puttur easy with this simple 2-day itinerary. Tips on temple timings, nature spots, dining, and stress-free travel with kids and elders.",
+    category: "Travel Guide",
+    tableOfContents: [
+      { id: "before-you-start", label: "Before You Start" },
+      { id: "day-1-temple-and-town", label: "Day 1: Temple and Town" },
+      { id: "day-2-nature-and-a-slow-morning", label: "Day 2: Nature and a Slow Morning" },
+      { id: "if-the-weather-turns", label: "If the Weather Turns" },
+      { id: "travelling-with-children", label: "Travelling with Children" },
+      { id: "tips-for-travelling-with-family", label: "A Few Tips for Travelling with Family" },
+      { id: "where-to-stay", label: "Where to Stay" }
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "A weekend in Puttur does not have to be a rush. Most families try to fit in too much, and end up tired by the second afternoon, with the children cranky and the elders waiting in the car. The result is a holiday you need a holiday from."
+      },
+      {
+        type: "paragraph",
+        text: "We have seen enough weekends to know that the trips that go well are the slow ones. Two days is enough to see the temple, enjoy a nature stop and still have time to rest. This is a simple, family-friendly plan that you can follow as it is, or change to suit your group."
+      },
+      {
+        id: "before-you-start",
+        type: "heading",
+        text: "Before You Start"
+      },
+      {
+        type: "paragraph",
+        text: "A few decisions make the weekend easier. First, decide the pace. If you are travelling with young children or elders, plan no more than two main stops a day. Second, decide where to base yourselves. Staying in central Puttur means that rest, food and the town are always close. Third, check the weather and temple timings before you leave, and keep a little flexibility in the plan."
+      },
+      {
+        id: "day-1-temple-and-town",
+        type: "heading",
+        text: "Day 1: Temple and Town"
+      },
+      {
+        type: "paragraph",
+        text: "Start the morning with breakfast and a visit to the *Shree Mahalingeshwara Temple|/blogs/shree-mahalingeshwara-temple-puttur*. Go early, since the morning is cooler and the queues are shorter, especially on a weekend. Take your time at the temple, and do not rush the darshan. After you finish, come back for lunch and a proper rest, because the afternoon is best spent doing nothing."
+      },
+      {
+        type: "paragraph",
+        text: "In the evening, take a slow walk through the town and see the market and the main road. Have an early dinner, and if the children still have energy, find one of Puttur's parks for a short stop before bed. If not, call it a day. A good first day leaves you rested, and ready for the second."
+      },
+      {
+        id: "day-2-nature-and-a-slow-morning",
+        type: "heading",
+        text: "Day 2: Nature and a Slow Morning"
+      },
+      {
+        type: "paragraph",
+        text: "Have a relaxed breakfast, then head out for a nature stop. Puttur sits close to green hills and forest, and our *guide to waterfalls and forest trails near Puttur|/blogs/waterfalls-near-puttur* lists the best options. Our *one-day guide to Puttur|/blogs/one-day-trip-to-puttur* covers the other places worth a visit. Check the weather and the trail conditions before you leave, carry water and snacks, and keep the outing short if you are travelling with children or elders."
+      },
+      {
+        type: "paragraph",
+        text: "Come back for lunch and some rest before check-out. If you have time, pick up a few local products to take home, and leave without rushing. The best way to end a weekend is with a little time to spare."
+      },
+      {
+        id: "if-the-weather-turns",
+        type: "heading",
+        text: "If the Weather Turns"
+      },
+      {
+        type: "paragraph",
+        text: "In the monsoon, or if the weather is poor, swap the outdoor stop for something gentler. Spend the second morning at the temple, then enjoy a slow meal and a walk through the market when the rain eases. A rainy day in a quiet town can be a pleasure if you are not trying to do too much."
+      },
+      {
+        id: "travelling-with-children",
+        type: "heading",
+        text: "Travelling with Children"
+      },
+      {
+        type: "paragraph",
+        text: "Keep the stops short, and build in play time. Children do better with a clear, simple plan and frequent breaks. Carry snacks, water and a change of clothes. Let them choose one small thing each day, such as an ice cream stop or a walk in a park, and they will remember the weekend fondly."
+      },
+      {
+        id: "tips-for-travelling-with-family",
+        type: "heading",
+        text: "A Few Tips for Travelling with Family"
+      },
+      {
+        type: "bulletList",
+        items: [
+          "Do less. Two main stops a day is plenty with children and elders.",
+          "Start early, because mornings are cooler and calmer.",
+          "Carry water, snacks and basic medicines.",
+          "Check temple timings before you go.",
+          "Stay somewhere central, so that rest is never far away.",
+          "Keep one slow hour in every day."
+        ]
+      },
+      {
+        id: "where-to-stay",
+        type: "heading",
+        text: "Where to Stay"
+      },
+      {
+        type: "paragraph",
+        text: "The Padival Grand is in central Puttur, with clean air-conditioned *rooms|/rooms* and *pure vegetarian dining|/dining*. It is a comfortable base for a family weekend, and it keeps everything in this itinerary close. If you are travelling with a larger family, or with elders, let us know in advance and we will help you with the rooms."
+      },
+      {
+        type: "paragraph",
+        text: "To plan your weekend, call or WhatsApp us on 96868 04784. We are happy to suggest timings and help you make the most of two days."
+      }
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://thepadivalgrand.com/blogs/weekend-in-puttur-with-family-2-day-plan#blog",
+          "headline": "A Weekend in Puttur with Family: A Simple 2-Day Plan",
+          "description": "Make your family weekend in Puttur easy with this simple 2-day itinerary. Tips on temple timings, nature spots, dining, and stress-free travel with kids and elders.",
+          "image": "https://thepadivalgrand.com/blogsImg/Desktop11.jpg",
+          "datePublished": "2026-10-20",
+          "dateModified": "2026-10-20",
+          "author": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "url": "https://thepadivalgrand.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Padival Grand",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://thepadivalgrand.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thepadivalgrand.com/blogs/weekend-in-puttur-with-family-2-day-plan"
+          },
+          "articleSection": "Travel Guide",
+          "keywords": [
+            "weekend in Puttur with family",
+            "2 day Puttur itinerary",
+            "Puttur family trip",
+            "Mahalingeshwara Temple itinerary",
+            "family hotel Puttur",
+            "The Padival Grand"
+          ]
+        },
+        {
+          "@type": "Hotel",
+          "@id": "https://thepadivalgrand.com/#hotel",
+          "name": "The Padival Grand",
+          "url": "https://thepadivalgrand.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mahaveer Mall, Main Road, Bolwar",
+            "addressLocality": "Puttur",
+            "addressRegion": "Karnataka",
+            "postalCode": "574201",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91 96868 04784",
+          "email": "info@padival-grand-hotel.com"
+        }
+      ]
+    }
+  },
 
   /* ═══════════════════════════════════════════════════════╗
    *  BLOG 14                                              ║
